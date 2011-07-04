@@ -236,6 +236,12 @@
     $this->form_validation->set_message('email_unique', 'The email address is already taken!  Perhaps try <a href="http://www.studygig.com/index.php/users/login">signing in</a> or have you <a href="http://www.studygig.com/index.php/users/forgotpass">forgot your password?</a>');
   	return $this->User->validates_email_uniqueness($email);
   }
+  
+  function ends_with_yorku($email) {
+    $this->form_validation->set_message('ends_with_yorku', 'The email address must be a YorkU email.  If you do not have one, use facebook to login.');
+    $length = -8;
+    return (substr($email, $length) === "yorku.ca");
+  }
 	
   function email_unique_or_same($email) {
     $this->form_validation->set_message('email_unique_or_same', 'The email address is already taken!');

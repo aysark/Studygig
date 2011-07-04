@@ -124,6 +124,12 @@ $(function() {
                 <a href="<?php echo site_url('users/login');?>" title="Sign in to your Studygig account">Login</a> |  
                 <a href="<?php echo site_url('users/signup');?>" title="Create an account to use Studygig">Create an Account</a> |  
                 <a href="<?php echo site_url('site/howitworks'); ?>" title="Find out how Studygig works">How it works</a>
+                
+                <div id="postStudyMaterialDialog" title="How would you like to post?">
+	<a href="<?php echo site_url('uploads/insert');?>" style="outline:none;	-moz-outline:none;"><div id="shareStudyMaterialButton"></div></a> <a href="<?php echo site_url('classifieds/insert');?>" style="outline:none;-moz-outline:none;"><div id="sellStudyMaterialButton"></div></a>
+
+	</div>
+	<div id="postStudyMaterialButton">Post Study Material</div>
 			
 			<?php endif; ?>
          </div>

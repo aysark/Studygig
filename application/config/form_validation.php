@@ -14,7 +14,7 @@ $config = array(
              'signup' =>  array(  array(
                      'field'   => 'email',
                      'label'   => 'email',
-                     'rules'   => 'required|valid_email|callback_email_unique'
+                     'rules'   => 'required|valid_email|callback_email_unique|callback_ends_with_yorku'
                   ),
                   	array(
                      'field'   => 'username',

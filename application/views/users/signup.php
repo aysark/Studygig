@@ -23,7 +23,7 @@
 $attributes = array('name' => 'signupform' ,'id' => 'loginWithOutFb'); 
 echo form_open('users/createuser',$attributes);?>
 	<p>Or sign up using this form:</p>
-Email: <br/><input type="textfield" class="formTextField2" name="email" maxlength="30" value="<?php echo set_value('email'); ?>" />
+YorkU Email:<br>(must end with yorku.ca) <br/><input type="textfield" class="formTextField2" name="email" maxlength="30" value="<?php echo set_value('email'); ?>" />
 Username: <br/><input type="textfield"class="formTextField2" maxlength="30" name="username" value="<?php echo set_value('username'); ?>" />
 
 <div id="password">
