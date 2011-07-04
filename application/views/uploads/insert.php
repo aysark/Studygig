@@ -17,9 +17,23 @@
 		$attributes = array('id' => 'uploadform');
 		echo form_open_multipart('uploads/upload',$attributes); 
 	?>
+		
+	<div id="insertUploadType">
+		<h2>How would you like to Share?<span class="formDesc">Required. You can upload from your computer or share a link from the web.  You can only upload Word, PowerPoint, PDF, or image files (eg. scanned papers).</span></h2>	
+		<label class="uploadTypeRadio"><input type="radio" name="uploadType"  value="u" /> Upload file(s)  </label>
+	   <label class="uploadTypeRadio"> <input type="radio" name="uploadType"  value="l" /> Direct website link to file (http://...)</label>
+		        <div id="u" class="uploadTypeField">
+		    	 <p>Select file(s) (must be in PDF, PPT, DOC, DOCX, JPEG/JPG, PNG or GIF format):</p>
+		<input type="file" name="userfile[]" size="10" class="multi" accept="docx|pdf|doc|ppt|pptx|gif|jpg|jpeg|png" />
+		    </div>
+		<div id="l" class="uploadTypeField">
+		    	 <p>Enter URL (the url must start with '<b>http://</b>' and end with .PDF, .PPT, .DOC, .DOCX, .JPEG/.JPG, .PNG or .GIF):</p>
+		<input type="textfield" name="uploadLink" size="75" id="insertURL" value="<?php echo set_value('uploadLink',"eg. http://www.myProfessorSite.com/assignment1Solutions.pdf"); ?>"/>
+		    </div>
+	</div>
 	
 	<div id="insertSelectSubject">
-		<h2>Select a Subject <span class="formDesc">Required. The subject your study material is for (and then the course).</span></h2>
+		<h2>Select Material's Subject <span class="formDesc">Required. The subject your study material is for (and then the course).</span></h2>
 			<select id="subject_id" multiple="multiple" size="10" name="subject_id" >
 			<?php foreach($subjects as $subject): ?>
 		
@@ -32,20 +46,6 @@
 		
 		<select id="course_id" size="10" name="course_id" style="display:none;">	
 		</select>
-	</div>
-	
-	<div id="insertUploadType">
-		<h2>How would you like to Share?<span class="formDesc">Required. You can upload from your computer or share a link from the web.  You can only upload Word, PowerPoint, PDF, or image files (eg. scanned papers).</span></h2>	
-		<label><input type="radio" name="uploadType"  value="u" /> Upload file(s)  </label>
-	   <label> <input type="radio" name="uploadType"  value="l" /> Direct website link to file (http://...)</label>
-		        <div id="u" class="uploadTypeField">
-		    	 <p>Select file(s) (must be in PDF, PPT, DOC, DOCX, JPEG/JPG, PNG or GIF format)</p>
-		<input type="file" name="userfile[]" size="10" class="multi" accept="docx|pdf|doc|ppt|pptx|gif|jpg|jpeg|png" />
-		    </div>
-		<div id="l" class="uploadTypeField">
-		    	 <p>URL (the url must start with '<b>http://</b>' and end with .PDF, .PPT, .DOC, .DOCX, .JPEG/.JPG, .PNG or .GIF)</p>
-		<input type="textfield" name="uploadLink" size="75" id="insertURL" value="<?php echo set_value('uploadLink',"eg. http://www.myProfessorSite.com/assignment1Solutions.pdf"); ?>"/>
-		    </div>
 	</div>
 	
 	<div id="insertMaterialType">

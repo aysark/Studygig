@@ -18,8 +18,20 @@
 		echo form_open_multipart('classifieds/add',$attributes); 
 	?>
 	
+	<div id="insertMaterialType">
+		<h2>What kind of study material are you selling?<span class="formDesc">Required. This helps us keep everything nice and tidy.</span></h2>
+				<select id="material" size="5" name="material">
+		<option value="7" <?php echo set_select('material', '7'); ?>>Book</option>
+		<option value="1" <?php echo set_select('material', '1'); ?>>Test Package (quizes, tests, midterms, exams, etc.)</option>
+		<option value="2" <?php echo set_select('material', '2'); ?>>Note Package (notes, study guides, reference material, labs, etc.)</option>
+		<option value="8" <?php echo set_select('material', '8'); ?>>All-in-one Package (book, test package, note package)</option>
+		<option value="6" <?php echo set_select('material', '6'); ?>>Other</option>
+	</select>		
+	
+	</div>
+	<div class="clear"></div>
 	<div id="insertSelectSubject">
-		<h2>Select a Subject <span class="formDesc">Required. The subject your study material is for (and then the course).</span></h2>
+		<h2>Select Subject <span class="formDesc">Required. The subject your study material is for (and then the course).</span></h2>
 			<select id="subject_id" multiple="multiple" size="10" name="subject_id" >
 			<?php foreach($subjects as $subject): ?>
 		
@@ -34,17 +46,7 @@
 	</div>
 
 	
-	<div id="insertMaterialType">
-		<h2>What kind of study material are you selling?<span class="formDesc">Required. This helps us keep everything nice and tidy.</span></h2>
-				<select id="material" size="5" name="material">
-		<option value="7" <?php echo set_select('material', '7'); ?>>Book</option>
-		<option value="1" <?php echo set_select('material', '1'); ?>>Test Package (quizes, tests, midterms, exams, etc.)</option>
-		<option value="2" <?php echo set_select('material', '2'); ?>>Note Package (notes, study guides, reference material, labs, etc.)</option>
-		<option value="8" <?php echo set_select('material', '8'); ?>>All-in-one Package (book, test package, note package)</option>
-		<option value="6" <?php echo set_select('material', '6'); ?>>Other</option>
-	</select>		
 	
-	</div>
 	
 	<div id="insertUTitleDesc">
 		<h2>Describe your study material<span class="formDesc">Required. The more details your write, the easier it will be to find and the more points you'll earn!</span></h2>	

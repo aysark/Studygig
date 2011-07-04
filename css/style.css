@@ -861,6 +861,9 @@ a.uploadAnotherStudyMatButton{
     #insertUploadType{
     	margin-top:20px;
     }
+    .uploadTypeRadio{
+    	font-size:1.4em;    	
+    }
     #insertMaterialType{
     	margin-top:20px;
     }
