@@ -1,0 +1,37 @@
+[24-Feb-2011 00:33:51] PHP Fatal error:  Cannot use object of type stdClass as array in /home/aysarkco/public_html/coursechamp/application/controllers/courses.php on line 77
+[24-Feb-2011 00:34:40] PHP Fatal error:  Call to undefined function _prepare_download() in /home/aysarkco/public_html/coursechamp/application/controllers/courses.php on line 84
+[24-Feb-2011 00:35:06] PHP Fatal error:  Call to undefined function force_download() in /home/aysarkco/public_html/coursechamp/application/views/courses/download.php on line 3
+[24-Feb-2011 12:24:02] PHP Fatal error:  Can't use method return value in write context in /home/aysarkco/public_html/coursechamp/application/controllers/users.php on line 11
+[24-Feb-2011 12:24:45] PHP Fatal error:  Call to a member function load() on a non-object in /home/aysarkco/public_html/coursechamp/application/controllers/users.php on line 6
+[24-Feb-2011 15:00:33] PHP Fatal error:  Call to undefined function get_by_id() in /home/aysarkco/public_html/coursechamp/application/models/course.php on line 25
+[01-Mar-2011 14:29:49] PHP Fatal error:  Call to a member function model() on a non-object in /home/aysarkco/public_html/coursechamp/application/helpers/MY_html_helper.php on line 3
+[02-Mar-2011 13:20:10] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/aysarkco/public_html/coursechamp/application/views/courses/results.php on line 15
+[04-Mar-2011 05:56:23] PHP Fatal error:  Call to undefined method User::find_by_id() in /home/aysarkco/public_html/coursechamp/application/controllers/users.php on line 27
+[05-Mar-2011 09:50:45] PHP Parse error:  syntax error, unexpected '}' in /home/aysarkco/public_html/coursechamp/application/models/rating.php on line 30
+[05-Mar-2011 09:51:00] PHP Fatal error:  Call to undefined method CI_Session::uwerdata() in /home/aysarkco/public_html/coursechamp/application/models/rating.php on line 24
+[05-Mar-2011 12:48:50] PHP Fatal error:  Call to a member function result() on a non-object in /home/aysarkco/public_html/coursechamp/application/models/course.php on line 110
+[05-Mar-2011 12:49:22] PHP Fatal error:  Call to undefined method CI_DB_mysql_driver::result() in /home/aysarkco/public_html/coursechamp/application/models/course.php on line 110
+[05-Mar-2011 14:38:53] PHP Fatal error:  Call to a member function result() on a non-object in /home/aysarkco/public_html/coursechamp/application/models/course.php on line 125
+[05-Mar-2011 14:39:11] PHP Fatal error:  Call to a member function result() on a non-object in /home/aysarkco/public_html/coursechamp/application/models/course.php on line 125
+[05-Mar-2011 14:39:31] PHP Fatal error:  Call to a member function result() on a non-object in /home/aysarkco/public_html/coursechamp/application/models/course.php on line 125
+[05-Mar-2011 14:59:10] PHP Parse error:  syntax error, unexpected ')' in /home/aysarkco/public_html/coursechamp/application/config/autoload.php on line 56
+[05-Mar-2011 15:41:41] PHP Warning:  POST Content-Length of 187312866 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[13-Mar-2011 14:47:41] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '../third_party/facebooksdk/src/facebook.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/aysarkco/public_html/coursechamp/application/controllers/sessions.php on line 40
+[13-Mar-2011 19:59:52] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/aysarkco/public_html/coursechamp/application/models/user.php on line 69
+[13-Mar-2011 20:00:03] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/aysarkco/public_html/coursechamp/application/models/user.php on line 69
+[13-Mar-2011 20:00:05] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/aysarkco/public_html/coursechamp/application/models/user.php on line 69
+[14-Mar-2011 09:17:56] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/aysarkco/public_html/coursechamp/application/models/user.php on line 69
+[14-Mar-2011 09:18:18] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/aysarkco/public_html/coursechamp/application/models/user.php on line 69
+[14-Mar-2011 09:18:24] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/aysarkco/public_html/coursechamp/application/models/user.php on line 69
+[14-Mar-2011 09:19:11] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/aysarkco/public_html/coursechamp/application/models/user.php on line 69
+[14-Mar-2011 09:46:01] PHP Fatal error:  Can't use method return value in write context in /home/aysarkco/public_html/coursechamp/application/models/user.php on line 63
+[19-Mar-2011 16:47:50] PHP Fatal error:  Call to a member function userdata() on a non-object in /home/aysarkco/public_html/coursechamp/application/controllers/courses.php on line 131
+[19-Mar-2011 16:48:10] PHP Fatal error:  Call to undefined function insert() in /home/aysarkco/public_html/coursechamp/application/models/favourite.php on line 16
+[21-Mar-2011 08:15:14] PHP Fatal error:  Call to undefined function view() in /home/aysarkco/public_html/coursechamp/application/controllers/courses.php on line 137
+[21-Mar-2011 09:11:13] PHP Fatal error:  Call to undefined function do_hash() in /home/aysarkco/public_html/coursechamp/application/controllers/users.php on line 32
+[21-Mar-2011 09:18:18] PHP Fatal error:  Call to undefined function do_hash() in /home/aysarkco/public_html/coursechamp/application/controllers/users.php on line 32
+[21-Mar-2011 12:05:08] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/aysarkco/public_html/coursechamp/application/models/user.php on line 106
+[22-Mar-2011 14:33:31] PHP Parse error:  syntax error, unexpected '}' in /home/aysarkco/public_html/coursechamp/application/controllers/courses.php on line 126
+[04-Apr-2011 00:59:37] PHP Parse error:  syntax error, unexpected ')' in /home/aysarkco/public_html/coursechamp/application/controllers/users.php on line 130
+[04-Apr-2011 16:06:12] PHP Fatal error:  Call to undefined function login() in /home/aysarkco/public_html/coursechamp/application/controllers/users.php on line 151
+[06-Apr-2011 03:27:06] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/aysarkco/public_html/coursechamp/application/controllers/courses.php on line 134

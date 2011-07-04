@@ -1,0 +1,1189 @@
+[Mon May 16 12:43:30.703 2011] [ 4908] accepting connections
+[Wed May 18 10:40:08.218 2011] [ 2740] binlog: replaying log ./binlog.001
+[Wed May 18 10:40:08.219 2011] [ 2740] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed May 18 10:40:08.219 2011] [ 2740] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Wed May 18 10:40:08.219 2011] [ 2740] binlog: finished replaying total 1 in 0.000 sec
+[Wed May 18 10:40:08.221 2011] [ 2740] accepting connections
+[Thu May 19 13:09:39.828 2011] [ 2640] binlog: replaying log ./binlog.001
+[Thu May 19 13:09:39.828 2011] [ 2640] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu May 19 13:09:39.828 2011] [ 2640] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Thu May 19 13:09:39.828 2011] [ 2640] binlog: replaying log ./binlog.002
+[Thu May 19 13:09:39.828 2011] [ 2640] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu May 19 13:09:39.828 2011] [ 2640] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Thu May 19 13:09:39.828 2011] [ 2640] binlog: finished replaying total 2 in 0.000 sec
+[Thu May 19 13:09:39.830 2011] [ 2640] accepting connections
+[Sat May 21 11:49:17.305 2011] [ 2620] binlog: replaying log ./binlog.001
+[Sat May 21 11:49:17.305 2011] [ 2620] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat May 21 11:49:17.305 2011] [ 2620] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Sat May 21 11:49:17.305 2011] [ 2620] binlog: replaying log ./binlog.002
+[Sat May 21 11:49:17.355 2011] [ 2620] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat May 21 11:49:17.355 2011] [ 2620] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Sat May 21 11:49:17.355 2011] [ 2620] binlog: replaying log ./binlog.003
+[Sat May 21 11:49:17.396 2011] [ 2620] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat May 21 11:49:17.396 2011] [ 2620] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Sat May 21 11:49:17.396 2011] [ 2620] binlog: finished replaying total 3 in 0.091 sec
+[Sat May 21 11:49:17.398 2011] [ 2620] accepting connections
+[Sat May 21 14:29:23.848 2011] [ 2600] binlog: replaying log ./binlog.001
+[Sat May 21 14:29:23.848 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat May 21 14:29:23.848 2011] [ 2600] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Sat May 21 14:29:23.848 2011] [ 2600] binlog: replaying log ./binlog.002
+[Sat May 21 14:29:23.848 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat May 21 14:29:23.848 2011] [ 2600] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Sat May 21 14:29:23.848 2011] [ 2600] binlog: replaying log ./binlog.003
+[Sat May 21 14:29:23.869 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat May 21 14:29:23.869 2011] [ 2600] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Sat May 21 14:29:23.869 2011] [ 2600] binlog: replaying log ./binlog.004
+[Sat May 21 14:29:23.885 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat May 21 14:29:23.885 2011] [ 2600] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Sat May 21 14:29:23.885 2011] [ 2600] binlog: finished replaying total 4 in 0.037 sec
+[Sat May 21 14:29:23.896 2011] [ 2600] accepting connections
+[Tue May 24 11:27:45.719 2011] [ 2556] binlog: replaying log ./binlog.001
+[Tue May 24 11:27:45.719 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 24 11:27:45.719 2011] [ 2556] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Tue May 24 11:27:45.719 2011] [ 2556] binlog: replaying log ./binlog.002
+[Tue May 24 11:27:45.720 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 24 11:27:45.720 2011] [ 2556] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Tue May 24 11:27:45.720 2011] [ 2556] binlog: replaying log ./binlog.003
+[Tue May 24 11:27:45.720 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 24 11:27:45.720 2011] [ 2556] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Tue May 24 11:27:45.720 2011] [ 2556] binlog: replaying log ./binlog.004
+[Tue May 24 11:27:45.739 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 24 11:27:45.739 2011] [ 2556] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Tue May 24 11:27:45.739 2011] [ 2556] binlog: replaying log ./binlog.005
+[Tue May 24 11:27:45.740 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 24 11:27:45.740 2011] [ 2556] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Tue May 24 11:27:45.740 2011] [ 2556] binlog: finished replaying total 5 in 0.020 sec
+[Tue May 24 11:27:45.741 2011] [ 2556] accepting connections
+[Tue May 24 18:23:41.055 2011] [ 2892] binlog: replaying log ./binlog.001
+[Tue May 24 18:23:41.055 2011] [ 2892] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 24 18:23:41.055 2011] [ 2892] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Tue May 24 18:23:41.055 2011] [ 2892] binlog: replaying log ./binlog.002
+[Tue May 24 18:23:41.056 2011] [ 2892] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 24 18:23:41.056 2011] [ 2892] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Tue May 24 18:23:41.056 2011] [ 2892] binlog: replaying log ./binlog.003
+[Tue May 24 18:23:41.056 2011] [ 2892] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 24 18:23:41.056 2011] [ 2892] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Tue May 24 18:23:41.056 2011] [ 2892] binlog: replaying log ./binlog.004
+[Tue May 24 18:23:41.057 2011] [ 2892] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 24 18:23:41.057 2011] [ 2892] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Tue May 24 18:23:41.057 2011] [ 2892] binlog: replaying log ./binlog.005
+[Tue May 24 18:23:41.057 2011] [ 2892] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 24 18:23:41.057 2011] [ 2892] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Tue May 24 18:23:41.057 2011] [ 2892] binlog: replaying log ./binlog.006
+[Tue May 24 18:23:41.077 2011] [ 2892] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 24 18:23:41.077 2011] [ 2892] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Tue May 24 18:23:41.077 2011] [ 2892] binlog: finished replaying total 6 in 0.022 sec
+[Tue May 24 18:23:41.079 2011] [ 2892] accepting connections
+[Wed May 25 11:33:49.631 2011] [ 2672] binlog: replaying log ./binlog.001
+[Wed May 25 11:33:49.632 2011] [ 2672] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed May 25 11:33:49.632 2011] [ 2672] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Wed May 25 11:33:49.632 2011] [ 2672] binlog: replaying log ./binlog.002
+[Wed May 25 11:33:49.632 2011] [ 2672] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed May 25 11:33:49.632 2011] [ 2672] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Wed May 25 11:33:49.632 2011] [ 2672] binlog: replaying log ./binlog.003
+[Wed May 25 11:33:49.632 2011] [ 2672] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed May 25 11:33:49.632 2011] [ 2672] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Wed May 25 11:33:49.632 2011] [ 2672] binlog: replaying log ./binlog.004
+[Wed May 25 11:33:49.633 2011] [ 2672] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed May 25 11:33:49.633 2011] [ 2672] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Wed May 25 11:33:49.633 2011] [ 2672] binlog: replaying log ./binlog.005
+[Wed May 25 11:33:49.633 2011] [ 2672] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed May 25 11:33:49.633 2011] [ 2672] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Wed May 25 11:33:49.633 2011] [ 2672] binlog: replaying log ./binlog.006
+[Wed May 25 11:33:49.650 2011] [ 2672] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed May 25 11:33:49.650 2011] [ 2672] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Wed May 25 11:33:49.650 2011] [ 2672] binlog: replaying log ./binlog.007
+[Wed May 25 11:33:49.650 2011] [ 2672] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed May 25 11:33:49.650 2011] [ 2672] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Wed May 25 11:33:49.650 2011] [ 2672] binlog: finished replaying total 7 in 0.018 sec
+[Wed May 25 11:33:49.652 2011] [ 2672] accepting connections
+[Fri May 27 05:29:23.549 2011] [ 3004] binlog: replaying log ./binlog.001
+[Fri May 27 05:29:23.550 2011] [ 3004] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri May 27 05:29:23.550 2011] [ 3004] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Fri May 27 05:29:23.550 2011] [ 3004] binlog: replaying log ./binlog.002
+[Fri May 27 05:29:23.550 2011] [ 3004] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri May 27 05:29:23.550 2011] [ 3004] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Fri May 27 05:29:23.550 2011] [ 3004] binlog: replaying log ./binlog.003
+[Fri May 27 05:29:23.551 2011] [ 3004] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri May 27 05:29:23.551 2011] [ 3004] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Fri May 27 05:29:23.551 2011] [ 3004] binlog: replaying log ./binlog.004
+[Fri May 27 05:29:23.551 2011] [ 3004] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri May 27 05:29:23.551 2011] [ 3004] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Fri May 27 05:29:23.551 2011] [ 3004] binlog: replaying log ./binlog.005
+[Fri May 27 05:29:23.552 2011] [ 3004] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri May 27 05:29:23.552 2011] [ 3004] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Fri May 27 05:29:23.552 2011] [ 3004] binlog: replaying log ./binlog.006
+[Fri May 27 05:29:23.552 2011] [ 3004] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri May 27 05:29:23.552 2011] [ 3004] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Fri May 27 05:29:23.552 2011] [ 3004] binlog: replaying log ./binlog.007
+[Fri May 27 05:29:23.552 2011] [ 3004] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri May 27 05:29:23.552 2011] [ 3004] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Fri May 27 05:29:23.552 2011] [ 3004] binlog: replaying log ./binlog.008
+[Fri May 27 05:29:23.553 2011] [ 3004] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri May 27 05:29:23.553 2011] [ 3004] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Fri May 27 05:29:23.553 2011] [ 3004] binlog: finished replaying total 8 in 0.003 sec
+[Fri May 27 05:29:23.573 2011] [ 3004] accepting connections
+[Mon May 30 22:35:59.394 2011] [ 2676] binlog: replaying log ./binlog.001
+[Mon May 30 22:35:59.394 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon May 30 22:35:59.394 2011] [ 2676] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Mon May 30 22:35:59.394 2011] [ 2676] binlog: replaying log ./binlog.002
+[Mon May 30 22:35:59.394 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon May 30 22:35:59.394 2011] [ 2676] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Mon May 30 22:35:59.394 2011] [ 2676] binlog: replaying log ./binlog.003
+[Mon May 30 22:35:59.395 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon May 30 22:35:59.395 2011] [ 2676] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Mon May 30 22:35:59.395 2011] [ 2676] binlog: replaying log ./binlog.004
+[Mon May 30 22:35:59.395 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon May 30 22:35:59.395 2011] [ 2676] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Mon May 30 22:35:59.395 2011] [ 2676] binlog: replaying log ./binlog.005
+[Mon May 30 22:35:59.396 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon May 30 22:35:59.396 2011] [ 2676] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Mon May 30 22:35:59.396 2011] [ 2676] binlog: replaying log ./binlog.006
+[Mon May 30 22:35:59.396 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon May 30 22:35:59.396 2011] [ 2676] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Mon May 30 22:35:59.396 2011] [ 2676] binlog: replaying log ./binlog.007
+[Mon May 30 22:35:59.396 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon May 30 22:35:59.396 2011] [ 2676] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Mon May 30 22:35:59.396 2011] [ 2676] binlog: replaying log ./binlog.008
+[Mon May 30 22:35:59.397 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon May 30 22:35:59.397 2011] [ 2676] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Mon May 30 22:35:59.397 2011] [ 2676] binlog: replaying log ./binlog.009
+[Mon May 30 22:35:59.397 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon May 30 22:35:59.397 2011] [ 2676] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Mon May 30 22:35:59.397 2011] [ 2676] binlog: finished replaying total 9 in 0.003 sec
+[Mon May 30 22:35:59.400 2011] [ 2676] accepting connections
+[Tue May 31 17:20:14.612 2011] [ 2988] binlog: replaying log ./binlog.001
+[Tue May 31 17:20:14.612 2011] [ 2988] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 31 17:20:14.612 2011] [ 2988] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Tue May 31 17:20:14.612 2011] [ 2988] binlog: replaying log ./binlog.002
+[Tue May 31 17:20:14.613 2011] [ 2988] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 31 17:20:14.613 2011] [ 2988] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Tue May 31 17:20:14.613 2011] [ 2988] binlog: replaying log ./binlog.003
+[Tue May 31 17:20:14.613 2011] [ 2988] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 31 17:20:14.614 2011] [ 2988] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Tue May 31 17:20:14.614 2011] [ 2988] binlog: replaying log ./binlog.004
+[Tue May 31 17:20:14.614 2011] [ 2988] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 31 17:20:14.614 2011] [ 2988] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Tue May 31 17:20:14.614 2011] [ 2988] binlog: replaying log ./binlog.005
+[Tue May 31 17:20:14.615 2011] [ 2988] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 31 17:20:14.615 2011] [ 2988] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Tue May 31 17:20:14.615 2011] [ 2988] binlog: replaying log ./binlog.006
+[Tue May 31 17:20:14.615 2011] [ 2988] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 31 17:20:14.615 2011] [ 2988] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Tue May 31 17:20:14.615 2011] [ 2988] binlog: replaying log ./binlog.007
+[Tue May 31 17:20:14.615 2011] [ 2988] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 31 17:20:14.615 2011] [ 2988] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Tue May 31 17:20:14.615 2011] [ 2988] binlog: replaying log ./binlog.008
+[Tue May 31 17:20:14.616 2011] [ 2988] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 31 17:20:14.616 2011] [ 2988] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Tue May 31 17:20:14.616 2011] [ 2988] binlog: replaying log ./binlog.009
+[Tue May 31 17:20:14.627 2011] [ 2988] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 31 17:20:14.627 2011] [ 2988] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Tue May 31 17:20:14.627 2011] [ 2988] binlog: replaying log ./binlog.010
+[Tue May 31 17:20:14.631 2011] [ 2988] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue May 31 17:20:14.631 2011] [ 2988] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Tue May 31 17:20:14.631 2011] [ 2988] binlog: finished replaying total 10 in 0.018 sec
+[Tue May 31 17:20:14.650 2011] [ 2988] accepting connections
+[Wed Jun  1 11:22:27.642 2011] [ 2636] binlog: replaying log ./binlog.001
+[Wed Jun  1 11:22:27.642 2011] [ 2636] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  1 11:22:27.642 2011] [ 2636] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Wed Jun  1 11:22:27.642 2011] [ 2636] binlog: replaying log ./binlog.002
+[Wed Jun  1 11:22:27.643 2011] [ 2636] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  1 11:22:27.643 2011] [ 2636] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Wed Jun  1 11:22:27.643 2011] [ 2636] binlog: replaying log ./binlog.003
+[Wed Jun  1 11:22:27.659 2011] [ 2636] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  1 11:22:27.659 2011] [ 2636] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Wed Jun  1 11:22:27.659 2011] [ 2636] binlog: replaying log ./binlog.004
+[Wed Jun  1 11:22:27.659 2011] [ 2636] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  1 11:22:27.659 2011] [ 2636] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Wed Jun  1 11:22:27.659 2011] [ 2636] binlog: replaying log ./binlog.005
+[Wed Jun  1 11:22:27.660 2011] [ 2636] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  1 11:22:27.660 2011] [ 2636] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Wed Jun  1 11:22:27.660 2011] [ 2636] binlog: replaying log ./binlog.006
+[Wed Jun  1 11:22:27.660 2011] [ 2636] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  1 11:22:27.660 2011] [ 2636] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Wed Jun  1 11:22:27.660 2011] [ 2636] binlog: replaying log ./binlog.007
+[Wed Jun  1 11:22:27.660 2011] [ 2636] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  1 11:22:27.660 2011] [ 2636] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Wed Jun  1 11:22:27.660 2011] [ 2636] binlog: replaying log ./binlog.008
+[Wed Jun  1 11:22:27.661 2011] [ 2636] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  1 11:22:27.661 2011] [ 2636] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Wed Jun  1 11:22:27.661 2011] [ 2636] binlog: replaying log ./binlog.009
+[Wed Jun  1 11:22:27.661 2011] [ 2636] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  1 11:22:27.661 2011] [ 2636] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Wed Jun  1 11:22:27.661 2011] [ 2636] binlog: replaying log ./binlog.010
+[Wed Jun  1 11:22:27.661 2011] [ 2636] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  1 11:22:27.661 2011] [ 2636] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Wed Jun  1 11:22:27.661 2011] [ 2636] binlog: replaying log ./binlog.011
+[Wed Jun  1 11:22:27.662 2011] [ 2636] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  1 11:22:27.662 2011] [ 2636] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Wed Jun  1 11:22:27.662 2011] [ 2636] binlog: finished replaying total 11 in 0.019 sec
+[Wed Jun  1 11:22:27.664 2011] [ 2636] accepting connections
+[Thu Jun  2 00:25:56.020 2011] [ 2556] binlog: replaying log ./binlog.001
+[Thu Jun  2 00:25:56.020 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 00:25:56.020 2011] [ 2556] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Thu Jun  2 00:25:56.020 2011] [ 2556] binlog: replaying log ./binlog.002
+[Thu Jun  2 00:25:56.020 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 00:25:56.020 2011] [ 2556] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Thu Jun  2 00:25:56.020 2011] [ 2556] binlog: replaying log ./binlog.003
+[Thu Jun  2 00:25:56.055 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 00:25:56.055 2011] [ 2556] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Thu Jun  2 00:25:56.055 2011] [ 2556] binlog: replaying log ./binlog.004
+[Thu Jun  2 00:25:56.101 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 00:25:56.101 2011] [ 2556] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Thu Jun  2 00:25:56.101 2011] [ 2556] binlog: replaying log ./binlog.005
+[Thu Jun  2 00:25:56.101 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 00:25:56.101 2011] [ 2556] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Thu Jun  2 00:25:56.101 2011] [ 2556] binlog: replaying log ./binlog.006
+[Thu Jun  2 00:25:56.102 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 00:25:56.102 2011] [ 2556] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Thu Jun  2 00:25:56.102 2011] [ 2556] binlog: replaying log ./binlog.007
+[Thu Jun  2 00:25:56.102 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 00:25:56.102 2011] [ 2556] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Thu Jun  2 00:25:56.102 2011] [ 2556] binlog: replaying log ./binlog.008
+[Thu Jun  2 00:25:56.129 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 00:25:56.129 2011] [ 2556] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Thu Jun  2 00:25:56.129 2011] [ 2556] binlog: replaying log ./binlog.009
+[Thu Jun  2 00:25:56.130 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 00:25:56.130 2011] [ 2556] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Thu Jun  2 00:25:56.130 2011] [ 2556] binlog: replaying log ./binlog.010
+[Thu Jun  2 00:25:56.130 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 00:25:56.130 2011] [ 2556] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Thu Jun  2 00:25:56.130 2011] [ 2556] binlog: replaying log ./binlog.011
+[Thu Jun  2 00:25:56.152 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 00:25:56.152 2011] [ 2556] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Thu Jun  2 00:25:56.152 2011] [ 2556] binlog: replaying log ./binlog.012
+[Thu Jun  2 00:25:56.153 2011] [ 2556] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 00:25:56.153 2011] [ 2556] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Thu Jun  2 00:25:56.153 2011] [ 2556] binlog: finished replaying total 12 in 0.133 sec
+[Thu Jun  2 00:25:56.179 2011] [ 2556] accepting connections
+[Thu Jun  2 06:11:21.105 2011] [ 2600] binlog: replaying log ./binlog.001
+[Thu Jun  2 06:11:21.105 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.105 2011] [ 2600] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.105 2011] [ 2600] binlog: replaying log ./binlog.002
+[Thu Jun  2 06:11:21.106 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.106 2011] [ 2600] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.106 2011] [ 2600] binlog: replaying log ./binlog.003
+[Thu Jun  2 06:11:21.106 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.106 2011] [ 2600] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.106 2011] [ 2600] binlog: replaying log ./binlog.004
+[Thu Jun  2 06:11:21.107 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.107 2011] [ 2600] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.107 2011] [ 2600] binlog: replaying log ./binlog.005
+[Thu Jun  2 06:11:21.107 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.107 2011] [ 2600] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.107 2011] [ 2600] binlog: replaying log ./binlog.006
+[Thu Jun  2 06:11:21.108 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.108 2011] [ 2600] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.108 2011] [ 2600] binlog: replaying log ./binlog.007
+[Thu Jun  2 06:11:21.108 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.108 2011] [ 2600] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.108 2011] [ 2600] binlog: replaying log ./binlog.008
+[Thu Jun  2 06:11:21.108 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.108 2011] [ 2600] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.109 2011] [ 2600] binlog: replaying log ./binlog.009
+[Thu Jun  2 06:11:21.109 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.109 2011] [ 2600] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.109 2011] [ 2600] binlog: replaying log ./binlog.010
+[Thu Jun  2 06:11:21.109 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.109 2011] [ 2600] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.109 2011] [ 2600] binlog: replaying log ./binlog.011
+[Thu Jun  2 06:11:21.110 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.110 2011] [ 2600] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.110 2011] [ 2600] binlog: replaying log ./binlog.012
+[Thu Jun  2 06:11:21.110 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.110 2011] [ 2600] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.110 2011] [ 2600] binlog: replaying log ./binlog.013
+[Thu Jun  2 06:11:21.111 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 06:11:21.111 2011] [ 2600] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Thu Jun  2 06:11:21.111 2011] [ 2600] binlog: finished replaying total 13 in 0.005 sec
+[Thu Jun  2 06:11:21.143 2011] [ 2600] accepting connections
+[Thu Jun  2 12:12:22.129 2011] [ 2600] binlog: replaying log ./binlog.001
+[Thu Jun  2 12:12:22.130 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.130 2011] [ 2600] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.130 2011] [ 2600] binlog: replaying log ./binlog.002
+[Thu Jun  2 12:12:22.130 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.130 2011] [ 2600] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.130 2011] [ 2600] binlog: replaying log ./binlog.003
+[Thu Jun  2 12:12:22.131 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.131 2011] [ 2600] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.131 2011] [ 2600] binlog: replaying log ./binlog.004
+[Thu Jun  2 12:12:22.131 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.131 2011] [ 2600] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.131 2011] [ 2600] binlog: replaying log ./binlog.005
+[Thu Jun  2 12:12:22.131 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.131 2011] [ 2600] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.131 2011] [ 2600] binlog: replaying log ./binlog.006
+[Thu Jun  2 12:12:22.132 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.132 2011] [ 2600] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.132 2011] [ 2600] binlog: replaying log ./binlog.007
+[Thu Jun  2 12:12:22.132 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.132 2011] [ 2600] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.132 2011] [ 2600] binlog: replaying log ./binlog.008
+[Thu Jun  2 12:12:22.133 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.133 2011] [ 2600] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.133 2011] [ 2600] binlog: replaying log ./binlog.009
+[Thu Jun  2 12:12:22.133 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.133 2011] [ 2600] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.133 2011] [ 2600] binlog: replaying log ./binlog.010
+[Thu Jun  2 12:12:22.133 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.133 2011] [ 2600] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.133 2011] [ 2600] binlog: replaying log ./binlog.011
+[Thu Jun  2 12:12:22.134 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.134 2011] [ 2600] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.134 2011] [ 2600] binlog: replaying log ./binlog.012
+[Thu Jun  2 12:12:22.134 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.134 2011] [ 2600] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.134 2011] [ 2600] binlog: replaying log ./binlog.013
+[Thu Jun  2 12:12:22.135 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.135 2011] [ 2600] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.135 2011] [ 2600] binlog: replaying log ./binlog.014
+[Thu Jun  2 12:12:22.135 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  2 12:12:22.135 2011] [ 2600] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Thu Jun  2 12:12:22.135 2011] [ 2600] binlog: finished replaying total 14 in 0.005 sec
+[Thu Jun  2 12:12:22.137 2011] [ 2600] accepting connections
+[Fri Jun  3 09:17:12.610 2011] [ 3020] binlog: replaying log ./binlog.001
+[Fri Jun  3 09:17:12.611 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.611 2011] [ 3020] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.611 2011] [ 3020] binlog: replaying log ./binlog.002
+[Fri Jun  3 09:17:12.611 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.611 2011] [ 3020] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.611 2011] [ 3020] binlog: replaying log ./binlog.003
+[Fri Jun  3 09:17:12.612 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.612 2011] [ 3020] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.612 2011] [ 3020] binlog: replaying log ./binlog.004
+[Fri Jun  3 09:17:12.636 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.636 2011] [ 3020] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.636 2011] [ 3020] binlog: replaying log ./binlog.005
+[Fri Jun  3 09:17:12.637 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.637 2011] [ 3020] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.637 2011] [ 3020] binlog: replaying log ./binlog.006
+[Fri Jun  3 09:17:12.638 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.638 2011] [ 3020] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.638 2011] [ 3020] binlog: replaying log ./binlog.007
+[Fri Jun  3 09:17:12.638 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.638 2011] [ 3020] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.638 2011] [ 3020] binlog: replaying log ./binlog.008
+[Fri Jun  3 09:17:12.638 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.638 2011] [ 3020] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.639 2011] [ 3020] binlog: replaying log ./binlog.009
+[Fri Jun  3 09:17:12.639 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.639 2011] [ 3020] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.639 2011] [ 3020] binlog: replaying log ./binlog.010
+[Fri Jun  3 09:17:12.640 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.640 2011] [ 3020] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.640 2011] [ 3020] binlog: replaying log ./binlog.011
+[Fri Jun  3 09:17:12.640 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.640 2011] [ 3020] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.640 2011] [ 3020] binlog: replaying log ./binlog.012
+[Fri Jun  3 09:17:12.640 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.640 2011] [ 3020] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.640 2011] [ 3020] binlog: replaying log ./binlog.013
+[Fri Jun  3 09:17:12.641 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.641 2011] [ 3020] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.641 2011] [ 3020] binlog: replaying log ./binlog.014
+[Fri Jun  3 09:17:12.641 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.641 2011] [ 3020] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.641 2011] [ 3020] binlog: replaying log ./binlog.015
+[Fri Jun  3 09:17:12.642 2011] [ 3020] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun  3 09:17:12.642 2011] [ 3020] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Fri Jun  3 09:17:12.642 2011] [ 3020] binlog: finished replaying total 15 in 0.031 sec
+[Fri Jun  3 09:17:12.644 2011] [ 3020] accepting connections
+[Sun Jun  5 08:33:37.219 2011] [ 2708] binlog: replaying log ./binlog.001
+[Sun Jun  5 08:33:37.219 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.219 2011] [ 2708] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.219 2011] [ 2708] binlog: replaying log ./binlog.002
+[Sun Jun  5 08:33:37.220 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.220 2011] [ 2708] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.220 2011] [ 2708] binlog: replaying log ./binlog.003
+[Sun Jun  5 08:33:37.220 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.220 2011] [ 2708] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.220 2011] [ 2708] binlog: replaying log ./binlog.004
+[Sun Jun  5 08:33:37.220 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.221 2011] [ 2708] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.221 2011] [ 2708] binlog: replaying log ./binlog.005
+[Sun Jun  5 08:33:37.221 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.221 2011] [ 2708] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.221 2011] [ 2708] binlog: replaying log ./binlog.006
+[Sun Jun  5 08:33:37.221 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.222 2011] [ 2708] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.222 2011] [ 2708] binlog: replaying log ./binlog.007
+[Sun Jun  5 08:33:37.222 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.222 2011] [ 2708] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.222 2011] [ 2708] binlog: replaying log ./binlog.008
+[Sun Jun  5 08:33:37.222 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.222 2011] [ 2708] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.222 2011] [ 2708] binlog: replaying log ./binlog.009
+[Sun Jun  5 08:33:37.223 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.223 2011] [ 2708] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.223 2011] [ 2708] binlog: replaying log ./binlog.010
+[Sun Jun  5 08:33:37.223 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.223 2011] [ 2708] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.223 2011] [ 2708] binlog: replaying log ./binlog.011
+[Sun Jun  5 08:33:37.223 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.223 2011] [ 2708] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.223 2011] [ 2708] binlog: replaying log ./binlog.012
+[Sun Jun  5 08:33:37.224 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.224 2011] [ 2708] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.224 2011] [ 2708] binlog: replaying log ./binlog.013
+[Sun Jun  5 08:33:37.224 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.224 2011] [ 2708] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.224 2011] [ 2708] binlog: replaying log ./binlog.014
+[Sun Jun  5 08:33:37.225 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.225 2011] [ 2708] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.225 2011] [ 2708] binlog: replaying log ./binlog.015
+[Sun Jun  5 08:33:37.225 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.225 2011] [ 2708] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.225 2011] [ 2708] binlog: replaying log ./binlog.016
+[Sun Jun  5 08:33:37.271 2011] [ 2708] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:33:37.271 2011] [ 2708] binlog: finished replaying ./binlog.016; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:33:37.271 2011] [ 2708] binlog: finished replaying total 16 in 0.051 sec
+[Sun Jun  5 08:33:37.272 2011] [ 2708] accepting connections
+[Sun Jun  5 08:36:54.363 2011] [ 2720] binlog: replaying log ./binlog.001
+[Sun Jun  5 08:36:54.363 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.363 2011] [ 2720] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.363 2011] [ 2720] binlog: replaying log ./binlog.002
+[Sun Jun  5 08:36:54.364 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.364 2011] [ 2720] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.364 2011] [ 2720] binlog: replaying log ./binlog.003
+[Sun Jun  5 08:36:54.365 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.365 2011] [ 2720] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.365 2011] [ 2720] binlog: replaying log ./binlog.004
+[Sun Jun  5 08:36:54.365 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.365 2011] [ 2720] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.365 2011] [ 2720] binlog: replaying log ./binlog.005
+[Sun Jun  5 08:36:54.365 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.365 2011] [ 2720] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.365 2011] [ 2720] binlog: replaying log ./binlog.006
+[Sun Jun  5 08:36:54.366 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.366 2011] [ 2720] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.366 2011] [ 2720] binlog: replaying log ./binlog.007
+[Sun Jun  5 08:36:54.366 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.366 2011] [ 2720] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.366 2011] [ 2720] binlog: replaying log ./binlog.008
+[Sun Jun  5 08:36:54.367 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.367 2011] [ 2720] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.367 2011] [ 2720] binlog: replaying log ./binlog.009
+[Sun Jun  5 08:36:54.367 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.367 2011] [ 2720] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.367 2011] [ 2720] binlog: replaying log ./binlog.010
+[Sun Jun  5 08:36:54.368 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.368 2011] [ 2720] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.368 2011] [ 2720] binlog: replaying log ./binlog.011
+[Sun Jun  5 08:36:54.368 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.368 2011] [ 2720] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.368 2011] [ 2720] binlog: replaying log ./binlog.012
+[Sun Jun  5 08:36:54.368 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.368 2011] [ 2720] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.368 2011] [ 2720] binlog: replaying log ./binlog.013
+[Sun Jun  5 08:36:54.369 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.369 2011] [ 2720] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.369 2011] [ 2720] binlog: replaying log ./binlog.014
+[Sun Jun  5 08:36:54.369 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.369 2011] [ 2720] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.369 2011] [ 2720] binlog: replaying log ./binlog.015
+[Sun Jun  5 08:36:54.370 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.370 2011] [ 2720] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.370 2011] [ 2720] binlog: replaying log ./binlog.016
+[Sun Jun  5 08:36:54.387 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.387 2011] [ 2720] binlog: finished replaying ./binlog.016; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.387 2011] [ 2720] binlog: replaying log ./binlog.017
+[Sun Jun  5 08:36:54.387 2011] [ 2720] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sun Jun  5 08:36:54.387 2011] [ 2720] binlog: finished replaying ./binlog.017; 0.0 MB in 0.000 sec
+[Sun Jun  5 08:36:54.387 2011] [ 2720] binlog: finished replaying total 17 in 0.024 sec
+[Sun Jun  5 08:36:54.389 2011] [ 2720] accepting connections
+[Mon Jun  6 10:10:22.365 2011] [ 2668] binlog: replaying log ./binlog.001
+[Mon Jun  6 10:10:22.366 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.366 2011] [ 2668] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.366 2011] [ 2668] binlog: replaying log ./binlog.002
+[Mon Jun  6 10:10:22.366 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.366 2011] [ 2668] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.366 2011] [ 2668] binlog: replaying log ./binlog.003
+[Mon Jun  6 10:10:22.367 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.367 2011] [ 2668] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.367 2011] [ 2668] binlog: replaying log ./binlog.004
+[Mon Jun  6 10:10:22.367 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.367 2011] [ 2668] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.367 2011] [ 2668] binlog: replaying log ./binlog.005
+[Mon Jun  6 10:10:22.367 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.367 2011] [ 2668] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.367 2011] [ 2668] binlog: replaying log ./binlog.006
+[Mon Jun  6 10:10:22.368 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.368 2011] [ 2668] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.368 2011] [ 2668] binlog: replaying log ./binlog.007
+[Mon Jun  6 10:10:22.368 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.368 2011] [ 2668] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.368 2011] [ 2668] binlog: replaying log ./binlog.008
+[Mon Jun  6 10:10:22.369 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.369 2011] [ 2668] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.369 2011] [ 2668] binlog: replaying log ./binlog.009
+[Mon Jun  6 10:10:22.369 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.369 2011] [ 2668] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.369 2011] [ 2668] binlog: replaying log ./binlog.010
+[Mon Jun  6 10:10:22.369 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.369 2011] [ 2668] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.369 2011] [ 2668] binlog: replaying log ./binlog.011
+[Mon Jun  6 10:10:22.370 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.370 2011] [ 2668] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.370 2011] [ 2668] binlog: replaying log ./binlog.012
+[Mon Jun  6 10:10:22.370 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.370 2011] [ 2668] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.370 2011] [ 2668] binlog: replaying log ./binlog.013
+[Mon Jun  6 10:10:22.371 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.371 2011] [ 2668] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.371 2011] [ 2668] binlog: replaying log ./binlog.014
+[Mon Jun  6 10:10:22.371 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.371 2011] [ 2668] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.371 2011] [ 2668] binlog: replaying log ./binlog.015
+[Mon Jun  6 10:10:22.372 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.372 2011] [ 2668] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.372 2011] [ 2668] binlog: replaying log ./binlog.016
+[Mon Jun  6 10:10:22.372 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.372 2011] [ 2668] binlog: finished replaying ./binlog.016; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.372 2011] [ 2668] binlog: replaying log ./binlog.017
+[Mon Jun  6 10:10:22.372 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.372 2011] [ 2668] binlog: finished replaying ./binlog.017; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.372 2011] [ 2668] binlog: replaying log ./binlog.018
+[Mon Jun  6 10:10:22.373 2011] [ 2668] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 10:10:22.373 2011] [ 2668] binlog: finished replaying ./binlog.018; 0.0 MB in 0.000 sec
+[Mon Jun  6 10:10:22.373 2011] [ 2668] binlog: finished replaying total 18 in 0.007 sec
+[Mon Jun  6 10:10:22.394 2011] [ 2668] accepting connections
+[Mon Jun  6 22:34:16.331 2011] [ 3012] binlog: replaying log ./binlog.001
+[Mon Jun  6 22:34:16.331 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.331 2011] [ 3012] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.331 2011] [ 3012] binlog: replaying log ./binlog.002
+[Mon Jun  6 22:34:16.331 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.331 2011] [ 3012] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.331 2011] [ 3012] binlog: replaying log ./binlog.003
+[Mon Jun  6 22:34:16.332 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.332 2011] [ 3012] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.332 2011] [ 3012] binlog: replaying log ./binlog.004
+[Mon Jun  6 22:34:16.332 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.332 2011] [ 3012] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.332 2011] [ 3012] binlog: replaying log ./binlog.005
+[Mon Jun  6 22:34:16.332 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.333 2011] [ 3012] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.333 2011] [ 3012] binlog: replaying log ./binlog.006
+[Mon Jun  6 22:34:16.333 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.333 2011] [ 3012] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.333 2011] [ 3012] binlog: replaying log ./binlog.007
+[Mon Jun  6 22:34:16.333 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.333 2011] [ 3012] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.333 2011] [ 3012] binlog: replaying log ./binlog.008
+[Mon Jun  6 22:34:16.334 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.334 2011] [ 3012] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.334 2011] [ 3012] binlog: replaying log ./binlog.009
+[Mon Jun  6 22:34:16.334 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.334 2011] [ 3012] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.334 2011] [ 3012] binlog: replaying log ./binlog.010
+[Mon Jun  6 22:34:16.334 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.334 2011] [ 3012] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.334 2011] [ 3012] binlog: replaying log ./binlog.011
+[Mon Jun  6 22:34:16.335 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.335 2011] [ 3012] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.335 2011] [ 3012] binlog: replaying log ./binlog.012
+[Mon Jun  6 22:34:16.335 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.335 2011] [ 3012] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.335 2011] [ 3012] binlog: replaying log ./binlog.013
+[Mon Jun  6 22:34:16.335 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.335 2011] [ 3012] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.335 2011] [ 3012] binlog: replaying log ./binlog.014
+[Mon Jun  6 22:34:16.336 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.336 2011] [ 3012] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.336 2011] [ 3012] binlog: replaying log ./binlog.015
+[Mon Jun  6 22:34:16.336 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.336 2011] [ 3012] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.336 2011] [ 3012] binlog: replaying log ./binlog.016
+[Mon Jun  6 22:34:16.337 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.337 2011] [ 3012] binlog: finished replaying ./binlog.016; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.337 2011] [ 3012] binlog: replaying log ./binlog.017
+[Mon Jun  6 22:34:16.337 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.337 2011] [ 3012] binlog: finished replaying ./binlog.017; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.337 2011] [ 3012] binlog: replaying log ./binlog.018
+[Mon Jun  6 22:34:16.337 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.337 2011] [ 3012] binlog: finished replaying ./binlog.018; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.337 2011] [ 3012] binlog: replaying log ./binlog.019
+[Mon Jun  6 22:34:16.376 2011] [ 3012] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Mon Jun  6 22:34:16.376 2011] [ 3012] binlog: finished replaying ./binlog.019; 0.0 MB in 0.000 sec
+[Mon Jun  6 22:34:16.376 2011] [ 3012] binlog: finished replaying total 19 in 0.045 sec
+[Mon Jun  6 22:34:16.421 2011] [ 3012] accepting connections
+[Tue Jun  7 10:21:12.651 2011] [ 2684] binlog: replaying log ./binlog.001
+[Tue Jun  7 10:21:12.651 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.651 2011] [ 2684] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.651 2011] [ 2684] binlog: replaying log ./binlog.002
+[Tue Jun  7 10:21:12.651 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.651 2011] [ 2684] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.651 2011] [ 2684] binlog: replaying log ./binlog.003
+[Tue Jun  7 10:21:12.652 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.652 2011] [ 2684] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.652 2011] [ 2684] binlog: replaying log ./binlog.004
+[Tue Jun  7 10:21:12.652 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.652 2011] [ 2684] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.652 2011] [ 2684] binlog: replaying log ./binlog.005
+[Tue Jun  7 10:21:12.653 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.653 2011] [ 2684] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.653 2011] [ 2684] binlog: replaying log ./binlog.006
+[Tue Jun  7 10:21:12.653 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.653 2011] [ 2684] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.653 2011] [ 2684] binlog: replaying log ./binlog.007
+[Tue Jun  7 10:21:12.653 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.653 2011] [ 2684] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.654 2011] [ 2684] binlog: replaying log ./binlog.008
+[Tue Jun  7 10:21:12.654 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.654 2011] [ 2684] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.654 2011] [ 2684] binlog: replaying log ./binlog.009
+[Tue Jun  7 10:21:12.654 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.654 2011] [ 2684] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.654 2011] [ 2684] binlog: replaying log ./binlog.010
+[Tue Jun  7 10:21:12.655 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.655 2011] [ 2684] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.655 2011] [ 2684] binlog: replaying log ./binlog.011
+[Tue Jun  7 10:21:12.655 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.655 2011] [ 2684] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.655 2011] [ 2684] binlog: replaying log ./binlog.012
+[Tue Jun  7 10:21:12.656 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.656 2011] [ 2684] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.656 2011] [ 2684] binlog: replaying log ./binlog.013
+[Tue Jun  7 10:21:12.656 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.656 2011] [ 2684] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.656 2011] [ 2684] binlog: replaying log ./binlog.014
+[Tue Jun  7 10:21:12.656 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.656 2011] [ 2684] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.656 2011] [ 2684] binlog: replaying log ./binlog.015
+[Tue Jun  7 10:21:12.657 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.657 2011] [ 2684] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.657 2011] [ 2684] binlog: replaying log ./binlog.016
+[Tue Jun  7 10:21:12.657 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.657 2011] [ 2684] binlog: finished replaying ./binlog.016; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.657 2011] [ 2684] binlog: replaying log ./binlog.017
+[Tue Jun  7 10:21:12.658 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.658 2011] [ 2684] binlog: finished replaying ./binlog.017; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.658 2011] [ 2684] binlog: replaying log ./binlog.018
+[Tue Jun  7 10:21:12.658 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.658 2011] [ 2684] binlog: finished replaying ./binlog.018; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.658 2011] [ 2684] binlog: replaying log ./binlog.019
+[Tue Jun  7 10:21:12.658 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.658 2011] [ 2684] binlog: finished replaying ./binlog.019; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.659 2011] [ 2684] binlog: replaying log ./binlog.020
+[Tue Jun  7 10:21:12.659 2011] [ 2684] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 10:21:12.659 2011] [ 2684] binlog: finished replaying ./binlog.020; 0.0 MB in 0.000 sec
+[Tue Jun  7 10:21:12.659 2011] [ 2684] binlog: finished replaying total 20 in 0.008 sec
+[Tue Jun  7 10:21:12.661 2011] [ 2684] accepting connections
+[Tue Jun  7 22:01:46.536 2011] [ 2600] binlog: replaying log ./binlog.001
+[Tue Jun  7 22:01:46.536 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.536 2011] [ 2600] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.536 2011] [ 2600] binlog: replaying log ./binlog.002
+[Tue Jun  7 22:01:46.536 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.536 2011] [ 2600] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.537 2011] [ 2600] binlog: replaying log ./binlog.003
+[Tue Jun  7 22:01:46.537 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.537 2011] [ 2600] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.537 2011] [ 2600] binlog: replaying log ./binlog.004
+[Tue Jun  7 22:01:46.537 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.538 2011] [ 2600] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.538 2011] [ 2600] binlog: replaying log ./binlog.005
+[Tue Jun  7 22:01:46.538 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.538 2011] [ 2600] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.538 2011] [ 2600] binlog: replaying log ./binlog.006
+[Tue Jun  7 22:01:46.538 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.538 2011] [ 2600] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.539 2011] [ 2600] binlog: replaying log ./binlog.007
+[Tue Jun  7 22:01:46.539 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.539 2011] [ 2600] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.539 2011] [ 2600] binlog: replaying log ./binlog.008
+[Tue Jun  7 22:01:46.539 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.539 2011] [ 2600] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.539 2011] [ 2600] binlog: replaying log ./binlog.009
+[Tue Jun  7 22:01:46.540 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.540 2011] [ 2600] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.540 2011] [ 2600] binlog: replaying log ./binlog.010
+[Tue Jun  7 22:01:46.540 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.540 2011] [ 2600] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.540 2011] [ 2600] binlog: replaying log ./binlog.011
+[Tue Jun  7 22:01:46.541 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.541 2011] [ 2600] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.541 2011] [ 2600] binlog: replaying log ./binlog.012
+[Tue Jun  7 22:01:46.541 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.541 2011] [ 2600] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.541 2011] [ 2600] binlog: replaying log ./binlog.013
+[Tue Jun  7 22:01:46.542 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.542 2011] [ 2600] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.542 2011] [ 2600] binlog: replaying log ./binlog.014
+[Tue Jun  7 22:01:46.542 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.542 2011] [ 2600] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.542 2011] [ 2600] binlog: replaying log ./binlog.015
+[Tue Jun  7 22:01:46.564 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.564 2011] [ 2600] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.564 2011] [ 2600] binlog: replaying log ./binlog.016
+[Tue Jun  7 22:01:46.564 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.564 2011] [ 2600] binlog: finished replaying ./binlog.016; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.564 2011] [ 2600] binlog: replaying log ./binlog.017
+[Tue Jun  7 22:01:46.565 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.565 2011] [ 2600] binlog: finished replaying ./binlog.017; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.565 2011] [ 2600] binlog: replaying log ./binlog.018
+[Tue Jun  7 22:01:46.565 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.565 2011] [ 2600] binlog: finished replaying ./binlog.018; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.565 2011] [ 2600] binlog: replaying log ./binlog.019
+[Tue Jun  7 22:01:46.565 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.565 2011] [ 2600] binlog: finished replaying ./binlog.019; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.565 2011] [ 2600] binlog: replaying log ./binlog.020
+[Tue Jun  7 22:01:46.566 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.566 2011] [ 2600] binlog: finished replaying ./binlog.020; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.566 2011] [ 2600] binlog: replaying log ./binlog.021
+[Tue Jun  7 22:01:46.585 2011] [ 2600] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Tue Jun  7 22:01:46.585 2011] [ 2600] binlog: finished replaying ./binlog.021; 0.0 MB in 0.000 sec
+[Tue Jun  7 22:01:46.585 2011] [ 2600] binlog: finished replaying total 21 in 0.049 sec
+[Tue Jun  7 22:01:46.587 2011] [ 2600] accepting connections
+[Wed Jun  8 10:27:59.302 2011] [ 2676] binlog: replaying log ./binlog.001
+[Wed Jun  8 10:27:59.302 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.302 2011] [ 2676] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.302 2011] [ 2676] binlog: replaying log ./binlog.002
+[Wed Jun  8 10:27:59.303 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.303 2011] [ 2676] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.303 2011] [ 2676] binlog: replaying log ./binlog.003
+[Wed Jun  8 10:27:59.303 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.303 2011] [ 2676] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.303 2011] [ 2676] binlog: replaying log ./binlog.004
+[Wed Jun  8 10:27:59.303 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.303 2011] [ 2676] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.303 2011] [ 2676] binlog: replaying log ./binlog.005
+[Wed Jun  8 10:27:59.304 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.304 2011] [ 2676] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.304 2011] [ 2676] binlog: replaying log ./binlog.006
+[Wed Jun  8 10:27:59.305 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.305 2011] [ 2676] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.305 2011] [ 2676] binlog: replaying log ./binlog.007
+[Wed Jun  8 10:27:59.305 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.305 2011] [ 2676] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.305 2011] [ 2676] binlog: replaying log ./binlog.008
+[Wed Jun  8 10:27:59.306 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.306 2011] [ 2676] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.306 2011] [ 2676] binlog: replaying log ./binlog.009
+[Wed Jun  8 10:27:59.307 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.307 2011] [ 2676] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.307 2011] [ 2676] binlog: replaying log ./binlog.010
+[Wed Jun  8 10:27:59.307 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.307 2011] [ 2676] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.307 2011] [ 2676] binlog: replaying log ./binlog.011
+[Wed Jun  8 10:27:59.308 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.308 2011] [ 2676] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.308 2011] [ 2676] binlog: replaying log ./binlog.012
+[Wed Jun  8 10:27:59.308 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.308 2011] [ 2676] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.308 2011] [ 2676] binlog: replaying log ./binlog.013
+[Wed Jun  8 10:27:59.309 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.309 2011] [ 2676] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.309 2011] [ 2676] binlog: replaying log ./binlog.014
+[Wed Jun  8 10:27:59.310 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.310 2011] [ 2676] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.310 2011] [ 2676] binlog: replaying log ./binlog.015
+[Wed Jun  8 10:27:59.311 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.311 2011] [ 2676] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.311 2011] [ 2676] binlog: replaying log ./binlog.016
+[Wed Jun  8 10:27:59.311 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.311 2011] [ 2676] binlog: finished replaying ./binlog.016; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.311 2011] [ 2676] binlog: replaying log ./binlog.017
+[Wed Jun  8 10:27:59.311 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.311 2011] [ 2676] binlog: finished replaying ./binlog.017; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.311 2011] [ 2676] binlog: replaying log ./binlog.018
+[Wed Jun  8 10:27:59.312 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.312 2011] [ 2676] binlog: finished replaying ./binlog.018; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.312 2011] [ 2676] binlog: replaying log ./binlog.019
+[Wed Jun  8 10:27:59.312 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.312 2011] [ 2676] binlog: finished replaying ./binlog.019; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.312 2011] [ 2676] binlog: replaying log ./binlog.020
+[Wed Jun  8 10:27:59.313 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.313 2011] [ 2676] binlog: finished replaying ./binlog.020; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.313 2011] [ 2676] binlog: replaying log ./binlog.021
+[Wed Jun  8 10:27:59.324 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.324 2011] [ 2676] binlog: finished replaying ./binlog.021; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.324 2011] [ 2676] binlog: replaying log ./binlog.022
+[Wed Jun  8 10:27:59.325 2011] [ 2676] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Wed Jun  8 10:27:59.325 2011] [ 2676] binlog: finished replaying ./binlog.022; 0.0 MB in 0.000 sec
+[Wed Jun  8 10:27:59.325 2011] [ 2676] binlog: finished replaying total 22 in 0.023 sec
+[Wed Jun  8 10:27:59.348 2011] [ 2676] accepting connections
+[Thu Jun  9 08:29:17.931 2011] [ 2504] binlog: replaying log ./binlog.001
+[Thu Jun  9 08:29:17.932 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:17.932 2011] [ 2504] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:17.932 2011] [ 2504] binlog: replaying log ./binlog.002
+[Thu Jun  9 08:29:17.932 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:17.932 2011] [ 2504] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:17.932 2011] [ 2504] binlog: replaying log ./binlog.003
+[Thu Jun  9 08:29:17.932 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:17.932 2011] [ 2504] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:17.932 2011] [ 2504] binlog: replaying log ./binlog.004
+[Thu Jun  9 08:29:17.979 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:17.979 2011] [ 2504] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:17.979 2011] [ 2504] binlog: replaying log ./binlog.005
+[Thu Jun  9 08:29:17.979 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:17.979 2011] [ 2504] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:17.979 2011] [ 2504] binlog: replaying log ./binlog.006
+[Thu Jun  9 08:29:18.005 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.005 2011] [ 2504] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.005 2011] [ 2504] binlog: replaying log ./binlog.007
+[Thu Jun  9 08:29:18.005 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.005 2011] [ 2504] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.005 2011] [ 2504] binlog: replaying log ./binlog.008
+[Thu Jun  9 08:29:18.005 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.005 2011] [ 2504] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.005 2011] [ 2504] binlog: replaying log ./binlog.009
+[Thu Jun  9 08:29:18.006 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.006 2011] [ 2504] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.006 2011] [ 2504] binlog: replaying log ./binlog.010
+[Thu Jun  9 08:29:18.006 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.006 2011] [ 2504] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.006 2011] [ 2504] binlog: replaying log ./binlog.011
+[Thu Jun  9 08:29:18.007 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.007 2011] [ 2504] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.007 2011] [ 2504] binlog: replaying log ./binlog.012
+[Thu Jun  9 08:29:18.007 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.007 2011] [ 2504] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.007 2011] [ 2504] binlog: replaying log ./binlog.013
+[Thu Jun  9 08:29:18.008 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.008 2011] [ 2504] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.008 2011] [ 2504] binlog: replaying log ./binlog.014
+[Thu Jun  9 08:29:18.008 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.008 2011] [ 2504] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.008 2011] [ 2504] binlog: replaying log ./binlog.015
+[Thu Jun  9 08:29:18.009 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.009 2011] [ 2504] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.009 2011] [ 2504] binlog: replaying log ./binlog.016
+[Thu Jun  9 08:29:18.009 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.009 2011] [ 2504] binlog: finished replaying ./binlog.016; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.009 2011] [ 2504] binlog: replaying log ./binlog.017
+[Thu Jun  9 08:29:18.009 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.009 2011] [ 2504] binlog: finished replaying ./binlog.017; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.009 2011] [ 2504] binlog: replaying log ./binlog.018
+[Thu Jun  9 08:29:18.010 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.010 2011] [ 2504] binlog: finished replaying ./binlog.018; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.010 2011] [ 2504] binlog: replaying log ./binlog.019
+[Thu Jun  9 08:29:18.049 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.049 2011] [ 2504] binlog: finished replaying ./binlog.019; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.049 2011] [ 2504] binlog: replaying log ./binlog.020
+[Thu Jun  9 08:29:18.049 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.049 2011] [ 2504] binlog: finished replaying ./binlog.020; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.049 2011] [ 2504] binlog: replaying log ./binlog.021
+[Thu Jun  9 08:29:18.050 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.050 2011] [ 2504] binlog: finished replaying ./binlog.021; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.050 2011] [ 2504] binlog: replaying log ./binlog.022
+[Thu Jun  9 08:29:18.102 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.102 2011] [ 2504] binlog: finished replaying ./binlog.022; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.102 2011] [ 2504] binlog: replaying log ./binlog.023
+[Thu Jun  9 08:29:18.102 2011] [ 2504] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:29:18.102 2011] [ 2504] binlog: finished replaying ./binlog.023; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:29:18.102 2011] [ 2504] binlog: finished replaying total 23 in 0.171 sec
+[Thu Jun  9 08:29:18.104 2011] [ 2504] accepting connections
+[Thu Jun  9 08:32:28.211 2011] [ 2560] binlog: replaying log ./binlog.001
+[Thu Jun  9 08:32:28.211 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.211 2011] [ 2560] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.211 2011] [ 2560] binlog: replaying log ./binlog.002
+[Thu Jun  9 08:32:28.211 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.211 2011] [ 2560] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.211 2011] [ 2560] binlog: replaying log ./binlog.003
+[Thu Jun  9 08:32:28.212 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.212 2011] [ 2560] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.212 2011] [ 2560] binlog: replaying log ./binlog.004
+[Thu Jun  9 08:32:28.225 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.225 2011] [ 2560] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.225 2011] [ 2560] binlog: replaying log ./binlog.005
+[Thu Jun  9 08:32:28.235 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.235 2011] [ 2560] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.235 2011] [ 2560] binlog: replaying log ./binlog.006
+[Thu Jun  9 08:32:28.235 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.235 2011] [ 2560] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.235 2011] [ 2560] binlog: replaying log ./binlog.007
+[Thu Jun  9 08:32:28.235 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.235 2011] [ 2560] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.235 2011] [ 2560] binlog: replaying log ./binlog.008
+[Thu Jun  9 08:32:28.236 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.236 2011] [ 2560] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.236 2011] [ 2560] binlog: replaying log ./binlog.009
+[Thu Jun  9 08:32:28.236 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.236 2011] [ 2560] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.236 2011] [ 2560] binlog: replaying log ./binlog.010
+[Thu Jun  9 08:32:28.237 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.237 2011] [ 2560] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.237 2011] [ 2560] binlog: replaying log ./binlog.011
+[Thu Jun  9 08:32:28.237 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.237 2011] [ 2560] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.237 2011] [ 2560] binlog: replaying log ./binlog.012
+[Thu Jun  9 08:32:28.238 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.238 2011] [ 2560] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.238 2011] [ 2560] binlog: replaying log ./binlog.013
+[Thu Jun  9 08:32:28.238 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.238 2011] [ 2560] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.238 2011] [ 2560] binlog: replaying log ./binlog.014
+[Thu Jun  9 08:32:28.239 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.239 2011] [ 2560] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.239 2011] [ 2560] binlog: replaying log ./binlog.015
+[Thu Jun  9 08:32:28.239 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.239 2011] [ 2560] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.239 2011] [ 2560] binlog: replaying log ./binlog.016
+[Thu Jun  9 08:32:28.240 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.240 2011] [ 2560] binlog: finished replaying ./binlog.016; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.240 2011] [ 2560] binlog: replaying log ./binlog.017
+[Thu Jun  9 08:32:28.240 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.240 2011] [ 2560] binlog: finished replaying ./binlog.017; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.240 2011] [ 2560] binlog: replaying log ./binlog.018
+[Thu Jun  9 08:32:28.241 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.241 2011] [ 2560] binlog: finished replaying ./binlog.018; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.241 2011] [ 2560] binlog: replaying log ./binlog.019
+[Thu Jun  9 08:32:28.241 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.241 2011] [ 2560] binlog: finished replaying ./binlog.019; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.241 2011] [ 2560] binlog: replaying log ./binlog.020
+[Thu Jun  9 08:32:28.241 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.241 2011] [ 2560] binlog: finished replaying ./binlog.020; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.242 2011] [ 2560] binlog: replaying log ./binlog.021
+[Thu Jun  9 08:32:28.242 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.242 2011] [ 2560] binlog: finished replaying ./binlog.021; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.242 2011] [ 2560] binlog: replaying log ./binlog.022
+[Thu Jun  9 08:32:28.257 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.257 2011] [ 2560] binlog: finished replaying ./binlog.022; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.257 2011] [ 2560] binlog: replaying log ./binlog.023
+[Thu Jun  9 08:32:28.258 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.258 2011] [ 2560] binlog: finished replaying ./binlog.023; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.258 2011] [ 2560] binlog: replaying log ./binlog.024
+[Thu Jun  9 08:32:28.258 2011] [ 2560] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Thu Jun  9 08:32:28.258 2011] [ 2560] binlog: finished replaying ./binlog.024; 0.0 MB in 0.000 sec
+[Thu Jun  9 08:32:28.258 2011] [ 2560] binlog: finished replaying total 24 in 0.047 sec
+[Thu Jun  9 08:32:28.261 2011] [ 2560] accepting connections
+[Fri Jun 10 09:39:22.553 2011] [ 2524] binlog: replaying log ./binlog.001
+[Fri Jun 10 09:39:22.553 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.553 2011] [ 2524] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.553 2011] [ 2524] binlog: replaying log ./binlog.002
+[Fri Jun 10 09:39:22.553 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.554 2011] [ 2524] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.554 2011] [ 2524] binlog: replaying log ./binlog.003
+[Fri Jun 10 09:39:22.612 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.612 2011] [ 2524] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.612 2011] [ 2524] binlog: replaying log ./binlog.004
+[Fri Jun 10 09:39:22.613 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.613 2011] [ 2524] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.613 2011] [ 2524] binlog: replaying log ./binlog.005
+[Fri Jun 10 09:39:22.613 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.613 2011] [ 2524] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.613 2011] [ 2524] binlog: replaying log ./binlog.006
+[Fri Jun 10 09:39:22.613 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.613 2011] [ 2524] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.613 2011] [ 2524] binlog: replaying log ./binlog.007
+[Fri Jun 10 09:39:22.614 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.614 2011] [ 2524] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.614 2011] [ 2524] binlog: replaying log ./binlog.008
+[Fri Jun 10 09:39:22.614 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.614 2011] [ 2524] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.614 2011] [ 2524] binlog: replaying log ./binlog.009
+[Fri Jun 10 09:39:22.615 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.615 2011] [ 2524] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.615 2011] [ 2524] binlog: replaying log ./binlog.010
+[Fri Jun 10 09:39:22.615 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.615 2011] [ 2524] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.615 2011] [ 2524] binlog: replaying log ./binlog.011
+[Fri Jun 10 09:39:22.616 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.616 2011] [ 2524] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.616 2011] [ 2524] binlog: replaying log ./binlog.012
+[Fri Jun 10 09:39:22.616 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.616 2011] [ 2524] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.616 2011] [ 2524] binlog: replaying log ./binlog.013
+[Fri Jun 10 09:39:22.617 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.617 2011] [ 2524] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.617 2011] [ 2524] binlog: replaying log ./binlog.014
+[Fri Jun 10 09:39:22.617 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.617 2011] [ 2524] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.617 2011] [ 2524] binlog: replaying log ./binlog.015
+[Fri Jun 10 09:39:22.663 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.663 2011] [ 2524] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.663 2011] [ 2524] binlog: replaying log ./binlog.016
+[Fri Jun 10 09:39:22.664 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.664 2011] [ 2524] binlog: finished replaying ./binlog.016; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.664 2011] [ 2524] binlog: replaying log ./binlog.017
+[Fri Jun 10 09:39:22.664 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.664 2011] [ 2524] binlog: finished replaying ./binlog.017; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.664 2011] [ 2524] binlog: replaying log ./binlog.018
+[Fri Jun 10 09:39:22.665 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.665 2011] [ 2524] binlog: finished replaying ./binlog.018; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.665 2011] [ 2524] binlog: replaying log ./binlog.019
+[Fri Jun 10 09:39:22.665 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.665 2011] [ 2524] binlog: finished replaying ./binlog.019; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.665 2011] [ 2524] binlog: replaying log ./binlog.020
+[Fri Jun 10 09:39:22.666 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.666 2011] [ 2524] binlog: finished replaying ./binlog.020; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.666 2011] [ 2524] binlog: replaying log ./binlog.021
+[Fri Jun 10 09:39:22.666 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.666 2011] [ 2524] binlog: finished replaying ./binlog.021; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.666 2011] [ 2524] binlog: replaying log ./binlog.022
+[Fri Jun 10 09:39:22.667 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.667 2011] [ 2524] binlog: finished replaying ./binlog.022; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.667 2011] [ 2524] binlog: replaying log ./binlog.023
+[Fri Jun 10 09:39:22.668 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.668 2011] [ 2524] binlog: finished replaying ./binlog.023; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.668 2011] [ 2524] binlog: replaying log ./binlog.024
+[Fri Jun 10 09:39:22.668 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.668 2011] [ 2524] binlog: finished replaying ./binlog.024; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.668 2011] [ 2524] binlog: replaying log ./binlog.025
+[Fri Jun 10 09:39:22.669 2011] [ 2524] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 09:39:22.669 2011] [ 2524] binlog: finished replaying ./binlog.025; 0.0 MB in 0.000 sec
+[Fri Jun 10 09:39:22.669 2011] [ 2524] binlog: finished replaying total 25 in 0.115 sec
+[Fri Jun 10 09:39:22.671 2011] [ 2524] accepting connections
+[Fri Jun 10 16:50:07.333 2011] [ 2788] binlog: replaying log ./binlog.001
+[Fri Jun 10 16:50:07.334 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.334 2011] [ 2788] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.334 2011] [ 2788] binlog: replaying log ./binlog.002
+[Fri Jun 10 16:50:07.363 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.363 2011] [ 2788] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.363 2011] [ 2788] binlog: replaying log ./binlog.003
+[Fri Jun 10 16:50:07.580 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.580 2011] [ 2788] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.580 2011] [ 2788] binlog: replaying log ./binlog.004
+[Fri Jun 10 16:50:07.615 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.615 2011] [ 2788] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.615 2011] [ 2788] binlog: replaying log ./binlog.005
+[Fri Jun 10 16:50:07.649 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.649 2011] [ 2788] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.649 2011] [ 2788] binlog: replaying log ./binlog.006
+[Fri Jun 10 16:50:07.665 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.665 2011] [ 2788] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.665 2011] [ 2788] binlog: replaying log ./binlog.007
+[Fri Jun 10 16:50:07.666 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.666 2011] [ 2788] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.666 2011] [ 2788] binlog: replaying log ./binlog.008
+[Fri Jun 10 16:50:07.718 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.718 2011] [ 2788] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.718 2011] [ 2788] binlog: replaying log ./binlog.009
+[Fri Jun 10 16:50:07.761 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.761 2011] [ 2788] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.761 2011] [ 2788] binlog: replaying log ./binlog.010
+[Fri Jun 10 16:50:07.841 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.841 2011] [ 2788] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.841 2011] [ 2788] binlog: replaying log ./binlog.011
+[Fri Jun 10 16:50:07.887 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.887 2011] [ 2788] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.888 2011] [ 2788] binlog: replaying log ./binlog.012
+[Fri Jun 10 16:50:07.955 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.955 2011] [ 2788] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.955 2011] [ 2788] binlog: replaying log ./binlog.013
+[Fri Jun 10 16:50:07.985 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:07.985 2011] [ 2788] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:07.985 2011] [ 2788] binlog: replaying log ./binlog.014
+[Fri Jun 10 16:50:08.024 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.024 2011] [ 2788] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.024 2011] [ 2788] binlog: replaying log ./binlog.015
+[Fri Jun 10 16:50:08.147 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.147 2011] [ 2788] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.147 2011] [ 2788] binlog: replaying log ./binlog.016
+[Fri Jun 10 16:50:08.202 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.202 2011] [ 2788] binlog: finished replaying ./binlog.016; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.202 2011] [ 2788] binlog: replaying log ./binlog.017
+[Fri Jun 10 16:50:08.203 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.203 2011] [ 2788] binlog: finished replaying ./binlog.017; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.203 2011] [ 2788] binlog: replaying log ./binlog.018
+[Fri Jun 10 16:50:08.219 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.219 2011] [ 2788] binlog: finished replaying ./binlog.018; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.219 2011] [ 2788] binlog: replaying log ./binlog.019
+[Fri Jun 10 16:50:08.350 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.350 2011] [ 2788] binlog: finished replaying ./binlog.019; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.350 2011] [ 2788] binlog: replaying log ./binlog.020
+[Fri Jun 10 16:50:08.488 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.488 2011] [ 2788] binlog: finished replaying ./binlog.020; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.488 2011] [ 2788] binlog: replaying log ./binlog.021
+[Fri Jun 10 16:50:08.519 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.519 2011] [ 2788] binlog: finished replaying ./binlog.021; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.519 2011] [ 2788] binlog: replaying log ./binlog.022
+[Fri Jun 10 16:50:08.591 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.591 2011] [ 2788] binlog: finished replaying ./binlog.022; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.591 2011] [ 2788] binlog: replaying log ./binlog.023
+[Fri Jun 10 16:50:08.704 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.704 2011] [ 2788] binlog: finished replaying ./binlog.023; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.704 2011] [ 2788] binlog: replaying log ./binlog.024
+[Fri Jun 10 16:50:08.783 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.783 2011] [ 2788] binlog: finished replaying ./binlog.024; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.783 2011] [ 2788] binlog: replaying log ./binlog.025
+[Fri Jun 10 16:50:08.817 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.817 2011] [ 2788] binlog: finished replaying ./binlog.025; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.817 2011] [ 2788] binlog: replaying log ./binlog.026
+[Fri Jun 10 16:50:08.817 2011] [ 2788] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Fri Jun 10 16:50:08.817 2011] [ 2788] binlog: finished replaying ./binlog.026; 0.0 MB in 0.000 sec
+[Fri Jun 10 16:50:08.817 2011] [ 2788] binlog: finished replaying total 26 in 1.484 sec
+[Fri Jun 10 16:50:08.968 2011] [ 2788] accepting connections
+[Sat Jun 11 10:06:54.973 2011] [ 2460] binlog: replaying log ./binlog.001
+[Sat Jun 11 10:06:54.973 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:54.974 2011] [ 2460] binlog: finished replaying ./binlog.001; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:54.974 2011] [ 2460] binlog: replaying log ./binlog.002
+[Sat Jun 11 10:06:54.974 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:54.974 2011] [ 2460] binlog: finished replaying ./binlog.002; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:54.974 2011] [ 2460] binlog: replaying log ./binlog.003
+[Sat Jun 11 10:06:54.992 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:54.992 2011] [ 2460] binlog: finished replaying ./binlog.003; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:54.992 2011] [ 2460] binlog: replaying log ./binlog.004
+[Sat Jun 11 10:06:55.021 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.021 2011] [ 2460] binlog: finished replaying ./binlog.004; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.021 2011] [ 2460] binlog: replaying log ./binlog.005
+[Sat Jun 11 10:06:55.022 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.022 2011] [ 2460] binlog: finished replaying ./binlog.005; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.022 2011] [ 2460] binlog: replaying log ./binlog.006
+[Sat Jun 11 10:06:55.022 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.022 2011] [ 2460] binlog: finished replaying ./binlog.006; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.022 2011] [ 2460] binlog: replaying log ./binlog.007
+[Sat Jun 11 10:06:55.022 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.022 2011] [ 2460] binlog: finished replaying ./binlog.007; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.023 2011] [ 2460] binlog: replaying log ./binlog.008
+[Sat Jun 11 10:06:55.042 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.042 2011] [ 2460] binlog: finished replaying ./binlog.008; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.042 2011] [ 2460] binlog: replaying log ./binlog.009
+[Sat Jun 11 10:06:55.042 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.042 2011] [ 2460] binlog: finished replaying ./binlog.009; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.042 2011] [ 2460] binlog: replaying log ./binlog.010
+[Sat Jun 11 10:06:55.068 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.068 2011] [ 2460] binlog: finished replaying ./binlog.010; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.068 2011] [ 2460] binlog: replaying log ./binlog.011
+[Sat Jun 11 10:06:55.068 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.068 2011] [ 2460] binlog: finished replaying ./binlog.011; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.068 2011] [ 2460] binlog: replaying log ./binlog.012
+[Sat Jun 11 10:06:55.086 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.086 2011] [ 2460] binlog: finished replaying ./binlog.012; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.086 2011] [ 2460] binlog: replaying log ./binlog.013
+[Sat Jun 11 10:06:55.087 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.087 2011] [ 2460] binlog: finished replaying ./binlog.013; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.087 2011] [ 2460] binlog: replaying log ./binlog.014
+[Sat Jun 11 10:06:55.087 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.087 2011] [ 2460] binlog: finished replaying ./binlog.014; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.087 2011] [ 2460] binlog: replaying log ./binlog.015
+[Sat Jun 11 10:06:55.168 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.168 2011] [ 2460] binlog: finished replaying ./binlog.015; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.168 2011] [ 2460] binlog: replaying log ./binlog.016
+[Sat Jun 11 10:06:55.215 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.215 2011] [ 2460] binlog: finished replaying ./binlog.016; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.215 2011] [ 2460] binlog: replaying log ./binlog.017
+[Sat Jun 11 10:06:55.216 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.216 2011] [ 2460] binlog: finished replaying ./binlog.017; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.216 2011] [ 2460] binlog: replaying log ./binlog.018
+[Sat Jun 11 10:06:55.216 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.216 2011] [ 2460] binlog: finished replaying ./binlog.018; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.216 2011] [ 2460] binlog: replaying log ./binlog.019
+[Sat Jun 11 10:06:55.239 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.239 2011] [ 2460] binlog: finished replaying ./binlog.019; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.239 2011] [ 2460] binlog: replaying log ./binlog.020
+[Sat Jun 11 10:06:55.239 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.239 2011] [ 2460] binlog: finished replaying ./binlog.020; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.239 2011] [ 2460] binlog: replaying log ./binlog.021
+[Sat Jun 11 10:06:55.402 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.402 2011] [ 2460] binlog: finished replaying ./binlog.021; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.402 2011] [ 2460] binlog: replaying log ./binlog.022
+[Sat Jun 11 10:06:55.444 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.444 2011] [ 2460] binlog: finished replaying ./binlog.022; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.444 2011] [ 2460] binlog: replaying log ./binlog.023
+[Sat Jun 11 10:06:55.462 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.462 2011] [ 2460] binlog: finished replaying ./binlog.023; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.462 2011] [ 2460] binlog: replaying log ./binlog.024
+[Sat Jun 11 10:06:55.517 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.517 2011] [ 2460] binlog: finished replaying ./binlog.024; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.517 2011] [ 2460] binlog: replaying log ./binlog.025
+[Sat Jun 11 10:06:55.518 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.518 2011] [ 2460] binlog: finished replaying ./binlog.025; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.518 2011] [ 2460] binlog: replaying log ./binlog.026
+[Sat Jun 11 10:06:55.619 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.619 2011] [ 2460] binlog: finished replaying ./binlog.026; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.619 2011] [ 2460] binlog: replaying log ./binlog.027
+[Sat Jun 11 10:06:55.619 2011] [ 2460] binlog: replay stats: 0 rows in 0 commits; 0 updates; 0 indexes
+[Sat Jun 11 10:06:55.619 2011] [ 2460] binlog: finished replaying ./binlog.027; 0.0 MB in 0.000 sec
+[Sat Jun 11 10:06:55.619 2011] [ 2460] binlog: finished replaying total 27 in 0.646 sec
+[Sat Jun 11 10:06:55.621 2011] [ 2460] accepting connections
