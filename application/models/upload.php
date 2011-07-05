@@ -147,7 +147,7 @@ class Upload extends CI_Model {
 			'description' => $description,
 			'material' => $material,
 			'user_id' => $userid,
-			'filetype' => $typesArray[$i],
+			'filetype' => strtolower($typesArray[$i]),
 			'filesize' => $sizesArray[$i],
 			'related' => 1
 			);
@@ -170,7 +170,7 @@ class Upload extends CI_Model {
 			'description' => $description,
 			'material' => $material,
 			'user_id' => $userid,
-			'filetype' => $typesArray[0],
+			'filetype' => strtolower($typesArray[0]),
 			'filesize' => $sizesArray[0],
 			'related' => 0  			 
 			);

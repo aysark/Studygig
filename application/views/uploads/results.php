@@ -22,7 +22,7 @@
     <div class="result">
     	<div class="twoCol11">
     	<h1><img src="<?php echo base_url().'images/material'.$materials[$i]; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> 
-<img src="<?php echo base_url().'/images/file'.$upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" />
+<img src="<?php echo base_url().'images/file'.$upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" />
 
 <a href="<?php echo site_url('uploads/view/'. $upload->upload_id);?>"><?php echo $upload->upload_title; ?></a></h1>
          <h5>Uploaded by <?php echo $users[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($courses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $courses[$i]; ?></span></a></h5> 
