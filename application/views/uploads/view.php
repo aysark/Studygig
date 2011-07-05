@@ -24,16 +24,19 @@
         if ($upload->filesize == -1){
             echo "This upload is not hosted on Studygig, currently we do not provide previews for such uploads.";
             
-        }else if (strcasecmp($upload->filetype,".pdf") != 0){
-            if ((strcasecmp($upload->filetype,".jpg") == 0) || (strcasecmp($upload->filetype,".jpeg") == 0) || (strcasecmp($upload->filetype,".gif") == 0) || (strcasecmp($upload->filetype,".png")== 0)){
+        }else if (strcasecmp($upload->filetype,".pdf") != 0)//if not pdf
+        {
+        	//check if its an image upload
+           	 if ((strcasecmp($upload->filetype,".jpg") == 0) || (strcasecmp($upload->filetype,".jpeg") == 0) || (strcasecmp($upload->filetype,".gif") == 0) || (strcasecmp($upload->filetype,".png")== 0)){
                 echo "<img src=\"".base_url().$file_path."\" width=\"500\" height=\"500\"/>";
-        }else{
+        	 }else{
            echo "Sorry, this file is not .pdf format, it is in ".$upload->filetype." format.  We are unable to provide previews for such file formats for the time being.";
-           
-        }
-    }else{
-    $preview = str_replace($upload->filetype,".jpg",$file_path);
-    echo "<img src=\"".base_url().$preview."\" />";
+      	 	 }
+    
+    //its a pdf and has a preview  	 	 
+	}else{
+   	 	$preview = str_replace($upload->filetype,".jpg",$file_path);
+    	echo "<img src=\"".base_url().$preview."\" />";
     }
         ?>
         
