@@ -46,7 +46,7 @@ class Classified extends CI_Model {
 				 	}else if ($mt == 9){
 						$subquery .=" CL.material = 1 ";
 				 	}else if ($mt == 10){
-						$subquery .=" CL.material = 2 ";
+						$subquery .=" CL.material = 5 ";
 				 	}else if ($mt == 11){
 						$subquery .=" CL.material = 8 ";
 				 	}else{
