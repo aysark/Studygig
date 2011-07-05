@@ -27,7 +27,12 @@
 <a href="<?php echo site_url('uploads/view/'. $upload->upload_id);?>"><?php echo $upload->upload_title; ?></a></h1>
          <h5>Uploaded by <?php echo $users[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($courses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $courses[$i]; ?></span></a></h5> 
           <p>
-    <?php echo substr(str_replace('\r\n','<br>',$upload->description),0,150).'...'; ?></p>
+    <?php 
+    $str = str_replace('\n',' ',$upload->description);
+    $str = str_replace('\r\n','<br>',$str);
+    echo substr($str,0,100).'...'; 
+    
+    ?></p>
     	</div>
     	
     	<div class="twoCol22">
@@ -75,7 +80,11 @@
 
 <a href="<?php echo site_url('classifieds/view/'. $classified->classified_id);?>"><?php echo $classified->classified_title; ?></a></h1>
          <h5>Posted by <?php echo $users[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($classified->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($courses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $courses[$i]; ?></span></a></h5> 
-          <p><?php echo substr(str_replace('\r\n','<br>',$classified->description),0,150).'...'; ?></p>
+          <p><?php  $str = str_replace('\n','<br>',$classified->description);
+    $str = str_replace('\r','<br>',$str);
+    echo substr($str,0,100).'...'; 
+          	
+          	?></p>
     	</div>
     	
     	<div class="twoCol22">

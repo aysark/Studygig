@@ -158,7 +158,7 @@ class Uploads extends CI_Controller {
 						# Facebook wall post              
 							if ($this->input->post('postfb') == 1) {
 								
-							$this->curl->simple_post('https://graph.facebook.com/me/feed', array('access_token'=>$this->session->userdata('token'),'link' =>'http://studygig.com' ,'message' => 'Past tests, lecture notes and study guides - Find study material on Studygig'));
+							$this->curl->simple_post('https://graph.facebook.com/me/feed', array('access_token'=>$this->session->userdata('token'),'link' =>'http://studygig.com' ,'message' => 'I just posted new study material on Studygig, check it out!'));
 							
 							}
 						
@@ -235,11 +235,9 @@ class Uploads extends CI_Controller {
 								
 								//change extension to .jpg in name
 								$output_file = str_replace($file['ext'],".jpg",$file['file']);
-								$command = "convert $input_file -resize 70% -size 500x500 canvas:none -fill \"#0076e6\" -font AvantGarde-Demi -pointsize 28 -draw \"text 60,270 'Studygig.com Preview'\" -channel RGBA $output_file ";
+								$command = "convert $input_file -resize 85% -crop 540x465+0+0 canvas:none -fill \"#0076e6\" -font AvantGarde-Demi -pointsize 28 -draw \"text 60,270 'Studygig.com Preview'\" -channel RGBA $output_file ";
 								
 								exec($command);
-									
-							  /*$command = "convert $input_file -resize 70% -size 500x500 canvas:none -fill \"#0076e6\" -font AvantGarde-Demi -pointsize 40 -draw \"text 60,150 'Sign in to view all'\" -pointsize 40 -draw \"text 80,270 'Studygig.com'\" -pointsize 42 -draw \"text 60,370 '1st page preview'\"   -channel RGBA -trim  $output_file ";*/
 								
 							}
 							$this->User->log_user_ip($this->input->post('user_id'),$_SERVER['REMOTE_ADDR'],$_SERVER['HTTP_USER_AGENT'],3);
@@ -256,7 +254,7 @@ class Uploads extends CI_Controller {
 							# Facebook wall post              
 							if ($this->input->post('postfb') == 1) {
 								
-							$this->curl->simple_post('https://graph.facebook.com/me/feed', array('access_token'=>$this->session->userdata('token'),'link' =>'www.example.com' ,'message' => 'testing'));
+							$this->curl->simple_post('https://graph.facebook.com/me/feed', array('access_token'=>$this->session->userdata('token'),'link' =>'http://studygig.com' ,'message' => 'I just posted new study material on Studygig, check it out!'));
 							
 							}
 							
@@ -580,7 +578,7 @@ class Uploads extends CI_Controller {
 		
 					
 					$data['content'] = 'users/error';
-					$data['error']=  "Not enough points";	
+					$data['error']=  "Not enough points - it costs 20 points to download study material.  <a href='http://studygig.com/index.php/site/help'>Click here</a> to see how you can gain points.";	
 					$data['pageTitle'] = "Oh dear, you don't have enough points!";
 					$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
 				

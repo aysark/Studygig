@@ -5,7 +5,11 @@
 <title><?php echo $pageTitle; ?></title>
 <meta name="title" content="<?php echo $pageTitle; ?>" /> 
 <meta name="author" content="Studygig"/> 
-<meta name="description" content="<?php echo str_replace('\r\n',' ',$pageDescription); ?>" /> 
+<meta name="description" content="<?php 
+$str = str_replace('\n',' ',$pageDescription);
+$str = str_replace('\r',' ',$str);
+echo $str; 
+?>" /> 
 
 <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="PUBLIC">
 
@@ -13,7 +17,9 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://studygig.com" />
 <meta property="og:image" content="http://www.studygig.com/images/logo.png" />
-<meta property="og:description" content="<?php echo str_replace('\r\n',' ',$pageDescription); ?>" />
+<meta property="og:description" content="<?php $str = str_replace('\n',' ',$pageDescription);
+$str = str_replace('\r',' ',$str);
+echo $str;  ?>" />
 <meta property="og:site_name" content="Studygig" />
 <meta property="fb:admins" content="509468451" />
 <meta property="fb:app_id" content="170587262970610" /> 

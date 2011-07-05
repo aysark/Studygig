@@ -45,7 +45,11 @@
     <div class="docDescription">
            
                 <div class="docContent">
-                <?php echo str_replace('\r\n','<br>',$upload->description); ?>
+                <?php 
+               $str = str_replace('\n',' ',$upload->description);
+               $str = str_replace('\r\n','<br>',$str);
+               echo $str; 
+                ?>
                 <p><?php if ($upload->filesize != -1) {echo "This material has a size of ".$upload->filesize."KB"; }?></p>
                 <?php if($related): ?>
                 <h4>Related Documents <img src="../../../images/help-icon.gif" width="16" height="15" alt="Help Icon" title="These are documents that were uploaded with the above upload- it might be a continuation of the above."/></h4>

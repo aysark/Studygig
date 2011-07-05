@@ -13,7 +13,11 @@
              Posted by <?php echo  $uploader->username. " on " . date('F j, Y \a\t g:i A', strtotime( $listing->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($course,0,8);?>"><span class="courseCourseStyle"><?php echo $course;?></span></a></h5> 
     <div class="docDescription">
                 <div class="docContent">
-                <p><?php echo  str_replace('\r\n','<br>',$listing->description);?></p>
+                <p><?php  $str = str_replace('\n',' ',$listing->description);
+    $str = str_replace('\r\n','<br>',$str);
+    echo substr($str,0,100).'...'; 
+                	
+                	?></p>
                 
                   <div id="seperator"></div>
                   <h1>Discuss this Material</h1>

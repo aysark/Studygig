@@ -5,7 +5,9 @@
 <title><?php echo $pageTitle; ?></title>
 <meta name="title" content="<?php echo $pageTitle; ?>" /> 
 <meta name="author" content="Studygig"/> 
-<meta name="description" content="<?php echo str_replace('\r\n',' ',$pageDescription); ?>" /> 
+<meta name="description" content="<?php $str = str_replace('\n',' ',$pageDescription);
+$str = str_replace('\r',' ',$str);
+echo $str;  ?>" /> 
 
 <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="PUBLIC">
  		
@@ -15,7 +17,9 @@
 <meta property="og:url" content="<?php echo current_url(); ?>" /> 
 <meta property="og:type" content="website" /> 
 <meta property="og:image" content="http://www.studygig.com/images/logo.png" /> 
-<meta property="og:description" content="<?php echo str_replace('\r\n',' ',$pageDescription); ?>" />
+<meta property="og:description" content="<?php $str = str_replace('\n',' ',$pageDescription);
+$str = str_replace('\r',' ',$str);
+echo $str; ?>" />
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />   
 <meta name="google-site-verification" content="wWfOHZs42xIyUlxca007WHi7_8QfdBsoxwX5dqgqZt4" /> 
 	<?php

@@ -89,11 +89,11 @@ class Multi_upload  {
 
             // Set the uploaded data as class variables
             $CI->upload->file_temp = $_FILES[$field]['tmp_name'][$i];        
-            $CI->upload->file_name = $_FILES[$field]['name'][$i];
+            $CI->upload->file_name = strtolower($_FILES[$field]['name'][$i]);
             $CI->upload->file_size = $_FILES[$field]['size'][$i];        
             $CI->upload->file_type = preg_replace("/^(.+?);.*$/", "\\1", $_FILES[$field]['type'][$i]);
             $CI->upload->file_type = strtolower($CI->upload->file_type);
-            $CI->upload->file_ext  = $CI->upload->get_extension($_FILES[$field]['name'][$i]);
+            $CI->upload->file_ext  = $CI->upload->get_extension(strtolower($_FILES[$field]['name'][$i]));
             
             // Convert the file size to kilobytes
             if ($CI->upload->file_size > 0)
