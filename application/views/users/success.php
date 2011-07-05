@@ -25,7 +25,7 @@
 </div>
 	
 	<div class="ui-state-highlight ui-corner-all" style="margin-top:10px;padding-top: 1em; padding-right: 1em; padding-bottom: 1em; padding-left: 1em; text-align:center;">
-		As a newly registered user, you have been given 100 points to start you off!
+		As a newly registered user, you have been given 50 points to start you off!
 	</div>
 	
 <div class="roundedCornerContent">
