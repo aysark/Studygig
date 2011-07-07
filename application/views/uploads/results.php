@@ -104,7 +104,7 @@
     
         <p>Your search doesn't have any study material yet, would you like to:
     	<div id="resultsFd" class="rewardFeedback ui-corner-all" ></div>
-    	<a href="../../uploads/insert" id="insertUploadButton" style="float:left;">Be the First to Post Study Material</a>  
+    	<a href="../../uploads/insert" id="insertUploadButton">Be the first to post study material & recieve additional points!</a>  
     	
 <form action="" method="post" accept-charset="utf-8" id="requestForm" >
  <input type="submit" class="button" id="requestStudyMaterial"  name="requestSM" value="Request Study Material" onclick="rqtStudyMaterial()"/>
