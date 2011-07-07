@@ -158,7 +158,7 @@ class Classifieds extends CI_Controller {
 		$data['similarUploads'] = $this->Classified->get_similar($id);
 		$data['byUserUploads'] = $this->Classified->get_byUser($id);
 
-		$data['pageTitle'] = substr($data['course'],0,8).' '.$data['listing']->title;
+		$data['pageTitle'] = substr($data['course'],0,8).' '.htmlspecialchars($data['listing']->title);
 		$data['pageDescription'] = $data['course'].'.  '.$data['listing']->description;
 								
 		$this->load->view('subTemplate', $data);

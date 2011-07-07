@@ -7,15 +7,18 @@
     <div class="docViewTitleIcons">
     	<a href="<?php echo site_url('classifieds/view/'.  $listing->id.'#disqus_thread');?>" data-disqus-identifier="<?php echo  $listing->id; ?>" id="commIconView"></a>
     </div>
-    <h1><?php echo  $listing->title;?> </h1>
+    <h1><?php echo  htmlspecialchars($listing->title);?> </h1>
         
     <h5> <img src="../../../images/material<?php echo $materialType; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> 
              Posted by <?php echo  $uploader->username. " on " . date('F j, Y \a\t g:i A', strtotime( $listing->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($course,0,8);?>"><span class="courseCourseStyle"><?php echo $course;?></span></a></h5> 
     <div class="docDescription">
                 <div class="docContent">
-                <p><?php  $str = str_replace('\n',' ',$listing->description);
-    $str = str_replace('\r\n','<br>',$str);
-    echo substr($str,0,100).'...'; 
+                <p><?php  
+    
+    			$str = str_replace('\n','<br>',htmlspecialchars($listing->description));
+               $str = str_replace('\r','<br>',$str);
+               
+               echo $str; 
                 	
                 	?></p>
                 
@@ -72,7 +75,7 @@
             }else{ ?>
                 
         <?php foreach($similarUploads as $similarUpload):?>
-        <h4><a href="<?php echo site_url('classifieds/view/'. $similarUpload->id);?>"><?php echo $similarUpload->title; ?></a></h4>
+        <h4><a href="<?php echo site_url('classifieds/view/'. $similarUpload->id);?>"><?php echo htmlspecialchars($similarUpload->title); ?></a></h4>
     <?php endforeach; ?>
     <?php } ?>
         </div>
@@ -85,7 +88,7 @@
             }else{ ?>
                 
         <?php foreach($byUserUploads as $moreUpload):?>
-        <h4><a href="<?php echo site_url('classifieds/view/'. $moreUpload->id);?>"><?php echo $moreUpload->title; ?></a></h4>
+        <h4><a href="<?php echo site_url('classifieds/view/'. $moreUpload->id);?>"><?php echo htmlspecialchars($moreUpload->title); ?></a></h4>
     <?php endforeach; ?>
     <?php } ?>
     </div>

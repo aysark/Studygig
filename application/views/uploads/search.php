@@ -46,7 +46,7 @@
                 <?php foreach($latestUploads as $upload):?>
         
        <div class="slide roundedCornerContent">
-    <h2><a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo $upload->title; ?></a></h2>
+    <h2><a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo htmlspecialchars($upload->title); ?></a></h2>
 			 <p>
              Uploaded in <a href="<?php echo site_url('uploads/search/').'/'.substr ($latestUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $latestUploadsCourses[$i];?></span></a></h5>
 		</p>

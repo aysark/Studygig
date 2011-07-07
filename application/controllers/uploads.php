@@ -409,7 +409,7 @@ class Uploads extends CI_Controller {
 
 		$data['query'] = urldecode($query);
 		
-		$data['results'] = $this->Upload->search( $query,$_SERVER['REMOTE_ADDR'],$offset,$this->input->post('sortResultsBy'),$this->input->post('materialTypeFilter'));
+		$data['results'] = $this->Upload->search( $query,$offset,$this->input->post('sortResultsBy'),$this->input->post('materialTypeFilter'));
 		$data['is_upload'] = TRUE;
 		
 		
@@ -471,6 +471,14 @@ class Uploads extends CI_Controller {
 		$query = mysql_real_escape_string(trim(str_replace(","," ",$this->input->post('query'))));
 		$this->load->model('Classified');
 		
+			
+			//log person's ip and query to db
+ 	$log = array(
+			'query' => $query,
+			'ip' => $_SERVER['REMOTE_ADDR'],
+			);
+
+	$this->db->insert('queries',$log);
 		
 			$urows = $this->Upload->searchcount($query);
 			$crows = $this->Classified->searchcount($query);
@@ -512,7 +520,7 @@ class Uploads extends CI_Controller {
 		$data['similarUploads'] = $this->Upload->get_similar($id);
 		$data['byUserUploads'] = $this->Upload->get_byUser($id);
 		
-		$data['pageTitle'] = substr($data['course'],0,8).' '.$data['upload']->title;
+		$data['pageTitle'] = substr($data['course'],0,8).' '.htmlspecialchars($data['upload']->title);
 		$data['pageDescription'] = $data['course'].'.  '.$data['upload']->description;
 
 		$this->session->keep_flashdata('last_search');
@@ -573,7 +581,7 @@ class Uploads extends CI_Controller {
 						$data['content'] = 'uploads/error'; # Not created yet!
 					}
 						
-					$data['pageTitle'] = $data['upload']->title;
+					$data['pageTitle'] = htmlspecialchars($data['upload']->title);
 					$data['pageDescription'] = $data['course'].'.  '.$data['upload']->description;
 			
 					$this->load->view('subTemplate', $data);
