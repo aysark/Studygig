@@ -257,6 +257,7 @@ $(function() {
     <div id="footerText">
     <ul class="horiList">
      <li><a href="<?php echo site_url('site/aboutus');?>">About Us</a></li>
+     <li><a href="<?php echo site_url('site/tenreasons');?>">9 Reasons</a></li>
      <li><a href="<?php echo site_url('site/help');?>">FAQs/Help</a></li>
      <li><a href="<?php echo site_url('site/blog');?>">Blog</a></li>
      <li><a href="<?php echo site_url('site/academicintegrity');?>">Academic Integrity</a></li>
