@@ -13,7 +13,7 @@
     	<?php endif; ?>
     	<a href="<?php echo site_url('uploads/view/'. $upload->id.'#disqus_thread');?>" data-disqus-identifier="<?php echo $upload->id; ?>" id="commIconView"></a>
     </div>
-    <h1><?php echo $upload->title;?> </h1>
+    <h1><?php echo htmlspecialchars($upload->title);?> </h1>
         
     <h5> <img src="../../../images/material<?php echo $materialType; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="../../../images/file<?php echo $fileType; ?>.png" width="20" height="20" class="file-type-icon" />
              Uploaded by <?php echo $uploader->username. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($course,0,8);?>"><span class="courseCourseStyle"><?php echo $course;?></span></a></h5> 
@@ -46,15 +46,16 @@
            
                 <div class="docContent">
                 <?php 
-               $str = str_replace('\n',' ',$upload->description);
-               $str = str_replace('\r\n','<br>',$str);
+               $str = str_replace('\n','<br>',htmlspecialchars($upload->description));
+               $str = str_replace('\r','<br>',$str);
+               
                echo $str; 
                 ?>
                 <p><?php if ($upload->filesize != -1) {echo "This material has a size of ".$upload->filesize."KB"; }?></p>
                 <?php if($related): ?>
                 <h4>Related Documents <img src="../../../images/help-icon.gif" width="16" height="15" alt="Help Icon" title="These are documents that were uploaded with the above upload- it might be a continuation of the above."/></h4>
                 <p>    <ol><?php foreach($moreByUser as $relatedUpload):?>
-    	<li><a href="<?php echo site_url('uploads/view/'. $relatedUpload->id);?>"><?php echo $relatedUpload->title; ?></a></li>
+    	<li><a href="<?php echo site_url('uploads/view/'. $relatedUpload->id);?>"><?php echo htmlspecialchars($relatedUpload->title); ?></a></li>
     <?php endforeach; ?>
   </ol></p>
                   <?php endif; ?>

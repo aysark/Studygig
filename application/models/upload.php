@@ -230,14 +230,7 @@ function searchcount($search){
     return $numresults;
   }
   
-  function search($search,$ip,$offset = 0,$sortResults=0, $materialTypeFilter=null) {  	
-  	//log person's ip and query to db
- 	$log = array(
-			'query' => $search,
-			'ip' => $ip,
-			);
-
-	$this->db->insert('queries',$log);
+  function search($search,$offset = 0,$sortResults=0, $materialTypeFilter=null) {  	
 				
 	
  	# apply a material type filter if there was one applied
