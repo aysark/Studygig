@@ -20,7 +20,7 @@ echo $str;  ?>" />
 <meta property="og:description" content="<?php $str = str_replace('\n',' ',$pageDescription);
 $str = str_replace('\r',' ',$str);
 echo $str; ?>" />
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />   
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />   
 <meta name="google-site-verification" content="wWfOHZs42xIyUlxca007WHi7_8QfdBsoxwX5dqgqZt4" /> 
 	<?php
 	

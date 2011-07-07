@@ -24,7 +24,7 @@ echo $str;  ?>" />
 <meta property="fb:admins" content="509468451" />
 <meta property="fb:app_id" content="170587262970610" /> 
 
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />   
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />   
 <meta name="google-site-verification" content="wWfOHZs42xIyUlxca007WHi7_8QfdBsoxwX5dqgqZt4" /> 
 
 	 <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" /> 
