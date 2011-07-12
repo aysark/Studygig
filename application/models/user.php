@@ -347,11 +347,11 @@
 		return $this->db->count_all_results('users');
 	}
 	
-	/* For admin panel
+	
 	function get_all_users() {
 		$query = $this->db->get('users');
 		return $query->result();
-	}*/
+	}
 	
 	function log_user_ip($id,$ip,$useragent,$action){
 
@@ -365,4 +365,12 @@
 			$this->db->insert('ips',$log);
   	}
 
+  	function is_moderator($id) {
+  		$this->db->where('user_id',$id);
+  		$query = $this->db->get('moderators');
+
+  		if ($query->num_rows() == 1) return TRUE;
+  			else
+  		return FALSE;
+  	}
 }

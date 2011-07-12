@@ -359,4 +359,15 @@ function searchcount($search){
   	
   }
 
+  function get_inactive() {
+    $this->db->where('active',0);
+    return $this->db->get('uploads')->result();
+  }
+
+  function approve($id) {
+    $this->db->where('id',$id);
+    $this->db->set('active',1);
+    $this->db->update('uploads');
+  } 
+
 }
