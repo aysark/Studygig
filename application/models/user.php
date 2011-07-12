@@ -366,6 +366,8 @@
   	}
 
   	function is_moderator($id) {
+  		#Checks if user has moderator privileges
+
   		$this->db->where('user_id',$id);
   		$query = $this->db->get('moderators');
 
@@ -373,4 +375,12 @@
   			else
   		return FALSE;
   	}
+
+  	function get_made($id) {
+  		#User gets made... moderator
+
+  		$newmoderator = array('user_id' => $id);
+  		$this->db->insert('moderators',$newmoderator);
+  	}
+  	
 }

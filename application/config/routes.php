@@ -41,6 +41,7 @@
 $route['admin'] = "admin/moderators/index";
 $route['admin/dashboard'] = "admin/moderators/dashboard";
 $route['admin/approve'] = "admin/moderators/approve";
+$route['admin/add'] = "admin/moderators/add";
 
 $route['default_controller'] = "uploads";
 $route['404_override'] = '';
