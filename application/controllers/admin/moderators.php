@@ -22,6 +22,9 @@
 
 		$data['all_users'] = $this->User->get_all_users();
 		$data['inactive_uploads'] = $this->Upload->get_inactive();
+
+		$this->load->model('Flag');
+		$data['flags'] = $this->Flag->get_all();
 		
 		$data['stats'] = array(
 			'total_users' => count($data['all_users']),

@@ -22,6 +22,20 @@
 	<input type="submit" value="Approve selected" />
 </form>
 
+<p>Flags: </p>
+
+<?if ($flags): ?>
+
+	<ul>
+		<?foreach($flags as $flag):?>
+			<li><?=$flag->reason?></li>
+		<?endforeach;?>
+	</ul>
+
+<?else:?>
+	<p>No flags!</p>
+<?endif?>
+
 <!-- <ul>
 <?foreach ($stats['queries'] as $q):?>
 <li><?=$q->query?> - <?=$q->ip?></li>
