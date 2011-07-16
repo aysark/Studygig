@@ -5,7 +5,7 @@
 <ul class="dashboardList">
 <li><a href="../uploads/insert"><img src="../../images/post-study-material-icon.png" class="textmiddle"> Share  Study Material</a></li>
 <li><a href="../classifieds/insert"><img src="../../images/list-study-material-icon.png" class="textmiddle"> List Study Material</a></li>
-<li><img src="../../images/download-earn-icon.png" class="textmiddle"> <a href="..">Download</a> & <a href="profile">Earn Rewards</a></li>
+<li><img src="../../images/download-earn-icon.png" class="textmiddle"> Download & <a href="profile">Earn Rewards</a></li>
 </ul>
 </div>
 <div id="tabs">

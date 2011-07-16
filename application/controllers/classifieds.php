@@ -41,6 +41,10 @@ class Classifieds extends CI_Controller {
 		}
 		
 		$data['query'] = urldecode($query);
+
+	if ($this->session->flashdata('last_search')) $this->session->keep_flashdata('last_search');
+		else
+	$this->session->set_flashdata('last_search',urldecode($query));	
 	
 	$data['results'] = $this->Classified->search($data['query'],$offset,$this->input->post('sortResultsBy'),$this->input->post('materialTypeFilter'));
 	$data['is_upload'] = FALSE;

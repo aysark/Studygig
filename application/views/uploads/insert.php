@@ -113,25 +113,25 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);"></textarea>
 	
 	<div id="insertKeywords">
 		<h2>Choose related keywords<span class="formDesc">Optional. These help make your study material more relevant and search-friendly.</span></h2>
-		<input type="button" class="tag" value=" Answers ">
-		<input type="button" class="tag" value=" Essay ">
-		<input type="button" class="tag" value=" Exam ">
-		<input type="button" class="tag" value=" Formula Sheet ">
-		<input type="button" class="tag" value=" Lecture ">
-		<input type="button" class="tag" value=" Midterm ">
-		<input type="button" class="tag" value=" Presentation ">
-		<input type="button" class="tag" value=" Problem Set ">
-		<input type="button" class="tag" value=" Questions ">
-		<input type="button" class="tag" value=" Quiz ">
-		<input type="button" class="tag" value=" Reading ">
-		<input type="button" class="tag" value=" Report ">
-		<input type="button" class="tag" value=" Review ">
-		<input type="button" class="tag" value=" Solutions ">
-		<input type="button" class="tag" value=" Summary ">
-		<input type="button" class="tag" value=" Syllabus ">
-		<input type="button" class="tag" value=" Test ">
-		<input type="button" class="tag" value=" Thesis ">
-		<input type="button" class="tag" value=" Tutorial ">
+		<input type="button" class="tag" value=" [ Answers ] ">
+		<input type="button" class="tag" value=" [ Essay ] ">
+		<input type="button" class="tag" value=" [ Exam ] ">
+		<input type="button" class="tag" value=" [ Formula Sheet ] ">
+		<input type="button" class="tag" value=" [ Lecture ] ">
+		<input type="button" class="tag" value=" [ Midterm ] ">
+		<input type="button" class="tag" value=" [ Presentation ] ">
+		<input type="button" class="tag" value=" [ Problem Set ] ">
+		<input type="button" class="tag" value=" [ Questions ] ">
+		<input type="button" class="tag" value=" [ Quiz ] ">
+		<input type="button" class="tag" value=" [ Reading ] ">
+		<input type="button" class="tag" value="  [ Report ] ">
+		<input type="button" class="tag" value="  [ Review ] ">
+		<input type="button" class="tag" value="  [ Solutions ] ">
+		<input type="button" class="tag" value="  [ Summary ] ">
+		<input type="button" class="tag" value="  [ Syllabus ] ">
+		<input type="button" class="tag" value="  [ Test ] ">
+		<input type="button" class="tag" value="  [ Thesis ] ">
+		<input type="button" class="tag" value="  [ Tutorial ] ">
 	</div>
 	
 	<div id="insertAnon">

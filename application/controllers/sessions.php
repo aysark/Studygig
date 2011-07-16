@@ -29,8 +29,8 @@
 		                   'points' => $this->User->get_points_by_id($id)
 		               );
 		
-					$this->session->set_userdata($newlogin);
-					redirect(site_url('users/dashboard'),'refresh');
+					$this->session->set_userdata($newlogin);					
+					redirect($this->session->flashdata('last_url'),'refresh');
 				}else{
 					$data['content'] = 'users/login';
 					$data['incorrectLogin'] = false;

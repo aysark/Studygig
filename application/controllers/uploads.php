@@ -403,6 +403,10 @@ class Uploads extends CI_Controller {
 		
 		$this->load->model('Classified');
 		
+		if ($this->session->flashdata('last_search')) $this->session->keep_flashdata('last_search');
+		else
+		$this->session->set_flashdata('last_search',urldecode($query));
+
 		$data['query'] = urldecode($query);
 		
 		$data['results'] = $this->Upload->search( $query,$offset,$this->input->post('sortResultsBy'),$this->input->post('materialTypeFilter'));
@@ -455,7 +459,7 @@ class Uploads extends CI_Controller {
 		
 		$data['crows'] = $this->Classified->searchcount($query);
 		$data['urows'] = $this->Upload->searchcount($query);
-				
+						
 		$data['content'] = 'uploads/results';
 		$data['pageTitle'] = urldecode($query).' - Find study material on Studygig';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
@@ -518,6 +522,8 @@ class Uploads extends CI_Controller {
 		
 		$data['pageTitle'] = substr($data['course'],0,8).' '.htmlspecialchars($data['upload']->title);
 		$data['pageDescription'] = $data['course'].'.  '.$data['upload']->description;
+
+		$this->session->keep_flashdata('last_search');
 								
 		$this->load->view('subTemplate', $data);
 	}

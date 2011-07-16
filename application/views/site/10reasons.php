@@ -20,7 +20,7 @@
 		<li>Transparency is our commitment to ensure that everything we do is legitimate with your university's policies.</li>
 	</ol>
 	<div class="center">
-<a href="../users/signup" id="insertUploadButton"/>Get Started Now & Recieve 100 Points Free!</a>
+<a href="../users/signup" id="insertUploadButton"/>Get Started Now & Recieve 50 Points Free!</a>
 </div>
 </div>
 </div>

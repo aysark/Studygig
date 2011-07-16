@@ -1,3 +1,7 @@
+<?php 	 if (uri_string() == 'users/login')
+			$this->session->keep_flashdata('last_url');
+		else
+		 	$this->session->set_flashdata('last_url',current_url()); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">  
 <head>
@@ -24,7 +28,7 @@ echo $str;  ?>" />
 <meta property="fb:admins" content="509468451" />
 <meta property="fb:app_id" content="170587262970610" /> 
 
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />   
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />   
 <meta name="google-site-verification" content="wWfOHZs42xIyUlxca007WHi7_8QfdBsoxwX5dqgqZt4" /> 
 
 	 <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" /> 

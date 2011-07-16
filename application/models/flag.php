@@ -16,4 +16,8 @@ class Flag extends CI_Model {
 		$this->db->insert('flags',$new);
 	}
 
+	function get_all() {
+		return $this->db->get('flags')->result();
+	}
+
 }
