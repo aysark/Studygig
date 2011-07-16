@@ -192,7 +192,7 @@
 	var disqus_developer = 0;
 	var disqus_title = 'Comment';
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
-    var disqus_identifier = '<?php echo  $listing->id; ?>';
+    var disqus_identifier = '<?php echo  "c".$listing->id; ?>';
     //var disqus_url = 'http://example.com/permalink-to-page.html';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */

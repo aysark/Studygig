@@ -6,11 +6,13 @@
         <br />
         Find study material.  Ace your courses.
         </div>
-        
+    	<div id="mainSearchDescription">
+        	Enter a textbook title, course code or subject.  Example: MATH2030 Notes
+        </div>
         <div id="mainSearch">
         	<?php $attributes = array('class' => 'search', 'method' => 'post', 'name' => 'searchform', 'onsubmit' => 'return validateForm()' ); 
 	echo form_open('uploads/searchfor',$attributes); ?>
-<input type="text" name="query" id="mainSearchField" placeholder="Course name (e.g. ACTG4160 notes)"  /><input name="submit" type="submit" value="" id="mainSearchButton" class="button" />
+<input type="text" name="query" id="mainSearchField" /><input name="submit" type="submit" value="" id="mainSearchButton" class="button" />
       <?php echo form_close(); ?>
         </div>
         <br/>
@@ -68,7 +70,7 @@
  
 <script type="text/javascript" language="JavaScript">
 
-//document.forms['searchform'].elements['query'].focus();
+document.forms['searchform'].elements['query'].focus();
 
 function validateForm()
 {
@@ -79,4 +81,5 @@ function validateForm()
 	  	return false;
 	 }
 }
+
 </script>

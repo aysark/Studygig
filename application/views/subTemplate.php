@@ -78,8 +78,8 @@ $.widget( "custom.catcomplete", $.ui.autocomplete, {
 	var _kmq = _kmq || [];
   function _kms(u){
     setTimeout(function(){
-      var s = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; s.type = 'text/javascript'; s.async = true;
-      s.src = u; f.parentNode.insertBefore(s, f);
+      var ks = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; ks.type = 'text/javascript'; ks.async = true;
+      ks.src = u; f.parentNode.insertBefore(ks, f);
     }, 1);
   }
   _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/d8977a0cd5dace9f913e5f13bb972a0a61b72853.1.js');
@@ -179,81 +179,7 @@ $(function() {
   	<div id="seperator">
   	</div>
    	
-    <div id="footerSEO">
-    	<div class="col11">
-                <h2>Popular Subjects</h2> 
-<ul class="seo" >
-<li><a href="Administrative Studies" title="Administrative Studies">ADMS - Administrative Studies</a></li>
-<li><a href="Computer Science & Engineering" title="Computer Science & Engineering">CSE - Computer Science & Engineering</a></li>
-<li><a href="Dance" title="Dance">DANC - Dance</a></li>
-<li><a href="Economics" title="Economics">ECON - Economics</a></li>
-<li><a href="English" title="English">EN - English</a></li>
-<li><a href="Environmental Studies" title="Environmental Studies">ENVS - Environmental Studies</a></li>
-<li><a href="Geography" title="Geography">GEOG - Geography</a></li>
-<li><a href="History" title="History">HIST - History</a></li>
-<li><a href="Humanities" title="Humanities">HUMA - Humanities</a></li>
-</ul>
-
-<ul class="seo" >
-	<li><a href="Mathematics and Statistics" title="Mathematics and Statistics">MATH - Mathematics and Statistics</a></li>
-<li><a href="Philosophy" title="Philosophy">PHIL - Philosophy</a></li>
-<li><a href="Political" title="Political Science">POLS - Political Science</a></li>
-<li><a href="Psychology" title="Psychology">PSYC - Psychology</a></li>
-<li><a href="Sociology" title="Sociology">SOCI - Sociology</a></li>
-<li><a href="Social Science" title="Social Science">SOSC - Social Science</a></li>
-<li><a href="Visual Arts" title="Visual Arts">VISA - Visual Arts</a></li>
-<li><a href="Womens Studies" title="Womens Studies">WMST - Womens Studies</a></li>
-</ul>
-            </div>
-            <div class="col22">
-                <h2>Popular Courses</h2>
-<ul class="seo" >
-<li><a href="ADMS1000" title="ADMS1000">ADMS1000</a></li>
-<li><a href="CSE1020" title="CSE1020">CSE1020</a></li>
-<li><a href="DANC1205" title="DANC1205">DANC1205</a></li>
-<li><a href="ECON1000" title="ECON1000">ECON1000</a></li>
-<li><a href="EN1001" title="EN1001">EN1001</a></li>
-<li><a href="ENVS1000" title="ENVS1000">ENVS1000</a></li>
-<li><a href="ENVS1200" title="ENVS1200">ENVS1200</a></li>
-<li><a href="GEOG1000" title="GEOG1000">GEOG1000</a></li>
-</ul>
-
-<ul class="seo" >
-<li><a href="HIST1010" title="HIST1010">HIST1010</a></li>
-<li><a href="HUMA1110" title="HUMA1110">HUMA1110</a></li>
-<li><a href="HUMA1125" title="HUMA1125">HUMA1125</a></li>
-<li><a href="MATH1013" title="MATH1013">MATH1013</a></li>
-<li><a href="MATH1014" title="MATH1014">MATH1014</a></li>
-<li><a href="PHIL1000" title="PHIL1000">PHIL1000</a></li>
-<li><a href="PHIL1100" title="PHIL1100">PHIL1100</a></li>
-<li><a href="PSYC1010" title="PSYC1010">PSYC1010</a></li>
-</ul>
-
-<ul class="seo" >
-<li><a href="PSYC2020" title="PSYC2020">PSYC2020</a></li>
-<li><a href="SOCI1010" title="SOCI1010">SOCI1010</a></li>
-<li><a href="SOCI2030" title="SOCI2030">SOCI2030</a></li>
-<li><a href="SOSC1000" title="SOSC1000">SOSC1000</a></li>
-<li><a href="SOSC1009" title="SOSC1009">SOSC1009</a></li>
-<li><a href="VISA1000" title="VISA1000">VISA1000</a></li>
-<li><a href="WMST1500" title="WMST1500">WMST1500</a></li>
-<li><a href="WMST1510" title="WMST1510">WMST1510</a></li>
-</ul>
-
-            </div>
-            <div class="col33">
-                <h2>Study Material</h2>
-<ul class="seo">
-<li><a href="Books" title="Books">Books</a></li>
-<li><a href="past tests" title="Past tests, quizes, exams, midterms, finals">Past Tests</a></li>
-<li><a href="Assignment Solutions" title="Assignment Solutions">Solutions</a></li>
-<li><a href="Lecture Notes" title="Lecture Notes and student notes">Lecture Notes</a></li>
-<li><a href="Lab Report" title="Lab Reports &amp; Material">Lab Reports &amp; Material</a></li>
-<li><a href="Study guide" title="Study guides">Study Guides</a></li>
-<li><a href="Reference Material" title="Reference Materials, equation sheets, cheat sheets">Reference Materials</a></li>
-</ul>
-            </div>
-    </div>
+   
     
     <div class="clear">
     </div>

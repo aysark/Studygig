@@ -43,7 +43,7 @@
         <input type="submit" class="ratingIconBad" id="ratingIconBad<?php echo $upload->upload_id; ?>"  name="rating_typeA" value="<?php echo $ratings[$i]['negative']; ?>" onclick="loadBadVote2(<?php echo $upload->upload_id;?>,<?php echo $ratings[$i]['negative'] + 1;?>)"/>
     	</form>
 
-    <a href="<?php echo site_url('uploads/view/'. $upload->upload_id.'#disqus_thread');?>" data-disqus-identifier="<?php echo $upload->upload_id; ?>" id="commIcon"></a>
+    <a href="<?php echo site_url('uploads/view/'. $upload->upload_id.'#disqus_thread');?>" data-disqus-identifier="<?php echo "u".$upload->upload_id; ?>" id="commIcon"></a>
             </div>
     	
     	<?php $i++;?>
