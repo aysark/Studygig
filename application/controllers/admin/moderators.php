@@ -44,13 +44,4 @@
 		redirect(site_url('admin'),'refresh');
 	}
 
-	function add() {
-		# Add a new moderator (only if user is also admin)
-		$users = $_POST['users'];
-		foreach ($users as $userid) {
-			$this->User->get_made($userid);
-		}
-		redirect(site_url('admin'),'refresh');
-	}
-
 }

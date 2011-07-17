@@ -375,12 +375,5 @@
   			else
   		return FALSE;
   	}
-
-  	function get_made($id) {
-  		#User gets made... moderator
-
-  		$newmoderator = array('user_id' => $id);
-  		$this->db->insert('moderators',$newmoderator);
-  	}
   	
 }
