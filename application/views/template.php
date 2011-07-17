@@ -77,8 +77,8 @@ $.widget( "custom.catcomplete", $.ui.autocomplete, {
 	var _kmq = _kmq || [];
   function _kms(u){
     setTimeout(function(){
-      var ks = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; ks.type = 'text/javascript'; ks.async = true;
-      ks.src = u; f.parentNode.insertBefore(ks, f);
+      var s = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; s.type = 'text/javascript'; s.async = true;
+      s.src = u; f.parentNode.insertBefore(s, f);
     }, 1);
   }
   _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/d8977a0cd5dace9f913e5f13bb972a0a61b72853.1.js');

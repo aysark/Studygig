@@ -18,6 +18,7 @@
 	}
 
 	function signup() {	
+		if($this->session->userdata('logged_in')) redirect('users/dashboard','refresh');
 		$data['content'] = 'users/signup';
 		
 		$data['pageTitle'] = 'Create an Account on Studygig';

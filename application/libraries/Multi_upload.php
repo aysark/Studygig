@@ -22,20 +22,15 @@ class Multi_upload  {
 	 */	
 	function go_upload($field = 'userfile') {
         $CI =& get_instance(); 
-        
-        $fname = $_FILES[$field]['name'][0];
-        echo $fname;
-        return FALSE;
-        
 		// Is $_FILES[$field] set? If not, no reason to continue.
-		if ( ! isset($_FILES[$field]))
+		if ( ! isset($_FILES[$field]['name'][0]))
 		{
 			$CI->upload->set_error('upload_no_file_selected');
 			return FALSE;
 		} else
 		{
 			$num_files = count($_FILES[$field]['name']) -1;
-			echo  $num_files;
+			//echo  count($_FILES[$field]['name']);
             $file_list = array();
             $error_hold = array();
             $error_upload = FALSE;
@@ -50,8 +45,8 @@ class Multi_upload  {
         
         for ($i=0; $i < $num_files; $i++) {
             
-            $fname = $_FILES[$field]['name'][$i];
-            echo $fname;
+//            $fname = $_FILES[$field]['name'][$i];
+//            echo "$fname\n\n<br><br>\n\n";
 
             $error_hold[$i] = FALSE;
                         
@@ -214,16 +209,16 @@ $error_hold[$i] = 'upload_destination_error';
             }
 
 // For debugging
-            
+/*            
             if (strlen($error_hold[$i]) > 1) {
                     print_r($error_hold);
             }
-           
+*/            
         } // end for loop
 
 // Add error display for individual files        
         if ($error_upload) {
-            $this->set_error($error_hold);
+            $CI->upload->set_error($error_hold);
             return FALSE;
         } else {
             return $file_list;

@@ -195,7 +195,7 @@ class Uploads extends CI_Controller {
 				
 				$config['upload_path'] = './uploads/';
 				$config['allowed_types'] = "docx|pdf|doc|ppt|pptx|gif|jpg|jpeg|png";
-				//$config['max_size']	= '50000';
+				$config['max_size']	= '50000';
 				$config['max_width'] = '0';
 				$config['max_height'] = '0';
 				$config['max_filename']  = '30';
@@ -206,7 +206,7 @@ class Uploads extends CI_Controller {
 		        if ( ! $files )        
 		        {
 						$data['subjects'] = $this->Subject->get_titles();
-						$data['error'] =  $this->upload->display_errors();
+						$data['error'] = $this->upload->display_errors();
 						$data['content'] = 'uploads/insert';
 						
 						$data['pageTitle'] = 'Post your Study Material on Studygig';
