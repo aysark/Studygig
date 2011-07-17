@@ -402,7 +402,7 @@ class Uploads extends CI_Controller {
 		}
 		
 		$this->load->model('Classified');
-		
+
 		if ($this->session->flashdata('last_search')) $this->session->keep_flashdata('last_search');
 		else
 		$this->session->set_flashdata('last_search',urldecode($query));
@@ -468,7 +468,8 @@ class Uploads extends CI_Controller {
 	}
 	
 	function searchfor() {
-		$query = mysql_real_escape_string(trim(str_replace(","," ",$this->input->post('query'))));
+		$replace = array(';',',');
+		$query = mysql_real_escape_string(trim(str_replace($replace," ",$this->input->post('query'))));
 		$this->load->model('Classified');
 		
 			
