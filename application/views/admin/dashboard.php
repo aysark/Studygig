@@ -1,38 +1,65 @@
-<h1>Dashboard!</h1>
-<p>Total registered users: <?=$stats['total_users']?></p>
-<p>Users:</p>
+<div id="content2">
+
+<h1>Studygig Admin Panel</h1>
+<p><ul class="horiList">
+     <li>Total registered users: <?php echo $stats['total_users']; ?></li>
+     <li>Total uploads: <?php echo $stats['total_uploads']; ?></li>
+     <li>Total classifieds: <?php echo $stats['total_classifieds']; ?></li>
+</ul></p>
+
+<div id="tabs">
 	<ul>
-		<?foreach ($all_users as $user):?>
-		<li <?if($user->verified == 0) echo 'class="not-verified"'?>><?=$user->username?> - <?=$user->points?></li>
-		<?endforeach;?>
+		<li><a href="#tabs-1">Upload</a></li>
+		<li><a href="#tabs-2">Users</a></li>
+		<li><a href="#tabs-3">Shared Posts</a></li>
+		<li><a href="#tabs-4">Classified Posts</a></li>
+		<li><a href="#tabs-5">Flags</a></li>
 	</ul>
-
-<p>Uploads awaiting moderation: </p>
-<form method="post" action="<?=site_url('admin/approve')?>">
-	<ul>
-		<?foreach ($inactive_uploads as $u):?>
-		<li><input type="checkbox" name="uploads[]" value="<?=$u->id?>" /> <?=$u->title?> </li>
-		<?endforeach;?>
+	<div id="tabs-1"> <!-- QUICK UPLOAD -->
+		adsfasdf
+	</div>
+	<div id="tabs-2"> <!-- USERS DATA -->
+		<ul>
+		<?php foreach ($all_users as $user):?>
+		<li <?php if($user->verified == 0) echo 'class="not-verified"'; ?>><?php echo $user->username; ?> - <?php echo $user->points; ?></li>
+		<?php endforeach;?>
 	</ul>
-	<input type="submit" value="Approve selected" />
-</form>
+	</div>
+	<div id="tabs-3"> <!-- UPLOADS DATA -->
+		
+		<p>Uploads awaiting moderation: </p>
+		<form method="post" action="<?php echo site_url('admin/approve'); ?>">
+			<ul>
+				<?php foreach ($inactive_uploads as $u): ?>
+				<li><input type="checkbox" name="uploads[]" value="<?php echo $u->id; ?>" /> <?php echo $u->title;?> </li>
+				<?php endforeach;?>
+			</ul>
+			<input type="submit" value="Approve selected" />
+		</form>
+	</div>
+	<div id="tabs-4"> <!-- CLASSIFIEDS DATA -->
 
-<p>Flags: </p>
+	</div>
+	<div id="tabs-5"> <!-- CLASSIFIEDS DATA -->
+		<?php if ($flags): ?>
+		
+			<ul>
+				<?php foreach($flags as $flag):?>
+					<li><?php  echo $flag->reason; ?></li>
+				<?php endforeach;?>
+			</ul>
+		
+		<?php else:?>
+			<p>No flags!</p>
+		<?php endif?>
+	</div>
+</div>
 
-<?if ($flags): ?>
 
-	<ul>
-		<?foreach($flags as $flag):?>
-			<li><?=$flag->reason?></li>
-		<?endforeach;?>
-	</ul>
-
-<?else:?>
-	<p>No flags!</p>
-<?endif?>
 
 <!-- <ul>
 <?foreach ($stats['queries'] as $q):?>
 <li><?=$q->query?> - <?=$q->ip?></li>
 <?endforeach;?>
 </ul> -->
+</div>

@@ -369,5 +369,10 @@ function searchcount($search){
     $this->db->set('active',1);
     $this->db->update('uploads');
   } 
+  
+  function get_total_uploads() {
+		$query = $this->db->get('uploads');
+		return count($query->result());
+	}
 
 }

@@ -5,6 +5,7 @@
 		parent::__construct();		
 		$this->load->model('User');
 		$this->load->model('Upload');
+		$this->load->model('Classified');
 
 		//Check if user is moderator
 		if (!$this->_verify_mod()) redirect(site_url(''),'refresh');
@@ -28,10 +29,12 @@
 		
 		$data['stats'] = array(
 			'total_users' => count($data['all_users']),
+			'total_uploads' => $this->Upload->get_total_uploads(),
+			'total_classifieds' => $this->Classified->get_total_classifieds(),
 			'queries' => $this->db->get('queries')->result()
 			);
-
-		$this->load->view('admin/dashboard',$data);
+		$data['content'] = 'admin/dashboard';
+		$this->load->view('admin/template',$data);
 	}	
 
 	function approve() {
