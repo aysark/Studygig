@@ -544,7 +544,7 @@ class Uploads extends CI_Controller {
 				#Check if he already has the file
 				$already_has = $this->User->already_has($this->session->userdata('user_id'),$uploadid);
 			
-				if ($this->User->can_download($this->session->userdata('user_id')) || $already_has)	
+				if ($this->User->can_download($this->session->userdata('user_id')))	
 				{
 					# Get the file
 					$data['file'] = $this->_prepare_download($this->input->post('file_path'),$this->input->post('file_name'));
@@ -589,7 +589,7 @@ class Uploads extends CI_Controller {
 					else
 				{
 					// check if the user is trying to dl their own upload
-		
+					
 					
 					$data['content'] = 'users/error';
 					$data['error']=  "Not enough points - it costs 20 points to download study material.  <a href='http://studygig.com/index.php/site/help'>Click here</a> to see how you can gain points.";	
