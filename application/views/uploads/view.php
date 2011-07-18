@@ -144,7 +144,7 @@
 
 	$(function() {
 		var reason = $( "#reportReason" ),
-			additionalinfo = $( "#reportAdditionalInfo" ),
+			additionalinfo = $( "#insertDescription" ),
 			allFields = $( [] ).add( reason ).add( additionalinfo ),
 			tips = $( ".validateTips" );
 			
