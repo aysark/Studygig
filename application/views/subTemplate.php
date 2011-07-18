@@ -53,7 +53,6 @@ echo substr($str,0,150);   ?>" />
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.blockUI.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.form.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.MetaData.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.MultiFile.min.js"></script>	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 
 <script type="text/javascript" language="JavaScript">

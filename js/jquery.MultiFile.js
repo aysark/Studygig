@@ -467,18 +467,19 @@
 	*/
 	$.fn.MultiFile.options = { //$.extend($.fn.MultiFile, { options: {
 		accept: '', // accepted file extensions
-		max: -1,    // maximum number of selectable files
-		
+		max: 10,    // maximum number of selectable files
+		maxsize: 50,
 		// name to use for newly created elements
 		namePattern: '$name', // same name by default (which creates an array)
 		
 		// STRING: collection lets you show messages in different languages
 		STRING: {
-			remove:'x',
+			remove:'[REMOVE]',
 			denied:'You cannot select a $ext file.\nTry again...',
 			file:'$file',
 			selected:'File selected: $file',
-			duplicate:'This file has already been selected:\n$file'
+			duplicate:'This file has already been selected:\n$file',
+			max:'Max file size is 50 MB'
 		},
 		
 		// name of methods that should be automcatically intercepted so the plugin can disable

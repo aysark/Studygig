@@ -21,20 +21,18 @@ class Multi_upload  {
      * see http://www.fyneworks.com/jquery/multiple-file-upload/
 	 */	
 	function go_upload($field = 'userfile') {
-        $CI =& get_instance(); 
-		// Is $_FILES[$field] set? If not, no reason to continue.
-		if ( ! isset($_FILES[$field]['name'][0]))
+	$CI =& get_instance(); 
+	// Is $_FILES[$field] set? If not, no reason to continue.
+		if (empty($_FILES[$field]['name'][0]))
 		{
 			$CI->upload->set_error('upload_no_file_selected');
 			return FALSE;
-		} else
-		{
+		}
 			$num_files = count($_FILES[$field]['name']) -1;
-			//echo  count($_FILES[$field]['name']);
             $file_list = array();
             $error_hold = array();
             $error_upload = FALSE;
-		}
+		
 		
         // Is the upload path valid?
         if ( ! $CI->upload->validate_upload_path())
@@ -45,8 +43,7 @@ class Multi_upload  {
         
         for ($i=0; $i < $num_files; $i++) {
             
-//            $fname = $_FILES[$field]['name'][$i];
-//            echo "$fname\n\n<br><br>\n\n";
+            $fname = $_FILES[$field]['name'][$i];
 
             $error_hold[$i] = FALSE;
                         

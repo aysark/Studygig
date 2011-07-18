@@ -132,10 +132,9 @@ class Uploads extends CI_Controller {
 	function upload() {
 		$this->load->model('Subject');
 		$this->load->model('User');
+
 		if($this->form_validation->run('upload')){
-			
 			if (strchr($this->input->post('uploadType'),"l")){
-				
 				$url =  mysql_real_escape_string(trim($this->input->post('uploadLink')));
 				$url = str_ireplace("www.","",$url);
 				if($this->check_upload_url($url) ){
@@ -192,7 +191,6 @@ class Uploads extends CI_Controller {
 				}
 				
 			}else{
-				
 				$config['upload_path'] = './uploads/';
 				$config['allowed_types'] = "docx|pdf|doc|ppt|pptx|gif|jpg|jpeg|png";
 				$config['max_size']	= '50000';
@@ -202,6 +200,7 @@ class Uploads extends CI_Controller {
 				
 				$this->load->library('upload', $config);
 		        $this->load->library('Multi_upload');
+		        
 		        $files = $this->multi_upload->go_upload();
 		        if ( ! $files )        
 		        {
