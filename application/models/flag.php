@@ -2,14 +2,14 @@
 
 class Flag extends CI_Model {
     
-	function add() {
+	function add($reason,$info,$upload_id,$type) {
 	
 		
 		$new = array(	
-			'reason' => $this->input->post('reportReason'),
-			'comments' => mysql_real_escape_string(trim($this->input->post('reportAdditionalInfo'))),
-			'upload_id'=> $this->input->post('upload_id'),
-			'type'=> $this->input->post('type'),
+			'reason' => $reason,
+			'comments' => mysql_real_escape_string(trim($info)),
+			'upload_id'=> $upload_id,
+			'type'=> $type,
 			'user_id'=> $this->session->userdata('user_id')	
 		);
 	
