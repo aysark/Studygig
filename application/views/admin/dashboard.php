@@ -9,14 +9,15 @@
 
 <div id="tabs">
 	<ul>
-		<li><a href="#tabs-1">Upload</a></li>
+		<li><a href="#tabs-1">Overview</a></li>
 		<li><a href="#tabs-2">Users</a></li>
 		<li><a href="#tabs-3">Shared Posts</a></li>
 		<li><a href="#tabs-4">Classified Posts</a></li>
 		<li><a href="#tabs-5">Flags</a></li>
 	</ul>
 	<div id="tabs-1"> <!-- QUICK UPLOAD -->
-		adsfasdf
+		<a href="moderators/insert">Click here to upload</a>		
+		
 	</div>
 	<div id="tabs-2"> <!-- USERS DATA -->
 		<ul>

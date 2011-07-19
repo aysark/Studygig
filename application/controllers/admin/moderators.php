@@ -35,7 +35,33 @@
 			);
 		$data['content'] = 'admin/dashboard';
 		$this->load->view('admin/template',$data);
-	}	
+	}
+	
+	function insert() {
+		$this->load->model('Subject');
+		$data['subjects'] = $this->Subject->get_titles();
+		$data['content'] = 'admin/upload';
+		$this->load->view('admin/template',$data);
+	}
+	
+	function upload(){
+		$this->load->model('Subject');
+		$this->load->model('User');
+		
+		if($this->form_validation->run('adminUpload')){
+			$data['content'] = 'admin/uploaded';
+				
+			//$this->User->log_user_ip(1,$_SERVER['REMOTE_ADDR'],$_SERVER['HTTP_USER_AGENT'],3);
+			//$data['upload_id']= $this->Upload->add($fileNames,$fileExtensions,$fileSizes,$numOfFiles,true);
+							
+			$this->load->view('admin/template', $data);
+		}else{
+			//validation error
+			$data['subjects'] = $this->Subject->get_titles();
+			$data['content'] = 'admin/upload';
+			$this->load->view('admin/template', $data);
+		}
+	}
 
 	function approve() {
 		# Approve pending uploads

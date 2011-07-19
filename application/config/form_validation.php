@@ -70,9 +70,32 @@ $config = array(
                      'field'   => 'uploadLink',
                      'label'   => 'upload link',
                      'rules'   => 'min_length[10]'
-                  )	
-                  	                  	
-),
+                  )	 ),
+	'adminUpload' =>  array(  array(
+                     'field'   => 'title',
+                     'label'   => 'title',
+                     'rules'   => 'required|min_length[3]|max_length[60]'
+                  ),
+                  	 array(
+                     'field'   => 'subject_id',
+                     'label'   => 'subject',
+                     'rules'   => 'required'
+                  ),
+                  	array(
+                     'field'   => 'course_id',
+                     'label'   => 'course',
+                     'rules'   => 'required'
+                  ),
+                  	array(
+                     'field'   => 'material',
+                     'label'   => 'material',
+                     'rules'   => 'required'
+                  ),
+                  	array(
+                     'field'   => 'description',
+                     'label'   => 'description',
+                     'rules'   => 'required|min_length[10]'
+                  ) ),
 	'list' =>  array(  array(
                      'field'   => 'title',
                      'label'   => 'title',
@@ -102,9 +125,7 @@ $config = array(
                      'field'   => 'description',
                      'label'   => 'description',
                      'rules'   => 'required|min_length[10]'
-                  ),
-                  	                  	
-),
+                  ) ),
             'editprofile' =>  array(  
                   array(
                      'field'   => 'email',
@@ -126,8 +147,7 @@ $config = array(
                      'field'   => 'confirmnewpassword',
                      'label'   => 'confirm new password',
                      'rules'   => 'required|min_length[5]'
-              	    ),
-              	    ),
+              	    )),
              'contact' =>  array(  
                   array(
                      'field'   => 'email',
@@ -149,6 +169,5 @@ $config = array(
                      'field'   => 'category',
                      'label'   => 'category',
                      'rules'   => 'required'
-              	    ),
-              	    ) 
+              	    )) 
             );

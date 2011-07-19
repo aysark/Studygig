@@ -30,10 +30,22 @@
 
 	echo link_tag($link);
 	
+	$link = array(
+          'href' => 'css/styleAdminUpload.css',
+          'rel' => 'stylesheet',
+          'type' => 'text/css',
+          'media' => 'screen'
+	);
+
+	echo link_tag($link);
+	
 	?>
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/swfupload.queue.js"></script>
+<script type="text/javascript" src="js/fileprogress.js"></script>
+<script type="text/javascript" src="js/handlers.js"></script>
 
 <script type="text/javascript" language="JavaScript">
  $(function() {
