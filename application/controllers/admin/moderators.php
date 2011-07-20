@@ -8,17 +8,47 @@
 		$this->load->model('Classified');
 
 		//Check if user is moderator
-		if (!$this->_verify_mod()) redirect(site_url(''),'refresh');
-
+		$uri = $this->uri->uri_string();
+		if ((($uri != 'admin') and ($uri !='admin/newsession')) and $this->_verify_mod() == FALSE) redirect('','refresh');
 	}
 
 	function _verify_mod() {
 		
-		if ($this->User->is_moderator($this->session->userdata('user_id')))	return TRUE;			
-		return FALSE;
+		if ($this->session->userdata('is_moderator') == 1)	return TRUE;
+			else return FALSE;
 	}
 
 	function index() {
+		
+
+		if ($this->_verify_mod()) {
+			redirect('admin/dashboard','refresh');
+		}
+			else
+		{
+			$data['content'] = 'admin/login';
+			$this->load->view('admin/template',$data);
+		}
+	}
+
+	function newsession() {
+		
+		if ($this->User->authenticate_mod($this->input->post('user'),$this->input->post('pass')))
+		{
+			$newmoderator = array('is_moderator' => 1);
+			$this->session->set_userdata($newmoderator);
+			redirect('admin/dashboard','refresh');
+		}
+		else redirect('','refresh');
+
+	}
+
+	function logout() {
+		$this->session->unset_userdata('is_moderator');
+		redirect('','refresh');
+	}
+
+	function dashboard() {
 		# All stats here 
 
 		$data['all_users'] = $this->User->get_all_users();
@@ -62,6 +92,13 @@
 			$this->load->view('admin/template', $data);
 		}
 	}
+
+	function view($id) {
+		$data['upload'] = $this->Upload->get_by_id($id);
+		
+		$data['content'] = 'admin/view';
+		$this->load->view('admin/template',$data);
+	}	
 
 	function approve() {
 		# Approve pending uploads

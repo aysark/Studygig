@@ -32,10 +32,10 @@
 		<form method="post" action="<?php echo site_url('admin/approve'); ?>">
 			<ul>
 				<?php foreach ($inactive_uploads as $u): ?>
-				<li><input type="checkbox" name="uploads[]" value="<?php echo $u->id; ?>" /> <?php echo $u->title;?> </li>
+				<li><input type="checkbox" name="uploads[]" value="<?php echo $u->id; ?>" /><a href="<?php echo site_url('admin/view/'.$u->id);?>"><?php echo $u->title;?></a></li>
 				<?php endforeach;?>
 			</ul>
-			<input type="submit" value="Approve selected" />
+			<input type="submit" value="Approve selected" /> <input type="submit" value="Reject selected" />
 		</form>
 	</div>
 	<div id="tabs-4"> <!-- CLASSIFIEDS DATA -->
@@ -46,7 +46,7 @@
 		
 			<ul>
 				<?php foreach($flags as $flag):?>
-					<li><?php  echo $flag->reason; ?></li>
+					<li><?php  echo $flag->reason. " ".$flag->comments; ?></li>
 				<?php endforeach;?>
 			</ul>
 		

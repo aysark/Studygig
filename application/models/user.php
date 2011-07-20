@@ -13,6 +13,18 @@
 		else
 			return false;
 	}
+
+	function authenticate_mod($user,$pass) {
+		$this->db->where('user',$user);
+		$this->db->where('pass',md5($pass));
+
+		$query = $this->db->get('moderators');
+
+		if ($query->num_rows() == 1)
+			return TRUE;
+			else
+			return FALSE;
+	}
 	
 	function create($the_hash) {
 	

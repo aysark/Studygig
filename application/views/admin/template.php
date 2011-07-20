@@ -76,6 +76,9 @@
     <ul class="horiList">
      <li><a href="http://development.studygig.com">development.studygig.com</a></li>
      <li><a href="https://studygig.basecamphq.com">Studygig Basecamp</a></li>
+     <?if($this->session->userdata('is_moderator') == 1):?>
+     <li><a href="<?= site_url('admin/logout') ?>">Logout</a></li>
+     <?endif;?>
     </ul>
     <br/>
     Be sure to like all of our stuff on: <a href="http://www.facebook.com/studygig" title="Like Studygig on Facebook">Facebook</a> & <a href="http://twitter.com/studygig" title="Follow Studygig on Twitter">Twitter</a>
