@@ -368,7 +368,18 @@ function searchcount($search){
     $this->db->where('id',$id);
     $this->db->set('active',1);
     $this->db->update('uploads');
-  } 
+  }
+
+  function reject($id,$uploaderid,$points) {
+
+    #Remove upload
+    $this->db->where('id',$id);
+    $this->db->delete('uploads');
+    #and sutract points from uploader
+    $this->db->where('id',$uploaderid);
+    $this->db->set('points','points-'.$points,FALSE);
+    $this->db->update('users');
+  }
   
   function get_total_uploads() {
 		$query = $this->db->get('uploads');

@@ -100,14 +100,80 @@
 		$this->load->view('admin/template',$data);
 	}	
 
-	function approve() {
-		# Approve pending uploads
+	function decide() {
+		
+		if ($this->input->post('approve')){
+			# Approve pending uploads
 
-		$approved = $_POST['uploads'];
-		foreach ($approved as $uploadid) {
-			$this->Upload->approve($uploadid);
+			$approved = $this->input->post('uploads');
+			foreach ($approved as $uploadid) {
+				$this->Upload->approve($uploadid);
+			}
+			redirect(site_url('admin'),'refresh');
 		}
-		redirect(site_url('admin'),'refresh');
+		else
+		{
+			# Reject pending uploads
+
+			$rejected = $this->input->post('uploads');
+			foreach ($rejected as $uploadid) {
+				$uploaderid = $this->Upload->get_uploader($uploadid)->id;
+				$points = 0;
+				if (substr($this->Upload->get_by_id($uploadid)->filepath,0,6) == 'http://') {
+					switch ($this->Upload->get_material_by_id($uploadid)) {
+					    case 0:
+					       	$points = 15 ;
+					        break;
+					    case 1:
+					        $points = 5 ;
+					        break;
+					    case 2:
+					        $points = 5 ;
+					        break;
+					    case 3:
+					        $points = 3 ;
+					        break;
+					    case 4:
+					        $points = 3 ;
+					        break;
+					    case 5:
+					        $points = 3 ;
+					        break;
+					    case 6:
+					        $points = 1 ;
+					        break;                 
+					}
+				}
+				else
+				{
+					switch ($this->Upload->get_material_by_id($uploadid)) {
+					    case 0:
+					       	$points = 20;
+					        break;
+					    case 1:
+					        $points = 15;
+					        break;
+					    case 2:
+					        $points = 10;
+					        break;
+					    case 3:
+					        $points = 5;
+					        break;
+					    case 4:
+					        $points = 5;
+					        break;
+					    case 5:
+					        $points = 5;
+					        break;
+					    case 6:
+					        $points = 1 ;
+					        break;                
+					}
+				}	
+				$this->Upload->reject($uploadid,$uploaderid,$points);
+			}
+			redirect(site_url('admin'),'refresh');
+		}
 	}
 
 }
