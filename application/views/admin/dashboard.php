@@ -29,13 +29,13 @@
 	<div id="tabs-3"> <!-- UPLOADS DATA -->
 		
 		<p>Uploads awaiting moderation: </p>
-		<form method="post" action="<?php echo site_url('admin/approve'); ?>">
+		<form method="post" action="<?php echo site_url('admin/decide'); ?>">
 			<ul>
 				<?php foreach ($inactive_uploads as $u): ?>
 				<li><input type="checkbox" name="uploads[]" value="<?php echo $u->id; ?>" /><a href="<?php echo site_url('admin/view/'.$u->id);?>"><?php echo $u->title;?></a></li>
 				<?php endforeach;?>
 			</ul>
-			<input type="submit" value="Approve selected" /> <input type="submit" value="Reject selected" />
+			<input type="submit" value="Approve selected" id="approve" name="approve" /> <input type="submit" value="Reject selected" id="reject" name="reject" />
 		</form>
 	</div>
 	<div id="tabs-4"> <!-- CLASSIFIEDS DATA -->
