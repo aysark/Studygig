@@ -77,7 +77,7 @@
      <li><a href="http://development.studygig.com">development.studygig.com</a></li>
      <li><a href="https://studygig.basecamphq.com">Studygig Basecamp</a></li>
      <?php if($this->session->userdata('is_moderator') == 1):?>
-     <li><a href="<?php site_url('logout') ?>">Logout</a></li>
+     <li><a href="<?php echo site_url('admin/logout'); ?>">Logout</a></li>
      <?php endif;?>
     </ul>
     <br/>
