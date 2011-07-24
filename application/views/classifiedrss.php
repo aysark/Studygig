@@ -26,7 +26,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>' . "\n";
     
         <item>
 
-          <title><?php echo xml_convert($entry->title); ?></title>
+          <title><?php echo xml_convert($entry->title." for $".$entry->price); ?></title>
           <link><?php echo site_url('classifieds/view/' . $entry->id) ?></link>
           <guid><?php echo site_url('classifieds/view/' . $entry->id) ?></guid>
 
