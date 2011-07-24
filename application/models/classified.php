@@ -194,9 +194,24 @@ class Classified extends CI_Model {
 		$this->db->insert('classifieds_messages',$new);
 	}
 	
-	 function get_total_classifieds() {
+	function get_total_classifieds() {
 		$query = $this->db->get('classifieds');
 		return count($query->result());
 	}
+
+	function get_inactive() {
+    	$this->db->where('active','0');
+    	return $this->db->get('classifieds')->result();
+  	}
  		
+	function approve($id) {
+    	$this->db->where('id',$id);
+    	$this->db->set('active','1');
+    	$this->db->update('classifieds');
+  	}
+
+  	function reject($id) {
+  		$this->db->where('id',$id);
+  		$this->db->delete('classifieds');
+  	}
 }		

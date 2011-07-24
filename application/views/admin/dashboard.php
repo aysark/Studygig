@@ -36,9 +36,21 @@
 				<?php endforeach;?>
 			</ul>
 			<input type="submit" value="Approve selected" id="approve" name="approve" /> <input type="submit" value="Reject selected" id="reject" name="reject" />
+			<input type="hidden" id="classifieds" value="0" />
 		</form>
 	</div>
 	<div id="tabs-4"> <!-- CLASSIFIEDS DATA -->
+
+		<p>Classifieds awaiting moderation: </p>
+		<form method="post" action="<?php echo site_url('admin/decide'); ?>">
+			<ul>
+				<?php foreach ($inactive_classifieds as $c): ?>
+				<li><input type="checkbox" name="classifieds[]" value="<?php echo $c->id; ?>" /><a href="<?php echo site_url('admin/viewclassified/'.$c->id);?>"><?php echo $c->title;?></a></li>
+				<?php endforeach;?>
+			</ul>
+			<input type="submit" value="Approve selected" id="approve" name="approve" /> <input type="submit" value="Reject selected" id="reject" name="reject" />
+			<input type="hidden" id="classifieds" value="1" />
+		</form>
 
 	</div>
 	<div id="tabs-5"> <!-- CLASSIFIEDS DATA -->
