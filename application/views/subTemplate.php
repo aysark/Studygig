@@ -47,6 +47,15 @@ echo substr($str,0,150);   ?>" />
 
 	echo link_tag($link);
 	
+	$link = array(
+          'href' => 'css/chosen.css',
+          'rel' => 'stylesheet',
+          'type' => 'text/css',
+          'media' => 'screen'
+	);
+
+	echo link_tag($link);
+	
 	?>
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -56,7 +65,7 @@ echo substr($str,0,150);   ?>" />
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 
 <script type="text/javascript" language="JavaScript">
-  //user voice
+
     var uvOptions = {};
   
 $.widget( "custom.catcomplete", $.ui.autocomplete, {
@@ -113,6 +122,8 @@ $(function() {
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+  
+  $(".chzn-select").chosen();
   
 
 </script>

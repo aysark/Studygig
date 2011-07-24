@@ -32,10 +32,10 @@ class Uploads extends CI_Controller {
 	}
 	
 	function getcourse() {
-		$id = $this->input->post('id');
+		$id = $this->input->post('subject_id');
 		$this->load->model('Course');
 		
-		$results = $this->Course->get_courses_by_subject_id($id[0]);
+		$results = $this->Course->get_courses_by_subject_id($id);
 		echo json_encode($results);
 	}
 	
@@ -639,7 +639,26 @@ class Uploads extends CI_Controller {
 		redirect('uploads/view/'. $courseid,'refresh');
 	}
 	
-	function requestStudyMaterial(){
+	function emailSignup(){
+	$email = $this->input->post('email');
+  		if (!empty($email))
+		{	
+					if(filter_var($email, FILTER_VALIDATE_EMAIL))
+					{
+						$this->Upload->addEmailSignUp();
+						echo "The email has been signed up.";
+					}else{
+						echo "The email is not valid.";
+					}
+		}
+			else
+		{
+				echo "Please type in an email.";
+		}
+  }
+  
+  
+  function requestStudyMaterial(){
   	if ($this->session->userdata('logged_in')) 
 		{	
 					$this->Upload->addStudyMaterialRequest();

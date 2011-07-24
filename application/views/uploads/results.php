@@ -105,14 +105,32 @@
 
 <?php else: ?>
     
-        <p>Your search doesn't have any study material yet, would you like to:
-    	<div id="resultsFd" class="rewardFeedback ui-corner-all" ></div>
-    	<a href="../../uploads/insert" id="insertUploadButton">Be the first to post study material & recieve additional points!</a>  
+        <h2>Your search did not match any posts.  Suggestions:</h2>
+<p><ul class="guidelines">
+<li>If searching a course code, do not include a space between the letters and numbers (eg. do this: CSE1020, not this: CSE 1020)</li>
+<li>Make sure all words are spelled correctly.</li>
+<li>Try different keywords.</li>
+<li>Try more general keywords.</li>
+<li>Try fewer keywords.</li>
+</ul></p>
+<h2>Alternatively you can...</h2>
+    	<a href="../../uploads/insert" id="postStudyMaterialButton2">Post study material & earn cash rewards</a>  
     	
 <form action="" method="post" accept-charset="utf-8" id="requestForm" >
- <input type="submit" class="button" id="requestStudyMaterial"  name="requestSM" value="Request Study Material" onclick="rqtStudyMaterial()"/>
+ <input type="submit" class="jqbutton"  name="requestSM" value="Request study material" onclick="rqtStudyMaterial()"/>
 </form>	
-</p> 
+
+    	<div id="resultsFd" class="rewardFeedback ui-corner-all" ></div>
+
+<div id="anotherUni">
+		<h2>Study at a different university?</h2>
+		<p>Join our mailing list and be the first to find out when new universities are added.  Enter your email below.</p>
+		<form action="" method="post" accept-charset="utf-8"  id="signupEmailUni" >
+<input type="textfield" class="formTextField2Inline" id="signupEmailUniField" name="email" maxlength="30" />
+ <input type="submit" class="jqbutton" name="emailUniSignup" value="Sign Up" onclick="signupEmailUni()"/>
+</form>	
+<div id="resultsFd2" class="rewardFeedback ui-corner-all" ></div>
+</div>
 
    <?php endif; ?>
    
@@ -143,7 +161,9 @@
 			<label class="searchFilterMaterialType"><input type="checkbox" name="materialTypeFilter[]" value="6" /> Lecture Notes</label>
 			<label class="searchFilterMaterialType"><input type="checkbox" name="materialTypeFilter[]"  value="7" /> Other</label>
 			
-			<input type="submit" value="Apply"  /> 
+			<input type="submit" class="jqbutton" style="float:right;" value=" Apply " /> 
+		<p><br></p>
+		
 		</form>
 		
 		<?php else: ?>
@@ -165,14 +185,15 @@
 			<label class="searchFilterMaterialType"><input type="checkbox" name="materialTypeFilter[]"  value="11" /> All-in-one Package</label>
 			<label class="searchFilterMaterialType"><input type="checkbox" name="materialTypeFilter[]"  value="12" /> Other</label>
 			
-			<input type="submit" value="Apply"  /> 
+			<input type="submit" value="Apply" /> 
+			
 		</form>
 		<?php endif; ?>
 	<br/>
 
 	
 </div>
-<a href="insert"><div id="memberAd2">
+<a href="../insert"><div id="memberAd2">
 </div></a>
 </div>
 </div>
@@ -195,9 +216,26 @@
       });
   }
   
+  function signupEmailUni(){
+  	/* attach a submit handler to the form */
+  $("#signupEmailUni").submit(function(event) {
+    /* stop form from submitting normally */
+    event.preventDefault(); 
+  });
+  	var email = $("#signupEmailUniField").val();
+
+  	//  Send the data using post and put the results in a div 
+    $.post( "../../uploads/emailSignup", {email:email},
+      function( data ) {
+      	$("#resultsFd2").css({'visibility' : 'visible', 'background-color' : '#fbec88', 'color':'#363636','margin-bottom':'5px','border':'1px solid #fad42e'}	);
+      	document.getElementById("resultsFd2").innerHTML=data;
+      });
+  }
+  
     $(document).ready(function(){
     	$("#sortResultsForm").change(onSelectChange);
-       $( "#accordion" ).accordion({ collapsible: true });
+       $( "#accordion" ).accordion({ collapsible: false});
+       $( ".jqbutton" ).button();
     })
     
 

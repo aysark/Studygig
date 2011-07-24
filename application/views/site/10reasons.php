@@ -9,7 +9,7 @@
 <div class="roundedCornerContent" id="siteAnchor">
 	<h1>9 Reasons Why Students Use Studygig</h1>	
 	<ol id="top10reasons">
-		<li>Supplemental study material helps students ace their courses.  Out of 60 students surveyed, 55 said they rely on supplemental study material to study for their courses.</li>
+		<li>Supplemental study material helps students ace their courses.  Out of 85 students surveyed, 75 said they rely on supplemental study material to study for their courses.</li>
 		<li>Studygig is available anytime, anywhere.</li>
 		<li>Studygig is free. And always will be. Points are used to ensure that everyone gives into the community to deter leechers.</li>
 		<li>Made by students for students.  We are going through the same problems you are, so we know exactly what you want.</li>
@@ -22,6 +22,7 @@
 	<div class="center">
 <a href="../users/signup" id="insertUploadButton"/>Get Started Now & Recieve 50 Points Free!</a>
 </div>
+<br>
 </div>
 </div>
 </div>

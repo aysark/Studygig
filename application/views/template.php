@@ -39,7 +39,7 @@ echo $str;  ?>" />
 	<script type="text/javascript" src="js/jquery.MetaData.js"></script>
 	<script type="text/javascript" src="js/jquery.MultiFile.min.js"></script>	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-	
+	 <link rel="alternate" type="application/rss+xml" title="Classifieds Feed" href="http://studygig.com/index.php/classifiedFeed/" /> 
 		<!-- include Cycle plugin -->
 <script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
 
@@ -172,8 +172,8 @@ $(function() {
   <div id="footer">
   	<div id="seperator">
   	</div>
-   	<a href="index.php/site/tenreasons"><div id="studentStatisticBanner">
-  </div></a>
+   	<a href="index.php/site/tenreasons"><div id="studentStatisticBanner"></div></a>
+   	<a href="index.php/site/academicintegrity"><div id="profSupportBanner"></div></a>
     <div id="footerSEO">
     	<div class="col11">
                 <h2>Popular Subjects</h2> 

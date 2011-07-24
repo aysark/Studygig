@@ -34,6 +34,13 @@ class Classified extends CI_Model {
 			return $query->result();		
 		}
 		
+		function get_recent($limit) {
+			$this->db->where('active','1');
+			$this->db->order_by("created_at", "desc"); 
+			$query = $this->db->get('classifieds',$limit);
+			return $query->result();		
+		}
+		
 		function search($search,$offset = 0,$sortResults=0, $materialTypeFilter=null) {
 			# apply a material type filter if there was one applied
 	 		if (!empty($materialTypeFilter)){

@@ -32,16 +32,18 @@
 	<div class="clear"></div>
 	<div id="insertSelectSubject">
 		<h2>Select Subject <span class="formDesc">Required. The subject your study material is for (and then the course).</span></h2>
-			<select id="subject_id" multiple="multiple" size="10" name="subject_id" >
+			<select id="subject_id"  size="10" name="subject_id" class="chzn-select1" title="Choose a Subject..."  >
 			<?php foreach($subjects as $subject): ?>
 		
 				<option value="<?php echo $subject->id; ?>"  <?php echo set_select('subject_id',  $subject->id); ?>><?php echo $subject->title; ?></option>
 		
 			<?php endforeach; ?>
 		</select>
-				
-		<select id="course_id" size="10" name="course_id" style="display:none;">	
-		</select>
+		
+		<div id="courses_select">
+		<select id="course_id" size="10" name="course_id"  class="chzn-select2" title="Choose a Course...">
+			</select>
+		</div>
 		
 	</div>
 
@@ -65,35 +67,11 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);"></textarea>
 
 	</div>
 	
-	<div id="insertKeywords">
-		<h2>Choose related keywords<span class="formDesc">Optional. These help make your study material more relevant and search-friendly.</span></h2>
-		<input type="button" class="tag" value="  [ Answers ] ">
-		<input type="button" class="tag" value="  [ Essay ] ">
-		<input type="button" class="tag" value="  [ Exam ] ">
-		<input type="button" class="tag" value="  [ Formula Sheet ] ">
-		<input type="button" class="tag" value="  [ Lecture ] ">
-		<input type="button" class="tag" value="  [ Midterm ] ">
-		<input type="button" class="tag" value="  [ Presentation ] ">
-		<input type="button" class="tag" value="  [ Problem Set ] ">
-		<input type="button" class="tag" value="  [ Questions ] ">
-		<input type="button" class="tag" value="  [ Quiz ] ">
-		<input type="button" class="tag" value="  [ Reading ] ">
-		<input type="button" class="tag" value="  [ Report ] ">
-		<input type="button" class="tag" value="  [ Review ] ">
-		<input type="button" class="tag" value="  [ Solutions ] ">
-		<input type="button" class="tag" value="  [ Summary ] ">
-		<input type="button" class="tag" value="  [ Syllabus ] ">
-		<input type="button" class="tag" value="  [ Test ] ">
-		<input type="button" class="tag" value="  [ Textbook ] ">
-		<input type="button" class="tag" value="  [ Tutorials ] ">
-	</div>
-	
 	<div id="postfb">
-		<h2>Would you like to tell your friends on Facebook?<span class="formDesc">Optional.</span></h2>
+		<p> <h2>Would you like to tell your friends on Facebook?<span class="formDesc">Optional.</span></h2>
 		<label><input type="checkbox" name="postfb" id="postfb" value="1" /> I would like to make a Facebook post.</label>
+		</p>
 	</div>
-	
-	<p>By uploading a file you certify that you have the right to distribute it and that it does not violate the Terms of Use.</p>
 	
 <input type="submit" value="Post Study Material" id="insertUploadButton" /> 
 <?php echo form_close(); ?>
@@ -121,28 +99,34 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);"></textarea>
 </div>
 </div>
 
+<script src="<?php echo base_url();?>js/chosen.jquery.js" type="text/javascript"></script>
 
 <script type="text/javascript" >
 
 $(document).ready(function(){
+	$(".chzn-select1").chosen();
+	$(".chzn-select2").chosen();
   $("#subject_id").change( 
 		
 		function (){
-			$("#course_id").css("display","inline");
+			$("#courses_select").css("visibility","visible");
 			var url = '<?php echo site_url('uploads/getcourse/') ?>/';
-			var subject_id = $("#subject_id").val();
+			var subject_id = $(".chzn-select1").val();
 		
-			$.post(url , { 'id' : subject_id }, function(data) {
+			$.post(url , { 'subject_id' : subject_id }, function(data) {
 			
 			var courses = '';
 			for (var key in data) {
-		  	courses += '<option value="' + data[key].id + '" <?php echo set_select("course_id", "'+ data[key].id +'"); ?>>' + data[key].course_title.substring(0,40) + '</option>';
+		  	courses += '<option value="' + data[key].id + '" <?php echo set_select("course_id", "'+ data[key].id +'"); ?>>' + data[key].course_title + '</option>';
 		  }								
-					
-			$('#course_id').html(courses);
+		    
+		    
+			$("#course_id").html(courses);
+			$(".chzn-select2").trigger("liszt:updated");
 			},'json');
+			
 		}
-	);  
+	);
 	
 	$(".tag").click(function () {
       var text = $(this).val();

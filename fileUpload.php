@@ -125,7 +125,7 @@ if (move_uploaded_file($_FILES[$field]['tmp_name'], $location.$name)) {
                             'ext' => $ext,
                             );
 
-    echo $file_info;
+     print_r ($file_info);
     
     if ($ext === ".pdf"){
 	    $output_file = str_replace($ext,".jpg",$fullname);

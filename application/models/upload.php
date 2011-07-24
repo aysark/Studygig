@@ -126,7 +126,12 @@ class Upload extends CI_Model {
   	}
   	
   	$this->load->model('Course');
-  	$material = $this->input->post('material');
+  	$material = mysql_real_escape_string($this->input->post('material'));
+  	$tags = $this->input->post('tags');
+  	if (!empty($tags))
+  		$tags = implode(",", $tags);
+  	else
+  		$tags = "";
   	
   	if ($numOfFiles > 1){
   		$title =  mysql_real_escape_string(trim($this->input->post('title')));
@@ -149,7 +154,8 @@ class Upload extends CI_Model {
 			'user_id' => $userid,
 			'filetype' => strtolower($typesArray[$i]),
 			'filesize' => $sizesArray[$i],
-			'related' => 1
+			'related' => 1,
+			'tags' => $tags
 			);
 			
 			$this->db->insert('uploads',$newcourse);
@@ -172,7 +178,8 @@ class Upload extends CI_Model {
 			'user_id' => $userid,
 			'filetype' => strtolower($typesArray[0]),
 			'filesize' => $sizesArray[0],
-			'related' => 0  			 
+			'related' => 0,
+			'tags' => $tags		 
 			);
 		
 			$this->db->insert('uploads',$newcourse);
@@ -314,6 +321,15 @@ function searchcount($search){
   	  
   }  
   
+  function addEmailSignUp(){
+
+			$newemail = array(	
+			'email' => mysql_real_escape_string(trim($this->input->post('email'))),
+			);
+	
+			$this->db->insert('emailsignup',$newemail);
+  }
+  
   function addStudyMaterialRequest(){
   	if ($this->Upload->findStudyMaterialRequest($this->input->post('query'))) {
 			// this search term has been previously requested, just add 1 to # of requests
@@ -323,7 +339,7 @@ function searchcount($search){
 			
 		}else{
 			$newrating = array(	
-			'query' => $this->input->post('query'),
+			'query' => mysql_real_escape_string(trim($this->input->post('query'))),
 			'requests' => 1,
 			);
 	
