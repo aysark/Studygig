@@ -6,9 +6,11 @@ echo '<?xml version="1.0" encoding="utf-8"?>' . "\n";
     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
     xmlns:admin="http://webns.net/mvcb/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:atom="http://www.w3.org/2005/Atom">
 	
     <channel>
+    <atom:link href="http://studygig.com/index.php/classifiedFeed/" rel="self" type="application/rss+xml" />
     <ttl>60</ttl>
     <title><?php echo $feed_name; ?></title>
 
@@ -29,7 +31,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>' . "\n";
           <guid><?php echo site_url('classifieds/view/' . $entry->id) ?></guid>
 
           <description><![CDATA[<?php echo $entry->description; ?>]]></description>
-      <pubDate><?php echo date('F j, Y \a\t g:i A', strtotime($entry->created_at));?></pubDate>
+      <pubDate><?php echo date('r', strtotime($entry->created_at));?></pubDate>
         </item>
 
         
