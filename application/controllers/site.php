@@ -39,14 +39,6 @@ class Site extends CI_Controller {
 		$this->load->view('subTemplate', $data);	
 	}
 	
-	function supportedbyprofessors() {
-		$data['content'] = 'site/supportedbyprofessors';
-		
-		$data['pageTitle'] = 'The Studygig initiative is supported by your professors';
-		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		$this->load->view('subTemplate', $data);	
-	}
-	
 	function help() {
 		$data['content'] = 'site/help';
 		

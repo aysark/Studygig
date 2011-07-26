@@ -72,11 +72,6 @@ $config = array(
                      'rules'   => 'min_length[10]'
                   )	 ),
 	'adminUpload' =>  array(  array(
-                     'field'   => 'title',
-                     'label'   => 'title',
-                     'rules'   => 'required|min_length[3]|max_length[60]'
-                  ),
-                  	 array(
                      'field'   => 'subject_id',
                      'label'   => 'subject',
                      'rules'   => 'required'
@@ -90,6 +85,11 @@ $config = array(
                      'field'   => 'material',
                      'label'   => 'material',
                      'rules'   => 'required'
+                  ),
+                  array(
+                     'field'   => 'title',
+                     'label'   => 'title',
+                     'rules'   => 'required|min_length[3]|max_length[60]'
                   ),
                   	array(
                      'field'   => 'description',

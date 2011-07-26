@@ -134,7 +134,7 @@ $(function() {
 			Hi there!  We are in <a href="index.php/site/aboutus">Public Alpha</a>, please be patient with us as we fix bugs, complete pages and add  features.  But we'd love to hear your opinion and feedback!
 			</div>
 			<div id="wrapper">
-
+<?php if( extension_loaded('newrelic') ) { echo newrelic_get_browser_timing_header(); } ?>
     <div id="top">
     	
         	<?php if($this->session->userdata('logged_in')): ?>
@@ -260,6 +260,7 @@ $(function() {
      <li><a href="index.php/site/help">FAQs/Help</a></li>
      <li><a href="http://studygig.posterous.com">Blog</a></li>
      <li><a href="index.php/site/academicintegrity">Academic Integrity</a></li>
+     <li><a href="index.php/site/copyright">Copyright Notice</a></li>
      <li><a href="index.php/site/termsofuse">Terms of Use</a></li>
      <li><a href="index.php/site/privacy">Privacy Policy</a></li>
      <li><a href="index.php/site/contact">Contact Us</a></li>
@@ -273,7 +274,7 @@ $(function() {
     
   	
   </div><!-- end footer div -->
-    
+    <?php if( extension_loaded('newrelic') ) { echo newrelic_get_browser_timing_footer(); } ?>
 </div><!-- end wrapper div -->
 	</body>
 </html>

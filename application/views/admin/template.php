@@ -36,6 +36,14 @@
           'type' => 'text/css',
           'media' => 'screen'
 	);
+	echo link_tag($link);
+	
+	$link = array(
+          'href' => 'css/chosen.css',
+          'rel' => 'stylesheet',
+          'type' => 'text/css',
+          'media' => 'screen'
+	);
 
 	echo link_tag($link);
 	
