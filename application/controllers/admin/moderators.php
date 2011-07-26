@@ -106,6 +106,12 @@
 		
 		$data['content'] = 'admin/viewclassified';
 		$this->load->view('admin/template',$data);
+	}
+	
+	function viewuser($id) {
+		$data['user'] = $this->User->find_by_id($id);
+		$data['content'] = 'admin/viewuser';
+		$this->load->view('admin/template',$data);
 	}	
 
 	function decide() {

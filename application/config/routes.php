@@ -46,6 +46,7 @@ $route['admin/view/(:any)'] = "admin/moderators/view/$1";
 $route['admin/viewclassified/(:any)'] = "admin/moderators/viewclassified/$1";
 $route['admin/newsession'] = "admin/moderators/newsession";
 $route['admin/logout'] = "admin/moderators/logout";
+$route['admin/viewuser/(:any)'] = "admin/moderators/viewuser/$1";
 
 $route['default_controller'] = "uploads";
 $route['404_override'] = '';
