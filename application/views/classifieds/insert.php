@@ -60,9 +60,9 @@
 	</div>
 	<div class="insertCol2">
 	Description
-	<textarea id="insertDescription" name="description" rows="5" cols="30" onKeyDown="limitText(this.form.description,this.form.countdown,350);" 
-onKeyUp="limitText(this.form.description,this.form.countdown,350);"></textarea>
-(Maximum characters: 350)
+	<textarea id="insertDescription" name="description" rows="5" cols="30" onKeyDown="limitText(this.form.description,this.form.countdown,500);" 
+onKeyUp="limitText(this.form.description,this.form.countdown,500);"></textarea>
+(Maximum characters: 500)
 </div>
 
 	</div>
