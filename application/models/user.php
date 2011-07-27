@@ -376,6 +376,18 @@
 
 			$this->db->insert('ips',$log);
   	}
+  	
+  	function log_admin_ip($username,$ip,$useragent,$action){
+
+  		$log = array(
+			'ip' => $ip,
+			'username' => $username,
+			'useragent' => $useragent,
+			'action' => $action 
+			);
+
+			$this->db->insert('admin_ips',$log);
+  	}
 
   	function is_moderator($id) {
   		#Checks if user has moderator privileges

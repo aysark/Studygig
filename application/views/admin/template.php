@@ -48,9 +48,10 @@
 	echo link_tag($link);
 	
 	?>
-	
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.dataTables.min.js"></script> 
 <script type="text/javascript" src="js/swfupload.queue.js"></script>
 <script type="text/javascript" src="js/fileprogress.js"></script>
 <script type="text/javascript" src="js/handlers.js"></script>
@@ -58,6 +59,7 @@
 <script type="text/javascript" language="JavaScript">
  $(function() {
 		$( "#tabs" ).tabs();
+		$("#logoutbtn").button();
 	});
 
 </script>
@@ -65,7 +67,10 @@
 </head>
 	<body>
 	<div id="wrapper">
-		 
+		
+		<?php if($this->session->userdata('is_moderator') == 1):?>
+     <a href="<?php echo site_url('admin/logout'); ?>" id="logoutbtn">Logout</a>
+     <?php endif;?>
     <!-- end header div -->		
 	<?php $this->load->view($content); ?>
 	
@@ -81,13 +86,15 @@
     </div>
     
     <div id="footerText">
+	<?php if($this->session->userdata('is_moderator') == 1):?>
     <ul class="horiList">
      <li><a href="http://development.studygig.com">development.studygig.com</a></li>
-     <li><a href="https://studygig.basecamphq.com">Studygig Basecamp</a></li>
-     <?php if($this->session->userdata('is_moderator') == 1):?>
-     <li><a href="<?php echo site_url('admin/logout'); ?>">Logout</a></li>
-     <?php endif;?>
+     <li><a href="https://studygig.basecamphq.com">Basecamp</a></li>
+     <li><a href="https://pp.pingdom.com/index.php/member/default">Pingdom</a></li>
+     <li><a href="https://rpm.newrelic.com">Newrelic</a></li>
+     <li><a href="https://64.207.156.202:4643/vz/cp">Parallels Container</a></li>
     </ul>
+      <?php endif;?>
     <br/>
     Be sure to like all of our stuff on: <a href="http://www.facebook.com/studygig" title="Like Studygig on Facebook">Facebook</a> & <a href="http://twitter.com/studygig" title="Follow Studygig on Twitter">Twitter</a>
     <br/>

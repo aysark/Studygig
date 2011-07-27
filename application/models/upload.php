@@ -18,7 +18,6 @@ class Upload extends CI_Model {
   	$query = $this->db->get('uploads');
   	
   	return $query->row();
-  
   }
   
   function get_subject_by_id($id) {
