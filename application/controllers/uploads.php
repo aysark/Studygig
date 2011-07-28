@@ -390,7 +390,8 @@ class Uploads extends CI_Controller {
 	}
 	
 	function search($query) {
-	
+		$query = str_ireplace("q=","",$query);
+		
 		if ($this->uri->segment(4) === FALSE)
 		{
 		    $offset = 0;
@@ -484,13 +485,12 @@ class Uploads extends CI_Controller {
 			$crows = $this->Classified->searchcount($query);
 			
 			if ($urows == 0 && $crows == 0){
-				redirect(site_url('uploads/search/'.$query),'redirect');
+				redirect(site_url('uploads/search/q='.$query),'redirect');
 			} else  if  ($urows >= $crows){
-				redirect(site_url('uploads/search/'.$query),'redirect');
+				redirect(site_url('uploads/search/q='.$query),'redirect');
 			}else{
-				redirect(site_url('classifieds/search/'.$query),'redirect');
+				redirect(site_url('classifieds/search/q='.$query),'redirect');
 			}
-
 	}
 	
 	//View a course

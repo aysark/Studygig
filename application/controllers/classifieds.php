@@ -30,7 +30,8 @@ class Classifieds extends CI_Controller {
 	}
 	
 	function search($query) {
-		
+	$query = str_ireplace("q=","",$query);
+	
 	if ($this->uri->segment(4) === FALSE)
 		{
 		    $offset = 0;
