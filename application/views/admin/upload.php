@@ -1,94 +1,176 @@
-<script type="text/javascript" src="../../../js/swfupload/swfupload.js"></script>
-<script type="text/javascript" src="../../../js/swfupload.queue.js"></script>
-<script type="text/javascript" src="../../../js/fileprogress.js"></script>
-<script type="text/javascript" src="../../../js/handlers.js"></script>
+<script type="text/javascript" src="/uploadify/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/uploadify/swfobject.js"></script>
+<script type="text/javascript" src="/uploadify/jquery.uploadify.v2.1.4.min.js"></script>
 
 <script type="text/javascript">
-		var swfu;
+$(document).ready(function() {
+var filenames;
+var extension;
+var textfield;
+  $('#file_upload').uploadify({
+    'uploader'  : '/uploadify/uploadify.swf',
+    'script'    : '/uploadify/uploadify.php',
+    'cancelImg' : '/uploadify/cancel.png',
+    'folder'    : 'uploads',
+    'auto'      : false,
+    'displayData' : 'speed',
+    'expressInstall' : '/uploadify/expressInstall.swf',
+    'fileDataName' : 'Filedata',
+    'fileExt'     : '*.docx;*.pdf;*.doc;*.ppt;*.pptx;*.gif;*.jpg;*.jpeg;*.png',
+  	'fileDesc'    : 'PDF,DOC,PPT,IMAGES',
+  	'multi'       : true,
+  	'queueSizeLimit' : 10,
+  	'removeCompleted' : true,
+  	'scriptAccess' : 'sameDomain',
+  	'scriptData'  : {'user_id':1},
+  	'sizeLimit'   : 52428800,
+  	'onComplete'  : function(event, ID, fileObj, response, data) {
+  		var fileinfo = eval('(' + response + ')');
+  		//get name
+  		filenames = $('#filename-text').val();
+    	$('#filename-text').val(filenames+fileinfo["name"] + ' ');
+    	
+    	//get extension
+    	extension = $('#fileext-text').val();
+    	$('#fileext-text').val(extension+fileinfo["ext"] + ',');
+    	
+    	//get sizes
+    	textfield = $('#filesize-text').val();
+    	$('#filesize-text').val(textfield+fileinfo["size"] + ',');
+    	
+},
+  	'onAllComplete' : function(event,data) {
+  		
+     $('html,body').animate({scrollTop: $("#file_upload").top},'fast');
+     	var fileNames = $('#filename-text').val();
+     	var fileExt = $('#fileext-text').val();
+     	var fileSize = $('#filesize-text').val();
+     	
+     	var url = '<?php echo site_url('admin/moderators/upload') ?>';
+		
+		$.post(url , { 'fileNames' : fileNames, 
+						'fileExt' : fileExt,
+						'fileSize' : fileSize,
+						'numOfFiles' : data.filesUploaded,
+						'course_id' : $('#subject_id').val(),
+						'subject_id' : $('#course_id').val(),
+						'material' : $('#material').val(),
+						'title' : $('#insertTitle').val(),
+						'description' : $('#insertDescription').val(),
+						'tags' : $('#multi_example').val()
+						}, function(data) {
+		$("#uploadFeedback").css({'visibility' : 'visible', 'background-color' : '#fbec88', 'color':'#363636','margin-bottom':'5px','border':'1px solid #fad42e'}	);
+      	document.getElementById("uploadFeedback").innerHTML=data;   
+		});
+    }
+  });
+});
 
-		window.onload = function() {
-			var settings = {
-				flash_url : "../../../js/swfupload/swfupload.swf",
-				upload_url: "../../../fileUpload.php",
-				post_params: {"upload" : true},
-				file_size_limit : "50 MB",
-				file_types : "*.docx;*.pdf;*.doc;*.ppt;*.pptx;*.gif;*.jpg;*.jpeg;*.png",
-				file_types_description : "PDF|DOC|PPT|IMAGES",
-				file_upload_limit : 0,
-				file_queue_limit : 0,
-				custom_settings : {
-					progressTarget : "fsUploadProgress",
-					cancelButtonId : "btnCancel",
-					upload_successful: false
-				},
-				debug: true,
-
-				// Button settings
-				button_image_url: "../../../css/images/TestImageNoText_65x29.png",
-				button_width: "65",
-				button_height: "29",
-				button_placeholder_id: "spanButtonPlaceHolder",
-				button_text: '<span class="theFont">Browse</span>',
-				button_text_style: ".theFont { font-size: 16; }",
-				button_text_left_padding: 10,
-				button_text_top_padding: 3,
-				
-				// The event handler functions are defined in handlers.js
-				file_queued_handler : fileQueued,
-				file_queue_error_handler : fileQueueError,
-				file_dialog_complete_handler : fileDialogComplete,
-				//upload_start_handler : uploadStart,
-				upload_progress_handler : uploadProgress,
-				upload_error_handler : uploadError,
-				upload_success_handler : uploadSuccess,
-				upload_complete_handler : uploadComplete,
-				queue_complete_handler : queueComplete	// Queue plugin event
-				
-				/*file_queued_handler: fileQueued,
-        		upload_progress_handler: uploadProgress,
-        		upload_error_handler: uploadError,
-        		upload_success_handler: uploadSuccess,
-        		upload_complete_handler: uploadComplete*/
-			};
-
-			swfu = new SWFUpload(settings);
-	     };
-	     
 /**
  * This function tells SWFUpload to start uploading the queued files.
  */
 function uploadFile(form, e) {
+		var x=document.forms["form"]["subject_id"].value;
+	if (x==null || x=="")
+	 {
+	  alert("Subject must be filled out");
+	  return false;
+	 }
+	 
+	 x=document.forms["form"]["course_id"].value;
+	if (x==null || x=="")
+	 {
+	  alert("Course must be filled out");
+	  return false;
+	 }
+	 
+	 x=document.forms["form"]["material"].value;
+	if (x==null || x=="")
+	 {
+	  alert("Material must be filled out");
+	  return false;
+	 }
+	 
+	 x=document.forms["form"]["title"].value;
+	if (x==null || x=="")
+	 {
+	  alert("Title must be filled out");
+	  return false;
+	 }
+	 
+	 x=document.forms["form"]["description"].value;
+	if (x==null || x=="" || x.length < 20)
+	 {
+	  alert("Description must be more than 20 chars");
+	  return false;
+	 }
     try {
-        swfu.startUpload();
+        $('#file_upload').uploadifyUpload();
     } catch (ex) {
     }
     return false;
 }
-	</script>
+
+function validateForm()
+{
+	var x=document.forms["form"]["subject_id"].value;
+	if (x==null || x=="")
+	 {
+	  alert("Subject must be filled out");
+	  return false;
+	 }
+	 
+	 x=document.forms["form"]["course_id"].value;
+	if (x==null || x=="")
+	 {
+	  alert("Course must be filled out");
+	  return false;
+	 }
+	 
+	 x=document.forms["form"]["material"].value;
+	if (x==null || x=="")
+	 {
+	  alert("Material must be filled out");
+	  return false;
+	 }
+	 
+	 x=document.forms["form"]["title"].value;
+	if (x==null || x=="")
+	 {
+	  alert("Title must be filled out");
+	  return false;
+	 }
+	 
+	 x=document.forms["form"]["description"].value;
+	if (x==null || x=="" || x.length < 20)
+	 {
+	  alert("Description must be more than 20 chars");
+	  return false;
+	 }
+	 
+	 $('#file_upload').uploadifyUpload();
+}
+</script>
 
 <div id="content2">
 <div class="twoCol1">
 	<a href="../">< Back to Admin Panel</a>
-		<?php if (validation_errors() != ""){
-			 echo '<div class="ui-state-error ui-corner-all" style="padding-top: 0px; padding-right: 0.7em; padding-bottom: 0px; padding-left: 0.7em;color:#CD0A0A; width:90%;">'.validation_errors().'</div>';
-			} ?>	
-	<?php 	$attributes = array('id' => 'uploadform', 'onsubmit' => 'return uploadFile(this, event);');
+	<?php 	$attributes = array('name'=>'form','id' => 'uploadform', 'onsubmit' => 'return uploadFile(this, event);' );
 		echo form_open_multipart('admin/moderators/upload',$attributes); 	?>
+				
 	<div id="insertUploadType">
 		<h2>Study Material Uploader<span class="formDesc">Required. You can upload from your computer or share a link from the web.  You can only upload Word, PowerPoint, PDF, or image files (eg. scanned papers).</span></h2>	
 		    	 <p>Select file(s) (must be in PDF, PPT, DOC, DOCX, JPEG/JPG, PNG or GIF format, <b>max file size: 50 MB</b>) - note you need flash 9+ to use it, so be sure to get <a href="http://www.adobe.com/products/flashplayer/">here</a>:</p>
-
+<div id="uploadFeedback" class="ui-corner-all" style="padding: 10px;" ></div>	
 <div>
-				<span id="spanButtonPlaceHolder"></span>
-				<input id="btnCancel" type="button" value="Cancel All Uploads" onclick="swfu.cancelQueue();" disabled="disabled" style="margin-left: 2px; font-size: 8pt; height: 29px;" />
+		<input id="file_upload" name="file_upload" type="file" />
+		<div class="clear"></div>		
+		<input type="hidden" name="filename-text" id="filename-text" value="" />
+		<input type="hidden" name="fileext-text" id="fileext-text" value="" />
+		<input type="hidden" name="filesize-text" id="filesize-text" value="" />
+</div>		
 
-			</div>
-		    <div class="fieldset flash" id="fsUploadProgress">
-			<span class="legend">Upload Queue</span>
-			</div>
-		<div id="divStatus">0 Files Uploaded</div>
-		<input type="hidden" name="hidFileID" id="hidFileID" value="" />
-	</div>
+</div>
 	
 	<div id="insertSelectSubject">
 		<h2>Select Material's Subject <span class="formDesc">Required. The subject your study material is for (and then the course).</span></h2>
@@ -155,23 +237,12 @@ Earn <b>1 point</b> for uploading or linking other helpful study material not ca
 	</p>
 	</div>
 	<div class="insertCol2">
-		<div id="descriptionSlideOut" style="display:none;"> 
-        <b>Include in your description:</b>
-        <ul class="guidelines"><li>Year & term study material was used for (ie. 2008 Fall)</li>
-        	<li>Professor's/Instructor's name</li>
-        	<li>Material description (what it includes, how it will help, etc.)</li>
-        	The more downloads the more points you get (2 pts/download)
-        </ul>
-      </div> 
 	Description
-	<textarea id="insertDescription" name="description" rows="5" cols="30" onKeyDown="limitText(this.form.description,this.form.countdown,350);" 
-onKeyUp="limitText(this.form.description,this.form.countdown,350);"></textarea>
+	<textarea id="insertDescription" name="description" rows="5" cols="30" ></textarea>
 (Maximum characters: 350)
 </div>
 
-	</div>
-	
-	<div id="insertKeywords">
+<div id="insertKeywords">
 		<h2>Add tags<span class="formDesc">Optional. These help make your study material more relevant and search-friendly.</span></h2>
 		
 		<select title="Type generic words that describe your post..." class="chzn-select3" multiple style="width:600px;" tabindex="7" name="tags[]" id="multi_example">
@@ -205,6 +276,8 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);"></textarea>
 		
 	</div>
 	<br>
+
+	</div>
 <input type="submit" value="Post Study Material" id="insertUploadButton" /> 
 <?php echo form_close(); ?>
 	
@@ -219,8 +292,17 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);"></textarea>
         	<li>We encourage .PDF and image formats as uploads, currently those are the only formats we provide previews for.</li>
         	
         </ul>
-            
+        
+        	<span class="blueh2">Include in Descriptions</span>
+        <ul class="guidelines">
+        	<li>Year & term study material was used for (ie. 2008 Fall)</li>
+        	<li>Professor's/Instructor's name</li>
+        	<li>Material description (what it includes, how it will help, etc.)</li>
+        </ul>
+            <span class="blueh2">Don't Forget Tags!</span>
     </div>
+    
+    
     
 </div>
 </div>
@@ -230,11 +312,10 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);"></textarea>
 <script type="text/javascript" >
 
 $(document).ready(function(){
- $(".chzn-select1").chosen();
+ 	$(".chzn-select1").chosen();
 	$(".chzn-select2").chosen();
 	$(".chzn-select3").chosen();
   $("#subject_id").change( 
-		
 		function (){
 			$("#courses_select").css("visibility","visible");
 			var url = '<?php echo site_url('uploads/getcourse/') ?>/';
@@ -254,69 +335,14 @@ $(document).ready(function(){
 			
 		}
 	);  
-	
-	$(".tag").click(function () {
-      var text = $(this).val();
-      var desc = $("#insertDescription").val();
-      //$("#insertDescription").text(desc+text);
-      $("#insertDescription").val(desc+text);
-      $(this).hide();
-    });
-	
-	$(".insertCol2 textarea").focus(function() {
-            $('#descriptionSlideOut').effect('slide', 'fast');
-            });
-            $("#insertDescription").blur(function() {
-              $('#descriptionSlideOut').css('display', 'none');
-    });
-    
-    $("#insertURL").click(function() {
-    	if ($("#insertURL").val() == "eg. http://www.myProfessorSite.com/assignment1Solutions.pdf" ){
-    	$("#insertURL").attr('value', '');
-    	$("#insertURL").css('color','#000000');
-	}
-	});
-    
-    $("#insertTitle").click(function() {
-    if ($("#insertTitle").val() == "eg. Midterm Fall 2008 Prof Albert" ){
-    	$("#insertTitle").attr('value', '');
-    	$("#insertTitle").css('color','#000000');
-    }
-	});
-
-	$("input[name='uploadType']").change(function() {
-        var test = $(this).val();
-        $("div.uploadTypeField").hide();
-       	 $("#"+test).show();
-       	 
-       	 if (test == "u"){
-       	 	$("input:radio[name='uploadType'][value='u']").prop("checked", true);
-       	 	$("input:radio[name='uploadType'][value='l']").prop("checked", false);
-       	 }else{
-       	 	$("input:radio[name='uploadType'][value='l']").prop("checked", true);
-       	 	$("input:radio[name='uploadType'][value='u']").prop("checked", false);
-       	 }
-    });
-    
+	    
     $("select[name='material']").change(function() {
         var test = $(this).val();
         $("div.materialType").hide();
        	 $("#material"+test).show();
        	 
     });
-    
- 
 	
-});	 	
-
-function limitText(limitField, limitCount, limitNum) {
-	if (limitField.value.length > limitNum) {
-		limitField.value = limitField.value.substring(0, limitNum);
-	} else {
-		limitCount.value = limitNum - limitField.value.length;
-	}
-}
-
-  
+});	 	  
 
 </script>

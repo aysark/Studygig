@@ -1,13 +1,9 @@
 <div id="content2">
-	
-<div id="aboutUsBanner">
-	</div>
-<div class="twoCol1RightBased">	
-<?php include('aboutUsNav.php');?>
-</div>
-<div class="twoCol2RightBased">	
+
 <div class="roundedCornerContent" id="siteAnchor">
-	<h1>9 Reasons Why Students Use Studygig</h1>	
+	<span class="bigText">Studygig is fabulous</span>
+	<h2>Your life is on the web, your iPhone, and your iPad. Your study material should be too.</h2>
+	<h3>9 Reasons Why Students Use Studygig</h3>	
 	<ol id="top10reasons">
 		<li>Supplemental study material helps students ace their courses.  Out of 85 students surveyed, 75 said they rely on supplemental study material to study for their courses.</li>
 		<li>Studygig is available anytime, anywhere.</li>
@@ -23,6 +19,5 @@
 <a href="../users/signup" id="insertUploadButton"/>Get Started Now & Recieve 50 Points Free!</a>
 </div>
 <br>
-</div>
 </div>
 </div>

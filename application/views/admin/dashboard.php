@@ -173,6 +173,7 @@
 
 <script type="text/javascript" language="JavaScript">
  $(function() {
+ 		$( "#tabs" ).tabs();
 		$('#usersTable').dataTable( {
 		"aaSorting": [[ 2, "desc" ]],
 		"aoColumns": [

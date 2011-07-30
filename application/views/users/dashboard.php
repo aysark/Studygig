@@ -1,7 +1,7 @@
 <div id="content2">
 <div class="twoCol1">
 	<div class="roundedCornerContent" id="dashboardGetStarted">
-<h2>Get Started With Studygig in 3 Simple Steps</h2>
+<h2>Welcome to Studygig! Get Started in 3 Simple Steps</h2>
 <ul class="dashboardList">
 <li><a href="../uploads/insert"><img src="../../images/post-study-material-icon.png" class="textmiddle"> Share  Study Material</a></li>
 <li><a href="../classifieds/insert"><img src="../../images/list-study-material-icon.png" class="textmiddle"> List Study Material</a></li>

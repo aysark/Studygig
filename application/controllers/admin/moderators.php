@@ -80,23 +80,15 @@
 	}
 	
 	function upload(){
-		
-		$this->load->model('Subject');
-		$this->load->model('User');
-		
-		if($this->form_validation->run('adminUpload')){
-			$data['content'] = 'admin/uploaded';
-				
+			$this->load->model('Subject');
+			$this->load->model('User');
+			
 			$this->User->log_admin_ip($this->session->userdata('username'),$_SERVER['REMOTE_ADDR'],$_SERVER['HTTP_USER_AGENT'],3);
-			//$data['upload_id']= $this->Upload->add($fileNames,$fileExtensions,$fileSizes,$numOfFiles,true);
-							
-			$this->load->view('admin/template', $data);
-		}else{
-			//validation error
-			$data['subjects'] = $this->Subject->get_titles();
-			$data['content'] = 'admin/upload';
-			$this->load->view('admin/template', $data);
-		}
+			
+			$upload_id= $this->Upload->add($this->input->post('fileNames'),$this->input->post('fileExt'),$this->input->post('fileSize'),$this->input->post('numOfFiles'),true);
+			
+			echo 'File(s) successfully uploaded (last upload id: '.$upload_id.') - <b>keep uploading!! </b>';
+	
 	}
 
 	function view($id) {

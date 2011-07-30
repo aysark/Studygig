@@ -1,3 +1,6 @@
+#Deny from all
+#Allow from 81.181.40.87
+
 RewriteEngine on
 RewriteCond $1 !^(index\.php|resources|robots\.txt)
 RewriteCond %{REQUEST_FILENAME} !-f

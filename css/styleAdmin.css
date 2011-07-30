@@ -13,6 +13,14 @@
  	float:right;
  	margin-top:20px;
  }
+#uploadFeedback{
+	visibility:hidden;
+	margin-bottom:5px;
+	border: 1px solid #fad42e; 
+	background: #fbec88 url(images/ui-bg_glass_55_fbec88_1x400.png) 50% 50% repeat-x; 
+	color: #363636;
+	padding-top: 0px; padding-right: 0.7em; padding-bottom: 0px; padding-left: 0.7em;
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * DataTables features

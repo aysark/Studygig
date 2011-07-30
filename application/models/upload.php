@@ -127,10 +127,12 @@ class Upload extends CI_Model {
   	$this->load->model('Course');
   	$material = mysql_real_escape_string($this->input->post('material'));
   	$tags = $this->input->post('tags');
-  	if (!empty($tags))
+
+  	if (is_array($tags)){
   		$tags = implode(",", $tags);
-  	else
+  	}else{
   		$tags = "";
+  	}
   	
   	if ($numOfFiles > 1){
   		$title =  mysql_real_escape_string(trim($this->input->post('title')));

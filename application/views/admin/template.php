@@ -48,17 +48,13 @@
 	echo link_tag($link);
 	
 	?>
-
+<link href="/uploadify/uploadify.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../../js/jquery.dataTables.min.js"></script> 
-<script type="text/javascript" src="js/swfupload.queue.js"></script>
-<script type="text/javascript" src="js/fileprogress.js"></script>
-<script type="text/javascript" src="js/handlers.js"></script>
 
 <script type="text/javascript" language="JavaScript">
  $(function() {
-		$( "#tabs" ).tabs();
 		$("#logoutbtn").button();
 	});
 
@@ -68,8 +64,8 @@
 	<body>
 	<div id="wrapper">
 		
-		<?php if($this->session->userdata('is_moderator') == 1):?>
-     <a href="<?php echo site_url('admin/logout'); ?>" id="logoutbtn">Logout</a>
+	<?php if($this->session->userdata('is_moderator') == 1):?>
+     	<a href="<?php echo site_url('admin/logout'); ?>" id="logoutbtn">Logout</a>
      <?php endif;?>
     <!-- end header div -->		
 	<?php $this->load->view($content); ?>
@@ -93,6 +89,10 @@
      <li><a href="https://pp.pingdom.com/index.php/member/default">Pingdom</a></li>
      <li><a href="https://rpm.newrelic.com">Newrelic</a></li>
      <li><a href="https://64.207.156.202:4643/vz/cp">Parallels Container</a></li>
+     <li><a href="http://bitly.com/u/studygig">Bit.ly</a></li>
+     <li><a href="http://feedburner.google.com/fb/a/myfeeds">Classifieds Feedburner</a></li>
+     <li><a href="https://www.cloudflare.com/my-websites.html">CloudFlare</a></li>
+     <li><a href="http://app.dlvr.it/deliveries">Dlvr.it</a></li>
     </ul>
       <?php endif;?>
     <br/>

@@ -46,7 +46,12 @@ a:visited {
   color: #006eda; }
   
 
-
+::selection {
+        background: #fff000; /* Safari */
+        }
+::-moz-selection {
+        background: #fff000; /* Firefox */
+}
   
 
 #alphaBarContent {
@@ -421,6 +426,8 @@ img.center {   display: block;   margin-left: auto;   margin-right: auto; }
 #dashboardGetStarted{
 	padding:5px;
 	margin-bottom:20px;
+	padding-left:10px;
+	padding-bottom:10px;
 }
 .dashboardList li{
 	display: inline;
@@ -1516,3 +1523,4 @@ h4 img, h5 img, h6 img {
 .blueh2 {font-weight: normal; margin: 10px 0 0;  font-size: 1.5em; line-height: 1.5; margin-bottom: 1em;  color:#0082ff; }
 .smallText{font-size:1em;	
 }
+.bigText{font-size:4em;color:#0082ff; }
