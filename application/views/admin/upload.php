@@ -25,11 +25,12 @@ var textfield;
   	'scriptData'  : {'user_id':1},
   	'sizeLimit'   : 52428800,
   	'onComplete'  : function(event, ID, fileObj, response, data) {
+  		
   		var fileinfo = eval('(' + response + ')');
   		//get name
   		filenames = $('#filename-text').val();
     	$('#filename-text').val(filenames+fileinfo["name"] + ' ');
-    	
+    	alert($('#filename-text').val());
     	//get extension
     	extension = $('#fileext-text').val();
     	$('#fileext-text').val(extension+fileinfo["ext"] + ',');
@@ -109,46 +110,6 @@ function uploadFile(form, e) {
     } catch (ex) {
     }
     return false;
-}
-
-function validateForm()
-{
-	var x=document.forms["form"]["subject_id"].value;
-	if (x==null || x=="")
-	 {
-	  alert("Subject must be filled out");
-	  return false;
-	 }
-	 
-	 x=document.forms["form"]["course_id"].value;
-	if (x==null || x=="")
-	 {
-	  alert("Course must be filled out");
-	  return false;
-	 }
-	 
-	 x=document.forms["form"]["material"].value;
-	if (x==null || x=="")
-	 {
-	  alert("Material must be filled out");
-	  return false;
-	 }
-	 
-	 x=document.forms["form"]["title"].value;
-	if (x==null || x=="")
-	 {
-	  alert("Title must be filled out");
-	  return false;
-	 }
-	 
-	 x=document.forms["form"]["description"].value;
-	if (x==null || x=="" || x.length < 20)
-	 {
-	  alert("Description must be more than 20 chars");
-	  return false;
-	 }
-	 
-	 $('#file_upload').uploadifyUpload();
 }
 </script>
 

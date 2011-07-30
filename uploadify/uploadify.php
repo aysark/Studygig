@@ -21,7 +21,7 @@ if (!empty($_FILES)) {
 	// 	echo 'Invalid file type.';
 	// }*/
 	
-	$location = "uploads/";
+	$location = "../uploads/";
 	$field = 'Filedata';
 	
 	if ( ! is_uploaded_file($_FILES[$field]['tmp_name']))
@@ -147,11 +147,12 @@ if (!empty($_FILES)) {
 	                            'ext' => $ext,
 	                            );
 	
-	     echo json_encode($file_info);
+	     
+	    echo json_encode($file_info);
 	    
-	    if ($ext === ".pdf"){
-	    	$input_file = $location.$name."[0]";
-		    $output_file = str_replace($ext,".jpg",$fullname);
+	    if ($ext == ".pdf"){
+	    	$input_file = "/var/www/vhosts/studygig.com/httpdocs/uploads/".$name."[0]";
+		    $output_file = str_replace($ext,".jpg",$name);
 			$command = "convert $input_file -resize 85% -crop 540x465+0+0 canvas:none -fill \"#0076e6\" -font AvantGarde-Demi -pointsize 28 -draw \"text 60,270 'Studygig.com Preview'\" -channel RGBA $output_file ";
 										
 			exec($command);

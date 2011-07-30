@@ -231,6 +231,7 @@ class Uploads extends CI_Controller {
 								
 								$input_file = $file['file']."[0]";
 								
+								//echo $file['file'];
 								
 								//change extension to .jpg in name
 								$output_file = str_replace($file['ext'],".jpg",$file['file']);
