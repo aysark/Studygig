@@ -27,7 +27,7 @@
 			
 			<a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><h2><?php echo $upload->title; ?></h2></a>
 			 <h5> <img src="../../images/material<?php echo $upload->material; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="../../images/file<?php echo $upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" />
-             Uploaded by <?php echo $favouritesUsers[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($favouritesCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $favouritesCourses[$i];?></span></a></h5>
+             Uploaded by <?php echo $favouritesUsers[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/getsearchfor/').'/'.substr ($favouritesCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $favouritesCourses[$i];?></span></a></h5>
 			
 		</li>
 		<?php $i++;?>
@@ -46,7 +46,7 @@
 		<li>
 			<h2><a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo $upload->title; ?></a></h2>
 			 <h5> <img src="../../images/material<?php echo $upload->material; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="../../images/file<?php echo $upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" />
-             Uploaded by <?php echo $recentUploadsUsers[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($recentUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $recentUploadsCourses[$i];?></span></a></h5>
+             Uploaded by <?php echo $recentUploadsUsers[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/getsearchfor/').'/'.substr ($recentUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $recentUploadsCourses[$i];?></span></a></h5>
 			
 		</li>
 		<?php $i++;?>
@@ -66,7 +66,7 @@
 	<li>
 	<h2><a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo $upload->title; ?></a></h2>
 	 <h5> <img src="../../images/material<?php echo $upload->material; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="../../images/file<?php echo $upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" />
-     Uploaded by <?php echo $recentDownloadsUsers[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($recentDownloadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $recentDownloadsCourses[$i];?></span></a></h5>
+     Uploaded by <?php echo $recentDownloadsUsers[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/getsearchfor/').'/'.substr ($recentDownloadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $recentDownloadsCourses[$i];?></span></a></h5>
 			
 		</li>
 		<?php $i++;?>

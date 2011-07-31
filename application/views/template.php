@@ -45,8 +45,44 @@ echo $str;  ?>" />
 
 <script type="text/javascript" language="JavaScript">
 
-$(document).ready(function() {
-    $('.slideshow').cycle({
+
+$.widget( "custom.catcomplete", $.ui.autocomplete, {
+		_renderMenu: function( ul, items ) {
+			var x = document.forms['searchform'].elements['query'].value;
+			var self = this, currentCategory = "";
+			
+			$.each( items, function( index, item ) {
+
+				if ( item.category != currentCategory ) {
+					ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+					currentCategory = item.category;
+				}
+			
+				document.forms['searchform'].elements['query'].value = x+(items[0].label).substring(x.length).toLowerCase();	
+				$('#mainSearchField').selectRange(x.length,items[0].label.length);
+				
+				self._renderItem( ul, item );
+				
+			});
+		}
+	});
+	
+$.fn.selectRange = function(start, end) {
+    return this.each(function() {
+        if (this.setSelectionRange) {
+            this.focus();
+            this.setSelectionRange(start, end);
+        } else if (this.createTextRange) {
+            var range = this.createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', end);
+            range.moveStart('character', start);
+            range.select();
+        }
+    });
+};
+$(function() {
+	$('.slideshow').cycle({
 		fx: 'scrollLeft', 
 		sync:   1, 
     	speed:   1000, 
@@ -54,36 +90,7 @@ $(document).ready(function() {
     	random: 1,
     	 nowrap:  0
 	});
-});
-
-  //user voice
-    var uvOptions = {};
-
-$.widget( "custom.catcomplete", $.ui.autocomplete, {
-		_renderMenu: function( ul, items ) {
-			var self = this,
-				currentCategory = "";
-			$.each( items, function( index, item ) {
-				if ( item.category != currentCategory ) {
-					ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
-					currentCategory = item.category;
-				}
-				self._renderItem( ul, item );
-			});
-		}
-	});
 	
-	//kissmetrics
-	var _kmq = _kmq || [];
-  function _kms(u){
-    setTimeout(function(){
-      var s = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; s.type = 'text/javascript'; s.async = true;
-      s.src = u; f.parentNode.insertBefore(s, f);
-    }, 1);
-  }
-  _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/d8977a0cd5dace9f913e5f13bb972a0a61b72853.1.js');
-	
-$(function() {
 	$( "#mainSearchField" ).catcomplete({
 				source: "get_course_list.php",
 				minLength: 1,
@@ -107,24 +114,29 @@ $(function() {
 	$( "#postStudyMaterialButton" )	.click(function() {
 				$( "#postStudyMaterialDialog" ).dialog( "open" );
 			});
-	var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+			
+//uservoice START
+  var uvOptions = {};
+
+    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
     uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/1bMi7usxc9DYeOCJAACjSw.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-})();
+
+  //uservoice END
+});
   
   
-  // google analytics
-   var _gaq = _gaq || [];
+  // google analytics START
+  var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-22030731-1']);
-  _gaq.push(['_setDomainName', '.studygig.com']);
   _gaq.push(['_trackPageview']);
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(ga, ss);
   })();
-
+  // google analytics END
 </script>
 
 </head>
@@ -155,9 +167,9 @@ $(function() {
 			<?php else: ?>	
 				<div id="navigation">
                 <a href="<?php echo site_url('users/login');?>" title="Sign in to your Studygig account">Login</a> |  
-                <a href="<?php echo site_url('users/signup');?>" title="Create an account to use Studygig">Create an Account</a> |  
+                <a href="<?php echo site_url('users/signup');?>" title="Create an account to use Studygig" class="createAnAccountLink">Create an Account</a> |  
                 <a href="index.php/site/howitworks" title="Find out how Studygig works">How it works</a>
-                
+
                 <div id="postStudyMaterialDialog" title="How would you like to post?">
 	<a href="<?php echo site_url('uploads/insert');?>" style="outline:none;	-moz-outline:none;"><div id="shareStudyMaterialButton"></div></a> <a href="<?php echo site_url('classifieds/insert');?>" style="outline:none;-moz-outline:none;"><div id="sellStudyMaterialButton"></div></a>
 
@@ -167,7 +179,10 @@ $(function() {
 			<?php endif; ?>
          </div>
     </div><!-- end top div -->
-    
+    <script type='text/javascript'> var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); document.write(unescape('%3Cscript src="' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js" type="text/javascript"%3E%3C/script%3E')); </script> <script type='text/javascript'> try {  var mpmetrics = new MixpanelLib('2150b708434b3dc7d28b6e2bb92fd003'); } catch(err) { null_fn = function () {}; var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; } 
+
+mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER']; ?>"}); 
+</script>
   <?php $this->load->view($content); ?>
   <div id="footer">
   	<div id="seperator">
@@ -257,7 +272,7 @@ $(function() {
     <ul class="horiList">
      <li><a href="index.php/site/aboutus">About Us</a></li>
      <li><a href="index.php/site/tenreasons">9 Reasons</a></li>
-     <li><a href="index.php/site/help">FAQs/Help</a></li>
+     <li><a href="http://studygig.assistly.com/">FAQs/Help</a></li>
      <li><a href="http://studygig.posterous.com">Blog</a></li>
      <li><a href="index.php/site/academicintegrity">Academic Integrity</a></li>
      <li><a href="index.php/site/copyright">Copyright Notice</a></li>
@@ -276,7 +291,13 @@ $(function() {
   </div><!-- end footer div -->
     <?php if( extension_loaded('newrelic') ) { echo newrelic_get_browser_timing_footer(); } ?>
 </div><!-- end wrapper div -->
-
-
 	</body>
+		<script type="text/javascript" language="JavaScript">
+	<?php if($this->session->userdata('logged_in')): ?>		
+	 		//mpq.push(['name_tag', "<?php echo $this->session->userdata('username'); ?>"]);
+	 		mpmetrics.name_tag("<?php echo $this->session->userdata('username'); ?>");
+	 	<?php else: ?>
+	 					mpmetrics.name_tag("<?php echo $_SERVER['REMOTE_ADDR']; ?>");
+	 	<?php endif; ?>
+	</script>
 </html>

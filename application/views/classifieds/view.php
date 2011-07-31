@@ -1,7 +1,7 @@
         <div id="content2">
     <div class="twoCol1">
     <?php if($this->session->flashdata('last_search')):?>    
-    <a href="#"><img src="../../../images/left-arrow-icon.png" width="16" height="14" alt="Back to search results" /></a> <a href="<?php echo site_url('uploads/search/').'/'. $this->session->flashdata('last_search');?>">Back to Search</a>
+    <a href="#"><img src="../../../images/left-arrow-icon.png" width="16" height="14" alt="Back to search results" /></a> <a href="<?php echo site_url('uploads/getsearchfor/').'/'. $this->session->flashdata('last_search');?>">Back to Search</a>
     <?php endif; ?>
     
     <div class="docViewTitleIcons">
@@ -10,7 +10,7 @@
     <h1><?php echo  htmlspecialchars($listing->title);?> </h1>
         
     <h5> <img src="../../../images/material<?php echo $materialType; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> 
-             Posted by <?php echo  $uploader->username. " on " . date('F j, Y \a\t g:i A', strtotime( $listing->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($course,0,8);?>"><span class="courseCourseStyle"><?php echo $course;?></span></a></h5> 
+             Posted by <?php echo  $uploader->username. " on " . date('F j, Y \a\t g:i A', strtotime( $listing->created_at));?> in <a href="<?php echo site_url('uploads/getsearchfor/').'/'.substr ($course,0,8);?>"><span class="courseCourseStyle"><?php echo $course;?></span></a></h5> 
     <div class="docDescription">
                 <div class="docContent">
                 <p><?php  

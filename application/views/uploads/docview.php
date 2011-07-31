@@ -15,7 +15,7 @@
     <h1><?php echo htmlspecialchars($upload->title);?> </h1>
         
     <h5> <img src="../../images/material<?php echo $materialType; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="../../images/file<?php echo $fileType; ?>.png" width="20" height="20" class="file-type-icon" />
-             Uploaded by <?php echo $uploader->username. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($course,0,8);?>"><span class="courseCourseStyle"><?php echo $course;?></span></a></h5> 
+             Uploaded by <?php echo $uploader->username. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/getsearchfor/').'/'.substr ($course,0,8);?>"><span class="courseCourseStyle"><?php echo $course;?></span></a></h5> 
              
              <div class="docActualView">
              	

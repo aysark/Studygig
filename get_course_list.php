@@ -39,8 +39,7 @@ for ($i=0;$i<count($convert) & $x < 5;$i++)
 }**/
 
 if (!isset($array)){
-	$array['value'] = 'No course or subject found.';
-	$array['category']="";
+	$array['category']="<p id='noCourseFound'>No course or subject found @ YorkU  <a href='http://studygig.com/index.php/site/contact' id='addYourUniLink'>Add your university </a></p>";
 	$row_set[] = $array;
 	echo json_encode($row_set);
 }else{

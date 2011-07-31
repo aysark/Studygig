@@ -10,12 +10,16 @@
  <div id="loginForm">
 	<div id="loginWithFacebook">
 		<h2>Skip the registration and login using Facebook</h2>
-	<a href="<?php echo site_url('sessions/fb_login');?>"><div id="loginWithFacebookButton"></div></a>
+	<a href="<?php echo site_url('sessions/fb_login');?>" class="facebookLink"><div id="loginWithFacebookButton"></div></a>
 	<p> <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js
 #appId=170587262970610&amp;xfbml=1"></script><fb:facepile></fb:facepile></p>
+<script type="text/javascript">
+    mpmetrics.track_links(".facebookLink", "Signed up through Facebook");
+</script>
 <br/>
 <h2>Already a Studygig member? <a href="login">Login Now.</a></h2>
 	 </div>
+	 
 	 <div id="verticalSep">
     &nbsp;
 	</div>
@@ -44,6 +48,13 @@ Username: <br/><input type="textfield"class="formTextField2" maxlength="30" name
 
 
 <script type="text/javascript" language="JavaScript">
+mpmetrics.track("Viewing Sign Up Page", {"From": "<?php echo $_SERVER['HTTP_REFERER']; ?>"}); 
+
+var on_button_click = function() {
+    mpmetrics.track("Signed up through Studygig"); 
+};
+$("#loginButton").click(on_button_click);
+
 document.forms['signupform'].elements['email'].focus();
 $(document).ready(function(){
     $('#password').showPassword();

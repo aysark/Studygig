@@ -391,7 +391,6 @@ class Uploads extends CI_Controller {
 	}
 	
 	function search($query) {
-		$query = str_ireplace("q=","",$query);
 		
 		if ($this->uri->segment(4) === FALSE)
 		{
@@ -486,11 +485,37 @@ class Uploads extends CI_Controller {
 			$crows = $this->Classified->searchcount($query);
 			
 			if ($urows == 0 && $crows == 0){
-				redirect(site_url('uploads/search/q='.$query),'redirect');
+				redirect(site_url('uploads/search/'.$query),'redirect');
 			} else  if  ($urows >= $crows){
-				redirect(site_url('uploads/search/q='.$query),'redirect');
+				redirect(site_url('uploads/search/'.$query),'redirect');
 			}else{
-				redirect(site_url('classifieds/search/q='.$query),'redirect');
+				redirect(site_url('classifieds/search/'.$query),'redirect');
+			}
+	}
+	
+	function getsearchfor($search) {
+		$replace = array(';',',');
+		$query = mysql_real_escape_string(trim(str_replace($replace," ",$search)));
+		$this->load->model('Classified');
+		
+			
+			//log person's ip and query to db
+ 	$log = array(
+			'query' => $query,
+			'ip' => $_SERVER['REMOTE_ADDR'],
+			);
+
+	$this->db->insert('queries',$log);
+		
+			$urows = $this->Upload->searchcount($query);
+			$crows = $this->Classified->searchcount($query);
+			
+			if ($urows == 0 && $crows == 0){
+				redirect(site_url('uploads/search/'.$query),'redirect');
+			} else  if  ($urows >= $crows){
+				redirect(site_url('uploads/search/'.$query),'redirect');
+			}else{
+				redirect(site_url('classifieds/search/'.$query),'redirect');
 			}
 	}
 	

@@ -29,9 +29,7 @@ class Classifieds extends CI_Controller {
 	$this->load->view('subTemplate',$data);
 	}
 	
-	function search($query) {
-	$query = str_ireplace("q=","",$query);
-	
+	function search($query) {	
 	if ($this->uri->segment(4) === FALSE)
 		{
 		    $offset = 0;

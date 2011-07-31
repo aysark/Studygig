@@ -1524,3 +1524,12 @@ h4 img, h5 img, h6 img {
 .smallText{font-size:1em;	
 }
 .bigText{font-size:4em;color:#0082ff; }
+
+#noCourseFound{
+	padding-left:0.5em;
+	padding-right:0.5em;
+}
+#addYourUniLink{
+	float:right;
+	color: #006eda;
+}

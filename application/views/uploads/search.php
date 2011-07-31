@@ -16,7 +16,14 @@
       <?php echo form_close(); ?>
         </div>
         <br/>
-      <img src="images/books-tests-notes-labs-guides.png" width="411" height="61" alt="Search for books, tests, notes, labs, and study guides" />
+      <img src="images/books-tests-notes-labs-guides.png" width="411" height="61" alt="Search for books, tests, notes, labs, and study guides" usemap="#Map" />
+      <map name="Map" id="Map1">
+        <area shape="rect" coords="-22,-5,60,62" href="#" id="booksIconSearch" />
+        <area shape="rect" coords="88,-1,144,60" href="#"  id="testsIconSearch"  />
+        <area shape="rect" coords="177,-1,233,59" href="#"  id="notesIconSearch"  />
+        <area shape="rect" coords="265,-8,324,60" href="#"  id="labsIconSearch"  />
+        <area shape="rect" coords="354,-4,441,60" href="#"  id="guidesIconSearch"  />
+      </map>
   </div>
     <!-- end header div -->
     
@@ -72,13 +79,38 @@
 
 document.forms['searchform'].elements['query'].focus();
 
+ $("#booksIconSearch").click(function () { 
+ 	   document.forms['searchform'].elements['query'].value = "Advanced Macroeconomics - David Romer";
+ 	   document.forms['searchform'].elements['query'].select();
+    });
+$("#testsIconSearch").click(function () { 
+      document.forms['searchform'].elements['query'].value = "Math2030 Tests";
+      document.forms['searchform'].elements['query'].select();
+    });
+$("#notesIconSearch").click(function () { 
+      document.forms['searchform'].elements['query'].value = "NATS1840 Notes";
+      document.forms['searchform'].elements['query'].select();
+    });
+$("#labsIconSearch").click(function () { 
+      document.forms['searchform'].elements['query'].value = "Project Exobots Proposal";
+      document.forms['searchform'].elements['query'].select();
+    });
+$("#guidesIconSearch").click(function () { 
+      document.forms['searchform'].elements['query'].value = "ADMS1000 Review";
+      document.forms['searchform'].elements['query'].select();
+    });
+
 function validateForm()
 {
 	var x= jQuery.trim(document.forms['searchform'].elements['query'].value);
-	if (x==null || x=="" || (x.length < 5) || x=="Course name (e.g. ACTG4160 notes)" || x=="No course or subject found.")
+	
+	if (x==null || x=="" || x.length < 5)
 	 {
 	  	document.forms['searchform'].elements['query'].focus();
 	  	return false;
+	 }else{
+	 	//mpmetrics.track("Search", {"Query": x}); 
+	 	return true;
 	 }
 }
 

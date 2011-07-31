@@ -14,7 +14,7 @@
 	
 		<?php endif; ?>
 	
-	<div id="shareResults">Share Results:<input type="textfield" name="shareResultsLink" size="20"  id="uploadLinkField" value="<?php echo site_url('uploads/search/').'/'.$query;?>"  onClick="SelectAll('uploadLinkField');" style="display: inline; "/></div>
+	<div id="shareResults">Share Results:<input type="textfield" name="shareResultsLink" size="20"  id="uploadLinkField" value="<?php echo site_url('uploads/getsearchfor/').'/'.$query;?>"  onClick="SelectAll('uploadLinkField');" style="display: inline; "/></div>
 
     <?php $i=0; ?>
     <?php foreach($results as $upload): ?>
@@ -25,7 +25,7 @@
 <img src="<?php echo base_url().'images/file'.$upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" />
 
 <a href="<?php echo site_url('uploads/view/'. $upload->upload_id);?>"><?php echo htmlspecialchars($upload->upload_title); ?></a></h1>
-         <h5>Uploaded by <?php echo $users[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($courses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $courses[$i]; ?></span></a></h5> 
+         <h5>Uploaded by <?php echo $users[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/getsearchfor/').'/'.substr ($courses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $courses[$i]; ?></span></a></h5> 
           <p>
     <?php 
     $str = str_replace('\n','<br>',htmlspecialchars($upload->description));
@@ -64,7 +64,7 @@
 		
 	<?php else: ?>
 		
-		<a href="<?php echo site_url('uploads/search/'.$query); ?>"><div id="viewClassifiedsOff"><img src="<?php echo base_url().'images/uploads-icon'; ?>.png" class="textmiddle" /> Shared (<?php echo $urows; ?>)</div></a>
+		<a href="<?php echo site_url('uploads/getsearchfor/'.$query); ?>"><div id="viewClassifiedsOff"><img src="<?php echo base_url().'images/uploads-icon'; ?>.png" class="textmiddle" /> Shared (<?php echo $urows; ?>)</div></a>
 		
 		<div id="viewClassifieds"><img src="<?php echo base_url().'images/classifieds-icon2'; ?>.png" class="textmiddle" /> Classifieds (<?php echo $crows; ?>)</div>
 		
@@ -80,7 +80,7 @@
     	<h1><img src="<?php echo base_url().'images/material'.$materials[$i]; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> 
 
 <a href="<?php echo site_url('classifieds/view/'. $classified->classified_id);?>"><?php echo htmlspecialchars($classified->classified_title); ?></a></h1>
-         <h5>Posted by <?php echo $users[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($classified->created_at));?> in <a href="<?php echo site_url('uploads/search/').'/'.substr ($courses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $courses[$i]; ?></span></a></h5> 
+         <h5>Posted by <?php echo $users[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($classified->created_at));?> in <a href="<?php echo site_url('uploads/getsearchfor/').'/'.substr ($courses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $courses[$i]; ?></span></a></h5> 
           <p><?php      
     $str = str_replace('\n','<br>',htmlspecialchars($classified->description));
     $str = str_replace('\r','<br>',$str);
@@ -141,7 +141,7 @@
 	<h4><a href="#">Search Filters</a></h4>
 		<?php if($is_upload): ?>
 		
-		<form action="<?php echo site_url('uploads/search/'.$query);?>" method="post" accept-charset="utf-8">
+		<form action="<?php echo site_url('uploads/getsearchfor/'.$query);?>" method="post" accept-charset="utf-8">
 	<div id="sortMenu">
 	<b>Sort by</b>
 		<select name="sortResultsBy">

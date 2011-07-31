@@ -65,32 +65,41 @@ echo substr($str,0,150);   ?>" />
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 
 <script type="text/javascript" language="JavaScript">
-
-    var uvOptions = {};
   
 $.widget( "custom.catcomplete", $.ui.autocomplete, {
 		_renderMenu: function( ul, items ) {
-			var self = this,
-				currentCategory = "";
+			var x = document.forms['searchform'].elements['query'].value;
+			var self = this, currentCategory = "";
+			
 			$.each( items, function( index, item ) {
+
 				if ( item.category != currentCategory ) {
 					ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
 					currentCategory = item.category;
 				}
+			
+				document.forms['searchform'].elements['query'].value = x+(items[0].label).substring(x.length).toLowerCase();	
+				$('#mainSearchField').selectRange(x.length,items[0].label.length);
+				
 				self._renderItem( ul, item );
+				
 			});
 		}
 	});
-	
-	//kissmetrics
-	var _kmq = _kmq || [];
-  function _kms(u){
-    setTimeout(function(){
-      var ks = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; ks.type = 'text/javascript'; ks.async = true;
-      ks.src = u; f.parentNode.insertBefore(ks, f);
-    }, 1);
-  }
-  _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/d8977a0cd5dace9f913e5f13bb972a0a61b72853.1.js');
+$.fn.selectRange = function(start, end) {
+    return this.each(function() {
+        if (this.setSelectionRange) {
+            this.focus();
+            this.setSelectionRange(start, end);
+        } else if (this.createTextRange) {
+            var range = this.createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', end);
+            range.moveStart('character', start);
+            range.select();
+        }
+    });
+};
 	
 $(function() {
 		$( "#mainSearchField" ).catcomplete({
@@ -99,32 +108,30 @@ $(function() {
 				delay: 0
 			});
 			
-		var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/1bMi7usxc9DYeOCJAACjSw.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-})();
-
-//google analytics
+			//uservoice START
   var uvOptions = {};
-  (function() {
+
     var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
     uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/1bMi7usxc9DYeOCJAACjSw.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-  })();
-  
+
+  //uservoice END
+})();
+
+
+  // google analytics START
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-22030731-1']);
-  _gaq.push(['_setDomainName', '.studygig.com']);
   _gaq.push(['_trackPageview']);
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(ga, ss);
   })();
+  // google analytics END
   
-  $(".chzn-select").chosen();
-  
+	$(".chzn-select").chosen();
 
 </script>
 
@@ -184,6 +191,11 @@ $(function() {
         </div>
   	</div>
     <!-- end header div -->		
+    
+        <script type='text/javascript'> var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); document.write(unescape('%3Cscript src="' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js" type="text/javascript"%3E%3C/script%3E')); </script> <script type='text/javascript'> try {  var mpmetrics = new MixpanelLib('2150b708434b3dc7d28b6e2bb92fd003'); } catch(err) { null_fn = function () {}; var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; } 
+
+</script>
+    
 	<?php $this->load->view($content); ?>
 	
 	<div id="footer">
@@ -199,8 +211,8 @@ $(function() {
     <ul class="horiList">
      <li><a href="<?php echo site_url('site/aboutus');?>">About Us</a></li>
      <li><a href="<?php echo site_url('site/tenreasons');?>">9 Reasons</a></li>
-     <li><a href="<?php echo site_url('site/help');?>">FAQs/Help</a></li>
-     <li><a href="<?php echo site_url('site/blog');?>">Blog</a></li>
+     <li><a href="http://studygig.assistly.com/">FAQs/Help</a></li>
+     <li><a href="http://studygig.posterous.com">Blog</a></li>
      <li><a href="<?php echo site_url('site/academicintegrity');?>">Academic Integrity</a></li>
      <li><a href="<?php echo site_url('site/copyright');?>">Copyright Notice</a></li>
      <li><a href="<?php echo site_url('site/termsofuse');?>">Terms of Use</a></li>
@@ -219,6 +231,9 @@ $(function() {
 	<?php if( extension_loaded('newrelic') ) { echo newrelic_get_browser_timing_footer(); } ?>
 </div><!-- end wrapper div -->
 <script type="text/javascript" language="JavaScript">
+<?php if(isset($query)): ?>		
+mpmetrics.track("Search", {"Query": "<?php echo $query; ?>"}); 
+<?php endif; ?>
 
 $(function() {
 	$( "#postStudyMaterialDialog" ).dialog({
@@ -243,14 +258,24 @@ $(function() {
 function validateForm()
 {
 	var x= jQuery.trim(document.forms['searchform'].elements['query'].value);
-	if (x==null || x=="" || (x.length < 5) || x=="Course name (e.g. ACTG4160 notes)" || x=="No course or subject found.")
+	
+	if (x==null || x=="" || x.length < 5)
 	 {
 	  	document.forms['searchform'].elements['query'].focus();
 	  	return false;
+	 }else{
+	 	return true;
 	 }
 }
 
-</script>
 
+</script>
 	</body>
+		<script type="text/javascript" language="JavaScript">
+	<?php if($this->session->userdata('logged_in')): ?>		
+	 		mpmetrics.name_tag("<?php echo $this->session->userdata('username'); ?>");
+	 	<?php else: ?>
+	 					mpmetrics.name_tag("<?php echo $_SERVER['REMOTE_ADDR']; ?>");
+	 	<?php endif; ?>
+	</script>
 </html>
