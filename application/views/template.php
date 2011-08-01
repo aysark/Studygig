@@ -115,7 +115,15 @@ $(function() {
 				$( "#postStudyMaterialDialog" ).dialog( "open" );
 			});
 			
+// google analytics START
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22030731-1']);
+  _gaq.push(['_trackPageview']);
 
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(ga, ss);
+  // google analytics END
 			
 //uservoice START
   var uvOptions = {};
@@ -128,7 +136,7 @@ $(function() {
 });
   
   
-  // google analytics START
+ /* // google analytics START
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-22030731-1']);
   _gaq.push(['_trackPageview']);
@@ -138,7 +146,7 @@ $(function() {
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(ga, ss);
   })();
-  // google analytics END
+  // google analytics END*/
 </script>
 
 </head>
@@ -189,8 +197,9 @@ mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER
   <div id="footer">
   	<div id="seperator">
   	</div>
-   	<a href="index.php/site/tenreasons"><div id="studentStatisticBanner"></div></a>
-   	<a href="index.php/site/academicintegrity"><div id="profSupportBanner"></div></a>
+   	<a href="index.php/site/tenreasons" class="tenReasonsLink"><div id="studentStatisticBanner"></div></a>
+
+   	<a href="index.php/site/academicintegrity" class="academicIntLink"><div id="profSupportBanner"></div></a>
     <div id="footerSEO">
     	<div class="col11">
                 <h2>Popular Subjects</h2> 
@@ -296,7 +305,6 @@ mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER
 	</body>
 		<script type="text/javascript" language="JavaScript">
 	<?php if($this->session->userdata('logged_in')): ?>		
-	 		//mpq.push(['name_tag', "<?php echo $this->session->userdata('username'); ?>"]);
 	 		mpmetrics.name_tag("<?php echo $this->session->userdata('username'); ?>");
 	 	<?php else: ?>
 	 					mpmetrics.name_tag("<?php echo $_SERVER['REMOTE_ADDR']; ?>");

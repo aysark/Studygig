@@ -107,9 +107,18 @@ $(function() {
 				minLength: 1,
 				delay: 0
 			});
-			
-			
-			//uservoice START
+
+// google analytics START
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22030731-1']);
+  _gaq.push(['_trackPageview']);
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(ga, ss);
+  // google analytics END			
+
+//uservoice START
   var uvOptions = {};
 
     var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
@@ -119,21 +128,6 @@ $(function() {
   //uservoice END
   
 })();
-
-
-  // google analytics START
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-22030731-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(ga, ss);
-    
-    
-  })();
-  // google analytics END
   
 	$(".chzn-select").chosen();
 

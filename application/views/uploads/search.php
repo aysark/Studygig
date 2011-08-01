@@ -30,8 +30,9 @@
 <div id="content">
 	
     	<div id="mainAction">
-        <a href="index.php/uploads/insert" title="Earn rewards by sharing your study material"><img src="images/share-study-material-earn-rewards-canada.gif" width="465" height="66" alt="Share and Upload your past tests, notes, labs, and study material"/></a>
-        <a href="index.php/classifieds/insert" title="Earn some cash by listing your study material"><img src="images/sell-your-books-study-material-canada.gif" width="465" height="66" alt="Sell your books, tests, notes, labs, study material" id="rightActionButton" /></a>
+        <a href="index.php/uploads/insert" title="Earn rewards by sharing your study material" class="uploadStudyMatLink"><img src="images/share-study-material-earn-rewards-canada.gif" width="465" height="66" alt="Share and Upload your past tests, notes, labs, and study material"/></a>
+        <a href="index.php/classifieds/insert" title="Earn some cash by listing your study material" class="listStudyMatLink"><img src="images/sell-your-books-study-material-canada.gif" width="465" height="66" alt="Sell your books, tests, notes, labs, study material" id="rightActionButton" /></a>
+
         </div>
         <div id="mainContentText">
             <div class="col1">
