@@ -19,7 +19,7 @@ var textfield;
     'fileExt'     : '*.docx;*.doc;*.ppt;*.pptx;*.gif;*.jpg;*.jpeg;*.png',
   	'fileDesc'    : 'DOC,PPT,IMAGES',
   	'multi'       : true,
-  	'queueSizeLimit' : 10,
+  	'queueSizeLimit' : 20,
   	'removeCompleted' : true,
   	'scriptAccess' : 'sameDomain',
   	'scriptData'  : {'user_id':1},
@@ -30,7 +30,7 @@ var textfield;
   		//get name
   		filenames = $('#filename-text').val();
     	$('#filename-text').val(filenames+fileinfo["name"] + ' ');
-    	alert($('#filename-text').val());
+    	//alert($('#filename-text').val());
     	//get extension
     	extension = $('#fileext-text').val();
     	$('#fileext-text').val(extension+fileinfo["ext"] + ',');
@@ -53,8 +53,8 @@ var textfield;
 						'fileExt' : fileExt,
 						'fileSize' : fileSize,
 						'numOfFiles' : data.filesUploaded,
-						'course_id' : $('#subject_id').val(),
-						'subject_id' : $('#course_id').val(),
+						'course_id' : $('#course_id').val(),
+						'subject_id' : $('#subject_id').val(),
 						'material' : $('#material').val(),
 						'title' : $('#insertTitle').val(),
 						'description' : $('#insertDescription').val(),

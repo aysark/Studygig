@@ -39,17 +39,16 @@ class Upload extends CI_Model {
     $query  = $this->db->get('uploads');
     $row = $query->row();
     
-    $course_id = $row->course_id;
+    $course_id =  $row->course_id;
     
-    $this->db->where('id', $course_id);
-    $query2 = $this->db->get('courses');
-    $course = $query2->row();
+    $query3 = $this->db->get_where('courses', array('id' => $course_id));
+    $course = $query3->row();
     
     return $course->course_title;
   }
   
   function get_material_by_id($id) {
-    $upload = $this->get_by_id($id);
+    $upload = $this->get_by_id($id); 
     return $upload->material;
   }
   
