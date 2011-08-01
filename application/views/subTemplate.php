@@ -108,6 +108,7 @@ $(function() {
 				delay: 0
 			});
 			
+			
 			//uservoice START
   var uvOptions = {};
 
@@ -116,6 +117,7 @@ $(function() {
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
 
   //uservoice END
+  
 })();
 
 
@@ -128,6 +130,8 @@ $(function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(ga, ss);
+    
+    
   })();
   // google analytics END
   

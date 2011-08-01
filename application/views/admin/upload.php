@@ -16,8 +16,8 @@ var textfield;
     'displayData' : 'speed',
     'expressInstall' : '/uploadify/expressInstall.swf',
     'fileDataName' : 'Filedata',
-    'fileExt'     : '*.docx;*.pdf;*.doc;*.ppt;*.pptx;*.gif;*.jpg;*.jpeg;*.png',
-  	'fileDesc'    : 'PDF,DOC,PPT,IMAGES',
+    'fileExt'     : '*.docx;*.doc;*.ppt;*.pptx;*.gif;*.jpg;*.jpeg;*.png',
+  	'fileDesc'    : 'DOC,PPT,IMAGES',
   	'multi'       : true,
   	'queueSizeLimit' : 10,
   	'removeCompleted' : true,
@@ -123,6 +123,7 @@ function uploadFile(form, e) {
 		<h2>Study Material Uploader<span class="formDesc">Required. You can upload from your computer or share a link from the web.  You can only upload Word, PowerPoint, PDF, or image files (eg. scanned papers).</span></h2>	
 		    	 <p>Select file(s) (must be in PDF, PPT, DOC, DOCX, JPEG/JPG, PNG or GIF format, <b>max file size: 50 MB</b>) - note you need flash 9+ to use it, so be sure to get <a href="http://www.adobe.com/products/flashplayer/">here</a>:</p>
 <div id="uploadFeedback" class="ui-corner-all" style="padding: 10px;" ></div>	
+<b>DO NOT TRY TO UPLOAD PDF FILES - THERE IS AN ERROR WITH GENERATING PREVIEWS FOR PDFS</b>, if you try to upload a pdf it will upload successfully but no image preview will be generated and then your upload will have a broken image linked to it!
 <div>
 		<input id="file_upload" name="file_upload" type="file" />
 		<div class="clear"></div>		

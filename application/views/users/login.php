@@ -23,7 +23,7 @@
 #appId=170587262970610&amp;xfbml=1"></script><fb:facepile></fb:facepile>
 </p>
 <br/>
-<h2>Need an account? <a href="../users/signup">Create an Account Now.</a></h2>
+<h2>Need an account? <a href="../users/signup">Create an Account Now - its Free (and takes 5 seconds).</a></h2>
 	</div>
 	<div id="verticalSep">
     &nbsp;

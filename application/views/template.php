@@ -115,6 +115,8 @@ $(function() {
 				$( "#postStudyMaterialDialog" ).dialog( "open" );
 			});
 			
+
+			
 //uservoice START
   var uvOptions = {};
 
@@ -281,12 +283,12 @@ mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER
      <li><a href="index.php/site/contact">Contact Us</a></li>
     </ul>
     <br/>
-    Join us on: <a href="http://www.facebook.com/studygig" title="Like Studygig on Facebook">Facebook</a> & <a href="http://twitter.com/studygig" title="Follow Studygig on Twitter">Twitter</a>
+    Join us on: <a href="http://www.facebook.com/studygig" title="Like Studygig on Facebook">Facebook</a> & <a href="http://twitter.com/studygig" title="Follow Studygig on Twitter">Twitter</a><a href="http://mixpanel.com/f/partner" style="float:right;"><img src="http://mixpanel.com/site_media/images/partner/badge_light.png" alt="Web Analytics" /></a>
     <br/>
     Copyright © 2011 Studygig.
     <br/>
-     Made in Canada <img src="images/made-in-canada.png" width="15" height="10" alt="Made in Canada" /></div>
-    
+     Made in Canada <img src="images/made-in-canada.png" width="15" height="10" alt="Made in Canada" />     
+ </div>
   	
   </div><!-- end footer div -->
     <?php if( extension_loaded('newrelic') ) { echo newrelic_get_browser_timing_footer(); } ?>

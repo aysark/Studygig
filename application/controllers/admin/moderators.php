@@ -242,5 +242,72 @@
 			}			
 		}	
 	}
+	
+	function emailmarket(){
+		include 'mixpanel_email.php';
+
+		$api = new MixpanelEmail(
+    	'2150b708434b3dc7d28b6e2bb92fd003', /* token is the first parameter. the value here is your actual token 		*/
+ 	   $this->input->post('subject') /* campaign is an arbitrary string. use it to group logically related emails */
+		);
+		$emailArray = explode(",",$this->input->post('to'));
+		$file="emailssent.txt";
+		$fh = fopen($file,"a") or exit("Unable to open file!");
+		
+		$emailsSent=0;
+		foreach ($emailArray as $email){
+				$not_sent= true;
+				$email = trim($email);
+				//check if we've already sent to this email before
+				$data = file_get_contents($file); //read the file
+				$alreadySentEmails = explode("\n", $data); //create array separate by new line
+				for ($i=0;$i<count($alreadySentEmails);$i++)  
+				{
+					if($alreadySentEmails[$i] == $email)
+						$not_sent= false;
+				}
+				
+				if($not_sent){
+					$emailsSent++;
+					fwrite($fh, $email."\n");
+					$rewritten_body = $api->add_tracking(
+				   	 $email,
+				    $this->input->post('message'));
+				    
+				   // echo "<p>$rewritten_body</p>";
+							
+						/*	$this->load->library('email');
+							$config['mailtype'] = 'html';
+							
+							$this->email->initialize($config);
+							$this->email->from("john@studygig.com", "John");
+							$this->email->to($this->input->post('to')); 
+							$this->email->subject($this->input->post('subject'));
+							$this->email->message($rewritten_body);
+							$this->email->send();*/
+							
+							require_once 'Mailgun.php';
+				
+							mailgun_init('key-147iqkqjpa8njqj7s9');
+				
+				                          
+							$rawMime = 
+				    "X-Priority: 1 (Highest)\n".
+				    "X-Mailgun-Tag: Craigslist/Kijiji Marketing Real\n".
+				    "Content-Type: text/html;charset=UTF-8\n".    
+				    "From: ".$this->input->post('fromEmail')."\n".
+				    "To: ".$email."\n".
+				    "Subject: ".$this->input->post('subject')."\n".
+				    "\n".
+				    $rewritten_body;
+				MailgunMessage::send_raw($this->input->post('fromEmail'), $email, $rawMime); 
+			}
+}
+
+				echo '<p>Sent to '.$emailsSent.' emails (first email: '.$emailArray[0].')</p>';
+				fclose($fh);
+				
+		
+}
 
 }

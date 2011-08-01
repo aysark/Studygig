@@ -91,8 +91,9 @@
      <li><a href="https://64.207.156.202:4643/vz/cp">Parallels Container</a></li>
      <li><a href="http://bitly.com/u/studygig">Bit.ly</a></li>
      <li><a href="http://feedburner.google.com/fb/a/myfeeds">Classifieds Feedburner</a></li>
-     <li><a href="https://www.cloudflare.com/my-websites.html">CloudFlare</a></li>
      <li><a href="http://app.dlvr.it/deliveries">Dlvr.it</a></li>
+     <li><a href="http://mixpanel.com/report/22823/stream/#users">Mixpanel</a></li>
+     <li><a href="https://mailgun.net/cp">Mailgun</a></li>
     </ul>
       <?php endif;?>
     <br/>
