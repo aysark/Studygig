@@ -20,19 +20,21 @@
 	
 	<div id="insertMaterialType">
 		<h2>What kind of study material are you selling?<span class="formDesc">Required. This helps us keep everything nice and tidy.</span></h2>
-				<select id="material" size="5" name="material">
+				<select id="material" size="5" name="material" tabindex="1" required>
 		<option value="7" <?php echo set_select('material', '7'); ?>>Book</option>
 		<option value="1" <?php echo set_select('material', '1'); ?>>Test Package (quizes, tests, midterms, exams, etc.)</option>
 		<option value="2" <?php echo set_select('material', '2'); ?>>Note Package (notes, study guides, reference material, labs, etc.)</option>
 		<option value="8" <?php echo set_select('material', '8'); ?>>All-in-one Package (book, test package, note package)</option>
 		<option value="6" <?php echo set_select('material', '6'); ?>>Other</option>
 	</select>		
-	
-	</div>
 	<div class="clear"></div>
+
+	
+
+	
 	<div id="insertSelectSubject">
 		<h2>Select Subject <span class="formDesc">Required. The subject your study material is for (and then the course).</span></h2>
-			<select id="subject_id"  size="10" name="subject_id" class="chzn-select1" title="Choose a Subject..."  >
+			<select id="subject_id"  size="10" name="subject_id" class="chzn-select1" title="Choose a Subject..." tabindex="2"  >
 			<?php foreach($subjects as $subject): ?>
 		
 				<option value="<?php echo $subject->id; ?>"  <?php echo set_select('subject_id',  $subject->id); ?>><?php echo $subject->title; ?></option>
@@ -41,27 +43,34 @@
 		</select>
 		
 		<div id="courses_select">
-		<select id="course_id" size="10" name="course_id"  class="chzn-select2" title="Choose a Course...">
+		<select id="course_id" size="10" name="course_id"  class="chzn-select2" title="Choose a Course..." tabindex="3">
 			</select>
 		</div>
 		
 	</div>
 
-	
-	
+
 	
 	<div id="insertUTitleDesc">
 		<h2>Describe your study material<span class="formDesc">Required. The more details your write, the easier it will be to find and the more points you'll earn!</span></h2>	
 				
 			<div class="insertCol1">
-	Title<input type="textfield" id="insertTitle" name="title" maxlength="60" value="<?php echo set_value('title',"eg. Microeconomics (7th Edition)"); ?>" />
+	Title<input type="textfield" id="insertTitle" name="title" maxlength="60" value="<?php echo set_value('title'); ?>" tabindex="4" placeholder="eg. Microeconomics (7th Edition)" required />
 	<br/>
-	Price ($)<input type="textfield" id="insertPrice" name="price" maxlength="30" value="<?php echo set_value('price',"eg. 100"); ?>" />
+	Price ($)<input type="textfield" id="insertPrice" name="price" maxlength="30" value="<?php echo set_value('price'); ?>" tabindex="5" placeholder="100" required />
 	</div>
 	<div class="insertCol2">
+			<div id="descriptionSlideOut2" style="display:none;"> 
+        <b>Include in your description:</b>
+        <ul class="guidelines"><li>For books: ISBN, title, author, edition</li>
+        	<li>Condition of material</li>
+        	<li>Material description (what it includes, how it will help, etc.)</li>
+        	<li>Additional contact info (eg. phone number)</li>
+        </ul>
+      </div> 
 	Description
-	<textarea id="insertDescription" name="description" rows="5" cols="30" onKeyDown="limitText(this.form.description,this.form.countdown,500);" 
-onKeyUp="limitText(this.form.description,this.form.countdown,500);"></textarea>
+	<textarea id="insertDescription" name="description" rows="5" cols="30" tabindex="6" onKeyDown="limitText(this.form.description,this.form.countdown,500);" 
+onKeyUp="limitText(this.form.description,this.form.countdown,500);" required ></textarea>
 (Maximum characters: 500)
 </div>
 
@@ -69,11 +78,11 @@ onKeyUp="limitText(this.form.description,this.form.countdown,500);"></textarea>
 	
 	<div id="postfb">
 		<p> <h2>Would you like to tell your friends on Facebook?<span class="formDesc">Optional.</span></h2>
-		<label><input type="checkbox" name="postfb" id="postfb" value="1" /> I would like to make a Facebook post.</label>
+		<label><input type="checkbox" name="postfb" id="postfb" value="1" tabindex="7" /> I would like to make a Facebook post.</label>
 		</p>
 	</div>
 	
-<input type="submit" value="Post Study Material" id="insertUploadButton" /> 
+<input type="submit" value="Post Study Material" id="insertUploadButton" tabindex="8"/> 
 <?php echo form_close(); ?>
 	
 	</div>
@@ -95,15 +104,40 @@ onKeyUp="limitText(this.form.description,this.form.countdown,500);"></textarea>
         </ul>
             
     </div>
-    
+    	<div id="materialKinds">
+	<div class="radioKinds" id="kind1" title="1"><input class="noRadio" name="radioKind1" value="Book" type="radio" id="radioKind1" /></div>
+	<div class="radioKinds" id="kind2" title="2"><input class="noRadio" name="radioKind2" value="Test" type="radio" id="radioKind2" /></div>
+	</div>
+	
+	</div>
 </div>
 </div>
+
+
 
 <script src="<?php echo base_url();?>js/chosen.jquery.js" type="text/javascript"></script>
 
 <script type="text/javascript" >
 
 $(document).ready(function(){
+	
+	$(".radioKinds").click(function() {
+		var $buttonTitle = $(this).attr('title');
+		$('#materialKinds').children().find("#kind"+$buttonTitle).find(":radio").attr("checked","checked");
+		
+		
+		if ($button == 1){
+	   		$("#kind1").css('background-position','left bottom');
+	    }else{
+	    	$("#kind2").css('background-position','-78px -78px');
+	   }
+		//alert($button);
+	});
+	
+	
+	
+	
+	
 	$(".chzn-select1").chosen();
 	$(".chzn-select2").chosen();
   $("#subject_id").change( 
@@ -128,14 +162,7 @@ $(document).ready(function(){
 		}
 	);
 	
-	$(".tag").click(function () {
-      var text = $(this).val();
-      var desc = $("#insertDescription").val();
-      //$("#insertDescription").text(desc+text);
-      $("#insertDescription").val(desc+text);
-      $(this).hide();
-    });
-
+	
     
     $("#insertTitle").click(function() {
     if ($("#insertTitle").val() == "eg. Microeconomics (7th Edition)" ){
@@ -144,12 +171,12 @@ $(document).ready(function(){
     }
 	});
 	
-	$("#insertPrice").click(function() {
-    if ($("#insertPrice").val() == "eg. 100" ){
-    	$("#insertPrice").attr('value', '');
-    	$("#insertPrice").css('color','#000000');
-    }
-	});
+	$(".insertCol2 textarea").focus(function() {
+            $('#descriptionSlideOut2').effect('slide', 'fast');
+            });
+            $("#insertDescription").blur(function() {
+              $('#descriptionSlideOut2').css('display', 'none');
+    });
  
 	
 });	 	

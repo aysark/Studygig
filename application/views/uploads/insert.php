@@ -30,7 +30,7 @@
 		    </div>
 		<div id="l" class="uploadTypeField">
 		    	 <p>Enter URL (the url must start with '<b>http://</b>' and end with .PDF, .PPT, .DOC, .DOCX, .JPEG/.JPG, .PNG or .GIF):</p>
-		<input type="textfield" name="uploadLink" size="75" id="insertURL" value="<?php echo set_value('uploadLink',"eg. http://www.myProfessorSite.com/assignment1Solutions.pdf"); ?>"/>
+		<input type="textfield" name="uploadLink" size="75" id="insertURL" value="<?php echo set_value('uploadLink'); ?>" placeholder="eg. http://www.myProfessorSite.com/assignment1Solutions.pdf"/>
 		    </div>
 	</div>
 	
@@ -53,7 +53,7 @@
 	
 	<div id="insertMaterialType">
 		<h2>What kind of study material are you sharing?<span class="formDesc">Required. This helps us keep everything nice and tidy.</span></h2>
-				<select id="material" size="7" name="material" tabindex="4">
+				<select id="material" size="7" name="material" tabindex="4" required>
 		<option value="0" <?php echo set_select('material', '0'); ?>>Quiz/Test/Midterm/Exam</option>
 		<option value="1" <?php echo set_select('material', '1'); ?>>Assignment/Solutions</option>
 		<option value="2" <?php echo set_select('material', '2'); ?>>Study Guide</option>
@@ -89,7 +89,7 @@ Earn <b>1 point</b> for uploading or linking other helpful study material not ca
 		<h2>Describe your study material<span class="formDesc">Required. The more details your write, the easier it will be to find and the more points you'll earn!</span></h2>	
 				
 			<div class="insertCol1">
-	Title<input type="textfield" id="insertTitle" name="title" maxlength="60" value="<?php echo set_value('title',"eg. Midterm Fall 2008 Prof Albert"); ?>" tabindex="5" /> 
+	Title<input type="textfield" id="insertTitle" name="title" maxlength="60" value="<?php echo set_value('title'); ?>" tabindex="5" placeholder="eg. Midterm Fall 2008 Prof Albert" required /> 
 	<p class="smallText"><b>Examples of good titles:</b><br/>
 		F09 Midterm 1<br/>
 		Lecture 8 Notes - Business Management<br/>
@@ -108,7 +108,7 @@ Earn <b>1 point</b> for uploading or linking other helpful study material not ca
       </div> 
 	Description
 	<textarea id="insertDescription" name="description" rows="5" cols="30" onKeyDown="limitText(this.form.description,this.form.countdown,350);" 
-onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"></textarea>
+onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6" required></textarea>
 (Maximum characters: 350)
 </div>
 
@@ -150,17 +150,17 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
 	
 	<div id="insertAnon">
 		<h2>Would you like to share anonymously?<span class="formDesc">Optional.</span></h2>
-		<label><input type="checkbox" name="anon" value="1" /> I would like to make this post anonymously.</label>
+		<label><input type="checkbox" name="anon" value="1" tabindex="8" /> I would like to make this post anonymously.</label>
 	</div>
 	
 	<div id="postfb">
 		<h2>Would you like to tell your friends on Facebook?<span class="formDesc">Optional. But it helps promote your stuff to get you points!</span></h2>
-		<label><input type="checkbox" name="postfb" id="postfb" value="1" /> I would like to make a Facebook post.</label>
+		<label><input type="checkbox" name="postfb" id="postfb" value="1" tabindex="9" /> I would like to make a Facebook post.</label>
 	</div>
 	
 	<p>By uploading a file you certify that you have the right to distribute it and that it does not violate the Terms of Use.</p>
 	
-<input type="submit" value="Post Study Material" id="insertUploadButton" /> 
+<input type="submit" value="Post Study Material" id="insertUploadButton" tabindex="9" /> 
 <?php echo form_close(); ?>
 	
 	</div>
@@ -218,33 +218,12 @@ $(document).ready(function(){
 		}
 	);  
 	
-	$(".tag").click(function () {
-      var text = $(this).val();
-      var desc = $("#insertDescription").val();
-      $("#insertDescription").val(desc+text);
-      $(this).hide();
-    });
-	
 	$(".insertCol2 textarea").focus(function() {
             $('#descriptionSlideOut').effect('slide', 'fast');
             });
             $("#insertDescription").blur(function() {
               $('#descriptionSlideOut').css('display', 'none');
     });
-    
-    $("#insertURL").click(function() {
-    	if ($("#insertURL").val() == "eg. http://www.myProfessorSite.com/assignment1Solutions.pdf" ){
-    	$("#insertURL").attr('value', '');
-    	$("#insertURL").css('color','#000000');
-	}
-	});
-    
-    $("#insertTitle").click(function() {
-    if ($("#insertTitle").val() == "eg. Midterm Fall 2008 Prof Albert" ){
-    	$("#insertTitle").attr('value', '');
-    	$("#insertTitle").css('color','#000000');
-    }
-	});
 
 	$("input[name='uploadType']").change(function() {
         var test = $(this).val();

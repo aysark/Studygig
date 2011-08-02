@@ -14,6 +14,7 @@
 		<li><a href="#tabs-4">Classified Posts <?php if(count($inactive_classifieds) > 0) echo "(". count($inactive_classifieds) .")"; ?></a></li>
 		<li><a href="#tabs-5">Flags <?php if(count($flags) > 0) echo "(". count($flags) .")"; ?></a></li>
 		<li><a href="#tabs-6">Server</a></li>
+		<li><a href="#tabs-7">Email Marketing</a></li>
 
 	</ul>
 	<div id="tabs-1"> <!-- QUICK UPLOAD -->
@@ -160,6 +161,21 @@
 		
 		<iframe src="https://rpm.newrelic.com/public/charts/7UBzQQjatkj" width="850" height="470" scrolling="yes" frameborder="no"></iframe>
 	</div>
+	
+	<div id="tabs-7"> <!-- EMAIL MARKETING DATA -->
+		<b>If you were not told to use this - do not use it.  This is for email tracking analytics only.</b>
+		<form action="moderators/emailmarket" method="post" name="email" id="emailForm" />
+	<p><input type="textfield" id="fromName" name="fromName" value="John S." required /></p>
+	<p><input type="textfield" id="fromEmail" name="fromEmail" value="john.sheen09@gmail.com" required /></p>
+	<p><input type="textfield" id="to" name="to" placeholder="To" required  onClick="SelectAll('to');"/></p>
+	<p><input type="textfield" id="subject" name="subject" placeholder="Subject" required /></p>
+	<label><input type="radio" name="uploadType" value="b" />Regarding book</label><label><input type="radio" name="uploadType" value="n" />Regarding notes</label>
+	<p><textarea rows="12" cols="130" id="insertMessage" name="message" placeholder="Message" required></textarea></p>
+	<p><input type="submit" value="Send"  onclick="signupEmailUni()" /></p>
+	<div id="ratingFeedback" class="ui-corner-all" style="padding-top: 0px; padding-right: 0.3em; padding-bottom: 0px; padding-left: 0.3em;" ></div>
+</form>
+		
+	</div>
 </div>
 
 
@@ -220,5 +236,43 @@
 		"sDom": '<"top"i>rt<"bottom"flp><"clear">',
 		"sPaginationType": "full_numbers"	
 	 } );
+	 
+	 $("input[name='uploadType']").change(function() {
+        var test = $(this).val();
+       	 
+       	 if (test == "b"){
+       	
+       	 	$("#insertMessage").val("Hi, <br><br>I was wondering if you are still selling your book because i wanted to share with you a new site for YorkU students to share, list and find books and study material.  Tons of students are registering on the site (especially first years) looking for books and study material- you might just sell your book sooner than you think! <br><br>Check it out at: <a href='http://studygig.com'>http://www.studygig.com</a> <br><br>Best of luck, <br>John S.");
+       	 }else{
+       	 	$("#insertMessage").val("Hi, <br><br>I was wondering if you are still giving away your notes because i wanted to share with you a new site for YorkU students to share, list and find study material such as your notes.  You get rewarded for every note your share, you can earn $1 for every 4 notes you share or 2 past tests - given in gift cards such as BestBuy, iTunes and Amazon. <br><br>Tons of students are registering on the site (especially first years) looking for study material- when they download your notes, you'll get rewarded too! <br><br>Check it out at: <a href='http://studygig.com'>http://www.studygig.com</a> <br><br>Best of luck,<br>John S.");
+       	 }
+    });
 	} );
+	
+function signupEmailUni(){
+  	/* attach a submit handler to the form */
+  $("#emailForm").submit(function(event) {
+    /* stop form from submitting normally */
+    event.preventDefault(); 
+  });
+  	 $("#ratingFeedback").html('loading...');  
+	 /* Send the data using post and put the results in a div */
+    $.post( "<?php echo site_url('admin/moderators/emailmarket');?>", { to: $("#to").val(), 
+    				 message: $("#insertMessage").val(), 
+    				  fromEmail: $("#fromEmail").val(), 
+    				   fromName: $("#fromName").val(), 
+    				    subject: $("#subject").val()
+    },
+      function( data ) {
+      	$("#ratingFeedback").css({'visibility' : 'visible', 'background-color' : '#fbec88', 'color':'#363636','margin-bottom':'5px','border':'1px solid #fad42e'}	);
+      	document.getElementById("ratingFeedback").innerHTML=data;
+      }
+    );
+}
+
+  function SelectAll(id)
+{
+    document.getElementById(id).focus();
+    document.getElementById(id).select();
+}
 </script>
