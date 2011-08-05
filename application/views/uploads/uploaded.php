@@ -57,11 +57,11 @@ if ($upload_data == ""){
 	<h2>Promote your Post!</h2>
 	<p>Tell your friends and classmates by sharing your post on Facebook and Twitter.  Remember, when someone downloads your study material- you get 2 points every time!</p>
 	<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php echo site_url('uploads/view/'. $upload_id);?>" send="true" width="450" show_faces="true" action="recommend" font="tahoma"></fb:like>
-	<p><a href="<?php echo site_url('uploads/view/'. $upload_id);?>" class="twitter-share-button" data-count="none" data-via="studygig">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<p><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="studygig" data-url="<?php echo site_url('uploads/view/'. $upload_id);?>" data-text="I just shared study material on Studygig! #yorku" >Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 		<span style="margin-left:50px;"><g:plusone></g:plusone></span>
 	</p>
 
-	<p><a href="insert" class="uploadAnotherStudyMatButton">Post study material</a>  <a href="../users/dashboard" id="insertUploadButton2">Dashboard</a></p>
+	<p><a href="insert" class="insertUploadButton">Post study material</a>  <a href="../users/dashboard" id="insertUploadButton2">Dashboard</a></p>
 
 </div>
 

@@ -281,13 +281,15 @@ class Uploads extends CI_Controller {
 	//Search form
 	function index()
 	{
-		
+		$this->load->helper('date');
 		$data['content'] = 'uploads/search';
 		$data['latestUploads'] = $this->Upload->latest();
 		
 		foreach ($data['latestUploads'] as $u => $upload){
-      	$data['latestUploadsUsers'][$u] = $this->Upload->get_uploader($upload->id)->username;
-      	$data['latestUploadsCourses'][$u]  = $this->Upload->get_course_by_id($upload->id);
+	      	$data['latestUploadsUsers'][$u] = $this->Upload->get_uploader($upload->id)->username;
+	      	$data['latestUploadsCourses'][$u]  = $this->Upload->get_course_by_id($upload->id);
+	      	$unix = mysql_to_unix($upload->created_at);
+	      	$data['latestUploadsTimes'][$u] = $this->compare_dates($unix);
   	  }
 		
 		$data['pageTitle'] = 'Past tests, lecture notes and study guides - Find study material on Studygig';
@@ -295,6 +297,39 @@ class Uploads extends CI_Controller {
 		
 		$this->load->view('template',$data);
 	}
+	
+	function compare_dates($date1) 
+    { 
+    	$date2 = time();
+
+	    $blocks = array( 
+	        array('name'=>'year','amount'    =>    60*60*24*365    ), 
+	        array('name'=>'month','amount'    =>    60*60*24*31    ), 
+	        array('name'=>'week','amount'    =>    60*60*24*7    ), 
+	        array('name'=>'day','amount'    =>    60*60*24    ), 
+	        array('name'=>'hour','amount'    =>    60*60        ), 
+	        array('name'=>'min','amount'    =>    60        )
+	        ); 
+	    
+	    $diff = abs($date1-$date2); 
+	    
+	    $levels = 2; 
+	    $current_level = 1; 
+	    $result = array(); 
+	    foreach($blocks as $block) 
+	        { 
+	        if ($current_level > $levels) {break;} 
+	        if ($diff/$block['amount'] >= 1) 
+	            { 
+	            $amount = floor($diff/$block['amount']); 
+	            if ($amount>1) {$plural='s';} else {$plural='';} 
+	            $result[] = $amount.' '.$block['name'].$plural; 
+	            $diff -= $amount*$block['amount']; 
+	            $current_level++; 
+	            } 
+	        } 
+	    return implode(' ',$result).' ago'; 
+    } 
 	
 	//Search results
 	function search_backup($last_search = "")

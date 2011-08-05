@@ -113,15 +113,16 @@
 <li>Try more general keywords.</li>
 <li>Try fewer keywords.</li>
 </ul></p>
+<br>
 <h2>Alternatively you can...</h2>
     	<a href="../../uploads/insert" id="postStudyMaterialButton2">Post study material & earn cash rewards</a>  
-    	
+   	
 <form action="" method="post" accept-charset="utf-8" id="requestForm" >
  <input type="submit" class="jqbutton"  name="requestSM" value="Request study material" onclick="rqtStudyMaterial()"/>
 </form>	
 
     	<div id="resultsFd" class="rewardFeedback ui-corner-all" ></div>
-
+<br>
 <div id="anotherUni">
 		<h2>Study at a different university?</h2>
 		<p>Join our mailing list and be the first to find out when new universities are added.  Enter your email below.</p>
@@ -137,8 +138,11 @@
 
 </div>
 <div class="twoCol2">
+	<?php if($results):?>
 <div id="accordion">
 	<h4><a href="#">Search Filters</a></h4>
+	<div>
+		
 		<?php if($is_upload): ?>
 		
 		<form action="<?php echo site_url('uploads/getsearchfor/'.$query);?>" method="post" accept-charset="utf-8">
@@ -162,7 +166,7 @@
 			<label class="searchFilterMaterialType"><input type="checkbox" name="materialTypeFilter[]"  value="7" /> Other</label>
 			
 			<input type="submit" class="jqbutton" style="float:right;" value=" Apply " /> 
-		<p><br></p>
+		<br><br>
 		
 		</form>
 		
@@ -185,14 +189,20 @@
 			<label class="searchFilterMaterialType"><input type="checkbox" name="materialTypeFilter[]"  value="11" /> All-in-one Package</label>
 			<label class="searchFilterMaterialType"><input type="checkbox" name="materialTypeFilter[]"  value="12" /> Other</label>
 			
-			<input type="submit" value="Apply" /> 
+			<input type="submit" class="jqbutton" style="float:right;" value=" Apply " /> 
+		<br><br>
 			
 		</form>
 		<?php endif; ?>
-	<br/>
-
-	
+	</div>
+	<h4><a href="#">Subscribe to Classifieds</a></h4>
+	<div>
+		Get the notified whenever a new classified ad has been posted right at your inbox!
+		<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=studygig', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>	Enter your email address:</p><input type="text" style="width:180px" name="email"/><input type="hidden" value="studygig" name="uri"/><input type="hidden" name="loc" value="en_US"/><input type="submit"  class="jqbutton" style="float:right;"  value=" Subscribe " /></form>
+			<a target="_blank" href="http://feeds.feedburner.com/~r/studygig/~6/3"><img src="http://feeds.feedburner.com/studygig.3.gif" alt="Studygig Classifieds" style="border:0"></a>
+	</div>
 </div>
+<?php endif; ?>
 <a href="../insert"><div id="memberAd2">
 </div></a>
 </div>

@@ -42,12 +42,13 @@
   notes, lab reports, and anything 
   that helps them study.  Studygig allows 
   students to download, share, list and earn rewards for their study material.<br/><br/>
-<b>It's free to use</b>, so get started today. <a href="index.php/site/aboutus" title="Find out more about what Studygig is">Learn more »</a></p>
+<b>It's free to use</b>, so get started today. <br><a href="index.php/site/aboutus" title="Find out more about what Studygig is">Learn more »</a></p>
             </div>
             <div class="col2">
                 <h1>Now at York University...</h1>
                 <img src="images/york-university.png" width="113" height="119" alt="Available in York University" class="contentImageLeft" />
-              <p>If you'd like to see Studygig at your university or college, <a href="index.php/site/contact" title="Contact us about your University or College">tell us!</a>  </p>
+              <p>If you'd like to see Studygig at your university or college, <a href="index.php/site/contact" title="Contact us about your University or College">tell us!</a>  
+              	<br><br>Or <a href="index.php/site/mailinglist">join our mailing list</a> to get updates when we launch at new universities. </p>
             </div>
             <div class="col3">
                 <h1>Recent Posts</h1>
@@ -58,9 +59,9 @@
        <div class="slide roundedCornerContent">
     <h2><a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo htmlspecialchars($upload->title); ?></a></h2>
 			 <p>
-             Uploaded in <a href="<?php echo site_url('uploads/search/').'/'.substr ($latestUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $latestUploadsCourses[$i];?></span></a></h5>
+            <h5> Uploaded in <a href="<?php echo site_url('uploads/search/').'/'.substr ($latestUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $latestUploadsCourses[$i].'</a> '?></span>
 		</p>
-			 <h5> <img src="images/material<?php echo $upload->material; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="images/file<?php echo $upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" />
+			  <img src="images/material<?php echo $upload->material; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="images/file<?php echo $upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" /><span class="formDesc" style="float:right;"><?php echo $latestUploadsTimes[$i]; ?></span></h5>
 			 	
 			 	
 	</div>
@@ -100,6 +101,7 @@ $("#guidesIconSearch").click(function () {
       document.forms['searchform'].elements['query'].value = "ADMS1000 Review";
       document.forms['searchform'].elements['query'].select();
     });
+
 
 function validateForm()
 {

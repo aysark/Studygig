@@ -238,29 +238,27 @@ padding-top:10px;
 	padding-top:10px;
 }
 
-#mainContentText{
-	text-align:justify;
-}
+
 
 .col1 {
 	float: left;
-	width: 303px;
-	padding-left:10px;
-	padding-right:10px;
+	width: 285px;
+	padding-left:7px;
+	padding-right:7px;
 }
 
 .col3 {
 	float: right;
-	width: 303px;
-	padding-left:10px;
-	padding-right:10px;
+	width: 300px;
+	padding-left:7px;
+	padding-right:7px;
 }
 
 .col2 { 
 	float: left;
-	width: 28%;
-	padding-left:10px;
-	padding-right:10px;
+	width: 32%;
+	padding-left:7px;
+	padding-right:7px;
 }
 
 .col111 {
@@ -324,6 +322,7 @@ padding-top:10px;
 	padding-left:15px;
 	padding-right:15px;
 	margin-top:10px;
+	width:95%;
 }
 #memberAd1{
 	margin-top:15px;
@@ -366,7 +365,9 @@ img.center {   display: block;   margin-left: auto;   margin-right: auto; }
 .slideshow {  	
 	height:155px;
 	}
-
+.slide{
+	width:90%;
+}
 
 /** ------------------------ **/
 /** SITE PAGE STYLING **/
@@ -707,7 +708,7 @@ img.center {   display: block;   margin-left: auto;   margin-right: auto; }
 .welcome2col2{
 	float:left;
 	padding-left:10px;
-	width:490px;
+	width:470px;
 	text-align:justify;
 	height: 1%; /* Holly hack for Peekaboo Bug */
 }
@@ -1039,6 +1040,7 @@ a.uploadAnotherStudyMatButton{
 		line-height: 22px;
 		color:#B9ABA2;
     }
+
     #insertTitle{
     	display:block;
     	padding: 10px 10px 5px;
@@ -1048,6 +1050,7 @@ a.uploadAnotherStudyMatButton{
 		width:100%;
 		color:#B9ABA2;
     }
+
     #insertPrice{
     	display:block;
     	padding: 10px 10px 5px;
@@ -1618,6 +1621,17 @@ ul.faq li{
 .autocomplete div { padding:2px 5px; white-space:nowrap; }
 .autocomplete strong { font-weight:normal; color:#3399FF; }
 
+
+/* TIPSY TOOLTIP
+-------------------------------------------------------------- */
+
+.tipsy { padding: 5px; font-size: 12px; opacity: 0.8; filter: alpha(opacity=80); background-repeat: no-repeat;  background-image: url(images/tipsy.gif); }
+  .tipsy-inner { padding: 5px 8px 4px 8px; background-color: black; color: white; max-width: 200px; text-align: left; }
+  .tipsy-inner { -moz-border-radius:3px; -webkit-border-radius:3px; }
+  .tipsy-north { background-position: top center; }
+  .tipsy-south { background-position: bottom center; }
+  .tipsy-east { background-position: right center; }
+  .tipsy-west { background-position: left center; }
 
 
 /* Headings

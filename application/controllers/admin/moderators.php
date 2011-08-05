@@ -293,7 +293,8 @@
 				                          
 							$rawMime = 
 				    "X-Priority: 1 (Highest)\n".
-				    "X-Mailgun-Tag: Craigslist/Kijiji Marketing Real\n".
+				    "X-Mailgun-Tag: ".$this->input->post('subject')."\n".
+				    "X-Campaign-Id: ".$this->input->post('subject')."\n".
 				    "Content-Type: text/html;charset=UTF-8\n".    
 				    "From: ".$this->input->post('fromEmail')."\n".
 				    "To: ".$email."\n".

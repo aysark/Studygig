@@ -84,11 +84,11 @@
 </div>
 <div class="twoCol2">
 	<br/>
-	<span id="dashboardSnapshot">Points </span>  <img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" title="Use points to download study material (it costs 20 points to download) or trade in your points to redeem real life rewards.  To earn points- simply upload study material!"/>  <span id="dashboardNumber"><?php echo $points;?></span>
+	<span id="dashboardSnapshot">Points </span>  <a href="#" class="dashHelp" title="Use points to download study material (it costs 20 points to download) or trade in your points to redeem real life rewards.  To earn points- simply upload study material!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a>  <span id="dashboardNumber"><?php echo $points;?></span>
 	<a href="profile">Trade in points for rewards »</a><br/>
 	<span id="dashboardSnapshot">Uploads</span> <span id="dashboardNumber"><?php echo $total_uploads;?></span>
 		<span id="dashboardSnapshot">Downloads</span> <span id="dashboardNumber"><?php echo $total_downloads;?></span>
-	<span id="dashboardSnapshot">Trophies</span> <img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" title="This feature is still under construction."/><span id="dashboardNumber2"><?php echo "None";?></span>
+	<span id="dashboardSnapshot">Trophies</span> <a href="#" class="dashHelp" title="This feature is still under construction."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span id="dashboardNumber2"><?php echo "None";?></span>
 	<br/>
 	<span id="dashboardSnapshot">Membership: <?php echo "Free";?></span>
 	<br/>
@@ -101,7 +101,7 @@
 
 <script type="text/javascript" >
 	$(function() {
-		$( "#tabs" ).tabs({
-		});
+		$( "#tabs" ).tabs();
+		$('.dashHelp').tipsy({gravity: 'w'});
 	});
 	</script>

@@ -52,7 +52,7 @@ if($upload->filesize == -1){
                ?>
             
                 <?php if($related): ?>
-                <h4>Related Documents <img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></h4>
+                <h4>Related Documents <a href="#" class="dashHelp" title="These are documents that were uploaded with the above upload- it might be a continuation of the above."><img src="../../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a></h4>
                 <p>    <ol><?php foreach($moreByUser as $relatedUpload):?>
     	<li><a href="<?php echo site_url('uploads/view/'. $relatedUpload->id);?>"><?php echo htmlspecialchars($relatedUpload->title); ?></a></li>
     <?php endforeach; ?>

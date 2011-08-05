@@ -38,6 +38,7 @@ echo $str;  ?>" />
 	<script type="text/javascript" src="js/jquery.form.js"></script>
 	<script type="text/javascript" src="js/jquery.MetaData.js"></script>
 	<script type="text/javascript" src="js/jquery.MultiFile.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.tipsy.mini.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 	 <link rel="alternate" type="application/rss+xml" title="Classifieds Feed" href="http://studygig.com/index.php/classifiedFeed/" /> 
 		<!-- include Cycle plugin -->

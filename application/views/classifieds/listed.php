@@ -6,7 +6,7 @@
 	<h2>Promote your Post!</h2>
 	<p>Tell your friends and classmates by sharing your post on Facebook and Twitter.  You may be able to sell it by tomorrow - you just need to get the word out!</p>
 	<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php echo site_url('classifieds/view/'. $classified_id);?>" send="true" width="450" show_faces="true" action="recommend" font="tahoma"></fb:like>
-	<p><a href="<?php echo site_url('classifieds/view/'. $classified_id);?>" class="twitter-share-button" data-count="none" data-via="studygig">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<p><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="studygig" data-url="<?php echo site_url('classifieds/view/'. $classified_id);?>" data-text="I'm selling study material on Studygig! #yorku">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 		<span style="margin-left:50px;"><g:plusone></g:plusone></span>
 	</p>
 

@@ -10,18 +10,14 @@
 		}?>
 		<?php if (validation_errors() != ""){
 			 echo '<div class="ui-state-error ui-corner-all" style="padding-top: 0px; padding-right: 0.7em; padding-bottom: 0px; padding-left: 0.7em;color:#CD0A0A; width:90%;">'.validation_errors().'</div>';
-			} ?>
-	
-
-	
-	
-	<?php 
+			} 
+			
 		$attributes = array('id' => 'uploadform');
 		echo form_open_multipart('uploads/upload',$attributes); 
 	?>
 		
 	<div id="insertUploadType">
-		<h2>How would you like to Share?<span class="formDesc">Required. You can upload from your computer or share a link from the web.  You can only upload Word, PowerPoint, PDF, or image files (eg. scanned papers).</span></h2>	
+		<h2>How would you like to Share?  <a href="#" class="dashHelp" title="You can upload from your computer or share a link from the web.  You can only upload Word, PowerPoint, PDF, or image files (eg. scanned papers)."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required.</span></h2>	
 		<label class="uploadTypeRadio"><input type="radio" name="uploadType"  value="u" tabindex="1"/> Upload file(s)  </label>
 	   <label class="uploadTypeRadio"> <input type="radio" name="uploadType"  value="l"  /> Direct website link to file (http://...)</label>
 		        <div id="u" class="uploadTypeField">
@@ -35,7 +31,7 @@
 	</div>
 	
 	<div id="insertSelectSubject">
-		<h2>Select Material's Subject <span class="formDesc">Required. The subject your study material is for (and then the course).</span></h2>
+		<h2>Select Material's Subject <a href="#" class="dashHelp" title="Select the subject your study material is for (and then the course)."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required.</span></h2>
 			<select id="subject_id"  size="10" name="subject_id" class="chzn-select1" title="Choose a Subject..." tabindex="2" >
 			<?php foreach($subjects as $subject): ?>
 		
@@ -52,7 +48,7 @@
 	</div>
 	
 	<div id="insertMaterialType">
-		<h2>What kind of study material are you sharing?<span class="formDesc">Required. This helps us keep everything nice and tidy.</span></h2>
+		<h2>What kind of study material are you sharing? <a href="#" class="dashHelp" title="This helps us keep everything nice and tidy."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required.</span></h2>
 				<select id="material" size="7" name="material" tabindex="4" required>
 		<option value="0" <?php echo set_select('material', '0'); ?>>Quiz/Test/Midterm/Exam</option>
 		<option value="1" <?php echo set_select('material', '1'); ?>>Assignment/Solutions</option>
@@ -86,7 +82,7 @@ Earn <b>1 point</b> for uploading or linking other helpful study material not ca
 	</div>
 	
 	<div id="insertUTitleDesc">
-		<h2>Describe your study material<span class="formDesc">Required. The more details your write, the easier it will be to find and the more points you'll earn!</span></h2>	
+		<h2>Describe your study material <a href="#" class="dashHelp" title="The more details you write, the easier it will be to find and the more points you'll earn!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required.</span></h2>	
 				
 			<div class="insertCol1">
 	Title<input type="textfield" id="insertTitle" name="title" maxlength="60" value="<?php echo set_value('title'); ?>" tabindex="5" placeholder="eg. Midterm Fall 2008 Prof Albert" required /> 
@@ -94,7 +90,6 @@ Earn <b>1 point</b> for uploading or linking other helpful study material not ca
 		F09 Midterm 1<br/>
 		Lecture 8 Notes - Business Management<br/>
 		Assignment 4 w/ Solutions<br/>
-		Textbook Chapter Summaries (1-4)<br/>
 	</p>
 	</div>
 	<div class="insertCol2">
@@ -115,7 +110,7 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
 	</div>
 	
 	<div id="insertKeywords">
-		<h2>Add tags<span class="formDesc">Optional. These help make your study material more relevant and search-friendly.</span></h2>
+		<h2>Add tags <a href="#" class="dashHelp" title="These help make your study material more relevant and search-friendly."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Optional.</span></h2>
 		
 		<select title="Type generic words that describe your post..." class="chzn-select3" multiple style="width:600px;" tabindex="7" name="tags[]" id="multi_example">
           <option value="Answers">Answers</option> 
@@ -154,11 +149,11 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
 	</div>
 	
 	<div id="postfb">
-		<h2>Would you like to tell your friends on Facebook?<span class="formDesc">Optional. But it helps promote your stuff to get you points!</span></h2>
+		<h2>Would you like to tell your friends on Facebook? <a href="#" class="dashHelp" title="It helps promote your stuff to get you points! This only posts to your wall once, we will never use it for spam- pwomise!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Optional. </span></h2>
 		<label><input type="checkbox" name="postfb" id="postfb" value="1" tabindex="9" /> I would like to make a Facebook post.</label>
 	</div>
 	
-	<p>By uploading a file you certify that you have the right to distribute it and that it does not violate the Terms of Use.</p>
+	<p>By uploading a file you certify that you have the right to distribute it and that it does not violate our <a href="<?php echo base_url();?>index.php/site/termsofuse">Terms of Use</a>.</p>
 	
 <input type="submit" value="Post Study Material" id="insertUploadButton" tabindex="9" /> 
 <?php echo form_close(); ?>
@@ -246,7 +241,7 @@ $(document).ready(function(){
        	 
     });
     
- 
+ 	$('.dashHelp').tipsy({gravity: 'w'});
 	
 });	 	
 
