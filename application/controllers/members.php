@@ -23,7 +23,7 @@ class Members extends CI_Controller {
 		if($this->session->userdata('logged_in')) {
 
 			if ($this->Member->is_member($this->session->userdata('user_id')))
-			$this->success();
+			$this->status();
 				else
 			$this->form();
 		}
@@ -88,6 +88,17 @@ class Members extends CI_Controller {
 		$data['pp_info'] = $_POST;
 
 		$data['content'] = 'members/success';
+		$data['pageTitle'] = 'Share your Study Material on Studygig';
+		$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
+
+		$this->load->view('subTemplate', $data);
+	}
+
+	function status() {
+
+		$data['subscription'] = $this->Member->get_subscription($this->session->userdata('user_id'));
+
+		$data['content'] = 'members/status';
 		$data['pageTitle'] = 'Share your Study Material on Studygig';
 		$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
 

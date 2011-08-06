@@ -11,6 +11,13 @@ class Member extends CI_Model {
 		$this->db->insert('members',$new);
 	}
 
+	function get_subscription($id) {
+		$this->db->where('user_id',$id);
+		$query = $this->db->get('members');
+
+		return $query->row();
+	}
+
 	function is_member($id) {
 		
 		$this->db->where('user_id',$id);

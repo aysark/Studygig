@@ -611,8 +611,12 @@ class Uploads extends CI_Controller {
 					$data['file'] = $this->_prepare_download($this->input->post('file_path'),$this->input->post('file_name'));
 					$data['upload'] = $this->Upload->get_by_id($uploadid);
 					
+					# Check if user is a subscriber
+					$this->load->model('Member');
+					$subscriber = $this->Member->is_member($this->session->userdata('user_id'));
+
 					# Check if transaction is complete
-					if ($this->Transaction->add($this->session->userdata('user_id'),$uploadid,$uploaderid,$already_has))
+					if ($this->Transaction->add($this->session->userdata('user_id'),$uploadid,$uploaderid,$already_has,$subscriber))
 					{
 						$this->load->model('Favourite');
 						
