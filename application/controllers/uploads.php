@@ -746,6 +746,18 @@ class Uploads extends CI_Controller {
     );
     $string = preg_replace($patterns, $replacements, $string);
     return $string;
-}
+  }
+
+  function delete($id) {
+  	if( $this->Upload->get_uploader($id)->id == $this->session->userdata('user_id'))
+  	 {
+  	 	$this->Upload->delete($id);
+  	 	redirect(site_url('users/mystuff'),'refresh');
+  	 }
+  	 else 
+  	 {
+	 	echo "You can't delete other people's stuff!";	  	 	
+	 }
+  }
 	
 }

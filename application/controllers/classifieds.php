@@ -211,5 +211,17 @@ class Classifieds extends CI_Controller {
 			echo '<a href="'.base_url().'index.php/users/signup">Register</a> or <a href="'.base_url().'index.php/users/login">Login</a> to send message.';
 		}	
 }
+
+	function delete($id) {
+		if( $this->Classified->get_seller_by_id($id)->user_id == $this->session->userdata('user_id') )
+  	 	{
+  	 		$this->Classified->delete($id);
+  	 		redirect(site_url('users/mystuff'),'refresh');
+  	 	}
+  	 	else 
+  	 	{
+	  	 	echo "You can't delete other people's stuff!";	  	 	
+	  	}
+	}
 	
 }

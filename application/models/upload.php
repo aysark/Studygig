@@ -402,4 +402,8 @@ function searchcount($search){
 		return count($query->result());
 	}
 
+  function delete($id) {
+    $this->db->where('id',$id);
+    $this->db->delete('uploads');
+  }
 }

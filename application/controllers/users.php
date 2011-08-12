@@ -395,6 +395,16 @@
     }
     else  
     redirect('users/login');
+  }
+  
+  function mystuff() { 
+  	$data['alluploads'] = $this->User->get_all_uploads($this->user->id);
+  	$data['allclassifieds'] = $this->User->get_all_classifieds($this->user->id);
+
+  	$data['content'] = 'users/mystuff';
+  	$data['pageTitle'] = 'Edit uploads';
+	$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+    $this->load->view('subTemplate', $data);
   }	
   
   function redeemReward(){
