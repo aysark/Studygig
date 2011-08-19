@@ -212,6 +212,14 @@ class Classifieds extends CI_Controller {
 		}	
 }
 
+	function edit($id) {
+		
+	}
+
+	function update() {
+		
+	}
+
 	function delete($id) {
 		if( $this->Classified->get_seller_by_id($id)->user_id == $this->session->userdata('user_id') )
   	 	{
@@ -222,6 +230,5 @@ class Classifieds extends CI_Controller {
   	 	{
 	  	 	echo "You can't delete other people's stuff!";	  	 	
 	  	}
-	}
-	
+	}	
 }

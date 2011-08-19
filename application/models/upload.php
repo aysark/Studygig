@@ -402,6 +402,21 @@ function searchcount($search){
 		return count($query->result());
 	}
 
+  function update($id) {
+    $this->db->where('id',$id);
+    $newdata = array(        
+      'title' => $this->input->post('title'),
+      'course_id' => $this->input->post('course_id'),
+      'subject_id' => $this->input->post('subject_id'),      
+      'description' => $this->input->post('description'),
+      'material' => $this->input->post('material'),
+      'user_id' => $this->input->post('user_id'),
+      'tags' => $this->input->post('tags')    
+      );
+    $this->db->set($newdata);  
+    $this->db->update('uploads');
+  }
+
   function delete($id) {
     $this->db->where('id',$id);
     $this->db->delete('uploads');
