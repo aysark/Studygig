@@ -749,17 +749,24 @@ class Uploads extends CI_Controller {
   }
 
   function edit($id) {
-  
- 	$this->load->model('Subject'); 
-  	$data['upload'] = $this->Upload->get_by_id($id);
-  	$data['subjects'] = $this->Subject->get_titles();
-  	$data['upload_id'] = $id;
+  	
+  	if( $this->Upload->get_uploader($id)->id == $this->session->userdata('user_id'))
+  		{
+		 	$this->load->model('Subject'); 
+		  	$data['upload'] = $this->Upload->get_by_id($id);
+		  	$data['subjects'] = $this->Subject->get_titles();
+		  	$data['upload_id'] = $id;
 
-  	$data['content'] = 'uploads/edit';
-  	$data['pageTitle'] = 'Edit study material';
-	$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-	    
-	$this->load->view('subTemplate', $data);		
+		  	$data['content'] = 'uploads/edit';
+		  	$data['pageTitle'] = 'Edit study material';
+			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+			    
+			$this->load->view('subTemplate', $data);
+		}
+		else
+		{
+			echo "You can't edit other people's stuff";
+		}
   }
 
   function update() {
