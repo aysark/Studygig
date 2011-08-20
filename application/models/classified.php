@@ -222,6 +222,21 @@ class Classified extends CI_Model {
   		$this->db->delete('classifieds');
   	}
 
+  	function update($id) {
+		$this->db->where('id',$id);
+		$newclassified = array(
+						'title' => $this->input->post('title'),
+						'description' => $this->input->post('description'),
+						'subject_id' => $this->input->post('subject_id'),
+						'course_id' => $this->input->post('course_id'),
+						'user_id' => $this->session->userdata('user_id'),
+						'material' => $this->input->post('material'),
+						'price' => $this->input->post('price')
+			);
+		$this->db->set($newclassified);
+		$this->db->update('classifieds');	  		
+  	}
+
   	function delete($id) {
   		$this->db->where('id',$id);
   		$this->db->delete('classifieds');

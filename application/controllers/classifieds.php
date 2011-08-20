@@ -213,12 +213,24 @@ class Classifieds extends CI_Controller {
 }
 
 	function edit($id) {
-		
-	}
+  
+ 	$this->load->model('Subject'); 
+  	$data['classifieds'] = $this->Classified->get_by_id($id);
+  	$data['subjects'] = $this->Subject->get_titles();
+  	$data['classified_id'] = $id;
 
-	function update() {
-		
-	}
+  	$data['content'] = 'classifieds/edit';
+  	$data['pageTitle'] = 'Edit classified';
+	$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+	    
+	$this->load->view('subTemplate', $data);		
+  }
+
+  function update() {
+
+  	$this->Classified->update($this->input->post('classified_id'));
+  	redirect('','refresh');
+  }
 
 	function delete($id) {
 		if( $this->Classified->get_seller_by_id($id)->user_id == $this->session->userdata('user_id') )
