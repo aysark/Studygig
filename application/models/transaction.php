@@ -2,7 +2,7 @@
 
 class Transaction extends CI_Model {
 
-	function add($userid,$uploadid,$uploader,$already_has) {
+	function add($userid,$uploadid,$uploader,$already_has,$subscriber) {
 	
 		$this->db->trans_start();
 		
@@ -11,9 +11,12 @@ class Transaction extends CI_Model {
 		
 		
 		if(!$already_has){
-			$this->db->where('id',$userid);
-			$this->db->set('points','points-20',FALSE);
-			$this->db->update('users');
+			if (!$subscriber)
+			{
+				$this->db->where('id',$userid);
+				$this->db->set('points','points-20',FALSE);
+				$this->db->update('users');
+			}	
 		}
 		if ($userid != $uploader){
 			$this->db->where('id',$uploader);

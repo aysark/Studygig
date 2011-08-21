@@ -211,5 +211,43 @@ class Classifieds extends CI_Controller {
 			echo '<a href="'.base_url().'index.php/users/signup">Register</a> or <a href="'.base_url().'index.php/users/login">Login</a> to send message.';
 		}	
 }
+
+	function edit($id) {
 	
+	if( $this->Classified->get_seller_by_id($id)->user_id == $this->session->userdata('user_id') )
+  	 	{  
+		 	$this->load->model('Subject'); 
+		  	$data['classifieds'] = $this->Classified->get_by_id($id);
+		  	$data['subjects'] = $this->Subject->get_titles();
+		  	$data['classified_id'] = $id;
+
+		  	$data['content'] = 'classifieds/edit';
+		  	$data['pageTitle'] = 'Edit classified';
+			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+			    
+			$this->load->view('subTemplate', $data);
+		}
+	else
+		{
+			echo "You can't edit other people's stuff";
+		}				
+  }
+
+  function update() {
+
+  	$this->Classified->update($this->input->post('classified_id'));
+  	redirect('','refresh');
+  }
+
+	function delete($id) {
+		if( $this->Classified->get_seller_by_id($id)->user_id == $this->session->userdata('user_id') )
+  	 	{
+  	 		$this->Classified->delete($id);
+  	 		redirect(site_url('users/mystuff'),'refresh');
+  	 	}
+  	 	else 
+  	 	{
+	  	 	echo "You can't delete other people's stuff!";	  	 	
+	  	}
+	}	
 }

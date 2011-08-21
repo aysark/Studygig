@@ -40,6 +40,13 @@ class Classified extends CI_Model {
 			$query = $this->db->get('classifieds',$limit);
 			return $query->result();		
 		}
+
+		function get_seller_by_id($id) {
+			$this->db->where('id',$id);
+			$query = $this->db->get('classifieds');
+
+			return $query->row();
+		}
 		
 		function search($search,$offset = 0,$sortResults=0, $materialTypeFilter=null) {
 			# apply a material type filter if there was one applied
@@ -211,6 +218,26 @@ class Classified extends CI_Model {
   	}
 
   	function reject($id) {
+  		$this->db->where('id',$id);
+  		$this->db->delete('classifieds');
+  	}
+
+  	function update($id) {
+		$this->db->where('id',$id);
+		$newclassified = array(
+						'title' => $this->input->post('title'),
+						'description' => $this->input->post('description'),
+						'subject_id' => $this->input->post('subject_id'),
+						'course_id' => $this->input->post('course_id'),
+						'user_id' => $this->session->userdata('user_id'),
+						'material' => $this->input->post('material'),
+						'price' => $this->input->post('price')
+			);
+		$this->db->set($newclassified);
+		$this->db->update('classifieds');	  		
+  	}
+
+  	function delete($id) {
   		$this->db->where('id',$id);
   		$this->db->delete('classifieds');
   	}

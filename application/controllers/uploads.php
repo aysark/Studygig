@@ -611,8 +611,12 @@ class Uploads extends CI_Controller {
 					$data['file'] = $this->_prepare_download($this->input->post('file_path'),$this->input->post('file_name'));
 					$data['upload'] = $this->Upload->get_by_id($uploadid);
 					
+					# Check if user is a subscriber
+					$this->load->model('Member');
+					$subscriber = $this->Member->is_member($this->session->userdata('user_id'));
+
 					# Check if transaction is complete
-					if ($this->Transaction->add($this->session->userdata('user_id'),$uploadid,$uploaderid,$already_has))
+					if ($this->Transaction->add($this->session->userdata('user_id'),$uploadid,$uploaderid,$already_has,$subscriber))
 					{
 						$this->load->model('Favourite');
 						
@@ -742,6 +746,45 @@ class Uploads extends CI_Controller {
     );
     $string = preg_replace($patterns, $replacements, $string);
     return $string;
-}
+  }
+
+  function edit($id) {
+  	
+  	if( $this->Upload->get_uploader($id)->id == $this->session->userdata('user_id'))
+  		{
+		 	$this->load->model('Subject'); 
+		  	$data['upload'] = $this->Upload->get_by_id($id);
+		  	$data['subjects'] = $this->Subject->get_titles();
+		  	$data['upload_id'] = $id;
+
+		  	$data['content'] = 'uploads/edit';
+		  	$data['pageTitle'] = 'Edit study material';
+			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+			    
+			$this->load->view('subTemplate', $data);
+		}
+		else
+		{
+			echo "You can't edit other people's stuff";
+		}
+  }
+
+  function update() {
+
+  	$this->Upload->update($this->input->post('upload_id'));
+  	redirect('','refresh');
+  }
+
+  function delete($id) {
+  	if( $this->Upload->get_uploader($id)->id == $this->session->userdata('user_id'))
+  	 {
+  	 	$this->Upload->delete($id);
+  	 	redirect(site_url('users/mystuff'),'refresh');
+  	 }
+  	 else 
+  	 {
+	 	echo "You can't delete other people's stuff!";	  	 	
+	 }
+  }
 	
 }

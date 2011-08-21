@@ -366,6 +366,16 @@
 		
 		return $query->result();	
 	}
+
+	function get_all_uploads($id) {
+		$this->db->where('user_id',$id);
+		return $this->db->get('uploads')->result();
+	}
+
+	function get_all_classifieds($id) {
+		$this->db->where('user_id',$id);
+		return $this->db->get('classifieds')->result();
+	}
 	
 	function get_total_users(){
 		return $this->db->count_all_results('users');
