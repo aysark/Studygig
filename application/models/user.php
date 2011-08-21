@@ -34,7 +34,7 @@
 		'password' => md5(mysql_real_escape_string($this->input->post('password'))),
 		'verifyhash' => $the_hash,
 		'oauth_provider' => NULL,
-		'points' => 50
+		'points' => 20
 		);
 	
 		$this->db->insert('users', $newuser);
@@ -74,7 +74,11 @@
 	  		
 	  		$this->db->where('verifyhash',$hash);
 	  		$this->db->update('users', $verifieduser); 
-	  		return TRUE;	  		
+	  		
+	  		$data[0] = TRUE;
+	  		$data[1] = $this->get_user_by_hash();
+	  		
+	  		return $data;
 	  	}
 	  else
 	  	return FALSE;	
@@ -86,6 +90,14 @@
 	  			
 		$user = $results[0];
 	  	return $user->email;
+	} 
+	
+	function get_user_by_hash($hash) {
+		$this->db->select('email')->from('users')->where('verifyhash', $hash);	 
+	  	$results= $this->db->get()->result();
+	  			
+		$user = $results[0];
+	  	return $user;
 	} 
 	
 	function get_id_by_email($email) {

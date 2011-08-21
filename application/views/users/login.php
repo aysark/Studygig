@@ -34,10 +34,10 @@ $attributes = array('name' => 'loginform', 'id' => 'loginWithOutFb');
 echo form_open('sessions/create',$attributes);?>
 	<h2>Or login using Studygig</h2>
 <div id="emailLoginField">
-Email:<input type="textfield" class="formTextField2" name="email" maxlength="30" value="<?php echo set_value('email'); ?>" />
+Email:<input type="textfield" class="formTextField2" name="email" maxlength="30" value="<?php echo set_value('email'); ?>" required />
 </div>
 <div id="passwordLoginField">
-Password: <input type="password" class="formTextField2" name="password" maxlength="32"  value="<?php echo set_value('password'); ?>" />
+Password: <input type="password" class="formTextField2" name="password" maxlength="32"  value="<?php echo set_value('password'); ?>" required />
 <a href="<?php echo site_url('users/forgotpass');?>">Forgot your password?</a>
 </div>
 <div id="loginButtonAlign">

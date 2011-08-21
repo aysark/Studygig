@@ -107,7 +107,7 @@
     
         <h2>Your search did not match any posts.  Suggestions:</h2>
 <p><ul class="guidelines">
-<li>If searching a course code, do not include a space between the letters and numbers (eg. do this: CSE1020, not this: CSE 1020)</li>
+<li>If searching a course code, do not include a space between the letters and numbers <br>(eg. do this: CSE1020, not this: CSE 1020)</li>
 <li>Make sure all words are spelled correctly.</li>
 <li>Try different keywords.</li>
 <li>Try more general keywords.</li>

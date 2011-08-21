@@ -3,6 +3,7 @@
 <div class="twoCol1RightBased">	
 	
 <h1>Your account has been created</h1>
+
 <?php if ($signedUpThruStudygig){
 	echo '<p class="ui-state-highlight ui-corner-all" style="padding-top: 0px; padding-right: 0.7em; padding-bottom: 0px; padding-left: 0.7em;">Please check your email and click the confirmation link we sent you!</p>';
 }

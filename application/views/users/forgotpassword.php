@@ -14,7 +14,7 @@ if ($resetpass){
 <?php echo form_open('users/resetpass');?>
 
 <p>Enter your e-mail address to have the password associated with that account reset.</p>
-Email: <input type="textfield" class="formTextField2" name="email" maxlength="30"  value="<?php echo set_value('email'); ?>" />
+Email: <input type="textfield" class="formTextField2" name="email" maxlength="30"  value="<?php echo set_value('email'); ?>" required />
 
 <input type="submit" id="loginButton" value="Reset my password" />
 

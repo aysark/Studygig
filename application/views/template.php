@@ -137,22 +137,23 @@ $(function() {
 });
   
   
- /* // google analytics START
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-22030731-1']);
-  _gaq.push(['_trackPageview']);
+  var _gms = {
+    move_sel: 'div,a,input[type=submit]',
+    load_t: +new Date,
+    unload: true,
+    profile: '2a65dc'
+  };
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(ga, ss);
-  })();
-  // google analytics END*/
 </script>
 
 </head>
 	<body>
-		
+		<!-- ClickTale Top part -->
+<script type="text/javascript">
+var WRInitTime=(new Date()).getTime();
+</script>
+<!-- ClickTale end of Top part -->
+
 			<div id="alphaBarContent">
 			Hi there!  We are in <a href="index.php/site/aboutus">Public Alpha</a>, please be patient with us as we fix bugs, complete pages and add  features.  But we'd love to hear your opinion and feedback!
 			</div>
@@ -303,6 +304,16 @@ mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER
   </div><!-- end footer div -->
     <?php if( extension_loaded('newrelic') ) { echo newrelic_get_browser_timing_footer(); } ?>
 </div><!-- end wrapper div -->
+<!-- ClickTale Bottom part -->
+<div id="ClickTaleDiv" style="display: none;"></div>
+<script type="text/javascript">
+if(document.location.protocol!='https:')
+  document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRc5.js'%20type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+if(typeof ClickTale=='function') ClickTale(247,1,"www08");
+</script>
+<!-- ClickTale end of Bottom part -->
 	</body>
 		<script type="text/javascript" language="JavaScript">
 	<?php if($this->session->userdata('logged_in')): ?>		

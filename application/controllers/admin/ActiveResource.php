@@ -587,4 +587,4 @@ echo $t->pleuralize ('song') . "\n";
 
 */
 
-?>ActiveResource.php
+?>

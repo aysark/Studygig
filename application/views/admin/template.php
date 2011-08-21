@@ -84,7 +84,7 @@
     <div id="footerText">
 	<?php if($this->session->userdata('is_moderator') == 1):?>
     <ul class="horiList">
-     <li><a href="http://development.studygig.com">development.studygig.com</a></li>
+     <li><a href="http://development.studygig.com">dev.studygig</a></li>
      <li><a href="https://studygig.basecamphq.com">Basecamp</a></li>
      <li><a href="https://pp.pingdom.com/index.php/member/default">Pingdom</a></li>
      <li><a href="https://rpm.newrelic.com">Newrelic</a></li>
@@ -94,6 +94,8 @@
      <li><a href="http://app.dlvr.it/deliveries">Dlvr.it</a></li>
      <li><a href="http://mixpanel.com/report/22823/stream/#users">Mixpanel</a></li>
      <li><a href="https://mailgun.net/cp">Mailgun</a></li>
+     <li><a href="http://www.meatspy.com/patterns">Meatspy</a></li>
+      <li><a href="http://www.meatspy.com/patterns">Meatspy</a></li>
     </ul>
       <?php endif;?>
     <br/>

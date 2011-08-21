@@ -19,7 +19,7 @@
 	?>
 	
 	<div id="insertMaterialType">
-		<h2>What kind of study material are you selling?<span class="formDesc">Required. This helps us keep everything nice and tidy.</span></h2>
+		<h2>What kind of study material are you selling? <a href="#" class="dashHelp" title="This helps us keep everything nice and tidy."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required. </span></h2>
 				<select id="material" size="5" name="material" tabindex="1" required>
 		<option value="7" <?php echo set_select('material', '7'); ?>>Book</option>
 		<option value="1" <?php echo set_select('material', '1'); ?>>Test Package (quizes, tests, midterms, exams, etc.)</option>
@@ -33,7 +33,7 @@
 
 	
 	<div id="insertSelectSubject">
-		<h2>Select Subject <span class="formDesc">Required. The subject your study material is for (and then the course).</span></h2>
+		<h2>Select Subject <a href="#" class="dashHelp" title="The subject your study material is for (and then the course)."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required.</span></h2>
 			<select id="subject_id"  size="10" name="subject_id" class="chzn-select1" title="Choose a Subject..." tabindex="2"  >
 			<?php foreach($subjects as $subject): ?>
 		
@@ -52,7 +52,7 @@
 
 	
 	<div id="insertUTitleDesc">
-		<h2>Describe your study material<span class="formDesc">Required. The more details your write, the easier it will be to find and the more points you'll earn!</span></h2>	
+		<h2>Describe your study material <a href="#" class="dashHelp" title="The more details your write, the easier it will be to find and the more points you'll earn!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required. </span></h2>	
 				
 			<div class="insertCol1">
 	Title<input type="textfield" id="insertTitle" name="title" maxlength="60" value="<?php echo set_value('title'); ?>" tabindex="4" placeholder="eg. Microeconomics (7th Edition)" required />
@@ -77,7 +77,7 @@ onKeyUp="limitText(this.form.description,this.form.countdown,500);" required ></
 	</div>
 	
 	<div id="postfb">
-		<p> <h2>Would you like to tell your friends on Facebook?<span class="formDesc">Optional.</span></h2>
+		<p> <h2>Would you like to tell your friends on Facebook? <a href="#" class="dashHelp" title="It helps promote your stuff to get you points! This only posts to your wall once, we will never use it for spam- pwomise!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Optional.</span></h2>
 		<label><input type="checkbox" name="postfb" id="postfb" value="1" tabindex="7" /> I would like to make a Facebook post.</label>
 		</p>
 	</div>
@@ -123,15 +123,21 @@ $(document).ready(function(){
 	
 	$(".radioKinds").click(function() {
 		var $buttonTitle = $(this).attr('title');
-		$('#materialKinds').children().find("#kind"+$buttonTitle).find(":radio").attr("checked","checked");
+				
+		// clear all radio bttns
+		$('input[class=noRadio]:checked').removeAttr('checked');
+		$("#kind1").css('background-position','left top');
+		$("#kind2").css('background-position','-78px 0px');
 		
-		
-		if ($button == 1){
+		if ($buttonTitle == 1){
 	   		$("#kind1").css('background-position','left bottom');
 	    }else{
 	    	$("#kind2").css('background-position','-78px -78px');
-	   }
-		//alert($button);
+	    }
+	   	//alert($buttonTitle);
+	   $('#materialKinds').children().find("#kind"+$buttonTitle).find(":radio").attr('checked','checked');
+		//$('#materialKinds').children().find("#kind"+$buttonTitle).css('background-position','0px 0px');
+		alert($("input[name=radioKind1]","#materialKinds").val());
 	});
 	
 	
@@ -178,7 +184,7 @@ $(document).ready(function(){
               $('#descriptionSlideOut2').css('display', 'none');
     });
  
-	
+	$('.dashHelp').tipsy({gravity: 'w'});
 });	 	
 
 function limitText(limitField, limitCount, limitNum) {

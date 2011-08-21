@@ -16,7 +16,7 @@
 <?php echo form_open('users/resendVerificationEmail');?>
 
 <p>Enter your e-mail address to have us resend the validation email.</p>
-Email: <input type="textfield" class="formTextField2" name="email" maxlength="30"  value="<?php echo set_value('email'); ?>" />
+Email: <input type="textfield" class="formTextField2" name="email" maxlength="30"  value="<?php echo set_value('email'); ?>" required />
 
 <input type="submit" id="loginButton" value="Resend Validation" />
 

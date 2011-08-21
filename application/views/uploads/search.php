@@ -39,9 +39,9 @@
                 <h1>What is Studygig?</h1>
 <p>  Studygig is the easiest way university 
   students find course textbooks, past tests, 
-  notes, lab reports, and anything 
+  notes, and anything 
   that helps them study.  Studygig allows 
-  students to download, share, list and earn rewards for their study material.<br/><br/>
+  students to download, share, sell and earn rewards for their study material.<br/><br/>
 <b>It's free to use</b>, so get started today. <br><a href="index.php/site/aboutus" title="Find out more about what Studygig is">Learn more »</a></p>
             </div>
             <div class="col2">
