@@ -85,7 +85,7 @@
 		</div>
 		
 	<div class="clear"></div>
-<a href="../users/signup" id="insertUploadButton"/>Get Started Now & Recieve 50 Points Free!</a>
+		 	<a href="../users/signup" id="insertUploadButton"/>Get started now - it's Free!</a>
 </div>
 <br>
 </div>

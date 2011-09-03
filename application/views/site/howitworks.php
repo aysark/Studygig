@@ -1,27 +1,58 @@
 <div id="content2">
 
 <div class="roundedCornerContent">	
-	<h1>How it works</h1>
-	<img src="../../images/howitworks-pic.png"class="center"  />
-<br/>
-<h1>Three Easy Steps to Acing your Courses & Earning Rewards</h1>
-<div class="col111">
-	<h2>Step 1: Search</h2>
-	<p>Searching for study material gives you access to a large database of user-submitted shared study material of uploads and a classifieds section of student-posted ads selling their study material.  With search results being university and course specific, this gives a wide range of content while still being relevant and consistent</p>
-</div>
-<div class="col222">
-	<h2>Step 2: Download & Connect</h2>
-	<p>Once you’ve searched you’ll be able to browse through uploaded study material or ads posted by students selling what you searched for.
-		<br/><br/>
-		You can then download the uploaded material using points (if you don’t have enough points see the next step!).  Or if you found an ad that your interested in, you can contact the seller to discuss more information and purchasing details.</p>
-</div>
-<div class="col333" >
-	<h2>Step 3: Share & Sell</h2>
-	<p>If you want to keep downloading study material you’ll need to earn points.  This is done by uploading your own study material for students to download.  The more study material you upload the more points you’ll earn! 
-		
-		<br/><br/>You can also sell your unused study material by posting an ad in the classifieds section.  This allows thousands of students to search for your study material and contact you if they are interested in purchasing.  You’ll be saving cash in no time!</p>
-</div>
-<div class="clear"></div>
+	<span class="bigText">How it works</span>
+	<div class="howitworkFeat">
+		<div class="howitworkTextL">
+		<span class="bigBlackText">Search</span>
+		<h2>Find relevant study material</h2>
+		<p>
+		Search hundreds of documents and find study material such notes, past tests, assignments, study guides and lab reports that are relevant to your course at your university.  Studygig is an essential tool for students to find supplemental study material to help them study and ace their courses.
+		</p>
+		</div>
+		<img src="../../images/howitworks1.png" class="howitworkImage" />
+		<div class="clear"></div>
+	</div>
+	
+	<div class="howitworkFeat">
+		<img src="../../images/howitworks2.png" class="howitworkImage" />
+		<div class="howitworkTextR">
+		<span class="bigBlackText">Share</span>
+		<h2>Give back to the community</h2>
+		<p>
+		The heart and soul of Studygig is sharing of information for a better learning experience for everyone.  Spread the word out to your friends and colleagues- the more people involved the more study material and the smarter we'll all be!You will also earn points for sharing, these points can then be used to redeem real-life rewards (read next point)!
+		</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="howitworkFeat">
+		<div class="howitworkTextL">
+		<span class="bigBlackText">Earn Rewards</span>
+		<h2>For your hard work</h2>
+		<p>
+		Once you've shared enough study material you would have earned enough points.  You can then trade those points in to redeem real-life rewards.  Among those rewards are $50 Amazon giftcards and $25 BestBuy giftcards!
+		<br><br>
+		As an added bonus you get 10 points for free when you get started, you're almost there- <a href="../users/signup">get started now.</a>
+		</p>
+		</div>
+		<img src="../../images/howitworks3.png" class="howitworkImage" />
+		<div class="clear"></div>
+	</div>
+	
+	<div class="howitworkFeat">
+		<img src="../../images/howitworks4.png" class="howitworkImage" />
+		<div class="howitworkTextR">
+		<span class="bigBlackText">Sell</span>
+		<h2>Save money by selling your books</h2>
+		<p>
+		In addition to sharing your study material- you can also sell your books and/or study material.  Since Studygig is a central hub for students at your university it is the best place to list your books for sale... if you'd like to sell it!  So go ahead and get started.
+		</p>
+		 	<a href="../users/signup" id="insertUploadButton"/>Get started now - it's Free!</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
 </div>
 	
 </div>

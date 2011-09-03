@@ -473,7 +473,25 @@ img.center {   display: block;   margin-left: auto;   margin-right: auto; }
 			background:url(images/bg-black.png);
 		}
 		/*** End Animation Styles ***/
-
+.howitworkFeat{
+	padding-top:10px;
+	padding-bottom:25px;
+}
+.howitworkTextL{
+	width:325px;
+	text-align:justify;
+	float:left;
+	padding-right:25px;
+}
+.howitworkTextR{
+	width:325px;
+	text-align:justify;
+	float:left;
+	padding-left:25px;
+}
+.howitworkImage{
+	float:left;
+}
 
 
 /** ------------------------ **/
@@ -1660,6 +1678,7 @@ h4 img, h5 img, h6 img {
 .smallText{font-size:1em;	
 }
 .bigText{font-size:4em;color:#0082ff; }
+.bigBlackText{font-size:2.5em;color:#000000; }
 
 #noCourseFound{
 	padding-left:0.5em;
