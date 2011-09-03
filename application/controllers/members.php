@@ -34,7 +34,7 @@ class Members extends CI_Controller {
 	function form()
 	{
 		
-		$this->paypal_lib->add_field('business', 'alexm_1312120710_biz@gmail.com');
+		$this->paypal_lib->add_field('business', 'admin@studygig.com');
 	    $this->paypal_lib->add_field('return', site_url('members/success'));
 	    $this->paypal_lib->add_field('cancel_return', site_url('members/cancel'));
 	    $this->paypal_lib->add_field('notify_url', site_url('members/ipn')); // <-- IPN url
@@ -61,7 +61,7 @@ class Members extends CI_Controller {
 
 	function auto_form()
 	{
-		$this->paypal_lib->add_field('business', 'alexm_1312120710_biz@gmail.com');
+		$this->paypal_lib->add_field('business', 'admin@studygig.com');
 	    $this->paypal_lib->add_field('return', site_url('members/success'));
 	    $this->paypal_lib->add_field('cancel_return', site_url('members/cancel'));
 	    $this->paypal_lib->add_field('notify_url', site_url('members/ipn')); // <-- IPN url

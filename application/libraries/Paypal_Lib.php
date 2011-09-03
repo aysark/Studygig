@@ -68,7 +68,7 @@ class Paypal_Lib {
 		$this->CI->load->helper('form');
 		$this->CI->load->config('paypallib_config');
 		
-		$this->paypal_url = 'https://www.sandbox.paypal.com/cgi-bin/webscr'; // Sandbox
+		$this->paypal_url = 'https://www.paypal.com/cgi-bin/webscr'; // Sandbox
 
 		$this->last_error = '';
 		$this->ipn_response = '';
@@ -167,7 +167,7 @@ class Paypal_Lib {
 		$post_string.="cmd=_notify-validate"; // append ipn command
 
 		// open the connection to paypal
-		$fp = fsockopen('ssl://www.sandbox.paypal.com',443,$err_num,$err_str,30); //Sandbox
+		$fp = fsockopen('ssl://www.paypal.com',443,$err_num,$err_str,30); //Sandbox
 		if(!$fp)
 		{
 			// could not open the connection.  If loggin is on, the error message

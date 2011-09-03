@@ -1,0 +1,435 @@
+1313833921TS---><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">  
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NATS1840 lecture 24 notes :pollution</title>
+<meta name="title" content="NATS1840 lecture 24 notes :pollution" /> 
+<meta name="author" content="Studygig"/> 
+<meta name="description" content="NATS1840 - Science, Technology and the Environment.  Pollution :Maltreating our water, earth, and air -The legacy of Silent Spring -Focal points of po" /> 
+
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="PUBLIC">
+ 		
+<meta property="fb:app_id" content="170587262970610" /> 
+<meta property="og:site_name" content="NATS1840 lecture 24 notes :pollution" /> 
+<meta property="og:title" content="NATS1840 lecture 24 notes :pollution" /> 
+<meta property="og:url" content="http://localhost/studygig/index.php/uploads/view/49" /> 
+<meta property="og:type" content="website" /> 
+<meta property="og:image" content="http://www.studygig.com/images/logo.png" /> 
+<meta property="og:description" content="NATS1840 - Science, Technology and the Environment.  Pollution :Maltreating our water, earth, and air -The legacy of Silent Spring -Focal points of po" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />   
+<meta name="google-site-verification" content="wWfOHZs42xIyUlxca007WHi7_8QfdBsoxwX5dqgqZt4" /> 
+	<link href="http://localhost/studygig/css/style.css" rel="stylesheet" type="text/css" media="screen" /><link href="http://localhost/studygig/css/jquerycss.css" rel="stylesheet" type="text/css" media="screen" /><link href="http://localhost/studygig/css/chosen.css" rel="stylesheet" type="text/css" media="screen" />	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://localhost/studygig/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="http://localhost/studygig/js/jquery.form.js"></script>
+	<script type="text/javascript" src="http://localhost/studygig/js/jquery.MetaData.js"></script>
+	<script type="text/javascript" src="http://localhost/studygig/js/jquery.tipsy.mini.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+
+<script type="text/javascript" language="JavaScript">
+  
+$.widget( "custom.catcomplete", $.ui.autocomplete, {
+		_renderMenu: function( ul, items ) {
+			var x = document.forms['searchform'].elements['query'].value;
+			var self = this, currentCategory = "";
+			
+			$.each( items, function( index, item ) {
+
+				if ( item.category != currentCategory ) {
+					ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+					currentCategory = item.category;
+				}
+			
+				document.forms['searchform'].elements['query'].value = x+(items[0].label).substring(x.length).toLowerCase();	
+				$('#mainSearchField').selectRange(x.length,items[0].label.length);
+				
+				self._renderItem( ul, item );
+				
+			});
+		}
+	});
+$.fn.selectRange = function(start, end) {
+    return this.each(function() {
+        if (this.setSelectionRange) {
+            this.focus();
+            this.setSelectionRange(start, end);
+        } else if (this.createTextRange) {
+            var range = this.createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', end);
+            range.moveStart('character', start);
+            range.select();
+        }
+    });
+};
+	
+$(function() {
+		$( "#mainSearchField" ).catcomplete({
+				source: "http://localhost/studygig/get_course_list.php",
+				minLength: 1,
+				delay: 0
+			});
+
+// google analytics START
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22030731-1']);
+  _gaq.push(['_trackPageview']);
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(ga, ss);
+  // google analytics END			
+
+//uservoice START
+  var uvOptions = {};
+
+    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/1bMi7usxc9DYeOCJAACjSw.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+
+  //uservoice END
+  
+})();
+  
+	$(".chzn-select").chosen();
+
+</script>
+
+</head>
+	<body>
+
+			<div id="alphaBarContent">
+			Hi there!  We are in <a href="http://localhost/studygig/index.php/site/aboutus">Public Alpha</a>, please be patient with us as we fix bugs, complete pages and add  features.  But we'd love to hear your opinion and feedback!
+			</div>
+	<div id="wrapper">
+				 <div id="top">
+    	
+        	        		<div id="navigationLoggedIn">
+            	<div id="hiUser">Hi, alexm!</div>
+                <a href="http://localhost/studygig/index.php/users/dashboard">Dashboard (80)</a> |  
+                <a href="http://localhost/studygig/index.php/users/profile">Account Settings</a> |  
+                <a href="http://localhost/studygig/index.php/sessions/destroy">Logout</a> |  
+				<a href="http://localhost/studygig/index.php/site/howitworks" title="Find out how Studygig works">How it works</a>  
+                <div id="postStudyMaterialDialog" title="How would you like to post?">
+	<a href="http://localhost/studygig/index.php/uploads/insert" style="outline:none;	-moz-outline:none;"><div id="shareStudyMaterialButton"></div></a> <a href="http://localhost/studygig/index.php/classifieds/insert" style="outline:none;-moz-outline:none;"><div id="sellStudyMaterialButton"></div></a>
+
+	</div>
+	<div id="postStudyMaterialButton">Post Study Material</div>
+			         </div>
+    </div><!-- end top div -->
+		
+	    <div id="header2">
+    <a href="http://localhost/studygig/index.php" title="Welcome to Studygig"><img src="http://localhost/studygig/images/studygig-logo.png" width="228" height="60" alt="Studygig Logo" /></a>
+    
+    <div id="main2Search">
+        	<form action="http://localhost/studygig/index.php/uploads/searchfor" accept-charset="utf-8" class="search" method="post" name="searchform" onsubmit="return validateForm()">	<input name="query" type="text" id="mainSearchField" value="" /><input name="submit" type="submit" value="" id="mainSearchButton" class="button" />
+			
+      </form>        </div>
+  	</div>
+    <!-- end header div -->		
+    
+        <script type='text/javascript'> var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); document.write(unescape('%3Cscript src="' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js" type="text/javascript"%3E%3C/script%3E')); </script> <script type='text/javascript'> try {  var mpmetrics = new MixpanelLib('2150b708434b3dc7d28b6e2bb92fd003'); } catch(err) { null_fn = function () {}; var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; } 
+
+</script>
+    
+	        <div id="content2">
+    <div class="twoCol1">
+        
+    <div class="docViewTitleIcons">
+    	
+    	    	<a href="http://localhost/studygig/index.php/uploads/favourite/49"><div id="favIcon">Favourite</div></a>
+    	    	<a href="http://localhost/studygig/index.php/uploads/view/49#disqus_thread" data-disqus-identifier="49" id="commIconView"></a>
+    </div>
+    <h1>lecture 24 notes :pollution </h1>
+        
+    <h5> <img src="../../../images/material5.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="../../../images/file.pdf.png" width="20" height="20" class="file-type-icon" />
+             Uploaded by Taiwo Tobi on July 5, 2011 at 3:57 AM in <a href="http://localhost/studygig/index.php/uploads/getsearchfor/NATS1840"><span class="courseCourseStyle">NATS1840 - Science, Technology and the Environment</span></a></h5> 
+    
+    
+    <div class="docPreview">
+        <img src="http://localhost/studygig/uploads/nats1840-24-pollution.jpg" />        
+    </div>
+    
+    <div class="docDescription">
+           
+                <div class="docContent">
+                Pollution :Maltreating our water, earth, and air<br>-The legacy of Silent Spring<br>-Focal points of pollution<br>-Abusing the water<br>-The Clean Water Act<br>-Beavers and wetlands<br>etc                <p>This material has a size of 534KB</p>
+                                  <div id="seperator">
+  	</div>
+                  <h1>Discuss this Material</h1>
+                  <div id="disqus_thread"></div>
+                  
+                </div>
+              </div>
+    
+    </div>
+    
+    <div class="twoCol2">
+    	
+    	<div id="docIconView">
+    		<div id="ratingFeedback" class="ui-corner-all" ></div>
+    	 <form action="" method="post" accept-charset="utf-8" id="ratingForm" >
+         <input type="submit" class="ratingIconGood" name="rating_typeA" value="0" class="button" onclick="loadGoodVote()"/>
+         <input type="submit" class="ratingIconBad" name="rating_typeA" value="0" class="button" onclick="loadBadVote()"/>
+    </form>
+    
+    <div id="reportDialog" title="Report This Study Material as Inappropriate">
+		<p>Please click on the category that most closely reflects your concern about the material, so that we can review it and determine whether it violates our Terms of Use or isn't appropriate for all users. Abusing this feature is also a violation of the Terms of Use, so don't do it.</p>
+	<p class="validateTips">All form fields are required.</p>
+	
+<form action="" method="post" accept-charset="utf-8" id="reportForm" >
+	<select name="reportReason" id="reportReason">
+	<option value="0">Select a Reason</option>
+	<option value="1">Spam (misleading info, scam/fraud, advertising)</option>
+	<option value="2">Infringes My Rights</option>
+	<option value="3">Bad Content (duplicate, irrelevant, blank)</option>
+	<option value="4">Other (please specify)</option>
+</select>
+
+<br/><br/>
+
+Additional Comments:
+<textarea rows="2" cols="50" name="reportAdditionalInfo" id="insertDescription" style="width:80%;">
+</textarea>
+	</form>	</div>
+                <div class="reportIconView">Report</div>
+                <div class="downloadViewButton"> 
+               
+            <form action="http://localhost/studygig/index.php/uploads/download" method="post" accept-charset="utf-8">	    <input type="hidden" id="file_name" name="file_name" value ="nats1840-24-pollution.pdf" />
+	    <input type="hidden" id="file_path" name="file_path" value ="uploads/nats1840-24-pollution.pdf" />
+	    <input type="hidden" id="upload_id" name="upload_id" value ="49" />
+	    <input type="submit" name="submit" value="Download Document" class="button" id="docViewItButton"/>
+	    </form>    
+    </div>
+    
+    <div class="facebookIconView">
+    <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=227114113981233&amp;xfbml=1"></script><fb:like href="http://localhost/studygig/index.php/uploads/view/49" send="false"  layout="box_count" width="100" height="100" show_faces="true" action="recommend" font="tahoma"></fb:like>
+    </div>
+        <div class="twitterIconView">
+    	<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="studygig">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </div>
+    <div class="clear"></div>
+    <br/>
+    <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:send href="http://localhost/studygig/index.php/uploads/view/49" font="tahoma"></fb:send>
+    <span style="margin-left:50px;"><g:plusone></g:plusone></span>
+    <div class="linkIconView">
+    	Link: <input type="textfield" name="uploadLink" size="20"  id="uploadLinkField" value="http://localhost/studygig/index.php/uploads/view/49"  onClick="SelectAll('uploadLinkField');" />
+    	</div>
+    
+    </div>
+    	
+    <div class="roundedCornerContent">
+                <h2>Similar Material</h2>
+                            
+                <h4><a href="http://localhost/studygig/index.php/uploads/view/4">Intro lecture</a></h4>
+            <h4><a href="http://localhost/studygig/index.php/uploads/view/5">Lecture 2: 3 case studies</a></h4>
+            <h4><a href="http://localhost/studygig/index.php/uploads/view/6">Lecture 3:  Isle Royale</a></h4>
+            <h4><a href="http://localhost/studygig/index.php/uploads/view/9">Lecture 5: Earth</a></h4>
+            <h4><a href="http://localhost/studygig/index.php/uploads/view/10">Lecture 6: Life</a></h4>
+                </div>
+                
+    
+    <div class="roundedCornerContent">
+                <h2>More from this user</h2>
+                            
+                <h4><a href="http://localhost/studygig/index.php/uploads/view/4">Intro lecture</a></h4>
+            <h4><a href="http://localhost/studygig/index.php/uploads/view/5">Lecture 2: 3 case studies</a></h4>
+            <h4><a href="http://localhost/studygig/index.php/uploads/view/6">Lecture 3:  Isle Royale</a></h4>
+            <h4><a href="http://localhost/studygig/index.php/uploads/view/7">Lecture 4: Technology Trap (1/2)</a></h4>
+            <h4><a href="http://localhost/studygig/index.php/uploads/view/8">Lecture 4: Technology Trap (2/2)</a></h4>
+            </div>
+    
+    </div>
+    
+    
+    </div><!-- end content div -->
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<script type="text/javascript">  
+
+	$(function() {
+		var reason = $( "#reportReason" ),
+			additionalinfo = $( "#insertDescription" ),
+			allFields = $( [] ).add( reason ).add( additionalinfo ),
+			tips = $( ".validateTips" );
+			
+		$( "#reportDialog" ).dialog({
+			autoOpen: false,
+			height: 400,
+			width: 550,
+			modal: true,
+			buttons: {
+				"Flag This Material": function() {
+					
+					var bValid = true;
+					bValid = bValid && (reason.val() != 0);
+					
+					
+					if ( bValid ) {						
+						$.post( "http://localhost/studygig/index.php/flags/add", { reportReason: reason.val(), 
+							reportAdditionalInfo : additionalinfo.val(),
+							upload_id: "49",
+							type: 0},
+					      function( data ) {
+					      	 $("#ratingFeedback").css("visibility","visible");
+					      	document.getElementById("ratingFeedback").innerHTML=data;
+					      }
+					    );
+						$( this ).dialog( "close" );
+					}
+				},
+				Cancel: function() {
+					$( this ).dialog( "close" );
+				}
+			},
+			close: function() {
+				allFields.val( "" ).removeClass( "ui-state-error" );
+			}
+
+		});
+
+		$( ".reportIconView" ).click(function() {
+			$( "#reportDialog" ).dialog( "open" );
+			return false;
+		});
+	});
+
+  function loadGoodVote(){
+  	/* attach a submit handler to the form */
+  $("#ratingForm").submit(function(event) {
+	
+    /* stop form from submitting normally */
+    event.preventDefault(); 
+  });
+  	
+  	 /* Send the data using post and put the results in a div */
+    $.post( "http://localhost/studygig/index.php/ratings/add", { rating_type: "1", upload_id: "49"},
+      function( data ) {
+      	$("#ratingFeedback").css("visibility","visible");
+      	document.getElementById("ratingFeedback").innerHTML=data;
+         $(".ratingIconGood").css("background-position","left bottom");
+         $(".ratingIconGood").css("color","#009b00");
+         $('.ratingIconGood').attr('value', ' 1');
+      }
+    );
+  }
+  
+    function loadBadVote(){
+  	/* attach a submit handler to the form */
+  $("#ratingForm").submit(function(event) {
+	
+    /* stop form from submitting normally */
+    event.preventDefault(); 
+  });
+  	
+  	 /* Send the data using post and put the results in a div */
+    $.post( "http://localhost/studygig/index.php/ratings/add", { rating_type: "0", upload_id: "49"},
+      function( data ) {
+      	$("#ratingFeedback").css("visibility","visible");
+      	document.getElementById("ratingFeedback").innerHTML=data;
+         $(".ratingIconBad").css("background-position","left bottom");
+         $(".ratingIconBad").css("color","#9b0000");
+         $('.ratingIconBad').attr('value', ' 1');
+      }
+    );
+  }
+  
+
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'studygig'; // required: replace example with your forum shortname
+	var disqus_developer = 0;
+	var disqus_title = 'Comment';
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    var disqus_identifier = 'u49';
+    //var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        
+    })();
+    
+    
+    function SelectAll(id)
+{
+    document.getElementById(id).focus();
+    document.getElementById(id).select();
+}
+</script>
+	
+	<div id="footer">
+  	<div id="seperator">
+  	</div>
+   	
+   
+    
+    <div class="clear">
+    </div>
+    
+    <div id="footerText">
+    <ul class="horiList">
+     <li><a href="http://localhost/studygig/index.php/site/aboutus">About Us</a></li>
+     <li><a href="http://localhost/studygig/index.php/site/tenreasons">9 Reasons</a></li>
+     <li><a href="http://studygig.assistly.com/">FAQs/Help</a></li>
+     <li><a href="http://studygig.posterous.com">Blog</a></li>
+     <li><a href="http://localhost/studygig/index.php/site/academicintegrity">Academic Integrity</a></li>
+     <li><a href="http://localhost/studygig/index.php/site/copyright">Copyright Notice</a></li>
+     <li><a href="http://localhost/studygig/index.php/site/termsofuse">Terms of Use</a></li>
+     <li><a href="http://localhost/studygig/index.php/site/privacy">Privacy Policy</a></li>
+     <li><a href="http://localhost/studygig/index.php/site/contact">Contact Us</a></li>
+    </ul>
+    <br/>
+    Join us on: <a href="http://www.facebook.com/studygig" title="Like Studygig on Facebook">Facebook</a> & <a href="http://twitter.com/studygig" title="Follow Studygig on Twitter">Twitter</a>
+    <br/>
+    Copyright © 2011 Studygig.
+    <br/>
+    Made in Canada <img src="http://localhost/studygig/images/made-in-canada.png" width="15" height="10" alt="Made in Canada" /></div>
+    
+  	
+  </div><!-- end footer div -->
+	</div><!-- end wrapper div -->
+<script type="text/javascript" language="JavaScript">
+
+$(function() {
+	$( "#postStudyMaterialDialog" ).dialog({
+		autoOpen: false,
+			height: 340,
+			width: 485,
+			modal: true,
+			buttons: {
+				Cancel: function() {
+					$( this ).dialog( "close" );
+				}
+			},
+		close: function() {
+				allFields.val( "" ).removeClass( "ui-state-error" );
+			}
+	});
+	$( "#postStudyMaterialButton" )	.click(function() {
+				$( "#postStudyMaterialDialog" ).dialog( "open" );
+			});
+			
+});
+function validateForm()
+{
+	var x= jQuery.trim(document.forms['searchform'].elements['query'].value);
+	
+	if (x==null || x=="" || x.length < 5)
+	 {
+	  	document.forms['searchform'].elements['query'].focus();
+	  	return false;
+	 }else{
+	 	return true;
+	 }
+}
+
+
+</script>
+	</body>
+		<script type="text/javascript" language="JavaScript">
+			
+	 		mpmetrics.name_tag("alexm");
+	 		</script>
+</html>
