@@ -47,12 +47,13 @@
 			<h2><a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo $upload->title; ?></a></h2>
 			 <h5> <img src="../../images/material<?php echo $upload->material; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="../../images/file<?php echo $upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" />
              Uploaded by <?php echo $recentUploadsUsers[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/getsearchfor/').'/'.substr ($recentUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $recentUploadsCourses[$i];?></span></a></h5>
-			
+             
+			 <a href="<?php echo site_url('uploads/delete/'.$upload->id);?>">Delete</a> <a href="<?php echo site_url('uploads/edit/'.$upload->id);?>">Edit</a></li>
 		</li>
 		<?php $i++;?>
 	<?php endforeach; ?>
 	</ul>
-	
+
 	</div>
 	
 	<div id="tabs-3">

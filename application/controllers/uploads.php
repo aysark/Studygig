@@ -772,14 +772,14 @@ class Uploads extends CI_Controller {
   function update() {
 
   	$this->Upload->update($this->input->post('upload_id'));
-  	redirect('','refresh');
+  	redirect(site_url('users/dashboard'),'refresh');
   }
 
   function delete($id) {
   	if( $this->Upload->get_uploader($id)->id == $this->session->userdata('user_id'))
   	 {
   	 	$this->Upload->delete($id);
-  	 	redirect(site_url('users/mystuff'),'refresh');
+  	 	redirect(site_url('users/dashboard'),'refresh');
   	 }
   	 else 
   	 {
