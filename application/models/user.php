@@ -34,7 +34,7 @@
 		'password' => md5(mysql_real_escape_string($this->input->post('password'))),
 		'verifyhash' => $the_hash,
 		'oauth_provider' => NULL,
-		'points' => 20
+		'points' => 10
 		);
 	
 		$this->db->insert('users', $newuser);
@@ -210,7 +210,7 @@
 				  'email' => $useremail,
 				  'username' => $username,
 				  'verified' => 1,
-				  'points' => 50
+				  'points' => 10
 			);
   
 		$this->db->insert('users',$newfbuser);	      
