@@ -208,7 +208,7 @@ $(function() {
     <ul class="horiList">
      <li><a href="<?php echo site_url('site/aboutus');?>">About Us</a></li>
      <li><a href="<?php echo site_url('site/tenreasons');?>">9 Reasons</a></li>
-     <li><a href="http://studygig.assistly.com/">FAQs/Help</a></li>
+     <li><a href="<?php echo site_url('site/help');?>">FAQs/Help</a></li>
      <li><a href="http://studygig.posterous.com">Blog</a></li>
      <li><a href="<?php echo site_url('site/academicintegrity');?>">Academic Integrity</a></li>
      <li><a href="<?php echo site_url('site/copyright');?>">Copyright Notice</a></li>

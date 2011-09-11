@@ -1,5 +1,5 @@
 <script type="text/javascript">
 <!--
-window.location = "http://studygig.assistly.com/"
+window.location = "http://getsatisfaction.com/studygig"
 //-->
 </script>
