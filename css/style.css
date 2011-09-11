@@ -74,7 +74,6 @@ a:visited {
 
 #top{
 	height:50px;
-	margin-top:20px;
 }
 
 #hiUser{
@@ -1639,6 +1638,25 @@ ul.faq li{
 .autocomplete div { padding:2px 5px; white-space:nowrap; }
 .autocomplete strong { font-weight:normal; color:#3399FF; }
 
+/* PAYMENT SYSTEM
+-------------------------------------------------------------- */
+.plan{
+	width:180px;
+	float:left;
+	padding:20px;
+}
+.planBg{
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+	background-color:#e9e9e9;
+	padding:5px;
+	padding-left:15px;
+	padding-right:15px;
+	margin-top:10px;
+	width:95%;
+}
 
 /* TIPSY TOOLTIP
 -------------------------------------------------------------- */
@@ -1679,6 +1697,8 @@ h4 img, h5 img, h6 img {
 }
 .bigText{font-size:4em;color:#0082ff; }
 .bigBlackText{font-size:2.5em;color:#000000; }
+.bigBlackText2{font-size:2em;color:#333333; }
+.popText{color:#a200ff;}
 
 #noCourseFound{
 	padding-left:0.5em;

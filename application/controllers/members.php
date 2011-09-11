@@ -33,23 +33,55 @@ class Members extends CI_Controller {
 	
 	function form()
 	{
-		
+		//yearly plan
 		$this->paypal_lib->add_field('business', 'admin@studygig.com');
 	    $this->paypal_lib->add_field('return', site_url('members/success'));
 	    $this->paypal_lib->add_field('cancel_return', site_url('members/cancel'));
 	    $this->paypal_lib->add_field('notify_url', site_url('members/ipn')); // <-- IPN url
 	    $this->paypal_lib->add_field('custom', $this->session->userdata('user_id')); // <-- User id
-
-	    $this->paypal_lib->add_field('item_name', 'Studygig 1 month subscription');
+	    $this->paypal_lib->add_field('item_name', 'Studygig 1 year subscription');
 	    $this->paypal_lib->add_field('item_number', '1');
-	    $this->paypal_lib->add_field('amount', '7');
-
+	    $this->paypal_lib->add_field('amount', '72');
 		// if you want an image button use this:
 		//$this->paypal_lib->image('button_03.gif');
-
-		$this->paypal_lib->button('Subscribe');
-		
-	    $data['paypal_form'] = $this->paypal_lib->paypal_form();
+		$this->paypal_lib->button('Choose Plan');
+	    $data['paypal_form_yearly'] = $this->paypal_lib->paypal_form();
+	    
+	    //term plan
+		$this->paypal_lib->add_field('business', 'admin@studygig.com');
+	    $this->paypal_lib->add_field('return', site_url('members/success'));
+	    $this->paypal_lib->add_field('cancel_return', site_url('members/cancel'));
+	    $this->paypal_lib->add_field('notify_url', site_url('members/ipn')); // <-- IPN url
+	    $this->paypal_lib->add_field('custom', $this->session->userdata('user_id')); // <-- User id
+	    $this->paypal_lib->add_field('item_name', 'Studygig 1 term subscription');
+	    $this->paypal_lib->add_field('item_number', '2');
+	    $this->paypal_lib->add_field('amount', '48');
+		$this->paypal_lib->button('Choose Plan');
+	    $data['paypal_form_term'] = $this->paypal_lib->paypal_form();
+	    
+	     //quarterly plan
+		$this->paypal_lib->add_field('business', 'admin@studygig.com');
+	    $this->paypal_lib->add_field('return', site_url('members/success'));
+	    $this->paypal_lib->add_field('cancel_return', site_url('members/cancel'));
+	    $this->paypal_lib->add_field('notify_url', site_url('members/ipn')); // <-- IPN url
+	    $this->paypal_lib->add_field('custom', $this->session->userdata('user_id')); // <-- User id
+	    $this->paypal_lib->add_field('item_name', 'Studygig 1 quarterly subscription');
+	    $this->paypal_lib->add_field('item_number', '3');
+	    $this->paypal_lib->add_field('amount', '57');
+		$this->paypal_lib->button('Choose Plan');
+	    $data['paypal_form_quarterly'] = $this->paypal_lib->paypal_form();
+	    
+	     //monthly plan
+		$this->paypal_lib->add_field('business', 'admin@studygig.com');
+	    $this->paypal_lib->add_field('return', site_url('members/success'));
+	    $this->paypal_lib->add_field('cancel_return', site_url('members/cancel'));
+	    $this->paypal_lib->add_field('notify_url', site_url('members/ipn')); // <-- IPN url
+	    $this->paypal_lib->add_field('custom', $this->session->userdata('user_id')); // <-- User id
+	    $this->paypal_lib->add_field('item_name', 'Studygig 1 quarterly subscription');
+	    $this->paypal_lib->add_field('item_number', '4');
+	    $this->paypal_lib->add_field('amount', '25');
+		$this->paypal_lib->button('Choose Plan');
+	    $data['paypal_form_monthly'] = $this->paypal_lib->paypal_form();
 
 		$data['content'] = 'members/form';
 		$data['pageTitle'] = 'Share your Study Material on Studygig';

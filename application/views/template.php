@@ -154,9 +154,6 @@ var WRInitTime=(new Date()).getTime();
 </script>
 <!-- ClickTale end of Top part -->
 
-			<div id="alphaBarContent">
-			Hi there!  We are in <a href="index.php/site/aboutus">Public Alpha</a>, please be patient with us as we fix bugs, complete pages and add  features.  But we'd love to hear your opinion and feedback!
-			</div>
 			<div id="wrapper">
 <?php if( extension_loaded('newrelic') ) { echo newrelic_get_browser_timing_header(); } ?>
     <div id="top">
