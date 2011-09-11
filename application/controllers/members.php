@@ -77,7 +77,7 @@ class Members extends CI_Controller {
 	    $this->paypal_lib->add_field('cancel_return', site_url('members/cancel'));
 	    $this->paypal_lib->add_field('notify_url', site_url('members/ipn')); // <-- IPN url
 	    $this->paypal_lib->add_field('custom', $this->session->userdata('user_id')); // <-- User id
-	    $this->paypal_lib->add_field('item_name', 'Studygig 1 quarterly subscription');
+	    $this->paypal_lib->add_field('item_name', 'Studygig 1 monthly subscription');
 	    $this->paypal_lib->add_field('item_number', '4');
 	    $this->paypal_lib->add_field('amount', '25');
 		$this->paypal_lib->button('Choose Plan');
@@ -142,7 +142,8 @@ class Members extends CI_Controller {
 		if ($this->paypal_lib->validate_ipn()) 
 		{
 			$id = $this->paypal_lib->ipn_data['custom'];
-			$this->Member->add($id);
+			$itemNum = $this->paypal_lib->ipn_data['item_number'];
+			$this->Member->add($id,$itemNum);
 		}
 	}
 }

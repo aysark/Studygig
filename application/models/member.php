@@ -2,10 +2,11 @@
 
 class Member extends CI_Model {
     
-	function add($user_id) {
+	function add($user_id,$itemNum) {
 	
 		$new = array(	
-			'user_id' => $user_id
+			'user_id' => $user_id,
+			'item_num' => $itemNum
 		);
 	
 		$this->db->insert('members',$new);
