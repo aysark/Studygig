@@ -42,7 +42,7 @@
   notes, and anything 
   that helps them study.  Studygig allows 
   students to download, share, sell and earn rewards for their study material.<br/><br/>
-<b>It's free to use</b>, so get started today. <br><a href="index.php/site/aboutus" title="Find out more about what Studygig is">Learn more »</a></p>
+<b>It's free to use</b>, so get started today. <br><a href="index.php/site/howitworks" title="Find out more about what Studygig is">Learn more »</a></p>
             </div>
             <div class="col2">
                 <h1>Now at York University...</h1>
