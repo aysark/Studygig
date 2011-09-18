@@ -17,7 +17,7 @@
 	?>
 	
 	<div id="insertSelectSubject">
-		<h2>Select Material's Subject <a href="#" class="dashHelp" title="Select the subject your study material is for (and then the course)."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required.</span></h2>
+		<h2>Select Material's Subject <a href="#" class="dashHelp" title="Select the subject your study material is for (and then the course)."><img src="../../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required.</span></h2>
 			<select id="subject_id"  size="10" name="subject_id" class="chzn-select1" title="Choose a Subject..." tabindex="2" >
 			<?php foreach($subjects as $subject): ?>
 		
@@ -34,7 +34,7 @@
 	</div>
 	
 	<div id="insertMaterialType">
-		<h2>What kind of study material are you sharing? <a href="#" class="dashHelp" title="This helps us keep everything nice and tidy."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required.</span></h2>
+		<h2>What kind of study material are you sharing? <a href="#" class="dashHelp" title="This helps us keep everything nice and tidy."><img src="../../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required.</span></h2>
 				<select id="material" size="7" name="material" tabindex="4" required>
 		<option value="0" <?php echo set_select('material', '0'); ?>>Quiz/Test/Midterm/Exam</option>
 		<option value="1" <?php echo set_select('material', '1'); ?>>Assignment/Solutions</option>
@@ -68,7 +68,7 @@ Earn <b>1 point</b> for uploading or linking other helpful study material not ca
 	</div>
 	
 	<div id="insertUTitleDesc">
-		<h2>Describe your study material <a href="#" class="dashHelp" title="The more details you write, the easier it will be to find and the more points you'll earn!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required.</span></h2>	
+		<h2>Describe your study material <a href="#" class="dashHelp" title="The more details you write, the easier it will be to find and the more points you'll earn!"><img src="../../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required.</span></h2>	
 				
 			<div class="insertCol1">
 	Title<input type="textfield" id="insertTitle" name="title" maxlength="60" value="<?php echo set_value('title'); ?>" tabindex="5" placeholder="eg. Midterm Fall 2008 Prof Albert" required /> 
@@ -96,7 +96,7 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
 	</div>
 	
 	<div id="insertKeywords">
-		<h2>Add tags <a href="#" class="dashHelp" title="These help make your study material more relevant and search-friendly."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Optional.</span></h2>
+		<h2>Add tags <a href="#" class="dashHelp" title="These help make your study material more relevant and search-friendly."><img src="../../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Optional.</span></h2>
 		
 		<select title="Type generic words that describe your post..." class="chzn-select3" multiple style="width:600px;" tabindex="7" name="tags[]" id="multi_example">
           <option value="Answers">Answers</option> 

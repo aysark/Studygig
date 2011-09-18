@@ -404,14 +404,22 @@ function searchcount($search){
 
   function update($id) {
     $this->db->where('id',$id);
+    
+    $tags = $this->input->post('tags');
+    if (is_array($tags)){
+  		$tags = implode(",", $tags);
+  	}else{
+  		$tags = "";
+  	}
+    
     $newdata = array(        
-      'title' => $this->input->post('title'),
+      'title' => mysql_real_escape_string(trim($this->input->post('title'))),
       'course_id' => $this->input->post('course_id'),
       'subject_id' => $this->input->post('subject_id'),      
-      'description' => $this->input->post('description'),
-      'material' => $this->input->post('material'),
+      'description' => mysql_real_escape_string(trim($this->input->post('description'))),
+      'material' => mysql_real_escape_string($this->input->post('material')),
       'user_id' => $this->input->post('user_id'),
-      'tags' => $this->input->post('tags')    
+      'tags' => $tags   
       );
     $this->db->set($newdata);  
     $this->db->update('uploads');

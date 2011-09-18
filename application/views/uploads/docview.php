@@ -1,8 +1,6 @@
 
 <div id="content2">
-	<div class="twoCol1">
-		<a href="#"><img src="../../images/left-arrow-icon.png" width="16" height="14" alt="Back to search results" /></a> <a href="#">Back to Search</a>
-    
+	<div class="twoCol1">    
     <div class="docViewTitleIcons">
     	
     	<?php if($this->session->userdata('logged_in') && !$favourited): ?>
