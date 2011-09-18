@@ -604,16 +604,16 @@ class Uploads extends CI_Controller {
 				
 				#Check if he already has the file
 				$already_has = $this->User->already_has($this->session->userdata('user_id'),$uploadid);
+
+				# Check if user is a subscriber
+				$this->load->model('Member');
+				$subscriber = $this->Member->is_member($this->session->userdata('user_id'));
 			
-				if ($this->User->can_download($this->session->userdata('user_id')))	
+				if ($this->User->can_download($this->session->userdata('user_id')) or $subscriber)	
 				{
 					# Get the file
 					$data['file'] = $this->_prepare_download($this->input->post('file_path'),$this->input->post('file_name'));
-					$data['upload'] = $this->Upload->get_by_id($uploadid);
-					
-					# Check if user is a subscriber
-					$this->load->model('Member');
-					$subscriber = $this->Member->is_member($this->session->userdata('user_id'));
+					$data['upload'] = $this->Upload->get_by_id($uploadid);					
 
 					# Check if transaction is complete
 					if ($this->Transaction->add($this->session->userdata('user_id'),$uploadid,$uploaderid,$already_has,$subscriber))
@@ -772,14 +772,14 @@ class Uploads extends CI_Controller {
   function update() {
 
   	$this->Upload->update($this->input->post('upload_id'));
-  	redirect('','refresh');
+  	redirect(site_url('users/dashboard'),'refresh');
   }
 
   function delete($id) {
   	if( $this->Upload->get_uploader($id)->id == $this->session->userdata('user_id'))
   	 {
   	 	$this->Upload->delete($id);
-  	 	redirect(site_url('users/mystuff'),'refresh');
+  	 	redirect(site_url('users/dashboard'),'refresh');
   	 }
   	 else 
   	 {
