@@ -52,7 +52,7 @@
 	Payment is done via <a href="http://paypal.com">Paypal</a>, the world leader in online transactions- you don’t have to have an account to use it.
 	<br><br>
 	<b>Can i order just one document download?	</b><br>
-	No, we do not sell document downloads.  Consider uploading uploading documents to gain points to use todownload.
+	No, we do not sell document downloads.  Consider uploading documents to gain points to use to download.
 	<br><br>
 	Need help? have a question? please <a href="http://studygig.com/index.php/site/contact">contact us.</a>
 	

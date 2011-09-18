@@ -3,9 +3,9 @@
 	<div class="roundedCornerContent" id="dashboardGetStarted">
 <h2>Welcome to Studygig! Get Started in 3 Simple Steps</h2>
 <ul class="dashboardList">
-<li><a href="../uploads/insert"><img src="../../images/post-study-material-icon.png" class="textmiddle"> Share  Study Material</a></li>
-<li><a href="../classifieds/insert"><img src="../../images/list-study-material-icon.png" class="textmiddle"> List Study Material</a></li>
-<li><img src="../../images/download-earn-icon.png" class="textmiddle"> Download & <a href="profile">Earn Rewards</a></li>
+<li><a href="../uploads/insert"><img src="../../images/post-study-material-icon.png" class="textmiddle">Share  Study Material</a></li>
+<li><a href="../classifieds/insert"><img src="../../images/list-study-material-icon.png" class="textmiddle">List Study Material</a></li>
+<li><img src="../../images/download-earn-icon.png" class="textmiddle">Download & <a href="profile">Earn Rewards</a></li>
 </ul>
 </div>
 <div id="tabs">
@@ -90,9 +90,9 @@
 		<span id="dashboardSnapshot">Downloads</span> <span id="dashboardNumber"><?php echo $total_downloads;?></span>
 	<span id="dashboardSnapshot">Trophies</span> <a href="#" class="dashHelp" title="This feature is still under construction."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span id="dashboardNumber2"><?php echo "None";?></span>
 	<br/>
-	<span id="dashboardSnapshot">Membership: <?php echo "Free";?></span>
+	<span id="dashboardSnapshot">Membership type: <?php echo "Free";?></span>
 	<br/>
-	<a href="../members/index">Become a Member »</a>
+	<a href="../members/index"><img src="../../images/become-a-member.png" /></a>
 	<br/><br/>
 	<span id="dashboardSnapshot">Joined:  <?php echo date('F j, Y', strtotime($user->joined));?></span>
 	

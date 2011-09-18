@@ -22,7 +22,7 @@
 	   <label class="uploadTypeRadio"> <input type="radio" name="uploadType"  value="l"  /> Direct website link to file (http://...)</label>
 		        <div id="u" class="uploadTypeField">
 		    	 <p>Select file(s) (must be in PDF, PPT, DOC, DOCX, JPEG/JPG, PNG or GIF format, max file size: 50 MB):</p>
-		<input type="file" name="userfile[]" size="200" class="multi" accept="docx|pdf|doc|ppt|pptx|gif|jpg|jpeg|png"  maxlength="10" />
+		<input type="file" name="userfile[]" size="20" class="multi" accept="docx|pdf|doc|ppt|pptx|gif|jpg|jpeg|png"  maxlength="10" />
 		    </div>
 		<div id="l" class="uploadTypeField">
 		    	 <p>Enter URL (the url must start with '<b>http://</b>' and end with .PDF, .PPT, .DOC, .DOCX, .JPEG/.JPG, .PNG or .GIF):</p>

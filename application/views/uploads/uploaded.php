@@ -37,23 +37,7 @@
 		}
 	}
 	?> points!</div>
-		
-		<ul>
-<?php  
-if ($upload_data == ""){
-	echo 'Uploaded: '.$link;
-}else{
-	foreach($upload_data as $file) {
-	    echo '<li><ul>';
-	    foreach ($file as $item => $value) {
-	        echo '<li>'.$item.': '.$value.'</li>';
-	    }
-	    echo '</ul></li>';
-	 } 
-}
-?>
-</ul>
-		<br/>
+
 	<h2>Promote your Post!</h2>
 	<p>Tell your friends and classmates by sharing your post on Facebook and Twitter.  Remember, when someone downloads your study material- you get 2 points every time!</p>
 	<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?php echo site_url('uploads/view/'. $upload_id);?>" send="true" width="450" show_faces="true" action="recommend" font="tahoma"></fb:like>
@@ -61,7 +45,7 @@ if ($upload_data == ""){
 		<span style="margin-left:50px;"><g:plusone></g:plusone></span>
 	</p>
 
-	<p><a href="insert" class="insertUploadButton">Post study material</a>  <a href="../users/dashboard" id="insertUploadButton2">Dashboard</a></p>
+	<p><a href="insert" id="insertUploadButton">Post study material</a>  <a href="../users/dashboard" id="insertUploadButton2">Dashboard</a></p>
 
 </div>
 

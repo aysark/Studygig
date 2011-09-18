@@ -20,6 +20,7 @@
     
     
     <div class="docPreview">
+    	<p>The following is a preview of the document.</p>
         <?php
         if ($upload->filesize == -1){
             echo "This upload is not hosted on Studygig, currently we do not provide previews for such uploads.";
