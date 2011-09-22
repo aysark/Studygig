@@ -73,11 +73,12 @@
 onKeyUp="limitText(this.form.description,this.form.countdown,500);" required ></textarea>
 (Maximum characters: 500)
 </div>
-
 	</div>
 	
 	<div id="postfb">
-		<p> <h2>Would you like to tell your friends on Facebook? <a href="#" class="dashHelp" title="It helps promote your stuff to get you points! This only posts to your wall once, we will never use it for spam- pwomise!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Optional.</span></h2>
+		
+		<p> 
+			<h2>Would you like to tell your friends on Facebook? <a href="#" class="dashHelp" title="It helps promote your stuff to get you points! This only posts to your wall once, we will never use it for spam- pwomise!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Optional.</span></h2>
 		<label><input type="checkbox" name="postfb" id="postfb" value="1" tabindex="7" /> I would like to make a Facebook post.</label>
 		</p>
 	</div>
@@ -86,7 +87,8 @@ onKeyUp="limitText(this.form.description,this.form.countdown,500);" required ></
 <?php echo form_close(); ?>
 	
 	</div>
-	<div class="twoCol2">
+	</div>
+<div class="twoCol2">
 	<div class="roundedCornerContent">
         <h1>Sell Your Stuff & Save</h1>
         <span class="blueh2">How it works</span>
@@ -104,13 +106,12 @@ onKeyUp="limitText(this.form.description,this.form.countdown,500);" required ></
         </ul>
             
     </div>
-    	<div id="materialKinds">
+   <!-- 	<div id="materialKinds">
 	<div class="radioKinds" id="kind1" title="1"><input class="noRadio" name="radioKind1" value="Book" type="radio" id="radioKind1" /></div>
 	<div class="radioKinds" id="kind2" title="2"><input class="noRadio" name="radioKind2" value="Test" type="radio" id="radioKind2" /></div>
-	</div>
+</div>-->
 	
 	</div>
-</div>
 </div>
 
 
@@ -139,10 +140,6 @@ $(document).ready(function(){
 		//$('#materialKinds').children().find("#kind"+$buttonTitle).css('background-position','0px 0px');
 		alert($("input[name=radioKind1]","#materialKinds").val());
 	});
-	
-	
-	
-	
 	
 	$(".chzn-select1").chosen();
 	$(".chzn-select2").chosen();

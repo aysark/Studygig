@@ -656,8 +656,7 @@ class Uploads extends CI_Controller {
 					// check if the user is trying to dl their own upload
 					
 					
-					$data['content'] = 'users/error';
-					$data['error']=  "Not enough points - it costs 20 points to download study material.  <a href='http://studygig.com/index.php/site/help'>Click here</a> to see how you can gain points.";	
+					$data['content'] = 'users/notenough';
 					$data['pageTitle'] = "Oh dear, you don't have enough points!";
 					$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
 				

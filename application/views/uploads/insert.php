@@ -143,10 +143,10 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
 		
 	</div>
 	
-	<div id="insertAnon">
+	<!--<div id="insertAnon">
 		<h2>Would you like to share anonymously?<span class="formDesc">Optional.</span></h2>
 		<label><input type="checkbox" name="anon" value="1" tabindex="8" /> I would like to make this post anonymously.</label>
-	</div>
+	</div>-->
 	
 	<div id="postfb">
 		<h2>Would you like to tell your friends on Facebook? <a href="#" class="dashHelp" title="It helps promote your stuff to get you points! This only posts to your wall once, we will never use it for spam- pwomise!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Optional. </span></h2>
