@@ -239,6 +239,7 @@ class Classified extends CI_Model {
 
   	function delete($id) {
   		$this->db->where('id',$id);
-  		$this->db->delete('classifieds');
+  		$inactive_classified = array('active' => '0');
+  		$this->db->update('classifieds',$inactive_classified);
   	}
 }		

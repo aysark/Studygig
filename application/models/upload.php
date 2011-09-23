@@ -427,6 +427,7 @@ function searchcount($search){
 
   function delete($id) {
     $this->db->where('id',$id);
-    $this->db->delete('uploads');
+    $inactive_upload = array('active' => '0');
+    $this->db->update('uploads',$inactive_upload);
   }
 }
