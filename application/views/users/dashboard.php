@@ -37,22 +37,36 @@
 	
 	<div id="tabs-2">
 		<?php 
-			if(empty($recentuploads)){
+			if(empty($recentuploads) && empty($allclassifieds)){
 				echo '<p>You haven\'t posted any study material yet! Why not <a href="../uploads/insert">post and earn some points?</a>  You can use the points to download or to <a href="profile">get real life rewards!</a></p>';
 			} ?>
 		<ul>
-			<?php $i=0; ?>
-	<?php foreach($recentuploads as  $upload): ?>
-		<li>
-			<h2><a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo $upload->title; ?></a></h2><a href="<?php echo site_url('uploads/delete/'.$upload->id);?>"><img src="../../images/cancel.png" /></a> <a href="<?php echo site_url('uploads/edit/'.$upload->id);?>"><img src="../../images/note_edit.png" /></a>
-			 <h5> <img src="../../images/material<?php echo $upload->material; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="../../images/file<?php echo $upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" />
-             Uploaded by <?php echo $recentUploadsUsers[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/getsearchfor/').'/'.substr ($recentUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $recentUploadsCourses[$i];?></span></a></h5>
-             
+		<?php $i=0; ?>
+		<?php foreach($recentuploads as  $upload): ?>
+			<li>
+				<h2><a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo $upload->title; ?></a></h2><a href="<?php echo site_url('uploads/delete/'.$upload->id);?>"><img src="../../images/cancel.png" /></a> <a href="<?php echo site_url('uploads/edit/'.$upload->id);?>"><img src="../../images/note_edit.png" /></a>
+				 <h5> <img src="../../images/material<?php echo $upload->material; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="../../images/file<?php echo $upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" />
+	             Uploaded by <?php echo $recentUploadsUsers[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/getsearchfor/').'/'.substr ($recentUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $recentUploadsCourses[$i];?></span></a></h5>
+	             
+				</li>
 			</li>
-		</li>
-		<?php $i++;?>
-	<?php endforeach; ?>
-	</ul>
+			<?php $i++;?>
+		<?php endforeach; ?>
+		</ul>
+
+		<ul>
+		<?php $i=0; ?>
+		<?php foreach($allclassifieds as  $classified): ?>
+			<li>
+				<h2><a href="<?php echo site_url('classifieds/view/'. $classified->id);?>"><?php echo $classified->title; ?></a></h2><a href="<?php echo site_url('classifieds/delete/'.$classified->id);?>"><img src="../../images/cancel.png" /></a> <a href="<?php echo site_url('classifieds/edit/'.$classified->id);?>"><img src="../../images/note_edit.png" /></a>	</h2>
+				<h5>Posted on <?php echo date('F j, Y \a\t g:i A', strtotime($classified->created_at));?></h5>
+				             
+				</li>
+			</li>
+			<?php $i++;?>
+		<?php endforeach; ?>
+		</ul>
+
 
 	</div>
 	

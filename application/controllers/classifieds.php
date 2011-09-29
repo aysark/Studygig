@@ -243,7 +243,7 @@ class Classifieds extends CI_Controller {
 		if( $this->Classified->get_seller_by_id($id)->user_id == $this->session->userdata('user_id') )
   	 	{
   	 		$this->Classified->delete($id);
-  	 		redirect(site_url('users/mystuff'),'refresh');
+  	 		redirect(site_url('users/dashboard'),'refresh');
   	 	}
   	 	else 
   	 	{
