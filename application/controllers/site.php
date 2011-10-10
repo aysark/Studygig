@@ -12,6 +12,8 @@ class Site extends CI_Controller {
 			$data->points = $this->User->total_points($this->session->userdata('user_id'));
 			$this->load->vars($data);
 		}
+
+		$this->output->cache(5);
 	
 	}
 	
