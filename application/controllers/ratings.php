@@ -9,9 +9,15 @@ class Ratings extends CI_Controller {
 	}
 	
 	function add() {
-		if ($this->session->userdata('logged_in')) 
+
+		$this->load->model('User');
+
+		$userid = $this->session->userdata('user_id');
+		$uploadid = $this->input->post('upload_id');
+
+		if ($this->session->userdata('logged_in') && $this->User->already_has($userid,$uploadid)) 
 		{	
-			if ($this->Rating->validate_unique($this->input->post('upload_id'))) 
+			if ($this->Rating->validate_unique($uploadid)) 
 				{
 					$this->Rating->add();
 					echo "+1 point!";
@@ -23,7 +29,10 @@ class Ratings extends CI_Controller {
 		}
 			else
 		{
+			if (!$this->session->userdata('logged_in'))
 			echo '<a href="'.base_url().'index.php/users/signup">Register</a> or <a href="'.base_url().'index.php/users/login">Login</a> to rate.';
+				else
+			echo 'Download it first!';
 		}
 	}
 }
