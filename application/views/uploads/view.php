@@ -37,6 +37,7 @@
     //its a pdf and has a preview  	 	 
 	}else{
    	 	$preview = str_replace($upload->filetype,".jpg",$file_path);
+      $preview = str_replace("/materials","",$preview);
     	echo "<img src=\"".base_url().$preview."\" />";
     }
         ?>

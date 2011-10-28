@@ -191,7 +191,7 @@ class Uploads extends CI_Controller {
 				}
 				
 			}else{
-				$config['upload_path'] = './uploads/';
+				$config['upload_path'] = './uploads/materials';
 				$config['allowed_types'] = "docx|pdf|doc|ppt|pptx|gif|jpg|jpeg|png";
 				$config['max_size']	= '50000';
 				$config['max_width'] = '0';
@@ -229,12 +229,11 @@ class Uploads extends CI_Controller {
 								$fileExtensions .= $file['ext'].",";
 								$fileSizes .= $file['size'].",";
 								
-								$input_file = $file['file']."[0]";
-								
-								//echo $file['file'];
+								$input_file = $file['file']."[0]";							
 								
 								//change extension to .jpg in name
-								$output_file = str_replace($file['ext'],".jpg",$file['file']);
+								$output_file = str_replace($file['ext'],".jpg","/var/www/vhosts/studygig.com/httpdocs/uploads/".$file['name']);
+																
 								$command = "convert $input_file -resize 85% -crop 540x465+0+0 canvas:none -fill \"#0076e6\" -font AvantGarde-Demi -pointsize 28 -draw \"text 60,270 'Studygig.com Preview'\" -channel RGBA $output_file ";
 								
 								exec($command);
@@ -563,7 +562,7 @@ class Uploads extends CI_Controller {
 		$data['upload'] = $this->Upload->get_by_id($id);
 		$data['content'] = 'uploads/view';
 		$data['file_name'] = $data['upload']->filepath;
-		$data['file_path'] = 'uploads/'. $data['file_name'];
+		$data['file_path'] = 'uploads/materials/'. $data['file_name'];
 		$data['ratings'] = $this->Upload->get_rating($id);
 		$data['uploader'] = $this->Upload->get_uploader($id);
 		$data['course']  = $this->Upload->get_course_by_id($id);
