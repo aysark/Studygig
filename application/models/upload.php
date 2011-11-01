@@ -144,11 +144,16 @@ class Upload extends CI_Model {
 		$sizesArray = explode(",", $sizes);
 
 		for ($i=0; $i < $numOfFiles; $i++){
+			
+			if (strchr($this->input->post('uploadType'),"u")){
+				$pathArray[$i] = strtolower($pathArray[$i]);
+			}
+		
 			$newcourse = array(
 			'title' => trim($title)." (". ($i+1)."/$numOfFiles)",
 			'course_id' => $courseid,
 			'subject_id' => $subjectid,
-			'filepath' => strtolower($pathArray[$i]),
+			'filepath' => $pathArray[$i],
 			'description' => $description,
 			'material' => $material,
 			'user_id' => $userid,
@@ -163,6 +168,11 @@ class Upload extends CI_Model {
 		}
   	}else{ 
   			$pathArray = explode(" ", $paths);
+  			
+  			if (strchr($this->input->post('uploadType'),"u")){
+				$pathArray[0] = strtolower($pathArray[0]);
+			}
+			
 			$typesArray = explode(",", $types);
 			$sizesArray = explode(",", $sizes);
 			$title =  mysql_real_escape_string(trim($this->input->post('title')));
@@ -172,7 +182,7 @@ class Upload extends CI_Model {
 			'title' => $title,
 			'course_id' => $courseid,
 			'subject_id' => $this->input->post('subject_id'),
-			'filepath' => strtolower($pathArray[0]),
+			'filepath' => $pathArray[0],
 			'description' => $description,
 			'material' => $material,
 			'user_id' => $userid,
