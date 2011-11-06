@@ -132,6 +132,7 @@ class Uploads extends CI_Controller {
 	function upload() {
 		$this->load->model('Subject');
 		$this->load->model('User');
+		$this->load->library('curl');
 
 		if($this->form_validation->run('upload')){
 			if (strchr($this->input->post('uploadType'),"l")){
@@ -147,13 +148,51 @@ class Uploads extends CI_Controller {
 						$numOfFiles = 1;
 						$data['numOfFiles']=1;
 						$ext = $this->get_url_ext($url);
+
+						$ch = curl_init();
+					    curl_setopt($ch, CURLOPT_HEADER, 0);
+					    curl_setopt($ch, CURLOPT_VERBOSE, 0);
+					    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+					    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
+					    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v1/document/upload" );
+					    curl_setopt($ch, CURLOPT_POST, true);
+					    
+					    $post = array(
+					        "url"=> $url,
+					        "token" => "yYaBAI95eJxVkPb0Twvh",
+					        "private" => "true",
+					        "title" => $this->input->post('title')
+					    );
+					    curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
+					    					    
+					    #Get response from crocdoc 
+					    $json_response = curl_exec($ch);
+					    $response = json_decode($json_response);
+
+					    #Check if upload is successful 
+					    if (isset($response->uuid)) $uuid = $response->uuid;
+					    else {
+					    	
+					    	$uuid = "ERROR";
+
+					    	$data['error'] = "There was an error uploading your document";
+							$data['content'] = 'uploads/insert';
+							
+							$data['pageTitle'] = 'Post your Study Material on Studygig';
+							$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
+								
+							$this->load->view('subTemplate', $data);	
+
+					    }		 
+
+					    log_message('debug','CROCDOC: '. $json_response. " ". $uuid);
 					
 						if ($this->input->post('anon') == 1){
-								$data['upload_id']=$this->Upload->add($url,$ext,-1,$numOfFiles,true);
+								$data['upload_id']=$this->Upload->add($url,$ext,-1,$numOfFiles,true,$uuid);
 						}else{
-								$data['upload_id']=$this->Upload->add($url,$ext,-1,$numOfFiles,false);
+								$data['upload_id']=$this->Upload->add($url,$ext,-1,$numOfFiles,false,$uuid);
 						}
-						
+
 						# Facebook wall post              
 							if ($this->input->post('postfb') == 1) {
 								
@@ -237,15 +276,61 @@ class Uploads extends CI_Controller {
 								$command = "convert $input_file -resize 85% -crop 540x465+0+0 canvas:none -fill \"#0076e6\" -font AvantGarde-Demi -pointsize 28 -draw \"text 60,270 'Studygig.com Preview'\" -channel RGBA $output_file ";
 								
 								exec($command);
+
+								#Crocdoc upload
+								
+								// $response = $this->curl->simple_post(
+								// 	'https://crocodoc.com/api/v1/document/upload', 
+								// 	array('file'  =>"@".$file['file'],
+								// 		  'token' => 'yYaBAI95eJxVkPb0Twvh',
+								// 		  'title' => $file['name']));
+
+								$ch = curl_init();
+							    curl_setopt($ch, CURLOPT_HEADER, 0);
+							    curl_setopt($ch, CURLOPT_VERBOSE, 0);
+							    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+							    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
+							    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v1/document/upload" );
+							    curl_setopt($ch, CURLOPT_POST, true);
+							    
+							    $post = array(
+							        "file"=>"@". $file['file'],
+							        "token" => "yYaBAI95eJxVkPb0Twvh",
+							        "private" => "true",
+							        "title" => $file['name']
+							    );
+							    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+							    
+							    #Get response from crocdoc 
+							    $json_response = curl_exec($ch);
+							    $response = json_decode($json_response);
+
+							    #Check if upload is successful 
+							    if (isset($response->uuid)) $uuid = $response->uuid;
+							    else {
+							    	
+							    	$uuid = "ERROR";
+
+							    	$data['error'] = "There was an error uploading your document";
+									$data['content'] = 'uploads/insert';
+									
+									$data['pageTitle'] = 'Post your Study Material on Studygig';
+									$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
+										
+									$this->load->view('subTemplate', $data);	
+
+							    }		 
+
+							    log_message('debug','CROCDOC: '. $json_response. " ". $uuid);
 								
 							}
 							$this->User->log_user_ip($this->input->post('user_id'),$_SERVER['REMOTE_ADDR'],$_SERVER['HTTP_USER_AGENT'],3);
 							$data['numOfFiles']=$numOfFiles;
 							
 							if ($this->input->post('anon') == 1){
-								$data['upload_id']= $this->Upload->add($fileNames,$fileExtensions,$fileSizes,$numOfFiles,true);
+								$data['upload_id']= $this->Upload->add($fileNames,$fileExtensions,$fileSizes,$numOfFiles,true,$uuid);
 							}else{
-								$data['upload_id']= $this->Upload->add($fileNames,$fileExtensions,$fileSizes,$numOfFiles,false);
+								$data['upload_id']= $this->Upload->add($fileNames,$fileExtensions,$fileSizes,$numOfFiles,false,$uuid);
 							}
 							
 							$data['material'] = $this->input->post('material');
@@ -256,9 +341,7 @@ class Uploads extends CI_Controller {
 							$this->curl->simple_post('https://graph.facebook.com/me/feed', array('access_token'=>$this->session->userdata('token'),'link' =>'http://studygig.com' ,'message' => 'I just posted new study material on Studygig, check it out!'));
 							
 							}
-							
-							
-							
+
 							$data['pageTitle'] = 'Success - Your Study Material was posted on Studygig';
 							$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
 							$this->load->view('subTemplate', $data);
@@ -783,6 +866,5 @@ class Uploads extends CI_Controller {
   	 {
 	 	echo "You can't delete other people's stuff!";	  	 	
 	 }
-  }
-	
+  }	
 }
