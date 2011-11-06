@@ -683,6 +683,7 @@ class Uploads extends CI_Controller {
 		    $uploadid = $this->input->post('upload_id');
 		    $uploader = $this->Upload->get_uploader($uploadid);
 		    $uploaderid = $uploader->id;
+		    $downloader_name = $this->User->get_username_by_id($this->session->userdata('user_id'));
 		    
 		    #Check if he already has the file
 		    $already_has = $this->User->already_has($this->session->userdata('user_id'),$uploadid);
@@ -733,7 +734,7 @@ class Uploads extends CI_Controller {
 				        "uuid"=> $data['upload']->uuid,
 				        "token" => "yYaBAI95eJxVkPb0Twvh",
 				        "downloadable" => "false",
-				        "name" => $uploader->username
+				        "name" => $downloader_name
 				    );
 
 				    log_message('debug','CROCDOC PARAMS: '. json_encode($post));
