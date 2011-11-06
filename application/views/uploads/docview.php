@@ -32,7 +32,7 @@ if($upload->filesize == -1){
 	$pdfurl = base_url(). $file['path'];
 	?>
 
-	<iframe src="http://docs.google.com/gview?url=<?php echo $pdfurl; ?>&embedded=true" style="width:650px; height:730px;" frameborder="0"></iframe>		
+	<iframe src="http://crocodoc.com/view/?sessionId=<?php echo $sessionid; ?>" style="width:650px; height:730px;" frameborder="0"></iframe>		
 			<?php
 	}
 }
