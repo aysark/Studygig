@@ -8,7 +8,10 @@
 		<h2>Find relevant study material</h2>
 		<p>
 		Search hundreds of documents and find study material such notes, past tests, assignments, study guides and lab reports that are relevant to your course at your university.  Studygig is an essential tool for students to find supplemental study material to help them study and ace their courses.
+		
 		</p>
+		
+	
 		</div>
 		<img src="../../images/howitworks1.png" class="howitworkImage" />
 		<div class="clear"></div>
@@ -21,9 +24,14 @@
 		<h2>Give back to the community</h2>
 		<p>
 		The heart and soul of Studygig is sharing of information for a better learning experience for everyone.  Spread the word out to your friends and colleagues- the more people involved the more study material and the smarter we'll all be!You will also earn points for sharing, these points can then be used to redeem real-life rewards (read next point)!
+	
 		</p>
+		
 		</div>
+		
 		<div class="clear"></div>
+	
+		
 	</div>
 	
 	<div class="howitworkFeat">

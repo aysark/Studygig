@@ -84,10 +84,10 @@ $.fn.selectRange = function(start, end) {
 };
 $(function() {
 	$('.slideshow').cycle({
-		fx: 'scrollLeft', 
+		fx: 'scrollDown', 
 		sync:   1, 
-    	speed:   1000, 
-    	timeout: 3500,
+    	speed:   1500, 
+    	timeout: 4000,
     	random: 1,
     	 nowrap:  0
 	});
@@ -154,40 +154,52 @@ var WRInitTime=(new Date()).getTime();
 </script>
 <!-- ClickTale end of Top part -->
 
-			<div id="wrapper">
+			
 <?php if( extension_loaded('newrelic') ) { echo newrelic_get_browser_timing_header(); } ?>
-    <div id="top">
-    	
+    <div id="navbar">
+    	<div id="innerNavBar">
+    		<a id="navLogo" href="/">
+    			<img src="images/nav/logo.png" width="122" height="28" alt="Studygig">
+    			</a>
+    			<ul class="navbar-list left">
         	<?php if($this->session->userdata('logged_in')): ?>
-        		<div id="navigationLoggedIn">
-        			
-            	<div id="hiUser">Hi, <?php echo $this->session->userdata('username'); ?>!</div>
-                <?php echo anchor('users/dashboard','Dashboard ('.$points.')'); ?> |  
-                <?php echo anchor('users/profile','Account Settings'); ?> |  
-                <a href="<?php echo site_url('sessions/destroy');?>">Logout</a> |  
-				<a href="index.php/site/howitworks" title="Find out how Studygig works">How it works</a>  
-			
-			<div id="postStudyMaterialDialog" title="How would you like to post?">
-	<a href="<?php echo site_url('uploads/insert');?>" style="outline:none;	-moz-outline:none;"><div id="shareStudyMaterialButton"></div></a> <a href="<?php echo site_url('classifieds/insert');?>" style="outline:none;-moz-outline:none;"><div id="sellStudyMaterialButton"></div></a>
-
-	</div>
-	<div id="postStudyMaterialButton">Post Study Material</div>
-
+        		
+        		<li class="navbar-list-item dropdown">
+        			<a href="<?php echo site_url('users/dashboard');?>">
+        				<span class="navbar-icon">&nbsp;&nbsp;&nbsp;</span>
+        				Hi, <?php echo $this->session->userdata('username'); ?>!
+        				<span class="navbar-arrow">&nbsp;&nbsp;&nbsp;</span>
+        			</a>
+        			<ul id="navbar-list-item-menu">
+        				<li>
+        					<img class="dropdown-arrow" alt="" src="<?php echo base_url(); ?>images/nav/arrowIconUpside.gif"/> 
+        					<a href="<?php echo site_url('users/dashboard');?>">Dashboard</a></li> 
+			            <li><a href="<?php echo site_url('users/account');?>">Account</a></li> 
+			            <li><a href="<?php echo site_url('users/rewards');?>">Rewards</a></li> 
+			            <li><a href="<?php echo site_url('sessions/destroy');?>">Log Out</a></li>
+        			</ul>
+			        
+        		</li>
+        		<li class="navbar-list-item points">
+        			<a href="#" class="dashHelpS" title="Points"><span class="navbar-points">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        			<?php echo $points; ?></a>
+        			</a>
+        			</li>
 			<?php else: ?>	
-				<div id="navigation">
-                <a href="<?php echo site_url('users/login');?>" title="Sign in to your Studygig account">Login</a> |  
-                <a href="<?php echo site_url('users/signup');?>" title="Create an account to use Studygig" class="createAnAccountLink">Create an Account</a> |  
-                <a href="index.php/site/howitworks" title="Find out how Studygig works">How it works</a>
-
-                <div id="postStudyMaterialDialog" title="How would you like to post?">
-	<a href="<?php echo site_url('uploads/insert');?>" style="outline:none;	-moz-outline:none;"><div id="shareStudyMaterialButton"></div></a> <a href="<?php echo site_url('classifieds/insert');?>" style="outline:none;-moz-outline:none;"><div id="sellStudyMaterialButton"></div></a>
-
-	</div>
-	<div id="postStudyMaterialButton">Post Study Material</div>
-			
+				<li class="navbar-list-item"><a href="index.php/site/howitworks">How It Works</a></li>
+				<li class="navbar-list-item"><a href="<?php echo site_url('users/signup');?>">Create An Account</a></li>
+				<li class="navbar-list-item"><a href="<?php echo site_url('users/login');?>">Log In</a></li>
 			<?php endif; ?>
-         </div>
-    </div><!-- end top div -->
+         </ul>
+         <a id="upload-notes" href="<?php echo site_url('uploads/insert');?>">Upload Notes</a>
+         
+         <ul class="navbar-list right">
+         	<li class="navbar-list-item"><a href="<?php echo site_url('site/help');?>">Help</a></li>
+         	
+	</ul>
+    </div><!-- end inner navbar-->
+    </div><!-- end navbar div -->
+    <div id="wrapper">
     <script type='text/javascript'> var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); document.write(unescape('%3Cscript src="' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js" type="text/javascript"%3E%3C/script%3E')); </script> <script type='text/javascript'> try {  var mpmetrics = new MixpanelLib('2150b708434b3dc7d28b6e2bb92fd003'); } catch(err) { null_fn = function () {}; var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; } 
 
 mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER']; ?>"}); 
@@ -196,9 +208,6 @@ mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER
   <div id="footer">
   	<div id="seperator">
   	</div>
-   	<a href="index.php/site/tenreasons" class="tenReasonsLink"><div id="studentStatisticBanner"></div></a>
-
-   	<a href="index.php/site/academicintegrity" class="academicIntLink"><div id="profSupportBanner"></div></a>
     <div id="footerSEO">
     	<div class="col11">
                 <h2>Popular Subjects</h2> 
@@ -304,6 +313,12 @@ mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER
 <!-- ClickTale Bottom part -->
 <div id="ClickTaleDiv" style="display: none;"></div>
 <script type="text/javascript">
+	$(function() {
+		$( "#tabs" ).tabs();
+		$('.dashHelp').tipsy({gravity: 'w'});
+		$('.dashHelpS').tipsy({gravity: 'n'});
+	});
+
 if(document.location.protocol!='https:')
   document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRc5.js'%20type='text/javascript'%3E%3C/script%3E"));
 </script>

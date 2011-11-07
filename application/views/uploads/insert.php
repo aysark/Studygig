@@ -2,7 +2,7 @@
   
 <div id="content2">
 <div class="twoCol1">
-	<h1>Share Study Material</h1>
+	<h1>Upload notes</h1>
 	
 	<?php if ( isset($error)) {
 			
@@ -45,7 +45,7 @@
 		<select id="course_id" size="10" name="course_id"  class="chzn-select2" title="Choose a Course..." tabindex="3">
 			</select>
 		</div>
-	</div>
+	</div>	
 	
 	<div id="insertMaterialType">
 		<h2>What kind of study material are you sharing? <a href="#" class="dashHelp" title="This helps us keep everything nice and tidy."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Required.</span></h2>
@@ -143,11 +143,6 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
 		
 	</div>
 	
-	<!--<div id="insertAnon">
-		<h2>Would you like to share anonymously?<span class="formDesc">Optional.</span></h2>
-		<label><input type="checkbox" name="anon" value="1" tabindex="8" /> I would like to make this post anonymously.</label>
-	</div>-->
-	
 	<div id="postfb">
 		<h2>Would you like to tell your friends on Facebook? <a href="#" class="dashHelp" title="It helps promote your stuff to get you points! This only posts to your wall once, we will never use it for spam- pwomise!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Optional. </span></h2>
 		<label><input type="checkbox" name="postfb" id="postfb" value="1" tabindex="9" /> I would like to make a Facebook post.</label>
@@ -155,13 +150,12 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
 	
 	<p>By uploading a file you certify that you have the right to distribute it and that it does not violate our <a href="<?php echo base_url();?>index.php/site/termsofuse">Terms of Use</a>.</p>
 	
-<input type="submit" value="Post Study Material" id="insertUploadButton" tabindex="9" /> 
+<input type="submit" value="Upload Notes" id="insertUploadButton" tabindex="9" /> 
 <?php echo form_close(); ?>
 	
 	</div>
 	<div class="twoCol2">
 	<div class="roundedCornerContent">
-        <h1>Post Material. Earn Points. Get Rewarded!</h1>
         <span class="blueh2">How it works</span>
         <ol class="insertHowIt">
         	<li><b>Post study material</b> — you can post your own study material or helpful study material that you found.</li>
@@ -169,12 +163,13 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
         	<li><b>Redeem your rewards</b> — trade in your points for Best Buy, iTunes, and Amazon gift cards!</li>
         	</ol>
         	
-        	<span class="blueh2">Guidelines to posting</span>
+        	<span class="blueh2">Rules to uploading</span>
         <ul class="guidelines">
         	<li>Share useful material- that means if you didn't use it to study, chances are not many people will. <b> You also get 2 points everytime someone downloads your study material so sharing quality material helps you in the long run!</b></li>
         	<li>Be as descriptive as possible; mention the year and term the study material was for, the professor at that time, etc.</li>
         	<li>Solutions are far better than questions!  No point in posting an assignment without its solutions!</li>
         	<li>We encourage .PDF and image formats as uploads, currently those are the only formats we provide previews for.</li>
+        	<li>Inappropriate, unrelated, or copyright uploads are not allowed.</li>
         	
         </ul>
             

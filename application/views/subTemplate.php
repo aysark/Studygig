@@ -56,6 +56,15 @@ echo substr($str,0,150);   ?>" />
 
 	echo link_tag($link);
 	
+	$link = array(
+          'href' => 'css/sticky.css',
+          'rel' => 'stylesheet',
+          'type' => 'text/css',
+          'media' => 'screen'
+	);
+
+	echo link_tag($link);
+	
 	?>
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -64,6 +73,7 @@ echo substr($str,0,150);   ?>" />
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.MetaData.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.tipsy.mini.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/sticky.js"></script>
 
 <script type="text/javascript" language="JavaScript">
   
@@ -138,41 +148,89 @@ $(function() {
 	<body>
 
 
-	<div id="wrapper">
+	
 		<?php if( extension_loaded('newrelic') ) { echo newrelic_get_browser_timing_header(); } ?>
-		 <div id="top">
-    	
+		 <div id="navbar">
+    	<div id="innerNavBar">
+    		<a id="navLogo" href="/">
+    			<img src="<?php echo base_url(); ?>images/nav/logo.png" width="122" height="28" alt="Studygig">
+    			</a>
+    			<ul class="navbar-list left">
         	<?php if($this->session->userdata('logged_in')): ?>
-        		<div id="navigationLoggedIn">
-            	<div id="hiUser">Hi, <?php echo $this->session->userdata('username'); ?>!</div>
-                <?php echo anchor('users/dashboard','Dashboard ('.$points.')'); ?> |  
-                <?php echo anchor('users/profile','Account Settings'); ?> |  
-                <a href="<?php echo site_url('sessions/destroy');?>">Logout</a> |  
-				<a href="<?php echo site_url('site/howitworks'); ?>" title="Find out how Studygig works">How it works</a>  
-                <div id="postStudyMaterialDialog" title="How would you like to post?">
-	<a href="<?php echo site_url('uploads/insert');?>" style="outline:none;	-moz-outline:none;"><div id="shareStudyMaterialButton"></div></a> <a href="<?php echo site_url('classifieds/insert');?>" style="outline:none;-moz-outline:none;"><div id="sellStudyMaterialButton"></div></a>
-
-	</div>
-	<div id="postStudyMaterialButton">Post Study Material</div>
+        		
+        		<li class="navbar-list-item dropdown">
+        			<a href="<?php echo site_url('users/dashboard');?>">
+        				<span class="navbar-icon">&nbsp;&nbsp;&nbsp;</span>
+        				Hi, <?php echo $this->session->userdata('username'); ?>!
+        				<span class="navbar-arrow">&nbsp;&nbsp;&nbsp;</span>
+        			</a>
+        			<ul id="navbar-list-item-menu">
+        				<li>
+        					<img class="dropdown-arrow" alt="" src="<?php echo base_url(); ?>images/nav/arrowIconUpside.gif"/> 
+        					<a href="<?php echo site_url('users/dashboard');?>">Dashboard</a></li> 
+			            <li><a href="<?php echo site_url('users/account');?>">Account</a></li> 
+			            <li><a href="<?php echo site_url('users/rewards');?>">Rewards</a></li> 
+			            <li><a href="<?php echo site_url('sessions/destroy');?>">Log Out</a></li>
+        			</ul>
+			        
+        		</li>
+        		<li class="navbar-list-item points">
+        			<a href="#" class="dashHelpS" title="Points"><span class="navbar-points">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        			<?php echo $points; ?></a>
+        			</a>
+        			</li>
 			<?php else: ?>	
-				<div id="navigation">
-                <a href="<?php echo site_url('users/login');?>" title="Sign in to your Studygig account">Login</a> |  
-                <a href="<?php echo site_url('users/signup');?>" title="Create an account to use Studygig">Create an Account</a> |  
-                <a href="<?php echo site_url('site/howitworks'); ?>" title="Find out how Studygig works">How it works</a>
-                
-                <div id="postStudyMaterialDialog" title="How would you like to post?">
-	<a href="<?php echo site_url('uploads/insert');?>" style="outline:none;	-moz-outline:none;"><div id="shareStudyMaterialButton"></div></a> <a href="<?php echo site_url('classifieds/insert');?>" style="outline:none;-moz-outline:none;"><div id="sellStudyMaterialButton"></div></a>
-
-	</div>
-	<div id="postStudyMaterialButton">Post Study Material</div>
-			
+				<li class="navbar-list-item"><a href="<?php echo site_url('site/howitworks');?>">How It Works</a></li>
+				<li class="navbar-list-item"><a href="<?php echo site_url('users/signup');?>">Create An Account</a></li>
+				<li class="navbar-list-item"><a href="<?php echo site_url('users/login');?>">Log In</a></li>
 			<?php endif; ?>
-         </div>
-    </div><!-- end top div -->
-		
+         </ul>
+         <a id="upload-notes" href="<?php echo site_url('uploads/insert');?>">Upload Notes</a>
+         
+         <ul class="navbar-list right">
+         	<li class="navbar-list-item"><a href="<?php echo site_url('site/help');?>">Help</a></li>
+         	
+         <!-- <div id="postStudyMaterialDialog" title="How would you like to post?">
+	<a href="<?php echo site_url('uploads/insert');?>" style="outline:none;	-moz-outline:none;"><div id="shareStudyMaterialButton"></div></a> <a href="<?php echo site_url('classifieds/insert');?>" style="outline:none;-moz-outline:none;"><div id="sellStudyMaterialButton"></div></a> 
+	<div id="postStudyMaterialButton">Post Study Material</div> -->
+	</ul>
+    </div><!-- end inner navbar-->
+    </div><!-- end navbar div -->
+		<div id="wrapper">
 	    <div id="header2">
-    <a href="<?php echo site_url();?>" title="Welcome to Studygig"><img src="<?php echo base_url(); ?>images/studygig-logo.png" width="228" height="60" alt="Studygig Logo" /></a>
-    
+	    	<div id="universityDialog" title="Pick a University/College">
+	<h1>Want Your University/College on Studygig?</h1>
+	<p>Studygig is currently offered for York University students.
+		<br /><br />
+		Leave your email and university/college name so we can let you know when we get to yours! </p>
+	<!-- Begin MailChimp Signup Form -->
+<link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+<div id="mc_embed_signup">
+<form action="http://studygig.us2.list-manage1.com/subscribe/post?u=474d67c0f98fc0b92284a9bc0&amp;id=8935058561" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+	<label for="mce-UNI">University/College Name  <span class="asterisk">*</span>
+</label>
+	<input type="text" value="" name="UNI" class="required" id="mce-UNI">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+	</div>
+   <div id="universityDropdown">York University<span class="whiteArrow"></span></div>
+   
+  
+	
     <div id="main2Search">
         	<?php $attributes = array('class' => 'search', 'method' => 'post', 'name' => 'searchform', 'onsubmit' => 'return validateForm()' ); 
 	echo form_open('uploads/searchfor',$attributes); 
@@ -233,10 +291,10 @@ mpmetrics.track("Search", {"Query": "<?php echo $query; ?>"});
 <?php endif; ?>
 
 $(function() {
-	$( "#postStudyMaterialDialog" ).dialog({
+	$( "#universityDialog" ).dialog({
 		autoOpen: false,
-			height: 340,
-			width: 485,
+			height: 450,
+			width: 600,
 			modal: true,
 			buttons: {
 				Cancel: function() {
@@ -247,9 +305,14 @@ $(function() {
 				allFields.val( "" ).removeClass( "ui-state-error" );
 			}
 	});
-	$( "#postStudyMaterialButton" )	.click(function() {
-				$( "#postStudyMaterialDialog" ).dialog( "open" );
+	$( "#universityDropdown" )	.click(function() {
+				$( "#universityDialog" ).dialog( "open" );
 			});
+			
+	$(function() {
+		$('.dashHelp').tipsy({gravity: 'w'});
+		$('.dashHelpS').tipsy({gravity: 'n'});
+	});
 			
 });
 function validateForm()

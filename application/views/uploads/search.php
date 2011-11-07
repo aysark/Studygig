@@ -1,13 +1,9 @@
-
-
 <div id="header">
-    	<div id="logo">
-   	    <a href="<?php echo site_url();?>" title="Welcome to Studygig"><img src="images/studygig-logo.png" width="228" height="60" alt="Studygig Logo" /></a>
-        <br />
-        Find study material.  Ace your courses.
+    	<div id="slogan">
+       	 	Find helpful study material.
         </div>
-    	<div id="mainSearchDescription">
-        	Enter a textbook title, course code or subject.  Example: MATH2030 Notes
+    	<div id="subslogan">
+        	Search more than 1000 documents from 500+ students (and counting)
         </div>
         <div id="mainSearch">
         	<?php $attributes = array('class' => 'search', 'method' => 'post', 'name' => 'searchform', 'onsubmit' => 'return validateForm()' ); 
@@ -15,66 +11,106 @@
 <input type="text" name="query" id="mainSearchField" /><input name="submit" type="submit" value="" id="mainSearchButton" class="button" />
       <?php echo form_close(); ?>
         </div>
-        <br/>
-      <img src="images/books-tests-notes-labs-guides.png" width="411" height="61" alt="Search for books, tests, notes, labs, and study guides" usemap="#Map" />
-      <map name="Map" id="Map1">
-        <area shape="rect" coords="-22,-5,60,62" href="#" id="booksIconSearch" />
-        <area shape="rect" coords="88,-1,144,60" href="#"  id="testsIconSearch"  />
-        <area shape="rect" coords="177,-1,233,59" href="#"  id="notesIconSearch"  />
-        <area shape="rect" coords="265,-8,324,60" href="#"  id="labsIconSearch"  />
-        <area shape="rect" coords="354,-4,441,60" href="#"  id="guidesIconSearch"  />
-      </map>
+      
   </div>
     <!-- end header div -->
+    <div id="greyButtonNav">
+    	<a href="index.php/uploads/insert" ><div id="greyButton1"></div></a>
+    	<a href="index.php/classifieds/insert"  ><div id="greyButton2"></div></a>
+	</div> <!-- end grey button nav div -->
+    <div class="clear"></div>
+    
     
 <div id="content">
-	
-    	<div id="mainAction">
-        <a href="index.php/uploads/insert" title="Earn rewards by sharing your study material" class="uploadStudyMatLink"><img src="images/share-study-material-earn-rewards-canada.gif" width="465" height="66" alt="Share and Upload your past tests, notes, labs, and study material"/></a>
-        <a href="index.php/classifieds/insert" title="Earn some cash by listing your study material" class="listStudyMatLink"><img src="images/sell-your-books-study-material-canada.gif" width="465" height="66" alt="Sell your books, tests, notes, labs, study material" id="rightActionButton" /></a>
-
-        </div>
         <div id="mainContentText">
             <div class="col1">
-                <h1>What is Studygig?</h1>
-<p>  Studygig is the easiest way university 
-  students find course textbooks, past tests, 
-  notes, and anything 
-  that helps them study.  Studygig allows 
-  students to download, share, sell and earn rewards for their study material.<br/><br/>
-<b>It's free to use</b>, so get started today. <br><a href="index.php/site/howitworks" title="Find out more about what Studygig is">Learn more »</a></p>
+                <h1>Collaborate</h1>
+                <div id="collaborateIcon"></div>
+<p class="featureText">  <b>Find and share class notes</b>, past tests and study guides at the click of a button.  Connect with other students and collaborate in real-time.  <a href="">Learn more »</a> </p>
             </div>
             <div class="col2">
-                <h1>Now at York University...</h1>
-                <img src="images/york-university.png" width="113" height="119" alt="Available in York University" class="contentImageLeft" />
-              <p>If you'd like to see Studygig at your university or college, <a href="index.php/site/contact" title="Contact us about your University or College">tell us!</a>  
-              	<br><br>Or <a href="index.php/site/mailinglist">join our mailing list</a> to get updates when we launch at new universities. </p>
+                <h1>Study Smarter</h1>
+                <div id="studyIcon"></div>
+<p class="featureText">  <b>Improve your GPA</b>, access notes at anytime, anywhere to help you study more effectively.  Your notes in the cloud.  <a href="">Learn more »</a> </p>
             </div>
             <div class="col3">
-                <h1>Recent Posts</h1>
-                <div class="slideshow">
+                <h1>Get Rewarded</h1>
+                <div id="rewardIcon"></div>
+<p class="featureText">  <b>Earn points for sharing your notes</b>. Exchange them for real-life rewards.  <a href="">Learn more »</a> </p>
+            </div>
+         </div>
+         <div class="clear"></div>
+    <div id="subContent">
+    	<a href="/"><div id="now-at-york-university"></div></a>
+    	<a href="index.php/site/academicintegrity"><div id="supported-by-your-professor"></div></a>
+    	<a href="index.php/site/tenreasons"><div id="reasons-students-use-studygig"></div></a>
+    	<a href="/"><div id="studygig-classifieds-sell-buy-text-books"></div></a>
+    	
+    	<div class="clear"></div>
+    	<br/>
+    	<div id="seperatorHalf">
+  	</div>
+    	<h1 style="float:left;">
+  	Recent Uploads</h1>
+  	<div id="seperatorHalf">
+  	</div>
+  	<div class="clear"></div>
+    	<div class="col1">
+    	<div class="slideshow">
                 	<?php $i=0; ?>
-                <?php foreach($latestUploads as $upload):?>
+                <?php foreach($latestUploads1 as $upload):?>
         
        <div class="slide roundedCornerContent">
-    <h2><a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo htmlspecialchars($upload->title); ?></a></h2>
-			 <p>
-            <h5> Uploaded in <a href="<?php echo site_url('uploads/search/').'/'.substr ($latestUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $latestUploadsCourses[$i].'</a> '?></span>
-		</p>
-			  <img src="images/material<?php echo $upload->material; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="images/file<?php echo $upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" /><span class="formDesc" style="float:right;"><?php echo $latestUploadsTimes[$i]; ?></span></h5>
-			 	
+    <h2><img src="images/materialIcons/material<?php echo $upload->material; ?>.jpg" alt="Material Type" class="recentPostIcon" /> 
+    	<a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo htmlspecialchars($upload->title); ?></a></h2>
+            <h5> <?php echo $latestUploadsUsers[$i];  ?> just uploaded in <a href="<?php echo site_url('uploads/search/').'/'.substr ($latestUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $latestUploadsCourses[$i].'</a> '?></span>
+	
+			</h5>
 			 	
 	</div>
         <?php $i++;?>
     <?php endforeach; ?>
-    
+</div><!-- eng slide-->
+</div><!-- end col -->
+<div class="col2">
+    	<div class="slideshow">
+                	<?php $i=0; ?>
+                <?php foreach($latestUploads2 as $upload):?>
+        
+       <div class="slide roundedCornerContent">
+    <h2><img src="images/materialIcons/material<?php echo $upload->material; ?>.jpg" alt="Material Type" class="recentPostIcon" /> 
+    	<a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo htmlspecialchars($upload->title); ?></a></h2>
+			   <h5> <?php echo $latestUploadsUsers[$i];  ?> just uploaded in <a href="<?php echo site_url('uploads/search/').'/'.substr ($latestUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $latestUploadsCourses[$i].'</a> '?></span>
+	
+			</h5>
+			 	
 	</div>
-                
-            </div>
-         </div>
+        <?php $i++;?>
+    <?php endforeach; ?>
+</div><!-- eng slide-->
+</div><!-- end col -->
+	<div class="col3">
+    	<div class="slideshow">
+                	<?php $i=0; ?>
+                <?php foreach($latestUploads3 as $upload):?>
+        
+       <div class="slide roundedCornerContent">
+    <h2><img src="images/materialIcons/material<?php echo $upload->material; ?>.jpg" alt="Material Type" class="recentPostIcon" /> <a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo htmlspecialchars($upload->title); ?></a></h2>
+			 <p>
+              <h5> <?php echo $latestUploadsUsers[$i];  ?> just uploaded in <a href="<?php echo site_url('uploads/search/').'/'.substr ($latestUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $latestUploadsCourses[$i].'</a> '?></span>
+	
+			</h5>
+			 	
+	</div>
+        <?php $i++;?>
+    <?php endforeach; ?>
+</div><!-- eng slide-->
+</div><!-- end col -->
+</div><!-- end subcontent-->
     
   </div>
     <!-- end content div -->
+    
     
  
 <script type="text/javascript" language="JavaScript">

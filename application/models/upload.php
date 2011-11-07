@@ -9,7 +9,7 @@ class Upload extends CI_Model {
     
   function latest() {
   	$this->db->order_by("created_at", "desc"); 
-  	$query = $this->db->get('uploads',10);
+  	$query = $this->db->get('uploads',12);
   	return $query->result();
   } 
   

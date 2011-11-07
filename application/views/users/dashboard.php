@@ -1,23 +1,92 @@
 <div id="content2">
-<div class="twoCol1">
+	
+	<ul id="user_navbar">
+		<li class="active">
+			<a href="dashboard">Dashboard</a>
+		</li>
+		<li>
+			<a href="yourUploads">Your Uploads</a>
+		</li>
+		<li>
+			<a href="yourListings">Your Listings</a>
+		</li>
+		<li>
+			<a href="profile">Profile</a>
+		</li>
+		<li>
+			<a href="account">Account</a>
+		</li>
+		<li>
+			<a href="rewards">Rewards</a>
+		</li>
+	</ul>
+	
+<div class="twoCol1RightBased">
+	<h1><?php echo $user->username;?></h1>
+	<span class="edit_button floatRight"><a href="profile">Edit Profile</a></span>
+	<div class="clear"></div>
+	<div id="dashboardSnapshot" class="roundedCornerContent">
+		<h2>Snapshot</h2>
+		<br/>
+		<ul>
+			<li class="clear">
+				<div class="stat_name">Points <a href="#" class="dashHelp" title="Use points to download study material (it costs 20 points to download) or trade in your points to redeem real life rewards.  To earn points- simply upload study material!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a></div>
+				<div class="stat_value"><?php echo $points;?></div>
+				<div class="clear"></div>
+			</li>
+			
+			<li class="clear">
+				<div class="stat_name">Uploads</div>
+				<div class="stat_value"><?php echo $total_uploads;?></div>
+				<div class="clear"></div>
+			</li>
+			
+			<li class="clear">
+				<div class="stat_name">Downloads</div>
+				<div class="stat_value"><?php echo $total_downloads;?></div>
+				<div class="clear"></div>
+			</li>
+			
+			<li class="clear">
+				<div class="stat_name">Trophies <a href="#" class="dashHelp" title="This feature is still under construction."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a></div>
+				<div class="stat_value">0</div>
+				<div class="clear"></div>
+			</li>
+			<li class="clear">
+				<div class="stat_name">Membership</div>
+				<div class="stat_value">Free</div>
+				<div class="clear"></div>
+				<div class="stat_action">
+				<a href="">Become a Member »</a>
+				</div>
+			</li>
+			
+		<ul>
+	</div>
+
+</div>
+
+
+<!-- MAIN CONTENT START
+ ************************
+ -->
+ 
+ 
+<div class="twoCol2RightBased">
+
 	<div class="roundedCornerContent" id="dashboardGetStarted">
-<h2>Welcome to Studygig! Get Started in 3 Simple Steps</h2>
+<h2>Get Started in 3 Steps</h2>
 <ul class="dashboardList">
-<li><a href="../uploads/insert"><img src="../../images/post-study-material-icon.png" class="textmiddle"> Share Notes & Study Guides</a></li>
-<li><a href="../classifieds/insert"><img src="../../images/list-study-material-icon.png" class="textmiddle"> List Books</a></li>
-<li><img src="../../images/download-earn-icon.png" class="textmiddle"><a href="profile"> Earn Rewards</a></li>
+<li><a href="../uploads/insert"><img src="../../images/post-study-material-icon.png" class="textmiddle"> Upload Notes</a></li>
+<li><a href="../classifieds/insert"><img src="../../images/list-study-material-icon.png" class="textmiddle"> List Your Books</a></li>
+<li><img src="../../images/download-earn-icon.png" class="textmiddle"><a href="rewards"> Earn Rewards</a></li>
 </ul>
 </div>
-<div id="tabs">
-	<ul>
-		<li class="tabTitle"><a href="#tabs-1"><img src="../../images/001_14.png" class="textmiddle"/> Favourites</a></li>
-		<li class="tabTitle"><a href="#tabs-2"><img src="../../images/001_45.png" class="textmiddle"/> My Posts</a></li>
-		<li class="tabTitle"><a href="#tabs-3"><img src="../../images/001_52.png" class="textmiddle"/> Recent Downloads</a></li>
-	</ul>
-	<div id="tabs-1">
-		<ul>
-			
-			<?php 
+
+<div id="favourites" class="roundedCornerContent">
+<h2>Favourites</h2>
+<ul>
+	<?php 
 			if(empty($favourites)){
 				echo '<p>Start favouriting study material and you\'ll see them here!</p>';
 			} ?>
@@ -32,46 +101,12 @@
 		</li>
 		<?php $i++;?>
 	<?php endforeach; ?>
-	</ul>
-	</div>
-	
-	<div id="tabs-2">
-		<?php 
-			if(empty($recentuploads) && empty($allclassifieds)){
-				echo '<p>You haven\'t posted any study material yet! Why not <a href="../uploads/insert">post and earn some points?</a>  You can use the points to download or to <a href="profile">get real life rewards!</a></p>';
-			} ?>
-		<ul>
-		<?php $i=0; ?>
-		<?php foreach($recentuploads as  $upload): ?>
-			<li>
-				<h2><a href="<?php echo site_url('uploads/view/'. $upload->id);?>"><?php echo $upload->title; ?></a></h2><a href="<?php echo site_url('uploads/delete/'.$upload->id);?>"><img src="../../images/cancel.png" /></a> <a href="<?php echo site_url('uploads/edit/'.$upload->id);?>"><img src="../../images/note_edit.png" /></a>
-				 <h5> <img src="../../images/material<?php echo $upload->material; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="../../images/file<?php echo $upload->filetype; ?>.png" width="20" height="20" class="file-type-icon" />
-	             Uploaded by <?php echo $recentUploadsUsers[$i]. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/getsearchfor/').'/'.substr ($recentUploadsCourses[$i],0,8);?>"><span class="courseCourseStyle"><?php echo $recentUploadsCourses[$i];?></span></a></h5>
-	             
-				</li>
-			</li>
-			<?php $i++;?>
-		<?php endforeach; ?>
-		</ul>
+</ul>
+</div>
 
-		<ul>
-		<?php $i=0; ?>
-		<?php foreach($allclassifieds as  $classified): ?>
-			<li>
-				<h2><a href="<?php echo site_url('classifieds/view/'. $classified->id);?>"><?php echo $classified->title; ?></a></h2><a href="<?php echo site_url('classifieds/delete/'.$classified->id);?>"><img src="../../images/cancel.png" /></a> <a href="<?php echo site_url('classifieds/edit/'.$classified->id);?>"><img src="../../images/note_edit.png" /></a>	</h2>
-				<h5>Posted on <?php echo date('F j, Y \a\t g:i A', strtotime($classified->created_at));?></h5>
-				             
-				</li>
-			</li>
-			<?php $i++;?>
-		<?php endforeach; ?>
-		</ul>
-
-
-	</div>
-	
-	<div id="tabs-3">
-		<?php 
+<div id="favourites" class="roundedCornerContent">
+<h2>Recent Downloads</h2>
+<?php 
 			if(empty($recentdownloads)){
 				echo '<p>You haven\'t downloaded yet! Use points to download useful study material you find.  It costs 20 points to download.  You can easily earn points by <a href="../uploads/insert">posting study material.</a></p>';
 			} ?>
@@ -87,7 +122,12 @@
 		<?php $i++;?>
 	<?php endforeach; ?>
 	</ul>
+	<div class="clear" style="text-align:right">
+		<a href="">Become a Member to see all your downloads »</a>
 	</div>
+</div>
+
+	
 </div>
 <?php if($user->oauth_provider): ?>
 	<div id="dashboardFacebook">
@@ -95,25 +135,4 @@
 </div>
 <?php endif; ?>
 
-
 </div>
-<div class="twoCol2">
-	<br/>
-	<span id="dashboardSnapshot">Points </span>  <a href="#" class="dashHelp" title="Use points to download study material (it costs 20 points to download) or trade in your points to redeem real life rewards.  To earn points- simply upload study material!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a>  <span id="dashboardNumber"><?php echo $points;?></span>
-	<a href="profile"><img src="../../images/redeem-rewards.png" /></a><br/>
-	<span id="dashboardSnapshot">Uploads</span> <span id="dashboardNumber"><?php echo $total_uploads;?></span>
-		<span id="dashboardSnapshot">Downloads</span> <span id="dashboardNumber"><?php echo $total_downloads;?></span>
-	<span id="dashboardSnapshot">Trophies</span> <a href="#" class="dashHelp" title="This feature is still under construction."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span id="dashboardNumber2"><?php echo "None";?></span>
-	<br/>
-	<span id="dashboardSnapshot">Membership type: <?php echo "Free";?></span>
-	<br/>
-	<a href="../members/index"><img src="../../images/become-a-member.png" /></a>	
-</div>
-</div>
-
-<script type="text/javascript" >
-	$(function() {
-		$( "#tabs" ).tabs();
-		$('.dashHelp').tipsy({gravity: 'w'});
-	});
-	</script>

@@ -309,29 +309,7 @@
   	
   }	
   
-	function editprofile() {	      
-		if ($this->loggedin) {
-			if($this->form_validation->run('editprofile')){	
-				$this->User->update_profile($this->user->id,$this->input->post('email'),$this->input->post('confirmnewpassword'));
-				$data['content'] = 'users/profile';
-				$data['user'] = $this->user; 
-				$data['editted'] = true;
-				
-				$data['pageTitle'] = 'Account Settings';
-		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-				$this->load->view('subTemplate', $data);	
-			}else{
-				$data['content'] = 'users/profile';
-				$data['user'] = $this->user; 
-				$data['editted'] = false;
-				
-				$data['pageTitle'] = 'Account Settings';
-		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-				$this->load->view('subTemplate', $data);	
-			}
-		}else
-    	redirect('users/login');
-	}
+	
 	
    function validate_password($currentpassword) {
     $this->form_validation->set_message('validate_password', 'Your current password was incorrect.');
@@ -350,12 +328,7 @@
       $data['total_downloads'] = $this->User->total_downloads($userid);
       
       $data['points'] = $this->User->total_points($userid);
-      
-      $data['recentuploads'] = $this->User->get_all_uploads($this->user->id);
       $data['recentdownloads'] = $this->User->recent_downloads($userid);
-
-  	  $data['allclassifieds'] = $this->User->get_all_classifieds($this->user->id);
-      
       $data['favourites'] = $this->Favourite->get($userid);
       
       foreach ($data['favourites'] as $f => $fav){
@@ -363,18 +336,11 @@
       	$data['favouritesCourses'][$f]  = $this->Upload->get_course_by_id($fav->id);
   	  }
   	  
-  	  foreach ($data['recentuploads'] as $u => $upload){
-      	$data['recentUploadsUsers'][$u] = $this->Upload->get_uploader($upload->id)->username;
-      	$data['recentUploadsCourses'][$u]  = $this->Upload->get_course_by_id($upload->id);
-  	  }
-  	  
   	  foreach ($data['recentdownloads'] as $d => $download){
       	$data['recentDownloadsUsers'][$d] = $this->Upload->get_uploader($download->id)->username;
       	$data['recentDownloadsCourses'][$d]  = $this->Upload->get_course_by_id($download->id);
   	  }
-  	  
-  	  
-  	  
+
       $data['pageTitle'] = 'Past tests, lecture notes and study guides - Find study material on Studygig';
 	  $data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
       $this->load->view('subTemplate', $data);
@@ -383,10 +349,10 @@
     redirect('users/login');
   }
   
-  function profile() {    
+  function account() {    
   
     if ($this->loggedin) {	
-      $data['content'] = 'users/profile';
+      $data['content'] = 'users/account';
       $data['user'] = $this->user; 
       $data['editted'] = false;   
   	
@@ -396,6 +362,95 @@
     }
     else  
     redirect('users/login');
+  }
+  
+  function profile(){
+	  if ($this->loggedin) {	
+	      $data['content'] = 'users/profile';
+	      $data['user'] = $this->user; 
+	  	
+	  	  $data['pageTitle'] = 'Account Settings';
+			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+	      $this->load->view('subTemplate', $data);  
+	    }
+	    else  
+	    redirect('users/login');
+  }
+  
+  function editAccount() {	      
+		if ($this->loggedin) {
+			if($this->form_validation->run('editprofile')){	
+				$this->User->update_profile($this->user->id,$this->input->post('email'),$this->input->post('confirmnewpassword'));
+				$data['content'] = 'users/account';
+				$data['user'] = $this->user; 
+				$data['editted'] = true;
+				
+				$data['pageTitle'] = 'Account Settings';
+		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+				$this->load->view('subTemplate', $data);	
+			}else{
+				$data['content'] = 'users/account';
+				$data['user'] = $this->user; 
+				$data['editted'] = false;
+				
+				$data['pageTitle'] = 'Account Settings';
+		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+				$this->load->view('subTemplate', $data);	
+			}
+		}else
+    	redirect('users/login');
+	}
+  
+  function yourUploads() {    
+  $this->load->model('Upload');
+    if ($this->loggedin) {	
+      $data['content'] = 'users/your-uploads';
+      $data['user'] = $this->user; 
+      $userid = $this->user->id;  
+      $data['uploads'] = $this->User->get_all_uploads($this->user->id);
+      foreach ($data['uploads'] as $u => $upload){
+      	$data['uploadsUsers'][$u] = $this->Upload->get_uploader($upload->id)->username;
+      	$data['uploadsCourses'][$u]  = $this->Upload->get_course_by_id($upload->id);
+  	  }
+  	
+  	  $data['pageTitle'] = 'Your Uploads';
+		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+      $this->load->view('subTemplate', $data);  
+    }
+    else  
+    redirect('users/login');
+  }
+  
+  function yourListings() {    
+   $this->load->model('Classified');
+    if ($this->loggedin) {	
+      $data['content'] = 'users/your-listings';
+      $data['user'] = $this->user; 
+      $userid = $this->user->id;  
+      $data['classifieds'] = $this->User->get_all_classifieds($this->user->id);
+      foreach ($data['classifieds'] as $l => $listing){
+      	$data['classifiedsUsers'][$l] = $this->Classified->get_uploader($listing->id)->username;
+      	$data['classifiedsCourses'][$l]  = $this->Classified->get_course_by_id($listing->id);
+  	  }
+  	  $data['pageTitle'] = 'Your Listings';
+	  $data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+      $this->load->view('subTemplate', $data);  
+    }
+    else  
+    redirect('users/login');
+  }
+  
+  function rewards(){
+	  if ($this->loggedin) {	
+	      $data['content'] = 'users/rewards';
+	      $data['user'] = $this->user; 
+	  	
+	  	  $data['pageTitle'] = 'Rewards';
+			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+	      $this->load->view('subTemplate', $data);  
+	    }
+	    else  
+	    redirect('users/login');
   }
   
   function redeemReward(){

@@ -82,7 +82,7 @@ onKeyUp="limitText(this.form.description,this.form.countdown,500);" required ></
 		</p>
 	</div>
 <input type="hidden" value="<?php echo $classified_id;?>" id="classified_id" name="classified_id" />	
-<input type="submit" value="Update Study Material" id="insertUploadButton" tabindex="8"/> 
+<input type="submit" value="Edit Listing" id="insertUploadButton" tabindex="8"/> 
 <?php echo form_close(); ?>
 	
 	</div>

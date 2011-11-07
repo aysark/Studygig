@@ -45,7 +45,7 @@
 		<span style="margin-left:50px;"><g:plusone></g:plusone></span>
 	</p>
 
-	<p><a href="insert" id="insertUploadButton">Post study material</a>  <a href="../users/dashboard" id="insertUploadButton2">Dashboard</a></p>
+	<p><a href="insert" id="insertUploadButton">Upload More</a> </p>
 
 </div>
 

@@ -83,7 +83,7 @@ onKeyUp="limitText(this.form.description,this.form.countdown,500);" required ></
 		</p>
 	</div>
 	
-<input type="submit" value="Post Study Material" id="insertUploadButton" tabindex="8"/> 
+<input type="submit" value="List Study Material" id="insertUploadButton" tabindex="8"/> 
 <?php echo form_close(); ?>
 	
 	</div>

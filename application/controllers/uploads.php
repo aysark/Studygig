@@ -283,12 +283,14 @@ class Uploads extends CI_Controller {
 		$this->load->helper('date');
 		$data['content'] = 'uploads/search';
 		$data['latestUploads'] = $this->Upload->latest();
+		$data['latestUploads1'] =  array_slice($data['latestUploads'],0, 4);
+		$data['latestUploads2'] =  array_slice($data['latestUploads'],4, 4);
+		$data['latestUploads3'] =  array_slice($data['latestUploads'],8, 4);
+		//print_r($data['latestUploads3']);
 		
 		foreach ($data['latestUploads'] as $u => $upload){
 	      	$data['latestUploadsUsers'][$u] = $this->Upload->get_uploader($upload->id)->username;
 	      	$data['latestUploadsCourses'][$u]  = $this->Upload->get_course_by_id($upload->id);
-	      	$unix = mysql_to_unix($upload->created_at);
-	      	$data['latestUploadsTimes'][$u] = $this->compare_dates($unix);
   	  }
 		
 		$data['pageTitle'] = 'Past tests, lecture notes and study guides - Find study material on Studygig';

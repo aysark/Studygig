@@ -131,7 +131,7 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
 	
 	<p>By uploading a file you certify that you have the right to distribute it and that it does not violate our <a href="<?php echo base_url();?>index.php/site/termsofuse">Terms of Use</a>.</p>
 <input type="hidden" value="<?php echo $upload_id;?>" id="upload_id" name="upload_id" />
-<input type="submit" value="Update Study Material" id="insertUploadButton" tabindex="9" /> 
+<input type="submit" value="Edit Notes" id="insertUploadButton" tabindex="9" /> 
 <?php echo form_close(); ?>
 	
 	</div>
