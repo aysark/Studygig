@@ -116,7 +116,7 @@ class Upload extends CI_Model {
   }
  
   
-  function add($paths,$types,$sizes,$numOfFiles,$anon ) {
+  function add($paths,$types,$sizes,$numOfFiles,$anon,$uuid ) {
   	if($anon){
   		$userid = 1;
   	}else{
@@ -160,7 +160,8 @@ class Upload extends CI_Model {
 			'filetype' => strtolower($typesArray[$i]),
 			'filesize' => $sizesArray[$i],
 			'related' => 1,
-			'tags' => $tags
+			'tags' => $tags,
+      'uuid' => $uuid
 			);
 			
 			$this->db->insert('uploads',$newcourse);
@@ -189,7 +190,8 @@ class Upload extends CI_Model {
 			'filetype' => strtolower($typesArray[0]),
 			'filesize' => $sizesArray[0],
 			'related' => 0,
-			'tags' => $tags		 
+			'tags' => $tags,
+      'uuid' => $uuid		 
 			);
 		
 			$this->db->insert('uploads',$newcourse);

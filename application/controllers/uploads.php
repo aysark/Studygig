@@ -132,6 +132,7 @@ class Uploads extends CI_Controller {
 	function upload() {
 		$this->load->model('Subject');
 		$this->load->model('User');
+		$this->load->library('curl');
 
 		if($this->form_validation->run('upload')){
 			if (strchr($this->input->post('uploadType'),"l")){
@@ -147,13 +148,51 @@ class Uploads extends CI_Controller {
 						$numOfFiles = 1;
 						$data['numOfFiles']=1;
 						$ext = $this->get_url_ext($url);
+
+						$ch = curl_init();
+					    curl_setopt($ch, CURLOPT_HEADER, 0);
+					    curl_setopt($ch, CURLOPT_VERBOSE, 0);
+					    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+					    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
+					    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v1/document/upload" );
+					    curl_setopt($ch, CURLOPT_POST, true);
+					    
+					    $post = array(
+					        "url"=> $url,
+					        "token" => "yYaBAI95eJxVkPb0Twvh",
+					        "private" => "true",
+					        "title" => $this->input->post('title')
+					    );
+					    curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
+					    					    
+					    #Get response from crocdoc 
+					    $json_response = curl_exec($ch);
+					    $response = json_decode($json_response);
+
+					    #Check if upload is successful 
+					    if (isset($response->uuid)) $uuid = $response->uuid;
+					    else {
+					    	
+					    	$uuid = "ERROR";
+
+					    	$data['error'] = "There was an error uploading your document";
+							$data['content'] = 'uploads/insert';
+							
+							$data['pageTitle'] = 'Post your Study Material on Studygig';
+							$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
+								
+							$this->load->view('subTemplate', $data);	
+
+					    }		 
+
+					    log_message('debug','CROCDOC: '. $json_response. " ". $uuid);
 					
 						if ($this->input->post('anon') == 1){
-								$data['upload_id']=$this->Upload->add($url,$ext,-1,$numOfFiles,true);
+								$data['upload_id']=$this->Upload->add($url,$ext,-1,$numOfFiles,true,$uuid);
 						}else{
-								$data['upload_id']=$this->Upload->add($url,$ext,-1,$numOfFiles,false);
+								$data['upload_id']=$this->Upload->add($url,$ext,-1,$numOfFiles,false,$uuid);
 						}
-						
+
 						# Facebook wall post              
 							if ($this->input->post('postfb') == 1) {
 								
@@ -237,15 +276,61 @@ class Uploads extends CI_Controller {
 								$command = "convert $input_file -resize 85% -crop 540x465+0+0 canvas:none -fill \"#0076e6\" -font AvantGarde-Demi -pointsize 28 -draw \"text 60,270 'Studygig.com Preview'\" -channel RGBA $output_file ";
 								
 								exec($command);
+
+								#Crocdoc upload
+								
+								// $response = $this->curl->simple_post(
+								// 	'https://crocodoc.com/api/v1/document/upload', 
+								// 	array('file'  =>"@".$file['file'],
+								// 		  'token' => 'yYaBAI95eJxVkPb0Twvh',
+								// 		  'title' => $file['name']));
+
+								$ch = curl_init();
+							    curl_setopt($ch, CURLOPT_HEADER, 0);
+							    curl_setopt($ch, CURLOPT_VERBOSE, 0);
+							    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+							    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
+							    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v1/document/upload" );
+							    curl_setopt($ch, CURLOPT_POST, true);
+							    
+							    $post = array(
+							        "file"=>"@". $file['file'],
+							        "token" => "yYaBAI95eJxVkPb0Twvh",
+							        "private" => "true",
+							        "title" => $file['name']
+							    );
+							    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+							    
+							    #Get response from crocdoc 
+							    $json_response = curl_exec($ch);
+							    $response = json_decode($json_response);
+
+							    #Check if upload is successful 
+							    if (isset($response->uuid)) $uuid = $response->uuid;
+							    else {
+							    	
+							    	$uuid = "ERROR";
+
+							    	$data['error'] = "There was an error uploading your document";
+									$data['content'] = 'uploads/insert';
+									
+									$data['pageTitle'] = 'Post your Study Material on Studygig';
+									$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
+										
+									$this->load->view('subTemplate', $data);	
+
+							    }		 
+
+							    log_message('debug','CROCDOC: '. $json_response. " ". $uuid);
 								
 							}
 							$this->User->log_user_ip($this->input->post('user_id'),$_SERVER['REMOTE_ADDR'],$_SERVER['HTTP_USER_AGENT'],3);
 							$data['numOfFiles']=$numOfFiles;
 							
 							if ($this->input->post('anon') == 1){
-								$data['upload_id']= $this->Upload->add($fileNames,$fileExtensions,$fileSizes,$numOfFiles,true);
+								$data['upload_id']= $this->Upload->add($fileNames,$fileExtensions,$fileSizes,$numOfFiles,true,$uuid);
 							}else{
-								$data['upload_id']= $this->Upload->add($fileNames,$fileExtensions,$fileSizes,$numOfFiles,false);
+								$data['upload_id']= $this->Upload->add($fileNames,$fileExtensions,$fileSizes,$numOfFiles,false,$uuid);
 							}
 							
 							$data['material'] = $this->input->post('material');
@@ -256,9 +341,7 @@ class Uploads extends CI_Controller {
 							$this->curl->simple_post('https://graph.facebook.com/me/feed', array('access_token'=>$this->session->userdata('token'),'link' =>'http://studygig.com' ,'message' => 'I just posted new study material on Studygig, check it out!'));
 							
 							}
-							
-							
-							
+
 							$data['pageTitle'] = 'Success - Your Study Material was posted on Studygig';
 							$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
 							$this->load->view('subTemplate', $data);
@@ -591,93 +674,113 @@ class Uploads extends CI_Controller {
 	}
 	
 	function download() {
-	
-		if ($this->session->userdata('logged_in'))
-			{			
-				$this->load->helper('download');
-				$this->load->model('Transaction');
-				$this->load->model('User');
-				
-				# Get the ids
-				$uploadid = $this->input->post('upload_id');
-				$uploader = $this->Upload->get_uploader($uploadid);
-				$uploaderid = $uploader->id;
-				
-				#Check if he already has the file
-				$already_has = $this->User->already_has($this->session->userdata('user_id'),$uploadid);
 
-				# Check if user is a subscriber
-				$this->load->model('Member');
-				$subscriber = $this->Member->is_member($this->session->userdata('user_id'));
+		if ($this->session->userdata('logged_in')) {
 			
-				if ($this->User->can_download($this->session->userdata('user_id')) or $subscriber)	
-				{
-					# Get the file
-					$data['file'] = $this->_prepare_download($this->input->post('file_path'),$this->input->post('file_name'));
-					$data['upload'] = $this->Upload->get_by_id($uploadid);					
+		    $this->load->helper('download');
+		    $this->load->model('Transaction');
+		    $this->load->model('User');
+		    
+		    # Get the ids
+		    $uploadid = $this->input->post('upload_id');
+		    $uploader = $this->Upload->get_uploader($uploadid);
+		    $uploaderid = $uploader->id;
+		    $downloader_name = $this->User->get_username_by_id($this->session->userdata('user_id'));
+		    
+		    #Check if he already has the file
+		    $already_has = $this->User->already_has($this->session->userdata('user_id'),$uploadid);
+		    
+		    # Check if user is a subscriber
+		    $this->load->model('Member');
+		    $subscriber = $this->Member->is_member($this->session->userdata('user_id'));
+		    
+		    if ($this->User->can_download($this->session->userdata('user_id')) or $subscriber) {
+		        # Get the file
+		        $data['file'] = $this->_prepare_download($this->input->post('file_path'),
+		        										 $this->input->post('file_name'));
+		        $data['upload'] = $this->Upload->get_by_id($uploadid);
+		        
+		        # Check if transaction is complete
+		        if ($this->Transaction->add($this->session->userdata('user_id'),$uploadid,$uploaderid,$already_has,$subscriber)) {
+		            $this->load->model('Favourite');
+		            
+		            $data['upload'] = $this->Upload->get_by_id($uploadid);
+		            $data['file_name'] = $data['upload']->filepath;
+		            $data['file_path'] = 'uploads/'. $data['file_name'];
+		            $data['ratings'] = $this->Upload->get_rating($uploadid);
+		            $data['uploader'] =$uploader;
+		            $data['course']  = $this->Upload->get_course_by_id($uploadid);
+		            $data['favourited'] =  $this->Favourite->is_favourited_by($this->session->userdata('user_id'),$uploadid);
+		            $data['related'] = false;
+		            $data['materialType'] = $this->Upload->get_material_by_id($uploadid);
+		            $data['fileType'] = $data['upload']->filetype;
+		            
+		            //check if upload has related uploads
+		            if ($data['upload']->related == 1) {
+		                $data['related'] = true;
+		                $data['moreByUser'] = $this->Upload->get_related($uploadid);
+		            }
+		            
+		            $data['similarUploads'] = $this->Upload->get_similar($uploadid);
+		            $data['byUserUploads'] = $this->Upload->get_byUser($uploadid);
 
-					# Check if transaction is complete
-					if ($this->Transaction->add($this->session->userdata('user_id'),$uploadid,$uploaderid,$already_has,$subscriber))
-					{
-						$this->load->model('Favourite');
-						
-						$data['upload'] = $this->Upload->get_by_id($uploadid);
-						$data['file_name'] = $data['upload']->filepath;
-						$data['file_path'] = 'uploads/'. $data['file_name'];
-						$data['ratings'] = $this->Upload->get_rating($uploadid);
-						$data['uploader'] =$uploader;
-						$data['course']  = $this->Upload->get_course_by_id($uploadid);
-						$data['favourited'] =  $this->Favourite->is_favourited_by($this->session->userdata('user_id'),$uploadid);
-						$data['related'] = false;
-						$data['materialType'] = $this->Upload->get_material_by_id($uploadid);
-						$data['fileType'] = $data['upload']->filetype;
-						
-						//check if upload has related uploads
-						if ($data['upload']->related == 1){
-							$data['related'] = true;
-							$data['moreByUser'] = $this->Upload->get_related($uploadid);
-						}
-						
-						$data['similarUploads'] = $this->Upload->get_similar($uploadid);
-						$data['byUserUploads'] = $this->Upload->get_byUser($uploadid);
-						$data['content'] = 'uploads/docview';
-					}
-						else
-					{
-						$data['content'] = 'uploads/error'; # Not created yet!
-					}
-						
-					$data['pageTitle'] = htmlspecialchars($data['upload']->title);
-					$data['pageDescription'] = $data['course'].'.  '.$data['upload']->description;
-			
-					$this->load->view('subTemplate', $data);
-				}
-					else
-				{
-					// check if the user is trying to dl their own upload
-					
-					
-					$data['content'] = 'users/notenough';
-					$data['pageTitle'] = "Oh dear, you don't have enough points!";
-					$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-				
-					$this->load->view('subTemplate', $data);
-				}	
-			}
-			
-				else
-			
-			{
-				$data['content'] = 'users/login';
-		$data['incorrectLogin'] = false;
-		$data['notVerified'] = false;
-	    $data['verifiedSent'] = false;
-	    
-	    $data['pageTitle'] = 'Login / Create an Account on Studygig';
-		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-	    
-		$this->load->view('subTemplate', $data);	
-			}
+		            $ch = curl_init();
+				    curl_setopt($ch, CURLOPT_HEADER, 0);
+				    curl_setopt($ch, CURLOPT_VERBOSE, 0);
+				    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
+				    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v1/session/get" );
+				    curl_setopt($ch, CURLOPT_POST, true);
+				    
+				    $post = array(
+				        "uuid"=> $data['upload']->uuid,
+				        "token" => "yYaBAI95eJxVkPb0Twvh",
+				        "downloadable" => "false",
+				        "name" => $downloader_name
+				    );
+
+				    log_message('debug','CROCDOC PARAMS: '. json_encode($post));
+
+				    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+				    
+				    #Get response from crocdoc 
+				    $json_response = curl_exec($ch);
+				    $response = json_decode($json_response);				    
+
+				    $data['sessionid'] = $response->sessionId;
+				    log_message('debug','CROCDOC SESSION ID: '. $response->sessionId);
+
+		            $data['content'] = 'uploads/docview';
+		        } else {
+		            $data['content'] = 'uploads/error';
+		            # Not created yet!
+		        }
+		        
+		        $data['pageTitle'] = htmlspecialchars($data['upload']->title);
+		        $data['pageDescription'] = $data['course'].'.  '.$data['upload']->description;
+		        
+		        $this->load->view('subTemplate', $data);
+		    } else {
+		        // check if the user is trying to dl their own upload
+		        
+		        
+		        $data['content'] = 'users/notenough';
+		        $data['pageTitle'] = "Oh dear, you don't have enough points!";
+		        $data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+		        
+		        $this->load->view('subTemplate', $data);
+		    }
+		} else {
+		    $data['content'] = 'users/login';
+		    $data['incorrectLogin'] = false;
+		    $data['notVerified'] = false;
+		    $data['verifiedSent'] = false;
+		    
+		    $data['pageTitle'] = 'Login / Create an Account on Studygig';
+		    $data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+		    
+		    $this->load->view('subTemplate', $data);
+		}
 	
 	}
 	
@@ -785,6 +888,5 @@ class Uploads extends CI_Controller {
   	 {
 	 	echo "You can't delete other people's stuff!";	  	 	
 	 }
-  }
-	
+  }	
 }
