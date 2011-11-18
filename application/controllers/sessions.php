@@ -38,7 +38,7 @@
 					
 				 	$data['pageTitle'] = 'Login / Create an Account on Studygig';
 					$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-					$this->load->view('subTemplate', $data);
+					$this->load->view('subTemplate2', $data);
 			}
 			}
 			else
@@ -49,7 +49,7 @@
 				
 				$data['pageTitle'] = 'Login / Create an Account on Studygig';
 				$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-				$this->load->view('subTemplate', $data);
+				$this->load->view('subTemplate2', $data);
 				
 			}
 		}else
@@ -60,7 +60,7 @@
 			
 			$data['pageTitle'] = 'Login / Create an Account on Studygig';
 			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-			$this->load->view('subTemplate',$data);
+			$this->load->view('subTemplate2',$data);
 		}
 	
 	}
@@ -129,7 +129,7 @@
             	$data['signedUpThruStudygig'] = false;
             	$data['pageTitle'] = 'Success, your account was created on Studygig';
 				$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-				$this->load->view('subTemplate',$data);
+				$this->load->view('subTemplate2',$data);
         }
             
                         		
@@ -156,8 +156,6 @@
      $app_secret = "fec7d93520564ba77807f059a823639a";
      $my_url = current_url();//"http://www.studygig.com/index.php/sessions/fb_login";
   	
-  	
-     
      $code = $this->input->get('code');
   	 
      if(empty($code)) {
@@ -232,7 +230,7 @@
             	$data['signedUpThruStudygig'] = false;
             	$data['pageTitle'] = 'Success, your account was created on Studygig';
 				$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-							$this->load->view('subTemplate',$data);
+							$this->load->view('subTemplate2',$data);
 		    			
 		    }
 		    	 

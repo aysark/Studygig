@@ -1,8 +1,7 @@
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.MultiFile.min.js"></script>	
   
-<div id="content2">
 <div class="twoCol1">
-	<h1>Upload notes</h1>
+	<h1>Upload Notes</h1>
 	
 	<?php if ( isset($error)) {
 			
@@ -108,7 +107,7 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
 </div>
 
 	</div>
-	
+	<!--
 	<div id="insertKeywords">
 		<h2>Add tags <a href="#" class="dashHelp" title="These help make your study material more relevant and search-friendly."><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Optional.</span></h2>
 		
@@ -141,13 +140,13 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
           <option value="Tutorial">Tutorial</option>
         </select>
 		
-	</div>
+	</div> 
 	
 	<div id="postfb">
 		<h2>Would you like to tell your friends on Facebook? <a href="#" class="dashHelp" title="It helps promote your stuff to get you points! This only posts to your wall once, we will never use it for spam- pwomise!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a><span class="formDesc">Optional. </span></h2>
 		<label><input type="checkbox" name="postfb" id="postfb" value="1" tabindex="9" /> I would like to make a Facebook post.</label>
-	</div>
-	
+	</div>-->
+	<div class="clear"></div>
 	<p>By uploading a file you certify that you have the right to distribute it and that it does not violate our <a href="<?php echo base_url();?>index.php/site/termsofuse">Terms of Use</a>.</p>
 	
 <input type="submit" value="Upload Notes" id="insertUploadButton" tabindex="9" /> 
@@ -175,7 +174,6 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
             
     </div>
     
-</div>
 </div>
 
 <script src="<?php echo base_url();?>js/chosen.jquery.js" type="text/javascript"></script>

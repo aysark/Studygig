@@ -1,5 +1,4 @@
-<div id="content2">
-	
+
 <div class="loginCol">	
 	<span id="loginTitle">Login to your Studygig Account</span>
 	<?php 
@@ -45,7 +44,6 @@ Password: <input type="password" class="formTextField2" name="password" maxlengt
 </div>
 <?php echo form_close();?>
 <div class="clear"></div>
-</div>
 </div>
 </div>
 

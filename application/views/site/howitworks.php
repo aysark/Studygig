@@ -1,6 +1,6 @@
 <div id="content2">
 
-<div class="roundedCornerContent">	
+<div class="roundedCornerContent" style="width:97%;">	
 	<span class="bigText">How it works</span>
 	<div class="howitworkFeat">
 		<div class="howitworkTextL">

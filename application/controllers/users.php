@@ -23,7 +23,7 @@
 		
 		$data['pageTitle'] = 'Create an Account on Studygig';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function verify($hash) {
@@ -48,7 +48,7 @@
 				
 				$data['pageTitle'] = 'Past tests, lecture notes and study guides - Find study material on Studygig';
 				$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-				$this->load->view('subTemplate',$data);
+				$this->load->view('subTemplate2',$data);
 				
 				
 				// send welcome email
@@ -77,7 +77,7 @@
 			$data['content'] = 'users/verified';
 			$data['pageTitle'] = 'Your email was not verified.';
 			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-			$this->load->view('subTemplate',$data);
+			$this->load->view('subTemplate2',$data);
 		}
 	}
 
@@ -119,7 +119,7 @@
 					$data['pageTitle'] = 'Success, your account was created on Studygig';
 					$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
 					
-					$this->load->view('subTemplate',$data);
+					$this->load->view('subTemplate2',$data);
 		}
 			else
 		{
@@ -128,7 +128,7 @@
 			$data['pageTitle'] = 'Create an Account on Studygig';
 			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
 			
-			$this->load->view('subTemplate',$data);
+			$this->load->view('subTemplate2',$data);
 		}
 	}
 	
@@ -138,7 +138,7 @@
 		
 		$data['pageTitle'] = 'Past tests, lecture notes and study guides - Find study material on Studygig';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';		
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function resendVerificationEmail(){
@@ -179,7 +179,7 @@
 			
 			$data['pageTitle'] = 'Past tests, lecture notes and study guides - Find study material on Studygig';
 			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';		
-			$this->load->view('subTemplate', $data);	
+			$this->load->view('subTemplate2', $data);	
 		}else{
 		
 		$data['content'] = 'users/resendemail';
@@ -187,7 +187,7 @@
 			
 			$data['pageTitle'] = 'Past tests, lecture notes and study guides - Find study material on Studygig';
 			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';		
-			$this->load->view('subTemplate', $data);	
+			$this->load->view('subTemplate2', $data);	
 	}
 	}
 
@@ -199,7 +199,7 @@
 	    $data['pageTitle'] = 'Login / Create an Account on Studygig';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
 	    
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function underconstruction() {
@@ -208,7 +208,7 @@
 	    $data['pageTitle'] = 'This feature is still under construction';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
 	    
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function forgotpass(){
@@ -217,7 +217,7 @@
 		
 		$data['pageTitle'] = 'Past tests, lecture notes and study guides - Find study material on Studygig';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';		
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function resetpass(){
@@ -264,7 +264,7 @@
 			
 			$data['pageTitle'] = 'Past tests, lecture notes and study guides - Find study material on Studygig';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-			$this->load->view('subTemplate', $data);	
+			$this->load->view('subTemplate2', $data);	
 		}else{
 			
 			$data['content'] = 'users/forgotpassword';
@@ -272,7 +272,7 @@
 			
 			$data['pageTitle'] = 'Past tests, lecture notes and study guides - Find study material on Studygig';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-			$this->load->view('subTemplate', $data);	
+			$this->load->view('subTemplate2', $data);	
 		}
 		
 		
@@ -343,7 +343,7 @@
 
       $data['pageTitle'] = 'Past tests, lecture notes and study guides - Find study material on Studygig';
 	  $data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-      $this->load->view('subTemplate', $data);
+      $this->load->view('subTemplate2', $data);
     }
     else
     redirect('users/login');
@@ -358,7 +358,7 @@
   	
   	  $data['pageTitle'] = 'Account Settings';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-      $this->load->view('subTemplate', $data);  
+      $this->load->view('subTemplate2', $data);  
     }
     else  
     redirect('users/login');
@@ -371,11 +371,59 @@
 	  	
 	  	  $data['pageTitle'] = 'Account Settings';
 			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-	      $this->load->view('subTemplate', $data);  
+	      $this->load->view('subTemplate2', $data);  
 	    }
 	    else  
 	    redirect('users/login');
   }
+  
+  function invite(){
+  	if ($this->loggedin) {
+	      $data['content'] = 'users/invite';
+	  	  $data['user'] = $this->user;
+	  	  $data['pageTitle'] = 'Invite Your Friends & Classmates';
+		  $data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+	      $this->load->view('subTemplate2', $data);  
+	}else
+    	redirect('users/login');
+  }
+  
+  function sendInvites(){
+  if ($this->session->userdata('logged_in')) 
+		{	
+				//$this->User->addInviteMessage();
+				
+				//$sender = $this->User->find_by_id($this->session->userdata('user_id'));
+				
+				echo $this->input->post('emails');
+				/*
+				foreach( $this->input->post('emails') as $e ) {
+				    echo $e;
+				}
+				
+				
+				$email = $this->input->post('listing_id');
+				
+				$body='<meta content="text/html; charset=utf-8" http-equiv=Content-Type><title>Welcome to Studygig</title><body><table cellpadding=0 cellspacing=0 border=0 align=center width="100%" style="padding: 0px 0 35px; background-image:url(\'http://email.studygig.com/welcome/images/bg_tile.png\'); background-repeat:repeat; background-position:center top" bgcolor="#f7f7f7"><tr><td height=20></td><tr><td align=center><table cellpadding=0 cellspacing=0 border=0 align=center width=599 style="font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif"><tr><td width=20></td><td width=200 style="margin: 0; padding: 10px 0 0" align=center valign=top><a href="http://studygig.com"><img src="http://email.studygig.com/welcome/images/studygig-logo.png" alt="Studygig Logo" width=174 height=61 style=float:left border=0></a><p style="color:#767676; font-weight: normal; margin: 0; padding: 0; line-height: 20px; font-size: 12px; float:right"><a href="http://studygig.com/index.php/users/login" style="color: #006eda; text-decoration: none">Login</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://studygig.com/index.php/site/help" style="color: #006eda; text-decoration: none">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://studygig.com/" style="color: #006eda; text-decoration: none">Search</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://studygig.com/index.php/site/contact" style="color: #006eda; text-decoration: none">Contact</a></p></td><td width=20></td><tr><td height=20></td><tr><td width=20></td><td style="padding:10px; border-style:dotted; border-width:1px; border-color: #CCC" align=left valign=top><p style=font-size:18px>'.nl2br(trim($this->input->post('message'))).'</p><p style=font-size:12px>Direct message sent by '.$sender->username.' ('.$sender->email.') to you ('.$email->email.').</p></td><td width=20></td><tr><td width=20></td><td style="margin: 0; padding: 15px 0 0" align=left valign=top><span style=font-size:18px>Send a message back to '.$sender->username.' by replying to this email.</span></td><td width=20></td></table><table cellpadding=0 cellspacing=0 border=0 align=center width=599 style="font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif"><tr><td width=599 valign=top align=left style="font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif"></td></table><table cellpadding=0 cellspacing=0 border=0 align=center width=599 style="font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif; line-height: 10px" class=footer><tr><td align=center style="padding: 15px 0 10px; font-size: 12px; color:#8a8a8a; margin: 0; line-height: 1.2;font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif" valign=top><p style="font-size: 12px; color:#8a8a8a; margin: 0; padding: 0;font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif">This message is a service email related to your use of Studygig.<br>Follow the adventures of Studygig:&nbsp;<a href="http://twitter.com/studygig">@studygig</a>,&nbsp;<a href="http://www.facebook.com/studygig">facebook.com/studygig</a>,&nbsp;<a href="http://studygig.posterous.com/">blog.studygig.com</a></p></td><tr></table></td></table>';
+				$rawMime = 
+				    "X-Priority: 1 (Highest)\n".
+				    "X-Mailgun-Tag: Classified Messages Email\n".
+				    "X-Campaign-Id: Classified Messages Email\n".
+				    "Content-Type: text/html;charset=UTF-8\n".    
+				    "From:".$sender->email."\n".
+				    "To: ".$email."\n".
+				    "Subject: Direct message from ".$sender->username." - Studygig\n".
+				    "\n".
+			$body;
+			MailgunMessage::send_raw($sender->email, $email, $rawMime); 
+				echo "Message was sent successfully.";
+				*/
+		}
+			else
+		{
+			echo '<a href="'.base_url().'index.php/users/signup">Register</a> or <a href="'.base_url().'index.php/users/login">Login</a> to send message.';
+		}	
+	}
   
   function editAccount() {	      
 		if ($this->loggedin) {
@@ -387,7 +435,7 @@
 				
 				$data['pageTitle'] = 'Account Settings';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-				$this->load->view('subTemplate', $data);	
+				$this->load->view('subTemplate2', $data);	
 			}else{
 				$data['content'] = 'users/account';
 				$data['user'] = $this->user; 
@@ -395,7 +443,7 @@
 				
 				$data['pageTitle'] = 'Account Settings';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-				$this->load->view('subTemplate', $data);	
+				$this->load->view('subTemplate2', $data);	
 			}
 		}else
     	redirect('users/login');
@@ -415,7 +463,7 @@
   	
   	  $data['pageTitle'] = 'Your Uploads';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-      $this->load->view('subTemplate', $data);  
+      $this->load->view('subTemplate2', $data);  
     }
     else  
     redirect('users/login');
@@ -434,7 +482,7 @@
   	  }
   	  $data['pageTitle'] = 'Your Listings';
 	  $data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-      $this->load->view('subTemplate', $data);  
+      $this->load->view('subTemplate2', $data);  
     }
     else  
     redirect('users/login');
@@ -447,7 +495,7 @@
 	  	
 	  	  $data['pageTitle'] = 'Rewards';
 			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-	      $this->load->view('subTemplate', $data);  
+	      $this->load->view('subTemplate2', $data);  
 	    }
 	    else  
 	    redirect('users/login');

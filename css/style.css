@@ -59,14 +59,13 @@ a:visited {
 }
 
 #navbar{
-	z-index: 9999;
+	z-index: 3;
     position: relative;
 	background: #F6F6F6 url("../images/nav/bg.png") repeat-x;
 	height: 79px;
 	line-height: 16px;
 	text-shadow: 0 1px 1px white;
 	font-weight: bold  !important;
-	margin-bottom: 5px;
 }
 
 #innerNavBar{
@@ -307,37 +306,93 @@ background: url("../images/nav/pointsIconBig.png") no-repeat;
 	width:145px;
 	height:54px;
 }
+#greyButtonNav {
+	background: white;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	width: 938px;
+	height: 41px;
+	list-style-type: none;
+	margin: 0;
+	padding: 16px 0 0 0;
+	
+	border: 1px solid #D5D5D5;
+	-moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.07);
+	background: white;
+	background: -moz-linear-gradient(top, white 30%, #F0F0F0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,white), color-stop(100%,#F0F0F0));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#F0F0F0',GradientType=0 );
+	background: -o-linear-gradient(top, white 30%,#F0F0F0 100%);
+}
+#greyButtonNav li{
+	display: inline;
+	height: 30px;
+	padding: 15px 100px 15px 100px;
+	margin: 0px 0px 0 0;
+	font-size: 24px;
+	font-weight: bold;
+	border-right: 1px solid #E0E0E0;
+}
+#greyButtonNav li:last-child{
+	border-right: none;
+}
+#greyButtonNav li a{
+	color: #BFC2C4;
+	font-weight: bold;
+	text-decoration: none;
+}
+#greyButtonNav li a:hover{
+	color: #434D51;
+}
+#greyButtonNav li a:active{
+	color: #01509d;
+}
+
 
 #greyButton1{
 	width:470px;
 	height:67px;
-	background:url("../images/main/upload-your-notes.png") no-repeat 0px 0px;
+	background:url("../images/main/upload-your-notes2.png") no-repeat 0px 0px;
 	float:left;
 }
 #greyButton1:hover{
 	width:470px;
 	height:67px;
-	background:url("../images/main/upload-your-notes.png") no-repeat 0px -67px;
+	background:url("../images/main/upload-your-notes2.png") no-repeat 0px -67px;
+}
+#greyButton1:active{
+	width:470px;
+	height:67px;
+	background:url("../images/main/upload-your-notes2.png") no-repeat 0px -134px;
 }
 #greyButton2{
 	width:470px;
 	height:67px;
-	background:url("../images/main/list-your-books-for-sale.png") no-repeat 0px 0px;
+	background:url("../images/main/list-your-books-for-sale2.png") no-repeat 0px 0px;
 	float:right;
 }
 #greyButton2:hover{
 	width:470px;
 	height:67px;
-	background:url("../images/main/list-your-books-for-sale.png") no-repeat 0px -67px;
+	background:url("../images/main/list-your-books-for-sale2.png") no-repeat 0px -67px;
+}
+#greyButton2:active{
+	width:470px;
+	height:67px;
+	background:url("../images/main/list-your-books-for-sale2.png") no-repeat 0px -134px;
 }
 
 
 #content{
-padding-top:10px;
+padding-top:5px;
 }
 
 #content2{
-	padding-top:10px;
+	padding:0;
 }
 
 
@@ -685,18 +740,12 @@ color:#fff;text-shadow:0 1px 1px rgba(0,0,0,0.4);background:#1d9dff;background:-
 /** USER PAGE STYLING **/
 /** ------------------------ **/
 #user_navbar {
-	background: white;
-	border-top-right-radius: 10px;
-	-moz-border-radius-topright: 10px;
-	-webkit-border-top-right-radius: 10px;
-	border-top-left-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-webkit-border-top-left-radius: 10px;
 	width: 940px;
-	height: 42px;
+	height: 32px;
 	list-style-type: none;
-	margin: 0;
-	padding: 11px 0 0 0;
+	margin: 0 0 5px 0;
+	padding: 5px 0 0 0;
+
 }
 #user_navbar li{
 	display: inline;
@@ -730,6 +779,24 @@ color:#fff;text-shadow:0 1px 1px rgba(0,0,0,0.4);background:#1d9dff;background:-
 
 #tabs-1 a:visited, #tabs-2 a:visited, #tabs-3 a:visited  {
   color: #005db5; }
+  
+#dashboardShare{
+  	width:90%;
+  	font-weight: 600;
+	text-align: center;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.silver{
+	border: 1px solid #D5D5D5;
+	-moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.07);
+	background: white;
+	background: -moz-linear-gradient(top, white 30%, #F0F0F0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,white), color-stop(100%,#F0F0F0));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#F0F0F0',GradientType=0 );
+	background: -o-linear-gradient(top, white 30%,#F0F0F0 100%);
+}
   
 #dashboardSnapshot{
 	width:90%;
@@ -786,6 +853,9 @@ color:#fff;text-shadow:0 1px 1px rgba(0,0,0,0.4);background:#1d9dff;background:-
 }
 #favourites ul li:hover{
 	border-top: 1px solid #01509d;
+}
+#favourites ul li:first-child{
+	border-top: 0;
 }
 .actions{
 	float:right;
@@ -1110,6 +1180,54 @@ text-decoration: none!important;
 	padding-top: 0px; padding-right: 0.7em; padding-bottom: 0px; padding-left: 0.7em;
 }
 /** ------------------------ **/
+/** INVITE PAGE STYLING **/
+/** ------------------------ **/
+#inviteOffer{
+	position: relative;
+	overflow: hidden;
+	width: 505px;
+	margin: 0 auto;
+	padding-top:15px;
+}
+#friendsPic{
+	width: 252px;
+	float: left;
+	background-image: url(../images/invite/friends.png);
+	height:174px;
+}
+#equals{
+	background: transparent url(../images/invite/equals.png) no-repeat center center;
+	height: 160px;
+	width: 100px;
+	float: left;
+}
+#pointCredit{
+	height: 163px;
+	width:156px;
+	position: absolute;
+	left: 348px;
+	bottom: 10px;
+	background-image: url(../images/invite/pointCredit.png);
+}
+#inviteOfferText{
+	font-size: 23px;
+	color: #434D51;
+	text-align: center;
+	font-weight: 500;
+	position: relative;
+	z-index: 3;
+}
+#inviteAction{
+	padding: 10px 0;
+border-top: 1px solid #CECECE;
+margin-top: 0px;
+font-size: 35px;
+color: #393C3D;
+height: 45px;
+}
+
+
+/** ------------------------ **/
 /** UPLOADED PAGE STYLING **/
 /** ------------------------ **/
 
@@ -1169,25 +1287,6 @@ text-decoration: none!important;
 	-webkit-border-radius:10px;
 	border-radius:10px;
 	color:#f6f6f6;
-}
-a.uploadAnotherStudyMatButton{
-	-moz-box-shadow:inset 0px 1px 0px 0px #fab3ad;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #fab3ad;
-	box-shadow:inset 0px 1px 0px 0px #fab3ad;
-	background-color:#fa665a;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px;
-	border:1px solid #d83526;
-	display:inline-block;
-	color:#ffffff;
-	font-family:arial;
-	font-size:16px;
-	font-weight:bold;
-	padding:15px 35px;
-	text-decoration:none;
-}a.uploadAnotherStudyMatButton:hover {
-	background-color:#d34639;
 }
 #more{
 	float:right;
@@ -1890,38 +1989,12 @@ text-decoration: none!important;
 #requestForm{
 	display:inline;
 }
-#postStudyMaterialButton2{
-	vertical-align:middle;
-	text-align:center;
-	-moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;
-	box-shadow:inset 0px 1px 0px 0px #fff6af;
-	background-color:#ffec64;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px;
-	border:none;
-	display:inline-block;
-	color:#002d7a;
-	font-family:arial;
-	font-size:12px;
-	font-weight:bold;
-	padding:6px 20px;
-	text-decoration:none;
-	text-shadow:1px 1px 0px #ffee66;
-	margin-left:8px;
-	margin-right:5px;
-	margin-top:-10px;
-	position:relative;
-}#postStudyMaterialButton2:hover {
-	background-color:#ffe224;
-	cursor:pointer;
-}
+
 #requestStudyMaterial{
 	display:inline;
 }
 .clear{
-	clear:both;
+	clear: both;
 }
 
 #seperator {

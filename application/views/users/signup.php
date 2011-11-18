@@ -1,6 +1,4 @@
 
-<div id="content2">
-	
 <div class="signupCol">	
 	<span id="loginTitle">Create a <b>Free</b> Account</span>
 	<?php

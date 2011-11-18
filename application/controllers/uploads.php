@@ -27,7 +27,7 @@ class Uploads extends CI_Controller {
 		$data['content'] = 'uploads/insert';
 		$data['pageTitle'] = 'Share your Study Material on Studygig';
 		$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
-		$this->load->view('subTemplate',$data);
+		$this->load->view('subTemplate2',$data);
 		
 	}
 	

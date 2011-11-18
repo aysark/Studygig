@@ -3,43 +3,46 @@
        	 	Find helpful study material.
         </div>
     	<div id="subslogan">
-        	Search more than 1000 documents from 500+ students (and counting)
+        	Search more than 1000 documents from hundreds of students (and counting)
         </div>
         <div id="mainSearch">
         	<?php $attributes = array('class' => 'search', 'method' => 'post', 'name' => 'searchform', 'onsubmit' => 'return validateForm()' ); 
 	echo form_open('uploads/searchfor',$attributes); ?>
-<input type="text" name="query" id="mainSearchField" /><input name="submit" type="submit" value="" id="mainSearchButton" class="button" />
+<input type="text" name="query" id="mainSearchField" placeholder="What course are you studying?"  /><input name="submit" type="submit" value="" id="mainSearchButton" class="button" />
       <?php echo form_close(); ?>
         </div>
       
-  </div>
-    <!-- end header div -->
-    <div id="greyButtonNav">
-    	<a href="index.php/uploads/insert" ><div id="greyButton1"></div></a>
-    	<a href="index.php/classifieds/insert"  ><div id="greyButton2"></div></a>
-	</div> <!-- end grey button nav div -->
-    <div class="clear"></div>
-    
+  </div> <!-- end header div -->
+
+	<ul id="greyButtonNav">
+		<li >
+			<a href="index.php/uploads/insert">Upload Your Notes</a>
+		</li>
+		<li>
+			<a href="index.php/classifieds/insert">List Your Books for Sale</a>
+		</li>
+	</ul>    
     
 <div id="content">
         <div id="mainContentText">
             <div class="col1">
                 <h1>Collaborate</h1>
                 <div id="collaborateIcon"></div>
-<p class="featureText">  <b>Find and share class notes</b>, past tests and study guides at the click of a button.  Connect with other students and collaborate in real-time.  <a href="">Learn more »</a> </p>
+<p class="featureText">  <b>Find and share class notes</b>, past tests and study guides at the click of a button.  Connect with other students and collaborate in real-time. </p>
             </div>
             <div class="col2">
                 <h1>Study Smarter</h1>
                 <div id="studyIcon"></div>
-<p class="featureText">  <b>Improve your GPA</b>, access notes at anytime, anywhere to help you study more effectively.  Your notes in the cloud.  <a href="">Learn more »</a> </p>
+<p class="featureText">  <b>Improve your GPA</b>, access notes at anytime, anywhere to help you study more effectively.  Your notes in the cloud. </p>
             </div>
             <div class="col3">
                 <h1>Get Rewarded</h1>
                 <div id="rewardIcon"></div>
-<p class="featureText">  <b>Earn points for sharing your notes</b>. Exchange them for real-life rewards.  <a href="">Learn more »</a> </p>
+<p class="featureText">  <b>Earn points for sharing your notes</b>. Exchange them for real-life rewards. </p>
             </div>
          </div>
          <div class="clear"></div>
+
     <div id="subContent">
     	<a href="/"><div id="now-at-york-university"></div></a>
     	<a href="index.php/site/academicintegrity"><div id="supported-by-your-professor"></div></a>
@@ -115,7 +118,6 @@
  
 <script type="text/javascript" language="JavaScript">
 
-document.forms['searchform'].elements['query'].focus();
 
  $("#booksIconSearch").click(function () { 
  	   document.forms['searchform'].elements['query'].value = "Advanced Macroeconomics - David Romer";

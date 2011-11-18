@@ -291,7 +291,7 @@
 .ui-corner-all { -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; }
 
 /* Overlays */
-.ui-widget-overlay { background: #000000 url(images/ui-bg_fine-grain_75_000000_60x60.png) 50% 50% repeat; opacity: .25;filter:Alpha(Opacity=25); }
+.ui-widget-overlay { background: #000000 url(images/ui-bg_fine-grain_75_000000_60x60.png) 50% 50% repeat; opacity: .1;filter:Alpha(Opacity=1); }
 .ui-widget-shadow { margin: -4px 0 0 -4px; padding: 4px; background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: 0;filter:Alpha(Opacity=0); -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; }/*
  * jQuery UI Resizable 1.8.13
  *

@@ -1,5 +1,4 @@
-<div id="content2">
-	
+
 	<ul id="user_navbar">
 		<li class="active">
 			<a href="dashboard">Dashboard</a>
@@ -25,6 +24,11 @@
 	<h1><?php echo $user->username;?></h1>
 	<span class="edit_button floatRight"><a href="profile">Edit Profile</a></span>
 	<div class="clear"></div>
+	<div id="dashboardShare" class="roundedCornerContent silver">
+		  Invite your friends <br/>Earn $20 point credit!
+		  <br/>
+		  <a href="invite" id="insertUploadButton" style="font-size:18px; margin-top:10px;">Invite Now</a>
+	</div>
 	<div id="dashboardSnapshot" class="roundedCornerContent">
 		<h2>Snapshot</h2>
 		<br/>
@@ -79,7 +83,7 @@
 <ul class="dashboardList">
 <li><a href="../uploads/insert"><img src="../../images/post-study-material-icon.png" class="textmiddle"> Upload Notes</a></li>
 <li><a href="../classifieds/insert"><img src="../../images/list-study-material-icon.png" class="textmiddle"> List Your Books</a></li>
-<li><img src="../../images/download-earn-icon.png" class="textmiddle"><a href="rewards"> Earn Rewards</a></li>
+<li><img src="../../images/download-earn-icon.png" class="textmiddle"><a href="profile"> Earn Rewards</a></li>
 </ul>
 </div>
 
@@ -135,4 +139,4 @@
 </div>
 <?php endif; ?>
 
-</div>
+

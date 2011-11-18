@@ -13,7 +13,7 @@ class Site extends CI_Controller {
 			$this->load->vars($data);
 		}
 
-		$this->output->cache(5);
+		//$this->output->cache(5);
 	
 	}
 	
@@ -22,7 +22,7 @@ class Site extends CI_Controller {
 		
 		$data['pageTitle'] = 'How Studygig Works';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function aboutus() {
@@ -30,7 +30,7 @@ class Site extends CI_Controller {
 		
 		$data['pageTitle'] = 'About Studygig';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function mailinglist() {
@@ -38,7 +38,7 @@ class Site extends CI_Controller {
 		
 		$data['pageTitle'] = 'Join the Studygig Mailing List';
 		$data['pageDescription'] = 'Stay up-to-date with us about new site features, giveaways, and when we launch at new universities!';
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function tenreasons() {
@@ -46,7 +46,7 @@ class Site extends CI_Controller {
 		
 		$data['pageTitle'] = '9 reasons why students use Studygig';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function help() {
@@ -54,7 +54,7 @@ class Site extends CI_Controller {
 		
 		$data['pageTitle'] = 'FAQs and Help on Studygig';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function blog() {
@@ -62,7 +62,7 @@ class Site extends CI_Controller {
 		
 		$data['pageTitle'] = 'Studygig Blog';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function academicintegrity() {
@@ -70,7 +70,7 @@ class Site extends CI_Controller {
 		
 		$data['pageTitle'] = 'Academic Integrity';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function copyright() {
@@ -78,7 +78,7 @@ class Site extends CI_Controller {
 		
 		$data['pageTitle'] = 'Copyright Notice';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function termsofuse() {
@@ -86,7 +86,7 @@ class Site extends CI_Controller {
 		
 		$data['pageTitle'] = 'Terms of Use';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function privacy() {
@@ -94,7 +94,7 @@ class Site extends CI_Controller {
 		
 		$data['pageTitle'] = 'Privacy Policy';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 	}
 	
 	function contact() {
@@ -141,7 +141,7 @@ class Site extends CI_Controller {
 			
 					$data['pageTitle'] = 'Contact Us';
 					$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-					$this->load->view('subTemplate', $data);	
+					$this->load->view('subTemplate2', $data);	
 
 				
 			}else{
@@ -151,7 +151,7 @@ class Site extends CI_Controller {
 		
 		$data['pageTitle'] = 'Contact Us';
 		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		$this->load->view('subTemplate', $data);	
+		$this->load->view('subTemplate2', $data);	
 
 			}
 	

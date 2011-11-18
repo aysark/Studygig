@@ -1,4 +1,5 @@
 	<p>By emailing you agree to our terms & privacy policy.</p>
+	<form>
 To:
 <input type="textfield" id="username" name="username" disabled="disabled" value="<?php echo $uploader->username; ?>" />
 Message:

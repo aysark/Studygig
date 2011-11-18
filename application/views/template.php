@@ -94,27 +94,10 @@ $(function() {
 	
 	$( "#mainSearchField" ).catcomplete({
 				source: "get_course_list.php",
-				minLength: 1,
+				minLength: 2,
 				delay: 0
-				
 			});
-	$( "#postStudyMaterialDialog" ).dialog({
-		autoOpen: false,
-			height: 340,
-			width: 485,
-			modal: true,
-			buttons: {
-				Cancel: function() {
-					$( this ).dialog( "close" );
-				}
-			},
-		close: function() {
-				allFields.val( "" ).removeClass( "ui-state-error" );
-			}
-	});
-	$( "#postStudyMaterialButton" )	.click(function() {
-				$( "#postStudyMaterialDialog" ).dialog( "open" );
-			});
+	
 			
 // google analytics START
   var _gaq = _gaq || [];
