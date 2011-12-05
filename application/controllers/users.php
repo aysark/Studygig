@@ -376,6 +376,12 @@
 	    else  
 	    redirect('users/login');
   }
+
+  function editprofile(){
+  	
+  	$this->User->editprofile();
+  	redirect('users/dashboard');
+  }
   
   function invite(){
   	if ($this->loggedin) {
