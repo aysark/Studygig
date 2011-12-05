@@ -422,4 +422,15 @@
   		return FALSE;
   	}
   	
+  	function addInvites($id, $numOfEmails, $emails){
+  	
+		$newInvite = array(	
+		'user_id' => $id,
+		'num_invitees' => $numOfEmails,
+		'emails'=> mysql_real_escape_string(trim($emails))
+		);
+	
+		$this->db->insert('invites',$newInvite);
+  }
+  	
 }

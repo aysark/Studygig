@@ -44,10 +44,10 @@
          <div class="clear"></div>
 
     <div id="subContent">
-    	<a href="/"><div id="now-at-york-university"></div></a>
+    	<div id="now-at-york-university"></div>
     	<a href="index.php/site/academicintegrity"><div id="supported-by-your-professor"></div></a>
     	<a href="index.php/site/tenreasons"><div id="reasons-students-use-studygig"></div></a>
-    	<a href="/"><div id="studygig-classifieds-sell-buy-text-books"></div></a>
+    	<a href="index.php/classifieds/searchAll"><div id="studygig-classifieds-sell-buy-text-books"></div></a>
     	
     	<div class="clear"></div>
     	<br/>

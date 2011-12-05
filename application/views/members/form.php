@@ -1,5 +1,3 @@
-<div id="content2">
-
 <div class="roundedCornerContent">	
 	<span class="bigText">Become a Member</span><a href="http://paypal.com"><img src="../../images/paypal_buttons/paypal_logo.jpg" style="float:right;"/></a>
 	<br>
@@ -7,37 +5,43 @@
 	
 	<p>Stop worrying about earning points to download your study material! <br> When you become a member you get unlimited access to all study material on Studygig.
 	</p>
-	The forever-free plan: upload documents and earn points! 
-	<br>
+	<h2>Member Features:</h2>
+	<ul id="memberFeatureList">
+		<li>Unlimited Downloads</li>
+		<li>Unlimited Dashboard Capacity</li>
+		<li>Unlimited Document Backups</li>
+		<li>No Ads (soon to be introduced)</li>
+		<li>24/7 Support</li>
+	</ul>
 	<div class="plan">
-		<div class="planBg">
+		<div class="roundedCornerContent silver">
 			<span class="bigBlackText2">Yearly Plan</span>
 			<br>
-			$6/month <br> (billed one-time $72/year)
+			<span class="memberPrice">$6/month</span> <br> (billed one-time $72/year)
 			<?php echo $paypal_form_yearly; ?>
 		</div>
 	</div>
 	<div class="plan">
-		<div class="planBg">
-			<span class="bigBlackText2">Term Plan</span>  <span class="popText">Popular</span>
+		<div class="roundedCornerContent blue">
+			<span class="bigBlackText2" style="color:white;">Term Plan</span>  <span class="popText">[Popular]</span>
 			<br>
-			$12/month <br> (billed one-time $48/4 mnths)
+			<span class="memberPrice">$12/month</span> <br> (billed one-time $48/4 mnths)
 			<?php echo $paypal_form_term; ?>
 		</div>
 	</div>
 	<div class="plan">
-		<div class="planBg">
+		<div class="roundedCornerContent silver">
 			<span class="bigBlackText2">Quarterly Plan</span> 
 			<br>
-			$19/month <br> (billed one-time $57/3 mnths)
+			<span class="memberPrice">$19/month</span> <br> (billed one-time $57/3 mnths)
 			<?php echo $paypal_form_quarterly; ?>
 		</div>
 	</div>
 	<div class="plan">
-		<div class="planBg">
+		<div class="roundedCornerContent silver">
 			<span class="bigBlackText2">Monthly Plan</span> 
 			<br>
-			$25/month <br><br>
+			<span class="memberPrice">$25/month</span> <br><br>
 			<?php echo $paypal_form_monthly; ?>
 		</div>
 	</div>
@@ -59,7 +63,12 @@
 	
 </p>
 </div>
-	
-</div>
+<script type="text/javascript" language="JavaScript">
 
+$(function(){
+	$('input[type="submit"]').attr('id','insertUploadButton');
+}
+);
+
+</script>
 

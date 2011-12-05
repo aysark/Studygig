@@ -181,7 +181,7 @@ class Uploads extends CI_Controller {
 							$data['pageTitle'] = 'Post your Study Material on Studygig';
 							$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
 								
-							$this->load->view('subTemplate', $data);	
+							$this->load->view('subTemplate2', $data);	
 
 					    }		 
 
@@ -203,7 +203,7 @@ class Uploads extends CI_Controller {
 						$data['pageTitle'] = 'Success - Your Study Material was posted on Studygig';
 						$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
 						
-						$this->load->view('subTemplate', $data);
+						$this->load->view('subTemplate2', $data);
 						
 						
 					}else{
@@ -215,7 +215,7 @@ class Uploads extends CI_Controller {
 					$data['pageTitle'] = 'Post your Study Material on Studygig';
 					$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
 						
-					$this->load->view('subTemplate', $data);
+					$this->load->view('subTemplate2', $data);
 				}
 					
 				}else{
@@ -226,7 +226,7 @@ class Uploads extends CI_Controller {
 					$data['pageTitle'] = 'Post your Study Material on Studygig';
 					$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
 						
-					$this->load->view('subTemplate', $data);
+					$this->load->view('subTemplate2', $data);
 				}
 				
 			}else{
@@ -250,7 +250,7 @@ class Uploads extends CI_Controller {
 						$data['pageTitle'] = 'Post your Study Material on Studygig';
 						$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
 						
-						$this->load->view('subTemplate', $data);
+						$this->load->view('subTemplate2', $data);
 		        }    
 		        else
 		        {
@@ -317,7 +317,7 @@ class Uploads extends CI_Controller {
 									$data['pageTitle'] = 'Post your Study Material on Studygig';
 									$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
 										
-									$this->load->view('subTemplate', $data);	
+									$this->load->view('subTemplate2', $data);	
 
 							    }		 
 
@@ -344,7 +344,7 @@ class Uploads extends CI_Controller {
 
 							$data['pageTitle'] = 'Success - Your Study Material was posted on Studygig';
 							$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
-							$this->load->view('subTemplate', $data);
+							$this->load->view('subTemplate2', $data);
 		        }
         	}
 		}else{
@@ -355,7 +355,7 @@ class Uploads extends CI_Controller {
 			$data['pageTitle'] = 'Post your Study Material on Studygig';
 			$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
 			
-			$this->load->view('subTemplate', $data);
+			$this->load->view('subTemplate2', $data);
 		}
 	}
 	
@@ -864,7 +864,7 @@ class Uploads extends CI_Controller {
 		  	$data['pageTitle'] = 'Edit study material';
 			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
 			    
-			$this->load->view('subTemplate', $data);
+			$this->load->view('subTemplate2', $data);
 		}
 		else
 		{

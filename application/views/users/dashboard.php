@@ -61,7 +61,7 @@
 				<div class="stat_value">Free</div>
 				<div class="clear"></div>
 				<div class="stat_action">
-				<a href="">Become a Member »</a>
+				<a href="../members/form">Become a Member »</a>
 				</div>
 			</li>
 			
@@ -127,7 +127,7 @@
 	<?php endforeach; ?>
 	</ul>
 	<div class="clear" style="text-align:right">
-		<a href="">Become a Member to see all your downloads »</a>
+		<a href="../members/form">Become a Member to see all your downloads »</a>
 	</div>
 </div>
 

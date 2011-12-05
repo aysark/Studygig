@@ -109,6 +109,22 @@ class Classified extends CI_Model {
 		  	return $query_final->result();
 			
 		}
+		
+	function searchAll($offset = 0,$sortResults=0, $materialTypeFilter=null) {
+
+ 		$query = "SELECT *, CL.id AS classified_id, CL.title AS classified_title  
+				  FROM classifieds AS CL
+				  LEFT JOIN courses AS C ON CL.course_id = C.Id
+				  LEFT JOIN subjects_shortform AS S ON CL.subject_id = S.Id
+				 ";
+ 		$query .= " ORDER BY created_at DESC"; 	  //newest
+ 	
+ 	$query .= " LIMIT $offset, 10";
+		                  
+		  	$query_final = $this->db->query($query);  	
+		  	return $query_final->result();
+			
+		}
 
 		function searchcount($search) {
 			

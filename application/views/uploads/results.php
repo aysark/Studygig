@@ -1,4 +1,4 @@
-<div id="content2">
+<div id="content2" style="margin-top:10px">
 <a name="top"></a>
 <div class="twoCol1">
 <?php if($results):?>
@@ -114,9 +114,7 @@
 <li>Try fewer keywords.</li>
 </ul></p>
 <br>
-<h2>Alternatively you can...</h2>
-    	<a href="../../uploads/insert" id="postStudyMaterialButton2">Post study material & earn cash rewards</a>  
-   	
+<h2>Alternatively you can...</h2>  	
 <form action="" method="post" accept-charset="utf-8" id="requestForm" >
  <input type="submit" class="jqbutton"  name="requestSM" value="Request study material" onclick="rqtStudyMaterial()"/>
 </form>	

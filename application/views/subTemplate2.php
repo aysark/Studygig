@@ -57,7 +57,7 @@ echo substr($str,0,150);   ?>" />
 	echo link_tag($link);
 	
 	$link = array(
-          'href' => 'css/sticky.css',
+          'href' => 'css/sticky.min.css',
           'rel' => 'stylesheet',
           'type' => 'text/css',
           'media' => 'screen'
@@ -73,51 +73,12 @@ echo substr($str,0,150);   ?>" />
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.MetaData.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.tipsy.mini.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>js/sticky.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/sticky.min.js"></script>
 
 <script type="text/javascript" language="JavaScript">
   
-$.widget( "custom.catcomplete", $.ui.autocomplete, {
-		_renderMenu: function( ul, items ) {
-			var x = document.forms['searchform'].elements['query'].value;
-			var self = this, currentCategory = "";
-			
-			$.each( items, function( index, item ) {
-
-				if ( item.category != currentCategory ) {
-					ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
-					currentCategory = item.category;
-				}
-			
-				document.forms['searchform'].elements['query'].value = x+(items[0].label).substring(x.length).toLowerCase();	
-				$('#mainSearchField').selectRange(x.length,items[0].label.length);
-				
-				self._renderItem( ul, item );
-				
-			});
-		}
-	});
-$.fn.selectRange = function(start, end) {
-    return this.each(function() {
-        if (this.setSelectionRange) {
-            this.focus();
-            this.setSelectionRange(start, end);
-        } else if (this.createTextRange) {
-            var range = this.createTextRange();
-            range.collapse(true);
-            range.moveEnd('character', end);
-            range.moveStart('character', start);
-            range.select();
-        }
-    });
-};
 	
 $(function() {
-		$( "#mainSearchField" ).catcomplete({
-				source: "<?php echo base_url();?>get_course_list.php",
-				minLength: 1,
-				delay: 0
-			});
 
 // google analytics START
   var _gaq = _gaq || [];
@@ -129,9 +90,10 @@ $(function() {
     var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(ga, ss);
   // google analytics END			
 
-})();
+
+});
   
-	$(".chzn-select").chosen();
+	
 
 </script>
 
@@ -170,6 +132,8 @@ $(function() {
         			<?php echo $points; ?></a>
         			</a>
         			</li>
+        		
+
 			<?php else: ?>	
 				<li class="navbar-list-item"><a href="<?php echo site_url('site/howitworks');?>">How It Works</a></li>
 				<li class="navbar-list-item"><a href="<?php echo site_url('users/signup');?>">Create An Account</a></li>
@@ -179,6 +143,7 @@ $(function() {
          <a id="upload-notes" href="<?php echo site_url('uploads/insert');?>">Upload Notes</a>
          
          <ul class="navbar-list right">
+         	<li class="navbar-list-item"><a href="<?php echo site_url('members/form');?>">Become a Member</a></li>
          	<li class="navbar-list-item"><a href="<?php echo site_url('site/help');?>">Help</a></li>
 	</ul>
     </div><!-- end inner navbar-->

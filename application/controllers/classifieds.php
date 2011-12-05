@@ -93,6 +93,70 @@ class Classifieds extends CI_Controller {
 	
 	}
 	
+	function searchAll($query = "latest_classifieds") {	
+	if ($this->uri->segment(4) === FALSE)
+		{
+		    $offset = 0;
+		}
+	else
+		{
+		    $offset = $this->uri->segment(4);
+		}
+		
+	$data['query'] = urldecode("latest_classifieds");
+
+	if ($this->session->flashdata('last_search')) $this->session->keep_flashdata('last_search');
+		else
+	$this->session->set_flashdata('last_search',urldecode($query));	
+	
+	$data['results'] = $this->Classified->searchAll();
+	$data['is_upload'] = FALSE;
+	
+	foreach($data['results'] as $k => $classif) {		
+			$classifid = $classif->classified_id;
+			$courses[$k]  = $this->Classified->get_course_by_id($classifid);
+			$users[$k] = $this->Classified->get_uploader($classifid)->username;
+			$materials[$k] = $this->Classified->get_material_by_id($classifid);
+		}
+	
+	if ($data['results']){			
+		$data['courses'] = $courses;
+		$data['users'] = $users;
+		$data['materials'] = $materials;
+	}
+			
+	$data['urows'] = $this->Upload->searchcount( $query);
+	$data['crows'] = $this->Classified->searchcount( $query);
+	
+	$this->load->library('pagination');
+
+	$config['base_url'] = site_url('classifieds/search/'.$query);
+	$config['per_page'] = '10';
+	$config['uri_segment'] = 4;
+	$config['num_links'] = 5;
+	$config['full_tag_open'] = '<div class="pagination">';
+	$config['full_tag_close'] = '</div>';
+	$config['num_tag_open'] = '<div class="paginationNumLink">';
+	$config['num_tag_close'] = '</div>';
+	$config['next_tag_open'] = '<div class="paginationNumLink">';
+	$config['next_tag_close'] = '</div>';
+	$config['prev_tag_open'] = '<div class="paginationNumLink">';
+	$config['prev_tag_close'] = '</div>';
+	$config['cur_tag_open'] = '<div class="paginationCurLink">';
+	$config['cur_tag_close'] = '</div>';
+		
+	$config['total_rows'] = $this->Classified->searchcount( $query);
+	$this->pagination->initialize($config);
+	$data['pagination'] = $this->pagination->create_links();
+	
+	$data['pageTitle'] = urldecode($query).' - Find study material on Studygig';
+	$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
+	
+	$data['content'] = 'uploads/results';
+	$this->load->view('subTemplate',$data);
+	
+	}
+	
 	function insert(){
 	
 	if (!$this->session->userdata('logged_in')) redirect(site_url('users/login'),'refresh');
@@ -103,7 +167,7 @@ class Classifieds extends CI_Controller {
 	$data['content'] = 'classifieds/insert';
 	$data['pageTitle'] = 'List your Books & Study Material on Studygig';
 	$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
-	$this->load->view('subTemplate',$data);
+	$this->load->view('subTemplate2',$data);
 	}
 	
 	function add(){
@@ -133,7 +197,7 @@ class Classifieds extends CI_Controller {
 			$data['content'] = 'classifieds/listed';
 			$data['pageTitle'] = 'Success - Your study material was listed on Studygig';
 			$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
-			$this->load->view('subTemplate', $data);
+			$this->load->view('subTemplate2', $data);
 		}else{
 			$data['subjects'] = $this->Subject->get_titles();
 			$data['content'] = 'classifieds/insert';
@@ -141,7 +205,7 @@ class Classifieds extends CI_Controller {
 			$data['pageTitle'] = 'List your Books & Study Material on Studygig';
 			$data['pageDescription'] = 'Find study material, from course books to lecture notes. Join thousands already finding study material and acing their courses. Listing your study material is free!';
 			
-			$this->load->view('subTemplate', $data);
+			$this->load->view('subTemplate2', $data);
 		}
 	}
 	
@@ -225,7 +289,7 @@ class Classifieds extends CI_Controller {
 		  	$data['pageTitle'] = 'Edit classified';
 			$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
 			    
-			$this->load->view('subTemplate', $data);
+			$this->load->view('subTemplate2', $data);
 		}
 	else
 		{

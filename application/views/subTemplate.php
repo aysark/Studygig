@@ -57,7 +57,7 @@ echo substr($str,0,150);   ?>" />
 	echo link_tag($link);
 	
 	$link = array(
-          'href' => 'css/sticky.css',
+          'href' => 'css/sticky.min.css',
           'rel' => 'stylesheet',
           'type' => 'text/css',
           'media' => 'screen'
@@ -73,7 +73,7 @@ echo substr($str,0,150);   ?>" />
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.MetaData.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.tipsy.mini.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>js/sticky.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/sticky.min.js"></script>
 
 <script type="text/javascript" language="JavaScript">
   
@@ -188,6 +188,7 @@ $(function() {
          <a id="upload-notes" href="<?php echo site_url('uploads/insert');?>">Upload Notes</a>
          
          <ul class="navbar-list right">
+         	<li class="navbar-list-item"><a href="<?php echo site_url('members/form');?>">Become a Member</a></li>
          	<li class="navbar-list-item"><a href="<?php echo site_url('site/help');?>">Help</a></li>
          	
          <!-- <div id="postStudyMaterialDialog" title="How would you like to post?">

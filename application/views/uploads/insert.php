@@ -154,6 +154,10 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
 	
 	</div>
 	<div class="twoCol2">
+		<div id="classifiedPlugOnInsert" class="roundedCornerContent silver">
+		  Need to sell your Books? <br/>
+		  <a href="../classifieds/insert" id="insertUploadButton2" style="font-size:18px; margin-top:10px;">List your books for sale</a>
+	</div>
 	<div class="roundedCornerContent">
         <span class="blueh2">How it works</span>
         <ol class="insertHowIt">

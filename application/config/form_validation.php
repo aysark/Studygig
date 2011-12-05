@@ -169,5 +169,11 @@ $config = array(
                      'field'   => 'category',
                      'label'   => 'category',
                      'rules'   => 'required'
-              	    )) 
+              	    )) ,
+              'sendInvites' =>  array(  
+                  array(
+                     'field'   => 'email',
+                     'label'   => 'email',
+                     'rules'   => 'valid_email'
+                  ))
             );
