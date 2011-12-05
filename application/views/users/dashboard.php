@@ -130,13 +130,13 @@
 		<a href="../members/form">Become a Member to see all your downloads »</a>
 	</div>
 </div>
-
-	
-</div>
 <?php if($user->oauth_provider): ?>
 	<div id="dashboardFacebook">
 <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:activity site="http://studygig.com" width="640" height="200" header="true" font="tahoma" border_color="" recommendations="true"></fb:activity>
 </div>
 <?php endif; ?>
+	
+</div>
+
 
 

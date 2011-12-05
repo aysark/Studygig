@@ -415,7 +415,7 @@
 				    "Subject:".$sender->username." has invited you to Studygig!\n".
 				    "\n".
 			$body;
-		//	MailgunMessage::send_raw($sender->email, $email, $rawMime); 
+			MailgunMessage::send_raw($sender->email, $email, $rawMime); 
 			}
 			
 			echo "Invite was sent successfully to: ".$inputClean;
