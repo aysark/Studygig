@@ -1,6 +1,5 @@
-<div id="content2">
 <div class="twoCol1">
-	<h1>List Your Books & Study Material</h1>
+	<h1>Edit Your Listing</h1>
 	
 	<?php if ( isset($error)) {
 			
@@ -86,9 +85,12 @@ onKeyUp="limitText(this.form.description,this.form.countdown,500);" required ></
 <?php echo form_close(); ?>
 	
 	</div>
+	</div>
+	
+	
 	<div class="twoCol2">
+		
 	<div class="roundedCornerContent">
-        <h1>Sell Your Stuff & Save</h1>
         <span class="blueh2">How it works</span>
         <ol class="insertHowIt">
         	<li><b>List your books and study material</b> — you can list books or any type of study material that helped you study.</li>
@@ -103,15 +105,9 @@ onKeyUp="limitText(this.form.description,this.form.countdown,500);" required ></
         	<li>Your email address is kept private and users will use a contact form to contact you.  If you'd like to be contacted faster, you can provide more contact details in the description section.</li>       	
         </ul>
             
-    </div>
-    	<div id="materialKinds">
-	<div class="radioKinds" id="kind1" title="1"><input class="noRadio" name="radioKind1" value="Book" type="radio" id="radioKind1" /></div>
-	<div class="radioKinds" id="kind2" title="2"><input class="noRadio" name="radioKind2" value="Test" type="radio" id="radioKind2" /></div>
+    </div>	
 	</div>
-	
-	</div>
-</div>
-</div>
+
 
 
 

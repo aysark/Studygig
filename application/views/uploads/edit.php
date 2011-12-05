@@ -2,7 +2,7 @@
   
 <div id="content2">
 <div class="twoCol1">
-	<h1>Share Study Material</h1>
+	<h1>Edit Your Post</h1>
 	
 	<?php if ( isset($error)) {
 			
@@ -137,7 +137,6 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
 	</div>
 	<div class="twoCol2">
 	<div class="roundedCornerContent">
-        <h1>Post Material. Earn Points. Get Rewarded!</h1>
         <span class="blueh2">How it works</span>
         <ol class="insertHowIt">
         	<li><b>Post study material</b> — you can post your own study material or helpful study material that you found.</li>
