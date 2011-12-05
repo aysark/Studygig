@@ -177,7 +177,9 @@ var WRInitTime=(new Date()).getTime();
          <a id="upload-notes" href="<?php echo site_url('uploads/insert');?>">Upload Notes</a>
          
          <ul class="navbar-list right">
+         	<?php if($this->session->userdata('logged_in')): ?>
          	<li class="navbar-list-item"><a href="<?php echo site_url('members/form');?>">Become a Member</a></li>
+         	<?php endif; ?>
          	<li class="navbar-list-item"><a href="<?php echo site_url('site/help');?>">Help</a></li>
          	
 	</ul>

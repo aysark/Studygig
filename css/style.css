@@ -1917,7 +1917,7 @@ ul.guidelines li{
 }
 .downloadViewButton{
 	padding-top:10px;
-	height:45px;
+	height:60px;
 	clear:both;
 }
 #docViewItButton{
@@ -1937,7 +1937,7 @@ border-radius: .3em;
 -webkit-border-radius: .3em;
 line-height: 2em;
 padding: 0 1em;
-font-size: 1.3em;
+font-size: 1.6em;
 font-weight: bold;
 color: white!important;
 text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);

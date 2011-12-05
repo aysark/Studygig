@@ -91,7 +91,7 @@ if($upload->filesize == -1){
     <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:send href="<?php echo site_url('uploads/view/'. $upload->id); ?>" font="tahoma"></fb:send>
     <span style="margin-left:50px;"><g:plusone></g:plusone></span>
     <div class="linkIconView">
-    	Link: <input type="textfield" name="uploadLink" size="15"  id="uploadLinkField" value="<?php echo site_url('uploads/view/'. $upload->id); ?>"  onClick="SelectAll('uploadLinkField');" />
+    	Link: <input type="textfield" name="uploadLink" size="30"  id="uploadLinkField" value="<?php echo site_url('uploads/view/'. $upload->id); ?>"  onClick="SelectAll('uploadLinkField');" />
     	</div>
     
     </div>
