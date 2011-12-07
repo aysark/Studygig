@@ -2,7 +2,7 @@
 	
 <div class="loginCol">	
 	
-	<span id="loginTitle">Account Validated</span>
+	<span id="loginTitle">Account Validation</span>
 		<?php 
 	if (validation_errors() != ""){
 		echo '<div class="ui-state-error ui-corner-all" style="padding-top: 0px; padding-right: 0.7em; padding-bottom: 0px; padding-left: 0.7em;color:#CD0A0A; width:95%;">'.validation_errors().'</div>'; 

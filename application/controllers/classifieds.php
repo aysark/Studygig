@@ -242,32 +242,28 @@ class Classifieds extends CI_Controller {
 				
 				$sender = $this->User->find_by_id($this->session->userdata('user_id'));
 				$email = $this->Classified->get_uploader($this->input->post('listing_id'));
+				$this->load->library('email');
+				$this->email->initialize(array(
+				  'protocol' => 'smtp',
+				  'smtp_host' => 'smtp.sendgrid.net',
+				  'smtp_user' => 'studygig',
+				  'smtp_pass' => '1studygig',
+				  'smtp_port' => 587,
+				  'crlf' => "\r\n",
+				  'newline' => "\r\n",
+				  'mailtype' => 'html'
+				));
+				$this->email->from($sender->email, $sender->username);
+				
+				
+				$this->email->subject("Direct message from ".$sender->username." - Studygig");
 				
 				$body='<meta content="text/html; charset=utf-8" http-equiv=Content-Type><title>Welcome to Studygig</title><body><table cellpadding=0 cellspacing=0 border=0 align=center width="100%" style="padding: 0px 0 35px; background-image:url(\'http://email.studygig.com/welcome/images/bg_tile.png\'); background-repeat:repeat; background-position:center top" bgcolor="#f7f7f7"><tr><td height=20></td><tr><td align=center><table cellpadding=0 cellspacing=0 border=0 align=center width=599 style="font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif"><tr><td width=20></td><td width=200 style="margin: 0; padding: 10px 0 0" align=center valign=top><a href="http://studygig.com"><img src="http://email.studygig.com/welcome/images/studygig-logo.png" alt="Studygig Logo" width=174 height=61 style=float:left border=0></a><p style="color:#767676; font-weight: normal; margin: 0; padding: 0; line-height: 20px; font-size: 12px; float:right"><a href="http://studygig.com/index.php/users/login" style="color: #006eda; text-decoration: none">Login</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://studygig.com/index.php/site/help" style="color: #006eda; text-decoration: none">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://studygig.com/" style="color: #006eda; text-decoration: none">Search</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://studygig.com/index.php/site/contact" style="color: #006eda; text-decoration: none">Contact</a></p></td><td width=20></td><tr><td height=20></td><tr><td width=20></td><td style="padding:10px; border-style:dotted; border-width:1px; border-color: #CCC" align=left valign=top><p style=font-size:18px>'.nl2br(trim($this->input->post('message'))).'</p><p style=font-size:12px>Direct message sent by '.$sender->username.' ('.$sender->email.') to you ('.$email->email.').</p></td><td width=20></td><tr><td width=20></td><td style="margin: 0; padding: 15px 0 0" align=left valign=top><span style=font-size:18px>Send a message back to '.$sender->username.' by replying to this email.</span></td><td width=20></td></table><table cellpadding=0 cellspacing=0 border=0 align=center width=599 style="font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif"><tr><td width=599 valign=top align=left style="font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif"></td></table><table cellpadding=0 cellspacing=0 border=0 align=center width=599 style="font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif; line-height: 10px" class=footer><tr><td align=center style="padding: 15px 0 10px; font-size: 12px; color:#8a8a8a; margin: 0; line-height: 1.2;font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif" valign=top><p style="font-size: 12px; color:#8a8a8a; margin: 0; padding: 0;font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif">This message is a service email related to your use of Studygig.<br>Follow the adventures of Studygig:&nbsp;<a href="http://twitter.com/studygig">@studygig</a>,&nbsp;<a href="http://www.facebook.com/studygig">facebook.com/studygig</a>,&nbsp;<a href="http://studygig.posterous.com/">blog.studygig.com</a></p></td><tr></table></td></table>';
-				$rawMime = 
-				    "X-Priority: 1 (Highest)\n".
-				    "X-Mailgun-Tag: Classified Messages Email\n".
-				    "X-Campaign-Id: Classified Messages Email\n".
-				    "Content-Type: text/html;charset=UTF-8\n".    
-				    "From:".$sender->email."\n".
-				    "To: ".$email."\n".
-				    "Subject: Direct message from ".$sender->username." - Studygig\n".
-				    "\n".
-			$body;
-			MailgunMessage::send_raw($sender->email, $email, $rawMime); 
 				
-				/*$this->load->library('email');
-				$config['mailtype'] = 'html';
-
-				$this->email->initialize($config);
-
-				$this->email->from($sender->email, $sender->username);
-				$this->email->to($reciever->email); 
-
-				$this->email->subject('Direct message from '.$sender->username.' - Studygig');
-				$this->email->set_alt_message(nl2br(trim($this->input->post('message'))).' - MESSAGE SENT VIA STUDYGIG.COM');
-				$this->email->message('<meta content="text/html; charset=utf-8" http-equiv=Content-Type><title>Welcome to Studygig</title><body><table cellpadding=0 cellspacing=0 border=0 align=center width="100%" style="padding: 0px 0 35px; background-image:url(\'http://email.studygig.com/welcome/images/bg_tile.png\'); background-repeat:repeat; background-position:center top" bgcolor="#f7f7f7"><tr><td height=20></td><tr><td align=center><table cellpadding=0 cellspacing=0 border=0 align=center width=599 style="font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif"><tr><td width=20></td><td width=200 style="margin: 0; padding: 10px 0 0" align=center valign=top><a href="http://studygig.com"><img src="http://email.studygig.com/welcome/images/studygig-logo.png" alt="Studygig Logo" width=174 height=61 style=float:left border=0></a><p style="color:#767676; font-weight: normal; margin: 0; padding: 0; line-height: 20px; font-size: 12px; float:right"><a href="http://studygig.com/index.php/users/login" style="color: #006eda; text-decoration: none">Login</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://studygig.com/index.php/site/help" style="color: #006eda; text-decoration: none">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://studygig.com/" style="color: #006eda; text-decoration: none">Search</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://studygig.com/index.php/site/contact" style="color: #006eda; text-decoration: none">Contact</a></p></td><td width=20></td><tr><td height=20></td><tr><td width=20></td><td style="padding:10px; border-style:dotted; border-width:1px; border-color: #CCC" align=left valign=top><p style=font-size:18px>'.nl2br(trim($this->input->post('message'))).'</p><p style=font-size:12px>Direct message sent by '.$sender->username.' ('.$sender->email.') to you ('.$reciever->email.').</p></td><td width=20></td><tr><td width=20></td><td style="margin: 0; padding: 15px 0 0" align=left valign=top><span style=font-size:18px>Send a message back to '.$sender->username.' by replying to this email.</span></td><td width=20></td></table><table cellpadding=0 cellspacing=0 border=0 align=center width=599 style="font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif"><tr><td width=599 valign=top align=left style="font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif"></td></table><table cellpadding=0 cellspacing=0 border=0 align=center width=599 style="font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif; line-height: 10px" class=footer><tr><td align=center style="padding: 15px 0 10px; font-size: 12px; color:#8a8a8a; margin: 0; line-height: 1.2;font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif" valign=top><p style="font-size: 12px; color:#8a8a8a; margin: 0; padding: 0;font-family: Tahoma,Arial,Helvetica,Garuda,sans-serif">This message is a service email related to your use of Studygig.<br>Follow the adventures of Studygig:&nbsp;<a href="http://twitter.com/studygig">@studygig</a>,&nbsp;<a href="http://www.facebook.com/studygig">facebook.com/studygig</a>,&nbsp;<a href="http://studygig.posterous.com/">blog.studygig.com</a></p></td><tr></table></td></table>');	
-					*/
+				$this->email->message($body); 
+				$this->email->set_alt_message(nl2br(trim($this->input->post('message')." Sent from http://studygig.com"))); 
+				$this->email->to($email); 
+				$this->email->send();
 				echo "Message was sent successfully.";
 		}
 			else

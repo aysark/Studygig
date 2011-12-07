@@ -114,26 +114,23 @@ class Site extends CI_Controller {
 				$cat = "Other (please specify)";
 			}
 			$email =trim($this->input->post('email'));
-			$body ="Message: \r\n".strip_tags(trim($this->input->post('message')))." \r\n\r\n".$_SERVER['REMOTE_ADDR']."\r\n  " .$_SERVER['HTTP_USER_AGENT'];
-			$rawMime = 
-				    "X-Priority: 1 (Highest)\n".
-				    "X-Mailgun-Tag: Contact Studygig Email\n".
-				    "Content-Type: text/html;charset=UTF-8\n".    
-				    "From:".$email."\n".
-				    "To: info@studygig.com\n".
-				    "Subject: Studygig Contact - ".$cat."\n".
-				    "\n".
-			$body;
-			MailgunMessage::send_raw($email, "info@studygig.com", $rawMime); 
 			
-			/*
 			$this->load->library('email');
-
-			$this->email->from($this->input->post('email'),$this->input->post('name'));
-			$this->email->to('info@studygig.com', 'Studygig'); 
-			$this->email->subject('Studygig - '.$cat);
-			$this->email->message('Message: \r\n'.strip_tags(trim($this->input->post('message'))).' \r\n\r\n'.$_SERVER['REMOTE_ADDR'].'\r\n  ' .$_SERVER['HTTP_USER_AGENT']);	
-			*/
+			$this->email->initialize(array(
+			  'protocol' => 'smtp',
+			  'smtp_host' => 'smtp.sendgrid.net',
+			  'smtp_user' => 'studygig',
+			  'smtp_pass' => '1studygig',
+			  'smtp_port' => 587,
+			  'crlf' => "\r\n",
+			  'newline' => "\r\n"
+			));
+			$this->email->from($email, $email);
+			$this->email->to('info@studygig.com'); 
+			
+			$this->email->subject('Studygig Contact - '.$cat);
+			$this->email->message($body);  
+			$this->email->send();
 
 					$data['editted'] = true;
 				

@@ -76,7 +76,7 @@
 	  		$this->db->update('users', $verifieduser); 
 	  		
 	  		$data[0] = TRUE;
-	  		$data[1] = $this->get_user_by_hash();
+	  		$data[1] = $this->get_user_by_hash($hash);
 	  		
 	  		return $data;
 	  	}
@@ -93,11 +93,10 @@
 	} 
 	
 	function get_user_by_hash($hash) {
-		$this->db->select('email')->from('users')->where('verifyhash', $hash);	 
-	  	$results= $this->db->get()->result();
-	  			
-		$user = $results[0];
-	  	return $user;
+		$this->db->where('verifyhash', $hash);	 
+	  	$query= $this->db->get('users');
+	  	
+	  	return $query->row();
 	} 
 	
 	function get_id_by_email($email) {

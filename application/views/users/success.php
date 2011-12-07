@@ -55,7 +55,7 @@
 <div class="roundedCornerContent">
 	<div class="welcome2col1"> <h2><img src="../../images/classifieds-icon.png" class="textmiddle" /> Classifieds</h2></div>
 	<div class="welcome2col2">
-	<p>Sell your books and study material by <a href="../users/underconstruction">listing it</a>.  This posts an ad in the classifieds section.  You can also subscribe to the <a href="http://feeds.feedburner.com/studygig">Studygig Classified RSS feed</a> to get instant updates on new books & study material posts that go for sale.</p></div>
+	<p>Sell your books and study material by <a href="../classifieds/insert">listing it</a>.  This posts an ad in the classifieds section.  You can also subscribe to the <a href="http://feeds.feedburner.com/studygig">Studygig Classified RSS feed</a> to get instant updates on new books & study material posts that go for sale.</p></div>
 	<div class="clear"></div>
 </div>
 
