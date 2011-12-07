@@ -431,5 +431,18 @@
 	
 		$this->db->insert('invites',$newInvite);
   }
+
+  function editprofile() {
+  	
+  	$profile = array(
+  		'fullname' => $this->input->post('fullname'),
+  		'major'    => $this->input->post('major'),
+  		'year'	   => $this->input->post('year')
+  		);
+
+  	$this->db->where('id',$this->session->userdata('user_id'));	
+  	$this->db->update('users',$profile);
+
+  }
   	
 }
