@@ -706,7 +706,7 @@ class Uploads extends CI_Controller {
 		            
 		            $data['upload'] = $this->Upload->get_by_id($uploadid);
 		            $data['file_name'] = $data['upload']->filepath;
-		            $data['file_path'] = 'uploads/'. $data['file_name'];
+		            $data['file_path'] = 'uploads/materials/'. $data['file_name'];
 		            $data['ratings'] = $this->Upload->get_rating($uploadid);
 		            $data['uploader'] =$uploader;
 		            $data['course']  = $this->Upload->get_course_by_id($uploadid);
@@ -724,31 +724,35 @@ class Uploads extends CI_Controller {
 		            $data['similarUploads'] = $this->Upload->get_similar($uploadid);
 		            $data['byUserUploads'] = $this->Upload->get_byUser($uploadid);
 
-		            $ch = curl_init();
-				    curl_setopt($ch, CURLOPT_HEADER, 0);
-				    curl_setopt($ch, CURLOPT_VERBOSE, 0);
-				    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-				    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
-				    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v1/session/get" );
-				    curl_setopt($ch, CURLOPT_POST, true);
-				    
-				    $post = array(
-				        "uuid"=> $data['upload']->uuid,
-				        "token" => "yYaBAI95eJxVkPb0Twvh",
-				        "downloadable" => "false",
-				        "name" => $downloader_name
-				    );
+		            // Check for Crocodoc version 
+		            if ($data['upload']->uuid != NULL) {
 
-				    log_message('debug','CROCDOC PARAMS: '. json_encode($post));
+			            $ch = curl_init();
+					    curl_setopt($ch, CURLOPT_HEADER, 0);
+					    curl_setopt($ch, CURLOPT_VERBOSE, 0);
+					    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+					    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
+					    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v1/session/get" );
+					    curl_setopt($ch, CURLOPT_POST, true);
+					    
+					    $post = array(
+					        "uuid"=> $data['upload']->uuid,
+					        "token" => "yYaBAI95eJxVkPb0Twvh",
+					        "downloadable" => "false",
+					        "name" => $downloader_name
+					    );
 
-				    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-				    
-				    #Get response from crocdoc 
-				    $json_response = curl_exec($ch);
-				    $response = json_decode($json_response);				    
+					    log_message('debug','CROCDOC PARAMS: '. json_encode($post));
 
-				    $data['sessionid'] = $response->sessionId;
-				    log_message('debug','CROCDOC SESSION ID: '. $response->sessionId);
+					    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+					    
+					    #Get response from crocdoc 
+					    $json_response = curl_exec($ch);
+					    $response = json_decode($json_response);				    
+
+					    $data['sessionid'] = $response->sessionId;
+					    log_message('debug','CROCDOC SESSION ID: '. $response->sessionId);
+					} 
 
 		            $data['content'] = 'uploads/docview';
 		        } else {
