@@ -648,6 +648,7 @@ class Uploads extends CI_Controller {
 		$data['content'] = 'uploads/view';
 		$data['file_name'] = $data['upload']->filepath;
 		$data['file_path'] = 'uploads/materials/'. $data['file_name'];
+		$data['file_path_for_images'] = 'uploads/'. $data['file_name'];
 		$data['ratings'] = $this->Upload->get_rating($id);
 		$data['uploader'] = $this->Upload->get_uploader($id);
 		$data['course']  = $this->Upload->get_course_by_id($id);
@@ -706,14 +707,23 @@ class Uploads extends CI_Controller {
 		            
 		            $data['upload'] = $this->Upload->get_by_id($uploadid);
 		            $data['file_name'] = $data['upload']->filepath;
-		            $data['file_path'] = 'uploads/materials/'. $data['file_name'];
+		            $data['fileType'] = $data['upload']->filetype;
+		            
+		            //check if image or not
+		             if ((strcasecmp($data['fileType'],".jpg") == 0) || (strcasecmp($data['fileType'],".jpeg") == 0) || (strcasecmp($data['fileType'],".gif") == 0) || (strcasecmp($data['fileType'],".png")== 0))
+		           	{
+		                $data['file_path_for_images'] = 'uploads/'. $data['file_name'];
+					}else{
+				   	 	 $data['file_path'] = 'uploads/materials/'. $data['file_name'];
+				    }
+				    
 		            $data['ratings'] = $this->Upload->get_rating($uploadid);
 		            $data['uploader'] =$uploader;
 		            $data['course']  = $this->Upload->get_course_by_id($uploadid);
 		            $data['favourited'] =  $this->Favourite->is_favourited_by($this->session->userdata('user_id'),$uploadid);
 		            $data['related'] = false;
 		            $data['materialType'] = $this->Upload->get_material_by_id($uploadid);
-		            $data['fileType'] = $data['upload']->filetype;
+		            
 		            
 		            //check if upload has related uploads
 		            if ($data['upload']->related == 1) {

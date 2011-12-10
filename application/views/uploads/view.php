@@ -29,7 +29,7 @@
         {
         	//check if its an image upload
            	 if ((strcasecmp($upload->filetype,".jpg") == 0) || (strcasecmp($upload->filetype,".jpeg") == 0) || (strcasecmp($upload->filetype,".gif") == 0) || (strcasecmp($upload->filetype,".png")== 0)){
-                echo "<img src=\"".base_url().$file_path."\" width=\"500\" height=\"500\"/>";
+                echo "<img src=\"".base_url().$file_path_for_images."\" width=\"500\" height=\"500\"/>";
         	 }else{
            echo "Sorry, this file is not .pdf format, it is in ".$upload->filetype." format.  We are unable to provide previews for such file formats for the time being.";
       	 	 }
@@ -88,7 +88,19 @@
                
             <?php echo form_open('uploads/download'); ?>
 	    <input type="hidden" id="file_name" name="file_name" value ="<?php echo $file_name; ?>" />
-	    <input type="hidden" id="file_path" name="file_path" value ="<?php echo $file_path; ?>" />
+	    <input type="hidden" id="file_path" name="file_path" value ="<?php
+	    
+
+        	//check if its an image upload
+           	 if ((strcasecmp($upload->filetype,".jpg") == 0) || (strcasecmp($upload->filetype,".jpeg") == 0) || (strcasecmp($upload->filetype,".gif") == 0) || (strcasecmp($upload->filetype,".png")== 0))
+           	{
+                echo $file_path_for_images;	 
+			}else{
+		   	 	 echo $file_path; 
+		    }
+	    
+	    
+	    ?>" />
 	    <input type="hidden" id="upload_id" name="upload_id" value ="<?php echo $upload->id; ?>" />
 	    <input type="submit" name="submit" value="Download Document" class="button" id="docViewItButton"/>
 	    <?php echo form_close();?>

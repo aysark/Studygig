@@ -1,6 +1,6 @@
 
 <div id="content2">
-	<div class="twoCol1">    
+	<div class="docViewSect1">    
     <div class="docViewTitleIcons">
     	
     	<?php if($this->session->userdata('logged_in') && !$favourited): ?>
@@ -27,14 +27,14 @@ if($upload->filesize == -1){
 	<?php	
 }else{
 	if ((strcasecmp($upload->filetype,".jpg") == 0) || (strcasecmp($upload->filetype,".jpeg") == 0) || 	(strcasecmp($upload->filetype,".gif") == 0) || (strcasecmp($upload->filetype,".png")== 0)){
-			echo "<img src=\"".base_url().$file['path']."\"/>";
+			echo "<img src=\"".base_url().$file['file_path_for_images']."\"/>";
 		}else{
 	$pdfurl = base_url(). $file['path'];
 	?>
   <?php if ($upload->uuid): ?>
-	<iframe src="http://crocodoc.com/view/?sessionId=<?php echo $sessionid; ?>" style="width:650px; height:730px;" frameborder="0"></iframe>
+	<iframe src="http://crocodoc.com/view/?sessionId=<?php echo $sessionid; ?>" style="width:940px; height:730px;" frameborder="0"></iframe>
   <?php else: ?>
-  <iframe src="http://docs.google.com/gview?url=<?php echo $pdfurl; ?>&embedded=true" style="width:650px; height:730px;" frameborder="0"></iframe>
+  <iframe src="http://docs.google.com/gview?url=<?php echo $pdfurl; ?>&embedded=true" style="width:940px; height:730px;" frameborder="0"></iframe>
   <?php endif; ?>		
 			<?php
 	}
@@ -67,8 +67,9 @@ if($upload->filesize == -1){
 	
 </div>
 
-<div class="twoCol2">
-		
+<div class="docViewSect2">
+		<div class="twoCol1">
+			
 		<div id="docIconView">
     		<div id="ratingFeedback" class="ui-corner-all" ></div>
     	 <form action="" method="post" accept-charset="utf-8" id="ratingForm" >
@@ -78,7 +79,7 @@ if($upload->filesize == -1){
                     <div id="reportDialog" title="Report This Study Material as Inappropriate">
 	<?php include 'reportcontent.php'; ?>
 	</div>
-                <div class="reportIconView">Report</div>
+                <div class="reportIconView" style="float:left; margin-left:150px;">Report</div>
                 <div class="clear"></div>
                 
  <br/> 
@@ -98,7 +99,9 @@ if($upload->filesize == -1){
     	</div>
     
     </div>
-		
+	
+	</div>
+	<div class="twoCol2">
     <div class="roundedCornerContent">
                 <h2>Similar Material</h2>
             <?php if(empty($similarUploads)){
@@ -122,6 +125,9 @@ if($upload->filesize == -1){
         <h4><a href="<?php echo site_url('uploads/view/'. $moreUpload->id);?>"><?php echo htmlspecialchars($moreUpload->title); ?></a></h4>
     <?php endforeach; ?>
     <?php } ?>
+	</div>
+	
+	
 	</div>
 </div>
 </div>
