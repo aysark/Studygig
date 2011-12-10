@@ -27,7 +27,7 @@ if($upload->filesize == -1){
 	<?php	
 }else{
 	if ((strcasecmp($upload->filetype,".jpg") == 0) || (strcasecmp($upload->filetype,".jpeg") == 0) || 	(strcasecmp($upload->filetype,".gif") == 0) || (strcasecmp($upload->filetype,".png")== 0)){
-			echo "<img src=\"".base_url().$file['file_path_for_images']."\"/>";
+			echo "<img src=\"".base_url().$file_path_for_images."\"/>";
 		}else{
 	$pdfurl = base_url(). $file['path'];
 	?>
