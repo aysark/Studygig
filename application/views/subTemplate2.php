@@ -144,7 +144,7 @@ $(function() {
          
          <ul class="navbar-list right">
          	<?php if($this->session->userdata('logged_in')): ?>
-         	<li class="navbar-list-item"><a href="<?php echo site_url('members/form');?>">Become a Member</a></li>
+         	<li class="navbar-list-item"><a href="<?php echo site_url('members/form');?>">Become a Member (25% Off)</a></li>
          	<?php endif; ?>
          	<li class="navbar-list-item"><a href="<?php echo site_url('site/help');?>">Help</a></li>
 	</ul>

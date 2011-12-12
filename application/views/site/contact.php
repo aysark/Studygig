@@ -15,7 +15,7 @@
 		echo '<div class="ui-state-error ui-corner-all" style="padding-top: 0px; padding-right: 0.7em; padding-bottom: 0px; padding-left: 0.7em;color:#CD0A0A; width:90%;">'.validation_errors().'</div>'; } 
 		?>
 
-<h3>Were you looking for the <a href="http://studygig.assistly.com/">help section?</a></h3>
+<h3>Were you looking for the <a href="http://studygig.com/index.php/site/help">help section?</a></h3>
 <div id="editProfileForm">
 <?php echo form_open('site/contact');?>
 Category:

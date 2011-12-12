@@ -41,7 +41,7 @@ class Members extends CI_Controller {
 	    $this->paypal_lib->add_field('custom', $this->session->userdata('user_id')); // <-- User id
 	    $this->paypal_lib->add_field('item_name', 'Studygig 1 year subscription');
 	    $this->paypal_lib->add_field('item_number', '1');
-	    $this->paypal_lib->add_field('amount', '72');
+	    $this->paypal_lib->add_field('amount', '54');
 		// if you want an image button use this:
 		//$this->paypal_lib->image('button_03.gif');
 		$this->paypal_lib->button('Choose Plan');
@@ -55,7 +55,7 @@ class Members extends CI_Controller {
 	    $this->paypal_lib->add_field('custom', $this->session->userdata('user_id')); // <-- User id
 	    $this->paypal_lib->add_field('item_name', 'Studygig 1 term subscription');
 	    $this->paypal_lib->add_field('item_number', '2');
-	    $this->paypal_lib->add_field('amount', '48');
+	    $this->paypal_lib->add_field('amount', '36');
 		$this->paypal_lib->button('Choose Plan');
 	    $data['paypal_form_term'] = $this->paypal_lib->paypal_form();
 	    
@@ -67,7 +67,7 @@ class Members extends CI_Controller {
 	    $this->paypal_lib->add_field('custom', $this->session->userdata('user_id')); // <-- User id
 	    $this->paypal_lib->add_field('item_name', 'Studygig 1 quarterly subscription');
 	    $this->paypal_lib->add_field('item_number', '3');
-	    $this->paypal_lib->add_field('amount', '57');
+	    $this->paypal_lib->add_field('amount', '42.75');
 		$this->paypal_lib->button('Choose Plan');
 	    $data['paypal_form_quarterly'] = $this->paypal_lib->paypal_form();
 	    
@@ -79,7 +79,7 @@ class Members extends CI_Controller {
 	    $this->paypal_lib->add_field('custom', $this->session->userdata('user_id')); // <-- User id
 	    $this->paypal_lib->add_field('item_name', 'Studygig 1 monthly subscription');
 	    $this->paypal_lib->add_field('item_number', '4');
-	    $this->paypal_lib->add_field('amount', '25');
+	    $this->paypal_lib->add_field('amount', '18.75');
 		$this->paypal_lib->button('Choose Plan');
 	    $data['paypal_form_monthly'] = $this->paypal_lib->paypal_form();
 

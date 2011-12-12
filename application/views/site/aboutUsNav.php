@@ -3,7 +3,7 @@
 <ul id="aboutUsNav">
 	<li><a href="aboutus#siteAnchor">About Studygig</a></li>
 	<li><a href="tenreasons">9 Reasons...</a></li>
-	<li><a href="http://studygig.assistly.com/">FAQs & Help</a></li>
+	<li><a href="http://studygig.com/index.php/site/help">FAQs & Help</a></li>
 	<li><a href="http://studygig.posterous.com/">Blog</a></li>
 	<li><a href="academicintegrity#siteAnchor">Academic Integrity</a></li>
 	<li><a href="copyright#siteAnchor">Copyright Notice</a></li>

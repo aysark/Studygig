@@ -17,7 +17,8 @@
 		<div class="roundedCornerContent silver">
 			<span class="bigBlackText2">Yearly Plan</span>
 			<br>
-			<span class="memberPrice">$6/month</span> <br> (billed one-time $72/year)
+			<span class="memberPrice">$4.50/month <br> <i>25% off<br> Limited Time Only</i></span> <br> (billed one-time $54/year)
+			<!--<span class="memberPrice">$6/month</span> <br> (billed one-time $72/year)-->
 			<?php echo $paypal_form_yearly; ?>
 		</div>
 	</div>
@@ -25,7 +26,8 @@
 		<div class="roundedCornerContent blue">
 			<span class="bigBlackText2" style="color:white;">Term Plan</span>  <span class="popText">[Popular]</span>
 			<br>
-			<span class="memberPrice">$12/month</span> <br> (billed one-time $48/4 mnths)
+			<span class="memberPrice">$9/month <br> <i>25% off<br> Limited Time Only</i></span> <br> (billed one-time $36/4 mnths)
+			<!--<span class="memberPrice">$12/month</span> <br> (billed one-time $48/4 mnths)-->
 			<?php echo $paypal_form_term; ?>
 		</div>
 	</div>
@@ -33,7 +35,8 @@
 		<div class="roundedCornerContent silver">
 			<span class="bigBlackText2">Quarterly Plan</span> 
 			<br>
-			<span class="memberPrice">$19/month</span> <br> (billed one-time $57/3 mnths)
+			<span class="memberPrice">$14.25/month <br> <i>25% off<br> Limited Time Only</i></span> <br> (billed one-time $42.75/3 mnths)
+			<!--<span class="memberPrice">$14.25/month</span> <br> (billed one-time $42.75/3 mnths)-->
 			<?php echo $paypal_form_quarterly; ?>
 		</div>
 	</div>
@@ -41,7 +44,8 @@
 		<div class="roundedCornerContent silver">
 			<span class="bigBlackText2">Monthly Plan</span> 
 			<br>
-			<span class="memberPrice">$25/month</span> <br><br>
+			<span class="memberPrice">$18.75/month <br> <i>25% off<br> Limited Time Only</i></span> <br><br>
+			<!--<span class="memberPrice">$25/month</span> <br><br>-->
 			<?php echo $paypal_form_monthly; ?>
 		</div>
 	</div>

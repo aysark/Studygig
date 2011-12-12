@@ -125,11 +125,11 @@ class Site extends CI_Controller {
 			  'crlf' => "\r\n",
 			  'newline' => "\r\n"
 			));
-			$this->email->from($email, $email);
+			$this->email->from(trim($this->input->post('name')),trim($email) );
 			$this->email->to('info@studygig.com'); 
 			
 			$this->email->subject('Studygig Contact - '.$cat);
-			$this->email->message($body);  
+			$this->email->message(nl2br(trim($this->input->post('message'))));  
 			$this->email->send();
 
 					$data['editted'] = true;
