@@ -15,6 +15,15 @@
     <h5> <img src="../../images/material<?php echo $materialType; ?>.png" width="75" height="25" alt="Material Type" class="material-type-icon" /> <img src="../../images/file<?php echo $fileType; ?>.png" width="20" height="20" class="file-type-icon" />
              Uploaded by <?php echo $uploader->username. " on " . date('F j, Y \a\t g:i A', strtotime($upload->created_at));?> in <a href="<?php echo site_url('uploads/getsearchfor/').'/'.substr ($course,0,8);?>"><span class="courseCourseStyle"><?php echo $course;?></span></a></h5> 
              
+             	<div id="ratingFeedback" class="ui-corner-all" ></div>
+             	
+    	 <form action="" method="post" accept-charset="utf-8" id="ratingForm" >
+    	 	<p id="ratingFeedback" class="ui-corner-all" style="visibility:visible;padding:5px;font-size:1.4em;">Was this material helpful? <b>Get points for rating/reporting documents</b>
+         <input type="submit" class="ratingIconGood" name="rating_typeA" value="<?php echo $ratings['positive']; ?>" class="button" onclick="loadGoodVote()" style="float:right;"/>
+         <input type="submit" class="ratingIconBad" name="rating_typeA" value="<?php echo $ratings['negative']; ?>" class="button" onclick="loadBadVote()"/>
+     </p>
+    </form>
+             
              <div class="docActualView">
              	
              	<?php 
@@ -32,7 +41,7 @@ if($upload->filesize == -1){
 	$pdfurl = base_url(). $file['path'];
 	?>
   <?php if ($upload->uuid): ?>
-	<iframe src="http://crocodoc.com/view/?sessionId=<?php echo $sessionid; ?>" style="width:940px; height:730px;" frameborder="0"></iframe>
+	<iframe src="http://crocodoc.com/view/<?php echo $sessionid; ?>" style="width:940px; height:730px;" frameborder="0"></iframe>
   <?php else: ?>
   <iframe src="http://docs.google.com/gview?url=<?php echo $pdfurl; ?>&embedded=true" style="width:940px; height:730px;" frameborder="0"></iframe>
   <?php endif; ?>		
@@ -71,11 +80,6 @@ if($upload->filesize == -1){
 		<div class="twoCol1">
 			
 		<div id="docIconView">
-    		<div id="ratingFeedback" class="ui-corner-all" ></div>
-    	 <form action="" method="post" accept-charset="utf-8" id="ratingForm" >
-         <input type="submit" class="ratingIconGood" name="rating_typeA" value="<?php echo $ratings['positive']; ?>" class="button" onclick="loadGoodVote()"/>
-         <input type="submit" class="ratingIconBad" name="rating_typeA" value="<?php echo $ratings['negative']; ?>" class="button" onclick="loadBadVote()"/>
-    </form>
                     <div id="reportDialog" title="Report This Study Material as Inappropriate">
 	<?php include 'reportcontent.php'; ?>
 	</div>

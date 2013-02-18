@@ -1,6 +1,7 @@
 <div id="content2" style="margin-top:10px">
 <a name="top"></a>
 <div class="twoCol1">
+	
 <?php if($results):?>
       
       <?php if($is_upload): ?>
@@ -31,7 +32,7 @@
     $str = str_replace('\n','<br>',htmlspecialchars($upload->description));
     $str = str_replace('\r','<br>',$str);
                
-    echo substr($str,0,100).'...';
+    echo substr($str,0,100);
     
     ?></p>
     	</div>
@@ -48,12 +49,20 @@
     	
     	<?php $i++;?>
     </div>
+    <?php if ($i % 4 == 0): ?>
+    	<div class="clear"></div>
+  		 <?php if(!$this->session->userdata('logged_in')): ?>
+	    	<a href="<?php echo site_url('users/signup'); ?>"><div id="signUpAd"></div></a>
+		<?php else: ?>	 
+			<a href="<?php echo site_url('members/form'); ?>"><div id="signUpAd2"></div></a>
+	    <?php endif; ?>
+    <?php endif; ?>
+  
     
     <?php endforeach;?>
 
 <div class="clear"></div>
 <?php echo $pagination;?>
-
 	<?php else: ?>
 		
 	<?php if ($urows == 0): ?>
@@ -136,6 +145,12 @@
 
 </div>
 <div class="twoCol2">
+<div id="dashboardShare" class="roundedCornerContent silver">
+		  Invite your friends <br/>Earn $20 point credit!
+		  <br/>
+		  <a href="../../users/invite" id="insertUploadButton" style="font-size:18px; margin-top:10px;">Invite Now</a>
+	</div>
+	<br/>
 	<?php if($results):?>
 <div id="accordion">
 	<h4><a href="#">Search Filters</a></h4>
@@ -201,7 +216,7 @@
 	</div>
 </div>
 <?php endif; ?>
-<a href="../insert"><div id="memberAd2">
+<a href="<?php echo site_url('uploads/insert'); ?>"><div id="memberAd2">
 </div></a>
 </div>
 </div>

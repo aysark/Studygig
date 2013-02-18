@@ -3,7 +3,7 @@
        	 	Find helpful study material.
         </div>
     	<div id="subslogan">
-        	Search more than 1000 documents from hundreds of students (and counting)
+        	Search more than 2000 documents from thousands of students (and counting)
         </div>
         <div id="mainSearch">
         	<?php $attributes = array('class' => 'search', 'method' => 'post', 'name' => 'searchform', 'onsubmit' => 'return validateForm()' ); 

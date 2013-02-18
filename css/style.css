@@ -68,6 +68,16 @@ a:visited {
 	font-weight: bold  !important;
 }
 
+#navbar-members{
+	z-index: 3;
+    position: relative;
+	background: #F6F6F6 url("../images/nav/bg-members.png") repeat-x;
+	height: 79px;
+	line-height: 16px;
+	text-shadow: 0 1px 1px white;
+	font-weight: bold  !important;
+}
+
 #innerNavBar{
 	width:940px;
 	position: relative;
@@ -547,15 +557,68 @@ padding-top:5px;
 	height:265px;
 	width:244px;
 }
+#memberAd3{
+	margin-top:15px;
+	background-image:url('../images/member-ad3.gif');
+	height:265px;
+	width:244px;
+}
+.signup-upload{
+	display: block;
+	position: absolute;
+	width: 167px;
+	height: 374px;
+	background: url("../images/studygig-signup-now.png") no-repeat;
+	background-size: 335px 374px;
+	background-position: 0 0;
+	margin-left: 38px;
+	margin-top: 30px;
+}
+.signup-rewards{
+	display: block;
+	position: absolute;
+	width: 167px;
+	height: 374px;
+	background: url("../images/studygig-signup-now.png") no-repeat;
+	background-size: 335px 374px;
+	background-position: -168px 0;
+	margin-left: 736px;
+	margin-top: 30px;
+}
+#signUpAd{
+	background-image:url('../images/signup-its-free.png');
+	height:88px;
+	width:631px;
+	margin:10px 0 20px 0;
+}
+#signUpAd2{
+	background-image:url('../images/signup-become-member.png');
+	height:88px;
+	width:631px;
+	margin:10px 0 20px 0;
+}
+#popularPlan{
+	float: right;
+background-image: url("images/star.png");
+background-repeat: no-repeat;
+background-position: 0px 0px;
+padding: 5px 0 0 30px;
+margin: 10px 0 0 0;
+}
 
 #memberFeatureList li{
-	 line-height:1.4em;
-	 margin-left:15px;
-	 list-style-type: circle;
+	line-height: 1.4em;
+	padding: 15px 0 10px 40px;
+	list-style-type: none;
+	border-top: solid #E8E8E8 1px;
+	background-image: url('images/check-mark.png');
+	background-repeat: no-repeat;
+	background-position: 0px 12px;
 }
 .memberPrice{
 	font-size:1.3em;
 	font-weight:bold;
+	padding-bottom:17px;
 }
 .twoCol11 {
 	float: left;
@@ -1285,7 +1348,7 @@ height: 45px;
 	display:block;
 	margin-top:5px;
 	float:right;
-	font-size:1.2em;
+	font-size:3em;
 }
 .paginationNumLink{
 	display:inline;
@@ -1908,12 +1971,6 @@ ul.guidelines li{
 	padding-top:12px;
 	margin-left:110px;
 }
-.docViewSect1{
-	
-}
-.docViewSect2{
-	
-}
 .docViewButtonForm{
 	float:right;
 }
@@ -2051,7 +2108,7 @@ text-decoration: none!important;
 
 .col22 { 
 	float: left;
-	width: 30%;
+	width: 31%;
 	padding-left:5px;
 	padding-right:5px;
 }
@@ -2115,7 +2172,7 @@ ul.faq li{
 /* PAYMENT SYSTEM
 -------------------------------------------------------------- */
 .plan{
-	width:180px;
+	width:260px;
 	float:left;
 	padding:20px;
 }
@@ -2172,7 +2229,10 @@ h4 img, h5 img, h6 img {
 .bigText{font-size:4em;color:#0082ff; }
 .bigBlackText{font-size:2.5em;color:#000000; }
 .bigBlackText2{font-size:2em;color:#333333; }
-.popText{color:#0083f9;}
+.popText{
+	color:yellow;
+}
+
 .featureText{font-size:14px;}
 
 #noCourseFound{

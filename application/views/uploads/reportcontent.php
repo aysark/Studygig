@@ -15,4 +15,5 @@
 Additional Comments:
 <textarea rows="2" cols="50" name="reportAdditionalInfo" id="insertDescription" style="width:80%;">
 </textarea>
-	</form>
+<input type="hidden" id="upload_id" name="upload_id" value="<?php echo $upload->id;?>" />
+</form>

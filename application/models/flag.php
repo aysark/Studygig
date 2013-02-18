@@ -9,7 +9,6 @@ class Flag extends CI_Model {
 			'reason' => $reason,
 			'comments' => mysql_real_escape_string(trim($info)),
 			'upload_id'=> $upload_id,
-			'type'=> $type,
 			'user_id'=> $this->session->userdata('user_id')	
 		);
 	

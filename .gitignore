@@ -1,5 +1,9 @@
 application/config/database.php
+application/cache/*
+application/db_cache/*
+application/logs/*
 uploads/*
+logs/*
 application/logs/*
 application/cache/*
 emailssent.txt

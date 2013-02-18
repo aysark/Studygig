@@ -34,7 +34,7 @@
 		<br/>
 		<ul>
 			<li class="clear">
-				<div class="stat_name">Points <a href="#" class="dashHelp" title="Use points to download study material (it costs 20 points to download) or trade in your points to redeem real life rewards.  To earn points- simply upload study material!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a></div>
+				<div class="stat_name">Points <a href="#" class="dashHelp" title="Use points to download study material (it costs 50 points to download) or trade in your points to redeem real life rewards.  To earn points- simply upload study material!"><img src="../../images/help-icon.gif" width="16" height="15" alt="Help Icon" /></a></div>
 				<div class="stat_value"><?php echo $points;?></div>
 				<div class="clear"></div>
 			</li>
@@ -58,10 +58,25 @@
 			</li>
 			<li class="clear">
 				<div class="stat_name">Membership</div>
-				<div class="stat_value">Free</div>
+				<div class="stat_value"><?php 
+					if ($ismember) {
+					 echo "Member";
+				 }
+					 else{
+					 echo "Free";
+				 	}
+					 ?></div>
 				<div class="clear"></div>
 				<div class="stat_action">
-				<a href="../members/form">Become a Member »</a>
+					<?php 
+					if ($ismember) {
+					 echo "<a href=\"../members/status\">View membership status »</a>";
+				 }
+					 else{
+					 echo "<a href=\"../members/form\">Become a Member »</a>";
+				 	}
+					 ?>
+				
 				</div>
 			</li>
 			
@@ -83,7 +98,7 @@
 <ul class="dashboardList">
 <li><a href="../uploads/insert"><img src="../../images/post-study-material-icon.png" class="textmiddle"> Upload Notes</a></li>
 <li><a href="../classifieds/insert"><img src="../../images/list-study-material-icon.png" class="textmiddle"> List Your Books</a></li>
-<li><img src="../../images/download-earn-icon.png" class="textmiddle"><a href="profile"> Earn Rewards</a></li>
+<li><img src="../../images/download-earn-icon.png" class="textmiddle"><a href="rewards"> Earn Rewards</a></li>
 </ul>
 </div>
 
@@ -127,7 +142,11 @@
 	<?php endforeach; ?>
 	</ul>
 	<div class="clear" style="text-align:right">
-		<a href="../members/form">Become a Member to see all your downloads »</a>
+		<?php 
+					if (!$ismember) {
+					 echo "<a href=\"../members/form\">Become a Member to see all your downloads »</a>";
+				 }
+					 ?>
 	</div>
 </div>
 <?php if($user->oauth_provider): ?>

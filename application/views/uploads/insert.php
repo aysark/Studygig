@@ -149,6 +149,8 @@ onKeyUp="limitText(this.form.description,this.form.countdown,350);" tabindex="6"
 	<div class="clear"></div>
 	<p>By uploading a file you certify that you have the right to distribute it and that it does not violate our <a href="<?php echo base_url();?>index.php/site/termsofuse">Terms of Use</a>.</p>
 	
+	<div class="ui-state-error ui-corner-all" style="padding-top: 2px; padding-right: 0.7em; padding-bottom: 2px; padding-left: 0.7em;color:#CD0A0A; margin-bottom:10px;"><b>LEECHERS BEWARE:</b> All uploads are monitored!  Uploading fake/misleading docs results in an instant ban for life.</div>
+	
 <input type="submit" value="Upload Notes" id="insertUploadButton" tabindex="9" /> 
 <?php echo form_close(); ?>
 	

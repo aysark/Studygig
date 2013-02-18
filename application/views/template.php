@@ -97,17 +97,6 @@ $(function() {
 				minLength: 2,
 				delay: 0
 			});
-	
-			
-// google analytics START
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-22030731-1']);
-  _gaq.push(['_trackPageview']);
-
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(ga, ss);
-  // google analytics END
 			
 //uservoice START
  /* var uvOptions = {};
@@ -129,6 +118,21 @@ $(function() {
 
 </script>
 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30883267-1']);
+  _gaq.push(['_setDomainName', 'studygig.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 </head>
 	<body>
 		<!-- ClickTale Top part -->
@@ -139,7 +143,9 @@ var WRInitTime=(new Date()).getTime();
 
 			
 <?php if( extension_loaded('newrelic') ) { echo newrelic_get_browser_timing_header(); } ?>
-    <div id="navbar">
+
+<div id="navbar">
+    
     	<div id="innerNavBar">
     		<a id="navLogo" href="/">
     			<img src="images/nav/logo.png" width="122" height="28" alt="Studygig">
@@ -178,7 +184,7 @@ var WRInitTime=(new Date()).getTime();
          
          <ul class="navbar-list right">
          	<?php if($this->session->userdata('logged_in')): ?>
-         	<li class="navbar-list-item"><a href="<?php echo site_url('members/form');?>">Become a Member (25% Off)</a></li>
+         	<li class="navbar-list-item"><a href="<?php echo site_url('members/form');?>">Become a Member (free 1 month)</a></li>
          	<?php endif; ?>
          	<li class="navbar-list-item"><a href="<?php echo site_url('site/help');?>">Help</a></li>
          	
@@ -205,7 +211,7 @@ mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER
 <li><a href="index.php/uploads/search/English" title="English">EN - English</a></li>
 <li><a href="index.php/uploads/search/Environmental Studies" title="Environmental Studies">ENVS - Environmental Studies</a></li>
 <li><a href="index.php/uploads/search/Geography" title="Geography">GEOG - Geography</a></li>
-<li><a href="index.php/uploads/search/History" title="History">HIST - History</a></li>
+<li><a href="index.php/uploads/view/723" title="Linear Algebra and Its Applications Solution Manual David C Lay">Linear Algebra and Its Applications</a></li>
 <li><a href="index.php/uploads/search/Humanities" title="Humanities">HUMA - Humanities</a></li>
 </ul>
 
@@ -214,45 +220,45 @@ mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER
 <li><a href="index.php/uploads/search/Philosophy" title="Philosophy">PHIL - Philosophy</a></li>
 <li><a href="index.php/uploads/search/Political" title="Political Science">POLS - Political Science</a></li>
 <li><a href="index.php/uploads/search/Psychology" title="Psychology">PSYC - Psychology</a></li>
+<li><a href="index.php/uploads/view/13" title="Probability by Jim Pitman Solution Manual">Probability by Jim Pitman</a></li>
 <li><a href="index.php/uploads/search/Sociology" title="Sociology">SOCI - Sociology</a></li>
 <li><a href="index.php/uploads/search/Social Science" title="Social Science">SOSC - Social Science</a></li>
-<li><a href="index.php/uploads/search/Visual Arts" title="Visual Arts">VISA - Visual Arts</a></li>
 <li><a href="index.php/uploads/search/Womens Studies" title="Womens Studies">WMST - Womens Studies</a></li>
 </ul>
             </div>
             <div class="col22">
                 <h2>Popular Courses</h2>
 <ul class="seo" >
-<li><a href="index.php/uploads/search/ADMS1000" title="ADMS1000">ADMS1000</a></li>
-<li><a href="index.php/uploads/search/CSE1020" title="CSE1020">CSE1020</a></li>
-<li><a href="index.php/uploads/search/DANC1205" title="DANC1205">DANC1205</a></li>
-<li><a href="index.php/uploads/search/ECON1000" title="ECON1000">ECON1000</a></li>
-<li><a href="index.php/uploads/search/EN1001" title="EN1001">EN1001</a></li>
-<li><a href="index.php/uploads/search/ENVS1000" title="ENVS1000">ENVS1000</a></li>
-<li><a href="index.php/uploads/search/ENVS1200" title="ENVS1200">ENVS1200</a></li>
-<li><a href="index.php/uploads/search/GEOG1000" title="GEOG1000">GEOG1000</a></li>
+<li><a href="index.php/uploads/search/ADMS1000" title="ADMS 1000">ADMS 1000</a></li>
+<li><a href="index.php/uploads/search/ADMS2400" title="ADMS 2400">ADMS 2400</a></li>
+<li><a href="index.php/uploads/search/CHEM1001" title="CHEM 1001">CHEM 1001</a></li>
+<li><a href="index.php/uploads/search/CSE1020" title="CSE 1020">CSE 1020</a></li>
+<li><a href="index.php/uploads/search/CSE1520" title="CSE 1520">CSE 1520</a></li>
+<li><a href="index.php/uploads/search/CSE2031" title="CSE 2031">CSE 2031</a></li>
+<li><a href="index.php/uploads/search/CSE3311" title="CSE 3311">CSE 3311</a></li>
+<li><a href="index.php/uploads/search/CSE3221" title="CSE 3221">CSE 3221</a></li>
 </ul>
 
 <ul class="seo" >
-<li><a href="index.php/uploads/search/HIST1010" title="HIST1010">HIST1010</a></li>
-<li><a href="index.php/uploads/search/HUMA1110" title="HUMA1110">HUMA1110</a></li>
-<li><a href="index.php/uploads/search/HUMA1125" title="HUMA1125">HUMA1125</a></li>
-<li><a href="index.php/uploads/search/MATH1013" title="MATH1013">MATH1013</a></li>
-<li><a href="index.php/uploads/search/MATH1014" title="MATH1014">MATH1014</a></li>
-<li><a href="index.php/uploads/search/PHIL1000" title="PHIL1000">PHIL1000</a></li>
-<li><a href="index.php/uploads/search/PHIL1100" title="PHIL1100">PHIL1100</a></li>
-<li><a href="index.php/uploads/search/PSYC1010" title="PSYC1010">PSYC1010</a></li>
+<li><a href="index.php/uploads/search/ECON1000" title="ECON 1000">ECON 1000</a></li>
+<li><a href="index.php/uploads/search/ECON1010" title="ECON 1010">ECON 1010</a></li>
+<li><a href="index.php/uploads/search/EN1001" title="EN 1001">EN 1001</a></li>
+<li><a href="index.php/uploads/search/EATS2470" title="EATS 2470">EATS 2470</a></li>
+<li><a href="index.php/uploads/search/KINE1000" title="KINE 1000">KINE 1000</a></li>
+<li><a href="index.php/uploads/search/KINE1020" title="KINE 1020">KINE 1020</a></li>
+<li><a href="index.php/uploads/search/MATH1013" title="MATH 1013">MATH 1013</a></li>
+<li><a href="index.php/uploads/search/MATH1014" title="MATH 1014">MATH 1014</a></li>
 </ul>
 
 <ul class="seo" >
-<li><a href="index.php/uploads/search/PSYC2020" title="PSYC2020">PSYC2020</a></li>
-<li><a href="index.php/uploads/search/SOCI1010" title="SOCI1010">SOCI1010</a></li>
-<li><a href="index.php/uploads/search/SOCI2030" title="SOCI2030">SOCI2030</a></li>
-<li><a href="index.php/uploads/search/SOSC1000" title="SOSC1000">SOSC1000</a></li>
-<li><a href="index.php/uploads/search/SOSC1009" title="SOSC1009">SOSC1009</a></li>
-<li><a href="index.php/uploads/search/VISA1000" title="VISA1000">VISA1000</a></li>
-<li><a href="index.php/uploads/search/WMST1500" title="WMST1500">WMST1500</a></li>
-<li><a href="index.php/uploads/search/WMST1510" title="WMST1510">WMST1510</a></li>
+<li><a href="index.php/uploads/search/MATH1019" title="MATH 1019">MATH 1019</a></li>
+<li><a href="index.php/uploads/search/MATH2030" title="MATH 2030">MATH 2030</a></li>
+<li><a href="index.php/uploads/search/PHIL1100" title="PHIL 1100">PHIL 1100</a></li>
+<li><a href="index.php/uploads/search/PHYS1420" title="PHYS 1420">PHYS 1420</a></li>
+<li><a href="index.php/uploads/search/PSYC1010" title="PSYC 1010">PSYC 1010</a></li>
+<li><a href="index.php/uploads/search/PSYC2020" title="PSYC 2020">PSYC 2020</a></li>
+<li><a href="index.php/uploads/search/SOCI1010" title="SOCI 1010">SOCI 1010</a></li>
+<li><a href="index.php/uploads/search/SOSC1000" title="SOSC 1000">SOSC 1000</a></li>
 </ul>
 
             </div>
@@ -266,6 +272,7 @@ mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER
 <li><a href="index.php/uploads/search/Lab Report" title="Lab Reports &amp; Material">Lab Reports &amp; Material</a></li>
 <li><a href="index.php/uploads/search/Study guide" title="Study guides">Study Guides</a></li>
 <li><a href="index.php/uploads/search/Reference Material" title="Reference Materials, equation sheets, cheat sheets">Reference Materials</a></li>
+<li><a href="index.php/uploads/search/Reference Material" title="Yorku York University notes tests exams">YorkU Notes</a></li>
 </ul>
             </div>
     </div>
@@ -288,7 +295,7 @@ mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER
     <br/>
     Join us on: <a href="http://www.facebook.com/studygig" title="Like Studygig on Facebook">Facebook</a> & <a href="http://twitter.com/studygig" title="Follow Studygig on Twitter">Twitter</a><a href="http://mixpanel.com/f/partner" style="float:right;"><img src="http://mixpanel.com/site_media/images/partner/badge_light.png" alt="Web Analytics" /></a>
     <br/>
-    Copyright © 2011 Studygig.
+    Copyright © 2012 Studygig.
     <br/>
      Made in Canada <img src="images/made-in-canada.png" width="15" height="10" alt="Made in Canada" />     
  </div>

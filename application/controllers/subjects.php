@@ -6,7 +6,7 @@ class Subjects extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('User');
-		$data->points = $this->User->total_points($this->session->userdata('user_id'));
+		$data->member = $this->Member->is_member($this->session->userdata('user_id'));
 		$this->load->vars($data);
 	}
 	

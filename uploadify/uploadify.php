@@ -147,8 +147,7 @@ if (!empty($_FILES)) {
 	                            'ext' => $ext,
 	                            );
 	
-	     
-	    echo json_encode($file_info);
+	     echo json_encode($file_info);
 	    
 	    if ($ext == ".pdf"){
 	    	$input_file = "/var/www/vhosts/studygig.com/httpdocs/uploads/".$name."[0]";

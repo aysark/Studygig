@@ -20,7 +20,6 @@
     
     
     <div class="docPreview">
-    	<p>The following is a preview of the document.</p>
         <?php
         if ($upload->filesize == -1){
             echo "This upload is not hosted on Studygig, currently we do not provide previews for such uploads.";
@@ -36,6 +35,7 @@
     
     //its a pdf and has a preview  	 	 
 	}else{
+		echo 'The following is a preview of the first page of the document';
    	 	$preview = str_replace($upload->filetype,".jpg",$file_path);
       $preview = str_replace("/materials","",$preview);
     	echo "<img src=\"".base_url().$preview."\" />";
@@ -84,28 +84,23 @@
 	<?php include 'reportcontent.php'; ?>
 	</div>
                 <div class="reportIconView">Report</div>
+                
                 <div class="downloadViewButton"> 
-               
-            <?php echo form_open('uploads/download'); ?>
-	    <input type="hidden" id="file_name" name="file_name" value ="<?php echo $file_name; ?>" />
-	    <input type="hidden" id="file_path" name="file_path" value ="<?php
-	    
-
-        	//check if its an image upload
-           	 if ((strcasecmp($upload->filetype,".jpg") == 0) || (strcasecmp($upload->filetype,".jpeg") == 0) || (strcasecmp($upload->filetype,".gif") == 0) || (strcasecmp($upload->filetype,".png")== 0))
-           	{
-                echo $file_path_for_images;	 
-			}else{
-		   	 	 echo $file_path; 
-		    }
-	    
-	    
-	    ?>" />
-	    <input type="hidden" id="upload_id" name="upload_id" value ="<?php echo $upload->id; ?>" />
-	    <input type="submit" name="submit" value="Download Document" class="button" id="docViewItButton"/>
-	    <?php echo form_close();?>
-    
-    </div>
+		            <?php echo form_open('uploads/download'); ?>
+			    <input type="hidden" id="file_name" name="file_name" value ="<?php echo $file_name; ?>" />
+			    <input type="hidden" id="file_path" name="file_path" value ="<?php
+		        	//check if its an image upload
+		           	 if ((strcasecmp($upload->filetype,".jpg") == 0) || (strcasecmp($upload->filetype,".jpeg") == 0) || (strcasecmp($upload->filetype,".gif") == 0) || (strcasecmp($upload->filetype,".png")== 0))
+		           	{
+		                echo $file_path_for_images;	 
+					}else{
+				   	 	 echo $file_path; 
+				    }
+			    ?>" />
+			    <input type="hidden" id="upload_id" name="upload_id" value ="<?php echo $upload->id; ?>" />
+			    <input type="submit" name="submit" value="Download Document" class="button" id="docViewItButton"/>
+			    <?php echo form_close();?>
+    		</div>
     
     <div class="facebookIconView">
     <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=227114113981233&amp;xfbml=1"></script><fb:like href="<?php echo site_url('uploads/view/'. $upload->id); ?>" send="false"  layout="box_count" width="100" height="100" show_faces="true" action="recommend" font="tahoma"></fb:like>
@@ -141,12 +136,16 @@
             <?php if(empty($byUserUploads)){
                 echo "No more study material from this user found.";
             }else{ ?>
-                
-        <?php foreach($byUserUploads as $moreUpload):?>
-        <h4><a href="<?php echo site_url('uploads/view/'. $moreUpload->id);?>"><?php echo $moreUpload->title; ?></a></h4>
-    <?php endforeach; ?>
-    <?php } ?>
+		                
+		        <?php foreach($byUserUploads as $moreUpload):?>
+		        <h4><a href="<?php echo site_url('uploads/view/'. $moreUpload->id);?>"><?php echo $moreUpload->title; ?></a></h4>
+		    <?php endforeach; ?>
+		    <?php } ?>
     </div>
+    <?php if(!$this->session->userdata('logged_in')): ?>
+    	<a href="<?php echo site_url('users/signup'); ?>"><div id="memberAd3">
+    <?php endif; ?>
+</div></a>
     
     </div>
     

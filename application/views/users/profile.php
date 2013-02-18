@@ -27,24 +27,10 @@
  -->
  
  
-<div id="profile" class="roundedCornerContent">
+<div id="favourites" class="roundedCornerContent">
 
 	<div id="editProfileForm">
-	<?php echo form_open('users/editprofile');?>
-		Full name:<input type="textfield" class="formTextField" id="fullname" name="fullname" value="<?php echo set_value('fullname', $user->fullname); ?>" />
-		University major:<input type="textfield" class="formTextField" name="major" value="<?php echo set_value('major', $user->major); ?>" />
-		Year of study:<select id="year" name="year">
-						<option value="1st year">1st year</option>
-						<option value="2nd year">2nd year</option>
-						<option value="3rd year">3rd year</option>
-						<option value="4th year">4th year</option>
-						<option value="5th+ year">5th+ year</option>
-						<option value="Other">Other</option>
-					  </select>
-		
-		<br />
-		<input type="submit" id="insertUploadButton"  name="submit" value="Save profile settings" /> 
-	<?php echo form_close();?>
+	Under development - check back soon!
 	</div>
 
 </div><!-- end favourite div -->

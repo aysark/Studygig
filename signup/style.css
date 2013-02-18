@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { background: #eee url(images/body_tile.png) repeat; 
+font-family: Tahoma, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 16px; color: #6f6f6f; text-align: left; line-height: normal;  }
+
+/* general things, floaters, general links and additional resets */
+a { color:#01509d; text-decoration:none; }
+a:hover { color:#1a75cd; text-decoration:none; }
+strong { font-weight: 700; }
+.fl { float:left;}
+.fr { float:right; }
+.clear {  clear:both; }
+.rel { position:relative; }
+.abs { position:absolute; }
+hr { border: none 0; border-bottom: 1px solid #E0E0E0;	height: 1px; margin: 10px 0; }
+blockquote { font-style: italic; font-size:13px; line-height:18px; background: url(images/quotes.png) no-repeat top left;	background-position: 12px 12px;	color:#595959; margin:5px 0;  padding: 8px 15px 10px 60px; }
+ul{line-height:1.5; margin-left:25px;}
+li{list-style-image:url(images/arrow.gif);}
+
+
+#wrapper{width: 940px; margin-left:auto; margin-right:auto; text-align: left;}
+
+#facebook{margin-top:30px; text-align:right;}
+#header{background-image:url(images/studygig-coming-soon2.png); background-repeat:no-repeat; width:940px; height:211px; }
+
+.left{float:left; padding-left:20px; padding-right:10px; padding-top:5px; width:350px; text-align:justify;}
+.right{float:right; padding-right:20px; width:500px; padding-left:10px; padding-top:5px;}
+
+h1{font-family: Calibri; font-weight:300; color:#333333; font-size:28px;}
+
+.spamnote{font-size:10px;}
+#emailfield{
+	background-image:url(images/notifyfield.png);
+	background-repeat:no-repeat;
+	background-color:none;
+	color:#4a4a4a;
+	font-size:20px;
+	outline:none;
+	width: 338px;
+	border:none;
+	padding-left:10px;
+	height:52px;
+}
+
+#submitButton{
+	background-image:url(images/notifybutton1.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+	width:165px;
+	height:54px;
+	border:none;
+	outline:none;
+	position:absolute;
+	cursor:pointer;
+}
+
+#submitButton:hover{
+	background-image:url(images/notifybutton1.png);
+	background-position:0 -54px;
+	background-repeat:no-repeat;
+	width:165px;
+	height:54px;
+	border:none;
+	outline:none;
+	position:absolute;
+	cursor:pointer;
+}
+#submitButton:active{
+	background-image:url(images/notifybutton1.png);
+	background-position:0 -54px;
+	background-repeat:no-repeat;
+	width:165px;
+	height:54px;
+	border:none;
+	outline:none;
+	position:absolute;
+	cursor:pointer;
+}
+.pageTitle {background-color:none; padding:8px; font-size:16px; font-weight:bold; color:#000000; text-align:left;}
+.pageTitleAlert {background-color: none; padding:8px; font-size:16px; font-weight:bold; color:#FFFFFF; text-align:left;}
+.pageTitleSuccess {background-color:none; padding:8px; font-size:16px; font-weight:bold; color:#FFFFFF; text-align:left;}
+.formLabel {font-size:13px;}
+.error {color:#FF0000; font-weight:bold; font-size:11px; background-color:none;}
+.small {font-size:11px;}
+
+.footer{font-size:12px; margin-top:30px;}
+#follow{position:relative; left:155px; top:40px;}
+

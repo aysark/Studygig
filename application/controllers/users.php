@@ -10,7 +10,6 @@
 		date_default_timezone_set('America/Toronto');
 		
 		if ($this->session->userdata('logged_in')) {
-			
 			$data->points = $this->User->total_points($this->session->userdata('user_id'));
 			$this->load->vars($data);
 		}
@@ -321,16 +320,24 @@
   function dashboard() {
     $this->load->model('Favourite');
     $this->load->model('Upload');
+    $this->load->model('Member');
     if ($this->loggedin) {
       $data['content'] = 'users/dashboard';
       $data['user'] = $this->user;    
       $userid = $this->user->id;
-      
+
+      if ($this->Member->is_member($userid)){
+      	$data['ismember'] = true;
+      	$data['recentdownloads'] = $this->User->recent_downloads_member($userid);
+      }else{
+		$data['ismember'] = false;
+      	$data['recentdownloads'] = $this->User->recent_downloads($userid);      
+      }	
       $data['total_uploads'] = $this->User->total_uploads($userid);
       $data['total_downloads'] = $this->User->total_downloads($userid);
       
       $data['points'] = $this->User->total_points($userid);
-      $data['recentdownloads'] = $this->User->recent_downloads($userid);
+      
       $data['favourites'] = $this->Favourite->get($userid);
       
       foreach ($data['favourites'] as $f => $fav){
@@ -377,12 +384,6 @@
 	    }
 	    else  
 	    redirect('users/login');
-  }
-
-  function editprofile(){
-  	
-  	$this->User->editprofile();
-  	redirect('users/dashboard');
   }
   
   function invite(){

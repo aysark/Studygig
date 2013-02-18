@@ -1,10 +1,9 @@
 <?php
 
-if (!empty($_FILES)) {
-	
-	$location = "uploads/";
-	$field = 'Filedata';
-	
+$location = "uploads/";
+$field = 'Filedata';
+if ($_POST['upload']){
+echo $_POST['id'];
 	if ( ! is_uploaded_file($_FILES[$field]['tmp_name']))
 	{
 		//echo "\nerror in uploading file";
@@ -119,19 +118,18 @@ if (!empty($_FILES)) {
 					exit(0);
 				}
 				
-	//move the file to final destination --- no ext in name: substr($name, 0,strrpos($name,'.'))
+	//move the file to final destination
 	if (move_uploaded_file($_FILES[$field]['tmp_name'], $location.$name)) {
-		 $file_info = array(
-	                            'name' => $name,
+		 $file_info[] = array(
+	                            'name' => substr($name, 0,strrpos($name,'.')),
 	                            'file' => $location.$name,
 	                            'size' => $file_size,
 	                            'ext' => $ext,
 	                            );
 	
-	     echo json_encode($file_info);
+	     print_r ($file_info);
 	    
 	    if ($ext === ".pdf"){
-	    	$input_file = $location.$name."[0]";
 		    $output_file = str_replace($ext,".jpg",$fullname);
 			$command = "convert $input_file -resize 85% -crop 540x465+0+0 canvas:none -fill \"#0076e6\" -font AvantGarde-Demi -pointsize 28 -draw \"text 60,270 'Studygig.com Preview'\" -channel RGBA $output_file ";
 										
@@ -141,3 +139,4 @@ if (!empty($_FILES)) {
 	    echo "\nPossible file upload attack!\n";
 	}
 }
+		

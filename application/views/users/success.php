@@ -42,7 +42,7 @@
 	  <div class="welcome2col2">
 	<p>Earn points by <a href="../uploads/insert">sharing study material</a> and then you can use those points to download or trade them in for real life rewards such as gift cards.
 		
-		<br/><br/>To earn points you simply share study material, you can get up to 20 points for sharing study material.  Other ways to earn points such as rating study material and whenever someone downloads your study material you get 2 points.  It costs 20 points to download a study material.  The number of points you have is displayed at the top in brackets beside the <a href="dashboard">Dashboard</a> link.  
+		<br/><br/>To earn points you simply share study material, you can get up to 20 points for sharing study material.  Other ways to earn points such as rating study material and whenever someone downloads your study material you get 2 points.  It costs 50 points to download a study material.  The number of points you have is displayed at the top in brackets beside the <a href="dashboard">Dashboard</a> link.  
 		<br/><br/><b>Tip:</b> be on the look out for point giveaways on our <a href="http://www.facebook.com/studygig">Facebook page</a> and on <a href="http://twitter.com/studygig">Twitter.</a></p>
 		</div>
 		<div class="clear"></div>

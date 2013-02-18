@@ -1,13 +1,36 @@
-
+<!-- Google Code for Signup Page Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1036987137;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "3lzaCM2l6AIQgda87gM";
+var google_conversion_value = 0;
+if (1) {
+  google_conversion_value = 1;
+}
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1036987137/?value=1&amp;label=3lzaCM2l6AIQgda87gM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- END Google Code for Signup Page Conversion Page -->
+<div id="loginTitle" style="text-align: center;">Create a <b>Free</b> Account</div>
+<div class="signup-upload"></div>
+<div class="signup-rewards"></div>
 <div class="signupCol">	
-	<span id="loginTitle">Create a <b>Free</b> Account</span>
+	<h3>The easiest way to study.</h3>
 	<?php
 	if (validation_errors() != ""){
 	 echo '<div class="ui-state-error ui-corner-all" style="padding-top: 0px; padding-right: 0.7em; padding-bottom: 0px; padding-left: 0.7em;color:#CD0A0A; width:95%;">'.validation_errors().'</div>';}?>
 	 
  <div id="loginForm">
 	<div id="loginWithFacebook">
-		<h2>Skip the registration and login using Facebook</h2>
 	<a href="<?php echo site_url('sessions/fb_login');?>" class="facebookLink"><div id="loginWithFacebookButton"></div></a>
 	<p> <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js
 #appId=170587262970610&amp;xfbml=1"></script><fb:facepile></fb:facepile></p>

@@ -6,6 +6,27 @@ class Upload extends CI_Model {
     {
         parent::__construct();
     }
+  
+  function get_crocodoc($limit,$offset) {
+  	$query = $this->db->get('uploads',$limit,$offset);
+  	return $query->result();
+  }
+  
+  function get_remaining() {
+    $this->db->where('id <',400);
+    $this->db->where('uuid','');
+    $this->db->limit(130);
+    
+    $query = $this->db->get('uploads');
+    
+    return $query->result();
+  }
+  
+  function update_uuid($id,$uuid) {
+  	$data = array('uuid' => $uuid);
+  	$this->db->where('id',$id);
+  	$this->db->update('uploads',$data);
+  }
     
   function latest() {
   	$this->db->order_by("created_at", "desc"); 

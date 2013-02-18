@@ -10,7 +10,6 @@ class Uploads extends CI_Controller {
 		date_default_timezone_set('America/Toronto');
 		
 		if ($this->session->userdata('logged_in')) {
-			
 			$data->points = $this->User->total_points($this->session->userdata('user_id'));
 			$this->load->vars($data);
 		}		
@@ -154,12 +153,12 @@ class Uploads extends CI_Controller {
 					    curl_setopt($ch, CURLOPT_VERBOSE, 0);
 					    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 					    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
-					    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v1/document/upload" );
+					    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v2/document/upload" );
 					    curl_setopt($ch, CURLOPT_POST, true);
 					    
 					    $post = array(
 					        "url"=> $url,
-					        "token" => "yYaBAI95eJxVkPb0Twvh",
+					        "token" => "yYaBAI95eJxVkPb0TwvhoqMi",
 					        "private" => "true",
 					        "title" => $this->input->post('title')
 					    );
@@ -290,12 +289,12 @@ class Uploads extends CI_Controller {
 							    curl_setopt($ch, CURLOPT_VERBOSE, 0);
 							    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 							    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
-							    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v1/document/upload" );
+							    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v2/document/upload" );
 							    curl_setopt($ch, CURLOPT_POST, true);
 							    
 							    $post = array(
 							        "file"=>"@". $file['file'],
-							        "token" => "yYaBAI95eJxVkPb0Twvh",
+							        "token" => "yYaBAI95eJxVkPb0TwvhoqMi",
 							        "private" => "true",
 							        "title" => $file['name']
 							    );
@@ -686,7 +685,8 @@ class Uploads extends CI_Controller {
 		    $uploadid = $this->input->post('upload_id');
 		    $uploader = $this->Upload->get_uploader($uploadid);
 		    $uploaderid = $uploader->id;
-		    $downloader_name = $this->User->get_username_by_id($this->session->userdata('user_id'));
+		    $downloader_id   = $this->session->userdata('user_id');
+		    $downloader_name = $this->User->get_username_by_id($downloader_id);
 		    
 		    #Check if he already has the file
 		    $already_has = $this->User->already_has($this->session->userdata('user_id'),$uploadid);
@@ -695,105 +695,195 @@ class Uploads extends CI_Controller {
 		    $this->load->model('Member');
 		    $subscriber = $this->Member->is_member($this->session->userdata('user_id'));
 		    
-		    if ($this->User->can_download($this->session->userdata('user_id')) or $subscriber) {
-		        # Get the file
-		        $data['file'] = $this->_prepare_download($this->input->post('file_path'),
-		        										 $this->input->post('file_name'));
-		        $data['upload'] = $this->Upload->get_by_id($uploadid);
-		        
-		        # Check if transaction is complete
-		        if ($this->Transaction->add($this->session->userdata('user_id'),$uploadid,$uploaderid,$already_has,$subscriber)) {
-		            $this->load->model('Favourite');
-		            
-		            $data['upload'] = $this->Upload->get_by_id($uploadid);
-		            $data['file_name'] = $data['upload']->filepath;
-		            $data['fileType'] = $data['upload']->filetype;
-		            
-		            //check if image or not
-		             if ((strcasecmp($data['fileType'],".jpg") == 0) || (strcasecmp($data['fileType'],".jpeg") == 0) || (strcasecmp($data['fileType'],".gif") == 0) || (strcasecmp($data['fileType'],".png")== 0))
-		           	{
-		                $data['file_path_for_images'] = 'uploads/'. $data['file_name'];
-					}else{
-				   	 	 $data['file_path'] = 'uploads/materials/'. $data['file_name'];
-				    }
-				    
-		            $data['ratings'] = $this->Upload->get_rating($uploadid);
-		            $data['uploader'] =$uploader;
-		            $data['course']  = $this->Upload->get_course_by_id($uploadid);
-		            $data['favourited'] =  $this->Favourite->is_favourited_by($this->session->userdata('user_id'),$uploadid);
-		            $data['related'] = false;
-		            $data['materialType'] = $this->Upload->get_material_by_id($uploadid);
-		            
-		            
-		            //check if upload has related uploads
-		            if ($data['upload']->related == 1) {
-		                $data['related'] = true;
-		                $data['moreByUser'] = $this->Upload->get_related($uploadid);
-		            }
-		            
-		            $data['similarUploads'] = $this->Upload->get_similar($uploadid);
-		            $data['byUserUploads'] = $this->Upload->get_byUser($uploadid);
-
-		            // Check for Crocodoc version 
-		            if ($data['upload']->uuid != NULL) {
-
-			            $ch = curl_init();
-					    curl_setopt($ch, CURLOPT_HEADER, 0);
-					    curl_setopt($ch, CURLOPT_VERBOSE, 0);
-					    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-					    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
-					    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v1/session/get" );
-					    curl_setopt($ch, CURLOPT_POST, true);
+		    $data['upload'] = $this->Upload->get_by_id($uploadid);
+		    
+		    //check if upload is members only
+		    if($data['upload']->members == 1){
+		    	//check if uploader is a member
+		    	if ($subscriber){
+		    		# Get the file
+			        $data['file'] = $this->_prepare_download($this->input->post('file_path'),
+			        										 $this->input->post('file_name'));
+			        										 
+			         # Check if transaction is complete
+			        if ($this->Transaction->add($this->session->userdata('user_id'),$uploadid,$uploaderid,$already_has,$subscriber)) {
+			            $this->load->model('Favourite');
+			            
+			            $data['upload'] = $this->Upload->get_by_id($uploadid);
+			            $data['file_name'] = $data['upload']->filepath;
+			            $data['fileType'] = $data['upload']->filetype;
+			            
+			            //check if image or not
+			             if ((strcasecmp($data['fileType'],".jpg") == 0) || (strcasecmp($data['fileType'],".jpeg") == 0) || (strcasecmp($data['fileType'],".gif") == 0) || (strcasecmp($data['fileType'],".png")== 0))
+			           	{
+			                $data['file_path_for_images'] = 'uploads/'. $data['file_name'];
+						}else{
+					   	 	 $data['file_path'] = 'uploads/materials/'. $data['file_name'];
+					    }
 					    
-					    $post = array(
-					        "uuid"=> $data['upload']->uuid,
-					        "token" => "yYaBAI95eJxVkPb0Twvh",
-					        "downloadable" => "false",
-					        "name" => $downloader_name
-					    );
-
-					    log_message('debug','CROCDOC PARAMS: '. json_encode($post));
-
-					    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			            $data['ratings'] = $this->Upload->get_rating($uploadid);
+			            $data['uploader'] =$uploader;
+			            $data['course']  = $this->Upload->get_course_by_id($uploadid);
+			            $data['favourited'] =  $this->Favourite->is_favourited_by($this->session->userdata('user_id'),$uploadid);
+			            $data['related'] = false;
+			            $data['materialType'] = $this->Upload->get_material_by_id($uploadid);
+			            
+			            
+			            //check if upload has related uploads
+			            if ($data['upload']->related == 1) {
+			                $data['related'] = true;
+			                $data['moreByUser'] = $this->Upload->get_related($uploadid);
+			            }
+			            
+			            $data['similarUploads'] = $this->Upload->get_similar($uploadid);
+			            $data['byUserUploads'] = $this->Upload->get_byUser($uploadid);
+	
+			            // Check for Crocodoc version 
+			            if ($data['upload']->uuid != NULL) {
+	
+				            $ch = curl_init();
+						    curl_setopt($ch, CURLOPT_HEADER, 0);
+						    curl_setopt($ch, CURLOPT_VERBOSE, 0);
+						    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
+						    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v2/session/create" );
+						    curl_setopt($ch, CURLOPT_POST, true);
+						    
+						    $post = array(
+						        "uuid"=> $data['upload']->uuid,
+						        "token" => "yYaBAI95eJxVkPb0TwvhoqMi",
+						        "downloadable" => "false",
+							"editable" => "true",
+						        "user" => $downloader_id. ",". $downloader_name
+						    );
+	
+						    log_message('error','CROCDOC PARAMS: '. json_encode($post));
+	
+						    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+						    
+						    #Get response from crocdoc 
+						    $json_response = curl_exec($ch);
+						    $response = json_decode($json_response);				    
+	
+						    $data['sessionid'] = $response->session;
+						    log_message('error','CROCDOC SESSION ID: '. $response->session);
+						} 
+	
+			            $data['content'] = 'uploads/docview';
+			        } else {
+			            $data['content'] = 'uploads/error';
+			            # Not created yet!
+			        }
+			        
+			        $data['pageTitle'] = htmlspecialchars($data['upload']->title);
+			        $data['pageDescription'] = $data['course'].'.  '.$data['upload']->description;
+			        
+			        $this->load->view('subTemplate', $data);
+		    	}else{
+		    		//user need to be a member
+		    		$data['content'] = 'users/memberdownload';
+			        $data['pageTitle'] = "Become a Member to Download This Document";
+			        $data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+			        $this->load->view('subTemplate', $data);
+	    		}
+		    }else{
+			    if ($this->User->can_download($this->session->userdata('user_id')) or $subscriber) {
+			        # Get the file
+			        $data['file'] = $this->_prepare_download($this->input->post('file_path'),
+			        										 $this->input->post('file_name'));
+			        
+			        
+			        # Check if transaction is complete
+			        if ($this->Transaction->add($this->session->userdata('user_id'),$uploadid,$uploaderid,$already_has,$subscriber)) {
+			            $this->load->model('Favourite');
+			            
+			            $data['upload'] = $this->Upload->get_by_id($uploadid);
+			            $data['file_name'] = $data['upload']->filepath;
+			            $data['fileType'] = $data['upload']->filetype;
+			            
+			            //check if image or not
+			             if ((strcasecmp($data['fileType'],".jpg") == 0) || (strcasecmp($data['fileType'],".jpeg") == 0) || (strcasecmp($data['fileType'],".gif") == 0) || (strcasecmp($data['fileType'],".png")== 0))
+			           	{
+			                $data['file_path_for_images'] = 'uploads/'. $data['file_name'];
+						}else{
+					   	 	 $data['file_path'] = 'uploads/materials/'. $data['file_name'];
+					    }
 					    
-					    #Get response from crocdoc 
-					    $json_response = curl_exec($ch);
-					    $response = json_decode($json_response);				    
-
-					    $data['sessionid'] = $response->sessionId;
-					    log_message('debug','CROCDOC SESSION ID: '. $response->sessionId);
-					} 
-
-		            $data['content'] = 'uploads/docview';
-		        } else {
-		            $data['content'] = 'uploads/error';
-		            # Not created yet!
-		        }
-		        
-		        $data['pageTitle'] = htmlspecialchars($data['upload']->title);
-		        $data['pageDescription'] = $data['course'].'.  '.$data['upload']->description;
-		        
-		        $this->load->view('subTemplate', $data);
-		    } else {
-		        // check if the user is trying to dl their own upload
-		        
-		        
-		        $data['content'] = 'users/notenough';
-		        $data['pageTitle'] = "Oh dear, you don't have enough points!";
-		        $data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		        
-		        $this->load->view('subTemplate', $data);
-		    }
+			            $data['ratings'] = $this->Upload->get_rating($uploadid);
+			            $data['uploader'] =$uploader;
+			            $data['course']  = $this->Upload->get_course_by_id($uploadid);
+			            $data['favourited'] =  $this->Favourite->is_favourited_by($this->session->userdata('user_id'),$uploadid);
+			            $data['related'] = false;
+			            $data['materialType'] = $this->Upload->get_material_by_id($uploadid);
+			            
+			            
+			            //check if upload has related uploads
+			            if ($data['upload']->related == 1) {
+			                $data['related'] = true;
+			                $data['moreByUser'] = $this->Upload->get_related($uploadid);
+			            }
+			            
+			            $data['similarUploads'] = $this->Upload->get_similar($uploadid);
+			            $data['byUserUploads'] = $this->Upload->get_byUser($uploadid);
+	
+			            // Check for Crocodoc version 
+			            if ($data['upload']->uuid != NULL) {
+	
+				            $ch = curl_init();
+						    curl_setopt($ch, CURLOPT_HEADER, 0);
+						    curl_setopt($ch, CURLOPT_VERBOSE, 0);
+						    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible;)");
+						    curl_setopt($ch, CURLOPT_URL, "https://crocodoc.com/api/v2/session/create" );
+						    curl_setopt($ch, CURLOPT_POST, true);
+						    
+						    $post = array(
+							"uuid"=> $data['upload']->uuid,
+                                                        "token" => "yYaBAI95eJxVkPb0TwvhoqMi",
+                                                        "downloadable" => "false",
+                                                        "editable" => "true",
+                                                        "user" => $downloader_id. ",". $downloader_name
+						    );
+	
+						    log_message('error','CROCDOC PARAMS: '. json_encode($post));
+	
+						    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+						    
+						    #Get response from crocdoc 
+						    $json_response = curl_exec($ch);
+						    $response = json_decode($json_response);				    
+	
+						    $data['sessionid'] = $response->session;
+						    log_message('error','CROCDOC SESSION ID: '. $response->session);
+						} 
+	
+			            $data['content'] = 'uploads/docview';
+			        } else {
+			            $data['content'] = 'uploads/error';
+			            # Not created yet!
+			        }
+			        
+			        $data['pageTitle'] = htmlspecialchars($data['upload']->title);
+			        $data['pageDescription'] = $data['course'].'.  '.$data['upload']->description;
+			        
+			        $this->load->view('subTemplate', $data);
+			    } else {
+			        // check if the user is trying to dl their own upload
+			        
+			        
+			        $data['content'] = 'users/notenough';
+			        $data['pageTitle'] = "Oh dear, you don't have enough points!";
+			        $data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+			        
+			        $this->load->view('subTemplate', $data);
+			    }
+	    	}
 		} else {
-		    $data['content'] = 'users/login';
-		    $data['incorrectLogin'] = false;
-		    $data['notVerified'] = false;
-		    $data['verifiedSent'] = false;
-		    
-		    $data['pageTitle'] = 'Login / Create an Account on Studygig';
-		    $data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
-		    
-		    $this->load->view('subTemplate', $data);
+		    $data['content'] = 'users/signup';
+		
+		$data['pageTitle'] = 'Create an Account on Studygig';
+		$data['pageDescription'] = 'Need a past test to help you study? Or a note for a missed class?  Studygig is a search engine for university students to find study material such as past tests and lecture notes.';
+		$this->load->view('subTemplate2', $data);	
 		}
 	
 	}

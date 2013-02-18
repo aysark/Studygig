@@ -14,13 +14,13 @@ class Transaction extends CI_Model {
 			if (!$subscriber)
 			{
 				$this->db->where('id',$userid);
-				$this->db->set('points','points-20',FALSE);
+				$this->db->set('points','points-50',FALSE);
 				$this->db->update('users');
 			}	
 		}
 		if ($userid != $uploader){
 			$this->db->where('id',$uploader);
-			$this->db->set('points','points+2',FALSE);
+			$this->db->set('points','points+1',FALSE);
 			$this->db->update('users');
 		}	
 		$this->db->trans_complete();

@@ -144,6 +144,21 @@ $(function() {
 
 </script>
 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30883267-1']);
+  _gaq.push(['_setDomainName', 'studygig.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 </head>
 	<body>
 
@@ -189,7 +204,7 @@ $(function() {
          
          <ul class="navbar-list right">
          	<?php if($this->session->userdata('logged_in')): ?>
-         	<li class="navbar-list-item"><a href="<?php echo site_url('members/form');?>">Become a Member (25% Off)</a></li>
+         	<li class="navbar-list-item"><a href="<?php echo site_url('members/form');?>">Become a Member (free 1 month)</a></li>
          	<?php endif; ?>
          	<li class="navbar-list-item"><a href="<?php echo site_url('site/help');?>">Help</a></li>
          	
@@ -280,7 +295,7 @@ $(function() {
     <br/>
     Join us on: <a href="http://www.facebook.com/studygig" title="Like Studygig on Facebook">Facebook</a> & <a href="http://twitter.com/studygig" title="Follow Studygig on Twitter">Twitter</a>
     <br/>
-    Copyright © 2011 Studygig.
+    Copyright © 2012 Studygig.
     <br/>
     Made in Canada <img src="<?php echo base_url(); ?>images/made-in-canada.png" width="15" height="10" alt="Made in Canada" /></div>
     

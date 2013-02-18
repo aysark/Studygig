@@ -225,7 +225,7 @@
 		#Checks if the user has enough points to download a course.
 		
 		$this->db->where('id',$id);
-		$this->db->where('points >=',20);
+		$this->db->where('points >=',50);
 		$query = $this->db->get('users');
 		
 		if ($query->num_rows() == 0)
@@ -365,6 +365,22 @@
 		
 		return $query->result();	
 	}
+	
+	function recent_downloads_member($id) {
+	
+		$this->db->select('*');
+		$this->db->from('transactions');
+		$this->db->where('transactions.user_id',$id);
+		
+		$this->db->join('uploads', 'uploads.id = transactions.upload_id','inner');
+		
+		$this->db->limit(20);
+		$this->db->order_by("transactions.created_at", "desc"); 
+		
+		$query = $this->db->get();		
+		
+		return $query->result();	
+	}
 
 	function get_all_uploads($id) {
 		$this->db->where('user_id',$id);
@@ -430,19 +446,6 @@
 		);
 	
 		$this->db->insert('invites',$newInvite);
-  }
-
-  function editprofile() {
-  	
-  	$profile = array(
-  		'fullname' => $this->input->post('fullname'),
-  		'major'    => $this->input->post('major'),
-  		'year'	   => $this->input->post('year')
-  		);
-
-  	$this->db->where('id',$this->session->userdata('user_id'));	
-  	$this->db->update('users',$profile);
-
   }
   	
 }

@@ -11,7 +11,7 @@ class Flags extends CI_Controller {
 	function add() {
 		if ($this->session->userdata('logged_in')) 
 		{		
-				$this->Flag->add($this->input->post('reportReason'),$this->input->post('reportAdditionalInfo'),$this->input->post('upload_id'),$this->input->post('type'));
+				$this->Flag->add($this->input->post('reportReason'),$this->input->post('reportAdditionalInfo'),$this->input->post('upload_id'),$this->session->userdata('user_id'));
 				echo "Thanks - we'll get right on it!";
 		}
 			else
