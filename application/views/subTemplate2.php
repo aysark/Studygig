@@ -173,7 +173,7 @@ echo substr($str,0,150);   ?>" />
     <br/>
     Join us on: <a href="http://www.facebook.com/studygig" title="Like Studygig on Facebook">Facebook</a> & <a href="http://twitter.com/studygig" title="Follow Studygig on Twitter">Twitter</a>
     <br/>
-    Copyright © 2012 Studygig.
+    Copyright © 2013 Studygig.
     <br/>
     Made in Canada <img src="<?php echo base_url(); ?>images/made-in-canada.png" width="15" height="10" alt="Made in Canada" /></div>
     

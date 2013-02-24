@@ -7,3 +7,5 @@ logs/*
 application/logs/*
 application/cache/*
 emailssent.txt
+studygig.sublime-project
+studygig.sublime-workspace
