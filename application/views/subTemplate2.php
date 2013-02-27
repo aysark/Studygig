@@ -89,14 +89,8 @@ echo substr($str,0,150);   ?>" />
   })();
 
 </script>
-
-
-
 </head>
-	<body>
-
-
-	
+	<body>	
 		<?php if( extension_loaded('newrelic') ) { echo newrelic_get_browser_timing_header(); } ?>
 		 <div id="navbar">
     	<div id="innerNavBar">
