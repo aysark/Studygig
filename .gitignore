@@ -10,4 +10,4 @@ emailssent.txt
 studygig.sublime-project
 studygig.sublime-workspace
 Capfile
-application/config/deploy.rb
+config/deploy.rb
