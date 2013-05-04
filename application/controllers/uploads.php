@@ -229,8 +229,7 @@ class Uploads extends CI_Controller {
 				}
 
 			}else{
-				$app_path = "/var/www/vhosts/studygig.com/development"; // testing new upload path
-				$config['upload_path'] = $app_path.'/uploads/materials/';
+				$config['upload_path'] = './uploads/materials/';
 				$config['allowed_types'] = "docx|pdf|doc|ppt|pptx|gif|jpg|jpeg|png";
 				$config['max_size']	= '50000';
 				$config['max_width'] = '0';
