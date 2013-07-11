@@ -36,7 +36,7 @@
     //its a pdf and has a preview  	 	 
 	}else{
 		echo 'The following is a preview of the first page of the document';
-   	 	$preview = str_replace($upload->filetype,".jpg",$file_path);
+   	 	$preview = str_replace($upload->filetype,"-0.jpg",$file_path);
       $preview = str_replace("/materials","",$preview);
     	echo "<img src=\"".base_url().$preview."\" />";
     }
