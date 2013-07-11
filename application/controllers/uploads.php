@@ -270,7 +270,7 @@ class Uploads extends CI_Controller {
 								$input_file = $file['file']."[0]";
 
 								//change extension to .jpg in name
-								$output_file = str_replace($file['ext'],".jpg","/var/www/vhosts/studygig.com/httpdocs/uploads/".$file['name']);
+								$output_file = str_replace($file['ext'],".jpg","/var/www/vhosts/studygig.com/uploads/".$file['name']);
 
 								$command = "convert $input_file -resize 85% -crop 540x465+0+0 canvas:none -fill \"#0076e6\" -font AvantGarde-Demi -pointsize 28 -draw \"text 60,270 'Studygig.com Preview'\" -channel RGBA $output_file ";
 
