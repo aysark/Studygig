@@ -152,7 +152,7 @@
   
      function fb_login() {
      
-     $app_id = 170587262970610;
+     $app_id = "170587262970610";
      $app_secret = "fec7d93520564ba77807f059a823639a";
      $my_url = current_url();//"http://www.studygig.com/index.php/sessions/fb_login";
   	
