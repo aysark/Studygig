@@ -284,12 +284,21 @@ mpmetrics.track("Viewing Home Page", {"From": "<?php echo $_SERVER['HTTP_REFERER
      <li><a href="index.php/site/contact">Contact Us</a></li>
     </ul>
     <br/>
-    Join us on: <a href="http://www.facebook.com/studygig" title="Like Studygig on Facebook">Facebook</a> & <a href="http://twitter.com/studygig" title="Follow Studygig on Twitter">Twitter</a><a href="http://mixpanel.com/f/partner" style="float:right;"><img src="http://mixpanel.com/site_media/images/partner/badge_light.png" alt="Web Analytics" /></a>
-    <br/>
-    Copyright © 2013 Studygig.
-    <br/>
-     Made in Canada <img src="images/made-in-canada.png" width="15" height="10" alt="Made in Canada" />     
- </div>
+          <div id="digital-ocean">
+            <a href="https://www.digitalocean.com/?refcode=547fcf0f68a5">
+            <img src="<?php echo base_url(); ?>images/digitalocean-badge-blue.png"/>
+          </a>
+        </div>
+        
+          <div id="copyright">
+          Join us on: <a href="http://www.facebook.com/studygig" title="Like Studygig on Facebook">Facebook</a> & <a href="http://twitter.com/studygig" title="Follow Studygig on Twitter">Twitter</a>
+          <br/>
+          Copyright © 2013 Studygig.
+          <br/>
+          Made in Canada <img src="<?php echo base_url(); ?>images/made-in-canada.png" width="15" height="10" alt="Made in Canada" />
+          </div>
+          <div style="clear:both"></div> 
+    </div>
   	
   </div><!-- end footer div -->
     <?php if( extension_loaded('newrelic') ) { echo newrelic_get_browser_timing_footer(); } ?>
