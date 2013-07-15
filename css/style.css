@@ -2244,3 +2244,7 @@ h4 img, h5 img, h6 img {
 	color: #005db5;
 }
 #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+
+#digital-ocean {float: right;}
+
+#copyright {float: left;}
