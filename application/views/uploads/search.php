@@ -51,12 +51,8 @@
     	
     	<div class="clear"></div>
     	<br/>
-    	<div id="seperatorHalf">
-  	</div>
-    	<h1 style="float:left;">
+    	<h1 style="text-align:center;">
   	Recent Uploads</h1>
-  	<div id="seperatorHalf">
-  	</div>
   	<div class="clear"></div>
     	<div class="col1">
     	<div class="slideshow">

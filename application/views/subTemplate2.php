@@ -67,7 +67,7 @@ echo substr($str,0,150);   ?>" />
 	
 	?>
 	
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.blockUI.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.form.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.MetaData.js"></script>

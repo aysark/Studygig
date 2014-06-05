@@ -33,7 +33,7 @@ echo $str;  ?>" />
 
 	 <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" /> 
 	  <link href="css/jquerycss.css" media="screen" rel="stylesheet" type="text/css" /> 
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.blockUI.js"></script>
 	<script type="text/javascript" src="js/jquery.form.js"></script>
 	<script type="text/javascript" src="js/jquery.MetaData.js"></script>

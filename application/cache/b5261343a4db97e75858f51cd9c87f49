@@ -19,7 +19,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />   
 <meta name="google-site-verification" content="wWfOHZs42xIyUlxca007WHi7_8QfdBsoxwX5dqgqZt4" /> 
 	<link href="http://localhost/studygig/css/style.css" rel="stylesheet" type="text/css" media="screen" /><link href="http://localhost/studygig/css/jquerycss.css" rel="stylesheet" type="text/css" media="screen" /><link href="http://localhost/studygig/css/chosen.css" rel="stylesheet" type="text/css" media="screen" />	
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
 	<script type="text/javascript" src="http://localhost/studygig/js/jquery.blockUI.js"></script>
 	<script type="text/javascript" src="http://localhost/studygig/js/jquery.form.js"></script>
 	<script type="text/javascript" src="http://localhost/studygig/js/jquery.MetaData.js"></script>
